@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0D4AAB79-89A2-4AF4-BBF7-17FDD436801C}" SchemaVersion="110">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{0D4AAB79-89A2-4AF4-BBF7-17FDD436801C}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="reloadLength" ID="{3BD1A413-A85D-4543-AE6F-031D261762A3}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="5"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="sfxVolume" ID="{D0301090-F454-48A3-849F-9001B777AF2D}"/>
+				<GameParameter Name="musicVolume" ID="{20814FDD-C28C-45C3-BE1E-26E2CE7C38C0}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

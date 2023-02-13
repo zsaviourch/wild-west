@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="89505537" Type="User" Language="SFX" Hash="{38B31A28-A296-C5C0-F340-7C2CA700CA65}">
+			<ShortName>Gameplay</ShortName>
+			<Path>Gameplay.bnk</Path>
+			<Media>
+				<File Id="63354751" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Shotgun PumpStart.wav</ShortName>
+					<CachePath>SFX/Shotgun PumpStart_19E5A7F7.wem</CachePath>
+				</File>
+				<File Id="77394988" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soul Reload.wav</ShortName>
+					<CachePath>SFX/Soul Reload_3BE2529D.wem</CachePath>
+				</File>
+				<File Id="92868043" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RevolverClickIn.wav</ShortName>
+					<CachePath>SFX/RevolverClickIn_8347025C.wem</CachePath>
+				</File>
+				<File Id="176955351" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soul Reload.wav</ShortName>
+					<CachePath>SFX/Soul Reload_50C4253D.wem</CachePath>
+				</File>
+				<File Id="209860096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RevolverClickOut.wav</ShortName>
+					<CachePath>SFX/RevolverClickOut_7C80F26F.wem</CachePath>
+				</File>
+				<File Id="244355290" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Crystal Shotgun.wav</ShortName>
+					<CachePath>SFX/Crystal Shotgun_20E4832E.wem</CachePath>
+				</File>
+				<File Id="460143773" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Shotgun PumpEnd.wav</ShortName>
+					<CachePath>SFX/Shotgun PumpEnd_F04D4B6F.wem</CachePath>
+				</File>
+				<File Id="486002857" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Soul Reload.wav</ShortName>
+					<CachePath>SFX/Soul Reload_81CF15C5.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="323245414" Name="gunReload" DurationType="OneShot" DurationMin="1.2" DurationMax="2.25">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="2548468192"/>
+							<MediaRefs>
+								<MediaRef Id="92868043"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="831777997"/>
+							<MediaRefs>
+								<MediaRef Id="460143773"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="2548468192"/>
+							<MediaRefs>
+								<MediaRef Id="209860096"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="831777997"/>
+							<MediaRefs>
+								<MediaRef Id="63354751"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="2548468192"/>
+							<MediaRefs>
+								<MediaRef Id="176955351"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="831777997"/>
+							<MediaRefs>
+								<MediaRef Id="486002857"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="998971168"/>
+							<MediaRefs>
+								<MediaRef Id="77394988"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3194616450" Name="gunShoot" DurationType="OneShot" DurationMin="0.8845916" DurationMax="0.8845916">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="831777997"/>
+							<MediaRefs>
+								<MediaRef Id="244355290"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<SwitchGroups>
+				<SwitchGroup Id="283915908" Name="weapon_switch">
+					<Switches>
+						<Switch Id="163030769" Name="gunRifle"/>
+						<Switch Id="831777997" Name="gunShotgun"/>
+						<Switch Id="998971168" Name="gunSniper"/>
+						<Switch Id="2548468192" Name="gunRevolver"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1B5103D2-8DDA-98C2-7837-29BA0F2837F7}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="988953028" Name="sfxVolume"/>
+				<GameParameter Id="2346531308" Name="musicVolume"/>
+				<GameParameter Id="4259737718" Name="reloadLength"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="283915908" Name="weapon_switch">
+					<Switches>
+						<Switch Id="163030769" Name="gunRifle"/>
+						<Switch Id="831777997" Name="gunShotgun"/>
+						<Switch Id="998971168" Name="gunSniper"/>
+						<Switch Id="2548468192" Name="gunRevolver"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{46BF8D28-4C91-6C82-7C59-3F5ED580F362}</FileHash>
+</SoundBanksInfo>

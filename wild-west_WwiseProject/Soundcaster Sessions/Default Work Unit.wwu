@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{99921570-90C3-459D-8E71-A8C54E41C256}" SchemaVersion="110">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{99921570-90C3-459D-8E71-A8C54E41C256}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="GunTesting" ID="{DCB095B5-E3B0-4A0A-9C33-AF9B75F899FC}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="gunShoot" ID="{2EEFE972-7AB9-4BC8-84C2-90D4E13A9F2B}" WorkUnitID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="gunReload" ID="{E3E1306A-DE9B-4107-99AF-8532CB2CE6B1}" WorkUnitID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="musicVolume" ID="{20814FDD-C28C-45C3-BE1E-26E2CE7C38C0}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="sfxVolume" ID="{D0301090-F454-48A3-849F-9001B777AF2D}"/>
+							<Value>50</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

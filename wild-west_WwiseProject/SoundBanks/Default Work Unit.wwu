@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" SchemaVersion="110">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Gameplay" ID="{0C8E0234-0513-445E-9C4B-9223118F94B6}">
+					<ObjectInclusionList>
+						<ObjectRef Name="gunReload" ID="{E3E1306A-DE9B-4107-99AF-8532CB2CE6B1}" WorkUnitID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="gunShoot" ID="{2EEFE972-7AB9-4BC8-84C2-90D4E13A9F2B}" WorkUnitID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
