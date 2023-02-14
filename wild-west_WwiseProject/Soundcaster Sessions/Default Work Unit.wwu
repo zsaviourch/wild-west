@@ -16,6 +16,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="Distance" ID="{D9180EF3-D981-42DE-BD95-544A6FD63DBB}"/>
+							<Value>24.8792270531401</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="musicVolume" ID="{20814FDD-C28C-45C3-BE1E-26E2CE7C38C0}"/>
 							<Value>50</Value>
 						</RTPCValue>
@@ -26,7 +30,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
+						<CurrentSwitchRef Name="gunRevolver" ID="{7BFB712C-0880-454A-B239-6DF4F86DC31C}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

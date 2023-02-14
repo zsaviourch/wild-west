@@ -13,7 +13,7 @@
 			<ShortName>EnvironmentBoss</ShortName>
 			<Path>EnvironmentBoss.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9FBBD68E-F1D7-DB66-48FD-EC28AA4AF59C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{CA05B9FE-90A7-4C0D-1622-7B17F73E76E7}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -27,8 +27,8 @@
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="988953028" Name="sfxVolume"/>
+				<GameParameter Id="1240670792" Name="Distance"/>
 				<GameParameter Id="2346531308" Name="musicVolume"/>
-				<GameParameter Id="4259737718" Name="reloadLength"/>
 			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="283915908" Name="weapon_switch">
@@ -41,7 +41,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{D194074F-A0DA-7855-6D0F-04E6452AA04E}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{11FF3888-D88C-F40D-EC54-3A4DD74E7249}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -51,7 +51,7 @@
 				</File>
 				<File Id="77394988" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Reload.wav</ShortName>
-					<CachePath>SFX/Soul Reload_9A774DF1.wem</CachePath>
+					<CachePath>SFX/Soul Reload_55C684F6.wem</CachePath>
 				</File>
 				<File Id="92868043" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RevolverClickIn.wav</ShortName>
@@ -59,7 +59,7 @@
 				</File>
 				<File Id="176955351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Reload.wav</ShortName>
-					<CachePath>SFX/Soul Reload_8586B2C9.wem</CachePath>
+					<CachePath>SFX/Soul Reload_C2B5C8F5.wem</CachePath>
 				</File>
 				<File Id="209860096" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RevolverClickOut.wav</ShortName>
@@ -67,7 +67,15 @@
 				</File>
 				<File Id="244355290" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crystal Shotgun.wav</ShortName>
-					<CachePath>SFX/Crystal Shotgun_42A6C694.wem</CachePath>
+					<CachePath>SFX/Crystal Shotgun_10C4C929.wem</CachePath>
+				</File>
+				<File Id="327693749" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Crystal Sniper.wav</ShortName>
+					<CachePath>SFX/Crystal Sniper_A05BE204.wem</CachePath>
+				</File>
+				<File Id="395550836" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BoltSlideStart.wav</ShortName>
+					<CachePath>SFX/BoltSlideStart_A7AB9A07.wem</CachePath>
 				</File>
 				<File Id="460143773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun PumpEnd.wav</ShortName>
@@ -77,9 +85,17 @@
 					<ShortName>Soul Reload.wav</ShortName>
 					<CachePath>SFX/Soul Reload_E6508C14.wem</CachePath>
 				</File>
+				<File Id="621894801" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sniper Explosion.wav</ShortName>
+					<CachePath>SFX/Sniper Explosion_10C4C929.wem</CachePath>
+				</File>
+				<File Id="665260187" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BoltSlideEnd.wav</ShortName>
+					<CachePath>SFX/BoltSlideEnd_CB14D800.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="323245414" Name="gunReload" DurationType="OneShot" DurationMin="1.2" DurationMax="2.25">
+				<Event Id="323245414" Name="gunReload" DurationType="OneShot" DurationMin="1.5379975" DurationMax="2.9335687">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="283915908" Id="2548468192"/>
@@ -94,6 +110,12 @@
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="998971168"/>
+							<MediaRefs>
+								<MediaRef Id="665260187"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="283915908" Id="2548468192"/>
 							<MediaRefs>
 								<MediaRef Id="209860096"/>
@@ -103,6 +125,12 @@
 							<SwitchValue GroupType="Switch" GroupId="283915908" Id="831777997"/>
 							<MediaRefs>
 								<MediaRef Id="63354751"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="998971168"/>
+							<MediaRefs>
+								<MediaRef Id="395550836"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -125,7 +153,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3194616450" Name="gunShoot" DurationType="OneShot" DurationMin="0.8845916" DurationMax="0.8845916">
+				<Event Id="3194616450" Name="gunShoot" DurationType="OneShot" DurationMin="3" DurationMax="5.1835303">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="283915908" Id="831777997"/>
@@ -133,9 +161,19 @@
 								<MediaRef Id="244355290"/>
 							</MediaRefs>
 						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="283915908" Id="998971168"/>
+							<MediaRefs>
+								<MediaRef Id="327693749"/>
+								<MediaRef Id="621894801"/>
+							</MediaRefs>
+						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="1240670792" Name="Distance"/>
+			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="283915908" Name="weapon_switch">
 					<Switches>
@@ -156,5 +194,5 @@
 			<Path>Environment2.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{F41CF3B8-9209-B1D4-E71D-CA40B38E99FC}</FileHash>
+	<FileHash>{CB5004C9-852E-9B60-636B-8153DDD3AD05}</FileHash>
 </SoundBanksInfo>

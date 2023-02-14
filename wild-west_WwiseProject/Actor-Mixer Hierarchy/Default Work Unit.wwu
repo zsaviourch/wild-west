@@ -123,9 +123,39 @@
 																<ActiveSource Name="Shotgun PumpEnd" ID="{C69C147B-9666-4281-BC26-2A339E4317DA}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
+														<Sound Name="BoltSlideEnd" ID="{9970233E-02F5-4192-8202-4C02B158FB5C}" ShortID="271207581">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BoltSlideEnd" ID="{ABFF3D63-466E-48DA-9474-F6A62788BA4D}">
+																	<PropertyList>
+																		<Property Name="LoopBegin" Type="Real64" Value="0.0988446726572529"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0988446726572529"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>BoltSlideEnd.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="665260187"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="BoltSlideEnd" ID="{ABFF3D63-466E-48DA-9474-F6A62788BA4D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
 													<GroupingInfo>
 														<GroupingBehaviorList>
+															<GroupingBehavior>
+																<ItemRef Name="BoltSlideEnd" ID="{9970233E-02F5-4192-8202-4C02B158FB5C}"/>
+															</GroupingBehavior>
 															<GroupingBehavior>
 																<ItemRef Name="revolverClickIn" ID="{44B7644D-E32D-4CA4-9DAE-44A1DC5D2179}"/>
 															</GroupingBehavior>
@@ -144,6 +174,12 @@
 																<SwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
 																<ItemList>
 																	<ItemRef Name="shotgunPumpEnd" ID="{024E4B4F-8DDF-4E03-97E2-BE5FF5957FBB}"/>
+																</ItemList>
+															</Grouping>
+															<Grouping>
+																<SwitchRef Name="gunSniper" ID="{9D5924F8-18FF-46FE-85AF-BC218BF61C37}"/>
+																<ItemList>
+																	<ItemRef Name="BoltSlideEnd" ID="{9970233E-02F5-4192-8202-4C02B158FB5C}"/>
 																</ItemList>
 															</Grouping>
 														</GroupingList>
@@ -225,9 +261,39 @@
 																<ActiveSource Name="RevolverClickOut" ID="{C0B5E43A-D5C7-4885-A967-C6C316CD2C73}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
+														<Sound Name="BoltSlideStart" ID="{238B5350-34C7-4D81-A4AB-D25F6EA93A54}" ShortID="477113352">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="BoltSlideStart" ID="{5689F6C3-9CDD-45C1-B500-D708C18A0EC2}">
+																	<PropertyList>
+																		<Property Name="LoopBegin" Type="Real64" Value="0.649871630295251"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.566431322207959"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>BoltSlideStart.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="395550836"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="BoltSlideStart" ID="{5689F6C3-9CDD-45C1-B500-D708C18A0EC2}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
 													<GroupingInfo>
 														<GroupingBehaviorList>
+															<GroupingBehavior>
+																<ItemRef Name="BoltSlideStart" ID="{238B5350-34C7-4D81-A4AB-D25F6EA93A54}"/>
+															</GroupingBehavior>
 															<GroupingBehavior>
 																<ItemRef Name="shotgunPumpStart" ID="{F5B17088-DBBD-4B97-8309-355E0CFA7A25}"/>
 															</GroupingBehavior>
@@ -246,6 +312,12 @@
 																<SwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
 																<ItemList>
 																	<ItemRef Name="shotgunPumpStart" ID="{F5B17088-DBBD-4B97-8309-355E0CFA7A25}"/>
+																</ItemList>
+															</Grouping>
+															<Grouping>
+																<SwitchRef Name="gunSniper" ID="{9D5924F8-18FF-46FE-85AF-BC218BF61C37}"/>
+																<ItemList>
+																	<ItemRef Name="BoltSlideStart" ID="{238B5350-34C7-4D81-A4AB-D25F6EA93A54}"/>
 																</ItemList>
 															</Grouping>
 														</GroupingList>
@@ -330,10 +402,9 @@
 																<Property Name="CrossfadeShape" Type="int16" Value="0"/>
 																<Property Name="FadeInDuration" Type="Real64" Value="0.217586649550706"/>
 																<Property Name="FadeInShape" Type="int16" Value="9"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.791720154043645"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.460526315789473"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.7"/>
-																<Property Name="TrimEnd" Type="Real64" Value="1.9"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.76521181001284"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Soul Reload.wav</AudioFile>
@@ -364,9 +435,9 @@
 																<Property Name="CrossfadeShape" Type="int16" Value="0"/>
 																<Property Name="FadeInDuration" Type="Real64" Value="0.217586649550706"/>
 																<Property Name="FadeInShape" Type="int16" Value="9"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.791720154043645"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.267650834403081"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="2.25"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.14409499358151"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Soul Reload.wav</AudioFile>
@@ -449,7 +520,14 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="crystalShotgun" ID="{2F658FC0-F6ED-4ECF-84F2-7BA941C6F8AF}" ShortID="41250611">
+												<Sound Name="Crystal Shotgun" ID="{FF2656B4-BE9F-43FF-8091-04C3EDB7EB7B}" ShortID="306380653">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
@@ -459,12 +537,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="Crystal Shotgun" ID="{9D2CF6E0-7D9E-4105-8C36-BD15EE32F648}">
-															<PropertyList>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.138482384823848"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.884591560201321"/>
-															</PropertyList>
+														<AudioFileSource Name="Crystal Shotgun" ID="{90354631-3E03-4E6C-ABF7-6BCDBDDCBFC3}">
 															<Language>SFX</Language>
 															<AudioFile>Crystal Shotgun.wav</AudioFile>
 															<MediaIDList>
@@ -473,21 +546,173 @@
 														</AudioFileSource>
 													</ChildrenList>
 													<ActiveSourceList>
-														<ActiveSource Name="Crystal Shotgun" ID="{9D2CF6E0-7D9E-4105-8C36-BD15EE32F648}" Platform="Linked"/>
+														<ActiveSource Name="Crystal Shotgun" ID="{90354631-3E03-4E6C-ABF7-6BCDBDDCBFC3}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
+												<RandomSequenceContainer Name="Crystal Sniper" ID="{1DB28697-FD62-4105-82D0-513D6189B940}" ShortID="32871675">
+													<PropertyList>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+														<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="sniperShot" ID="{263880EF-AECF-4E5A-B199-64ECE6AC97AC}" ShortID="19302137">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>7</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-4</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Crystal Sniper" ID="{6DF49144-7579-4082-8DB9-600C99C4B094}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="1.50353016688062"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Crystal Sniper.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="327693749"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Crystal Sniper" ID="{6DF49144-7579-4082-8DB9-600C99C4B094}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="sniperExplosion" ID="{5FC1DD1B-EF1A-460B-8B40-C451EBE2A1DD}" ShortID="235604720">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>6</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="OverrideEffect" Type="bool" Value="True"/>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>6</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Sniper Explosion" ID="{C44800DF-729D-4398-BC76-B705813FE43A}">
+																	<Language>SFX</Language>
+																	<AudioFile>Sniper Explosion.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="621894801"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists>
+																<ObjectList Name="RTPC">
+																	<Reference>
+																		<Local>
+																			<RTPC Name="" ID="{BA90BAC7-AC77-4475-8BB2-664AF8259258}" ShortID="829035911">
+																				<PropertyList>
+																					<Property Name="PropertyName" Type="string" Value="Volume"/>
+																				</PropertyList>
+																				<ReferenceList>
+																					<Reference Name="ControlInput">
+																						<ObjectRef Name="Distance" ID="{D9180EF3-D981-42DE-BD95-544A6FD63DBB}" WorkUnitID="{0D4AAB79-89A2-4AF4-BBF7-17FDD436801C}"/>
+																					</Reference>
+																					<Reference Name="Curve">
+																						<Custom>
+																							<Curve Name="" ID="{49287988-C52D-4867-86A2-3CBC195E937D}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>10</XPos>
+																										<YPos>-0</YPos>
+																										<Flags>0</Flags>
+																										<SegmentShape>Log3</SegmentShape>
+																									</Point>
+																									<Point>
+																										<XPos>85.02415</XPos>
+																										<YPos>-200</YPos>
+																										<Flags>0</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>100</XPos>
+																										<YPos>-200</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</Custom>
+																					</Reference>
+																				</ReferenceList>
+																			</RTPC>
+																		</Local>
+																	</Reference>
+																</ObjectList>
+															</ObjectLists>
+															<ActiveSourceList>
+																<ActiveSource Name="Sniper Explosion" ID="{C44800DF-729D-4398-BC76-B705813FE43A}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<Playlist>
+														<ItemRef Name="sniperShot" ID="{263880EF-AECF-4E5A-B199-64ECE6AC97AC}"/>
+														<ItemRef Name="sniperExplosion" ID="{5FC1DD1B-EF1A-460B-8B40-C451EBE2A1DD}"/>
+													</Playlist>
+												</RandomSequenceContainer>
 											</ChildrenList>
 											<GroupingInfo>
 												<GroupingBehaviorList>
 													<GroupingBehavior>
-														<ItemRef Name="crystalShotgun" ID="{2F658FC0-F6ED-4ECF-84F2-7BA941C6F8AF}"/>
+														<ItemRef Name="Crystal Sniper" ID="{1DB28697-FD62-4105-82D0-513D6189B940}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Crystal Shotgun" ID="{FF2656B4-BE9F-43FF-8091-04C3EDB7EB7B}"/>
 													</GroupingBehavior>
 												</GroupingBehaviorList>
 												<GroupingList>
 													<Grouping>
 														<SwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
 														<ItemList>
-															<ItemRef Name="crystalShotgun" ID="{2F658FC0-F6ED-4ECF-84F2-7BA941C6F8AF}"/>
+															<ItemRef Name="Crystal Shotgun" ID="{FF2656B4-BE9F-43FF-8091-04C3EDB7EB7B}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="gunSniper" ID="{9D5924F8-18FF-46FE-85AF-BC218BF61C37}"/>
+														<ItemList>
+															<ItemRef Name="Crystal Sniper" ID="{1DB28697-FD62-4105-82D0-513D6189B940}"/>
 														</ItemList>
 													</Grouping>
 												</GroupingList>
