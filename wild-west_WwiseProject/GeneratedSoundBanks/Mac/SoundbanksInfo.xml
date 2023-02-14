@@ -41,7 +41,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{11FF3888-D88C-F40D-EC54-3A4DD74E7249}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{CD1CF3BC-678A-5A5E-2F0D-AE5433924ABB}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -51,7 +51,7 @@
 				</File>
 				<File Id="77394988" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Reload.wav</ShortName>
-					<CachePath>SFX/Soul Reload_55C684F6.wem</CachePath>
+					<CachePath>SFX/Soul Reload_90EF86C7.wem</CachePath>
 				</File>
 				<File Id="92868043" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RevolverClickIn.wav</ShortName>
@@ -59,7 +59,7 @@
 				</File>
 				<File Id="176955351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Reload.wav</ShortName>
-					<CachePath>SFX/Soul Reload_C2B5C8F5.wem</CachePath>
+					<CachePath>SFX/Soul Reload_E8E42B9B.wem</CachePath>
 				</File>
 				<File Id="209860096" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RevolverClickOut.wav</ShortName>
@@ -71,11 +71,11 @@
 				</File>
 				<File Id="327693749" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crystal Sniper.wav</ShortName>
-					<CachePath>SFX/Crystal Sniper_A05BE204.wem</CachePath>
+					<CachePath>SFX/Crystal Sniper_4B7D086F.wem</CachePath>
 				</File>
 				<File Id="395550836" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BoltSlideStart.wav</ShortName>
-					<CachePath>SFX/BoltSlideStart_A7AB9A07.wem</CachePath>
+					<CachePath>SFX/BoltSlideStart_BC84C130.wem</CachePath>
 				</File>
 				<File Id="460143773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun PumpEnd.wav</ShortName>
@@ -91,7 +91,7 @@
 				</File>
 				<File Id="665260187" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BoltSlideEnd.wav</ShortName>
-					<CachePath>SFX/BoltSlideEnd_CB14D800.wem</CachePath>
+					<CachePath>SFX/BoltSlideEnd_20899F11.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -194,5 +194,5 @@
 			<Path>Environment2.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CB5004C9-852E-9B60-636B-8153DDD3AD05}</FileHash>
+	<FileHash>{F32EF791-0BAF-32DD-884E-80E87E38BC60}</FileHash>
 </SoundBanksInfo>
