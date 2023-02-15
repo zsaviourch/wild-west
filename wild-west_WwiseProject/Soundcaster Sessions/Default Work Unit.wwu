@@ -13,11 +13,19 @@
 							<ObjectRef Name="gunReload" ID="{E3E1306A-DE9B-4107-99AF-8532CB2CE6B1}" WorkUnitID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}"/>
 							<Position X="1" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="gunEmpty" ID="{2A86A847-9D2B-4A49-BF83-7C9FF422E156}" WorkUnitID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}"/>
+							<Position X="2" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Distance" ID="{D9180EF3-D981-42DE-BD95-544A6FD63DBB}"/>
-							<Value>24.8792270531401</Value>
+							<Value>10</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RoFIncrease" ID="{E70800F6-73EE-43F2-8486-7AA8F77040B3}"/>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="musicVolume" ID="{20814FDD-C28C-45C3-BE1E-26E2CE7C38C0}"/>
@@ -30,7 +38,7 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="gunRevolver" ID="{7BFB712C-0880-454A-B239-6DF4F86DC31C}"/>
+						<CurrentSwitchRef Name="gunSniper" ID="{9D5924F8-18FF-46FE-85AF-BC218BF61C37}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

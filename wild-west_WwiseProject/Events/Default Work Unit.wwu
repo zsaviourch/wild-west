@@ -16,7 +16,7 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{3E12CA3B-9797-485A-A42A-71E7BF791400}" ShortID="659372183">
+										<Action Name="" ID="{BD103BD8-F76F-4270-BCC3-699BEA10173C}" ShortID="95043481">
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="soulReload" ID="{7E076551-CFD0-40FC-BD04-EF2728A2B64C}" WorkUnitID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}"/>
@@ -31,6 +31,17 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="SwitchGunShoot" ID="{C61173D1-2523-45AE-96BF-955AA788DD0E}" WorkUnitID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="gunEmpty" ID="{2A86A847-9D2B-4A49-BF83-7C9FF422E156}">
+									<ChildrenList>
+										<Action Name="" ID="{750A4418-2DA7-49A1-81CC-148486455785}" ShortID="462601841">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EmptyClip" ID="{16E92FB7-E403-4E59-9690-0B87B5CAD841}" WorkUnitID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

@@ -49,6 +49,11 @@
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 												</Reference>
+												<Reference Name="Effect0">
+													<Custom>
+														<Effect Name="Time Stretch (Custom)" ID="{0624E787-57CD-4709-BB7E-3CA7DABF6B79}" ShortID="401765169" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3"/>
+													</Custom>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
 												</Reference>
@@ -60,13 +65,13 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 														</Reference>
 														<Reference Name="DefaultSwitchOrState">
-															<ObjectRef Name="gunRifle" ID="{BE14D35F-9EA7-42A7-A259-3EA0AC7BD1B0}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+															<ObjectRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
 														</Reference>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
 														</Reference>
 														<Reference Name="SwitchGroupOrStateGroup">
-															<ObjectRef Name="weapon_switch" ID="{9209FE2F-2627-4661-8AC5-92FD74E05B26}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+															<ObjectRef Name="weaponSwitch" ID="{9209FE2F-2627-4661-8AC5-92FD74E05B26}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -83,6 +88,7 @@
 																<AudioFileSource Name="RevolverClickIn" ID="{2694B5F8-68AE-4EE1-A981-21CDFFC44DB8}">
 																	<PropertyList>
 																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.15"/>
 																		<Property Name="TrimEnd" Type="Real64" Value="1"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
@@ -108,9 +114,10 @@
 															<ChildrenList>
 																<AudioFileSource Name="Shotgun PumpEnd" ID="{C69C147B-9666-4281-BC26-2A339E4317DA}">
 																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0122910815702428"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0105352127744938"/>
 																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="0.1"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="0.35"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.3"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Shotgun PumpEnd.wav</AudioFile>
@@ -124,6 +131,13 @@
 															</ActiveSourceList>
 														</Sound>
 														<Sound Name="BoltSlideEnd" ID="{9970233E-02F5-4192-8202-4C02B158FB5C}" ShortID="271207581">
+															<PropertyList>
+																<Property Name="Inclusion" Type="bool">
+																	<ValueList>
+																		<Value>False</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
@@ -150,6 +164,34 @@
 																<ActiveSource Name="BoltSlideEnd" ID="{ABFF3D63-466E-48DA-9474-F6A62788BA4D}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
+														<Sound Name="Rifle Reload" ID="{11AD7A97-98DB-45EB-8ECD-A5EC4CB2E8FE}" ShortID="796264930">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Rifle Reload" ID="{3FD9CD6C-1AA2-4BB9-9980-FA4B4BB082EC}">
+																	<PropertyList>
+																		<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.2"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="2.2"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Rifle Reload.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="774037349"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Rifle Reload" ID="{3FD9CD6C-1AA2-4BB9-9980-FA4B4BB082EC}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
 													<GroupingInfo>
 														<GroupingBehaviorList>
@@ -162,6 +204,9 @@
 															<GroupingBehavior>
 																<ItemRef Name="shotgunPumpEnd" ID="{024E4B4F-8DDF-4E03-97E2-BE5FF5957FBB}"/>
 															</GroupingBehavior>
+															<GroupingBehavior>
+																<ItemRef Name="Rifle Reload" ID="{11AD7A97-98DB-45EB-8ECD-A5EC4CB2E8FE}"/>
+															</GroupingBehavior>
 														</GroupingBehaviorList>
 														<GroupingList>
 															<Grouping>
@@ -171,15 +216,15 @@
 																</ItemList>
 															</Grouping>
 															<Grouping>
-																<SwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
+																<SwitchRef Name="gunRifle" ID="{BE14D35F-9EA7-42A7-A259-3EA0AC7BD1B0}"/>
 																<ItemList>
-																	<ItemRef Name="shotgunPumpEnd" ID="{024E4B4F-8DDF-4E03-97E2-BE5FF5957FBB}"/>
+																	<ItemRef Name="Rifle Reload" ID="{11AD7A97-98DB-45EB-8ECD-A5EC4CB2E8FE}"/>
 																</ItemList>
 															</Grouping>
 															<Grouping>
-																<SwitchRef Name="gunSniper" ID="{9D5924F8-18FF-46FE-85AF-BC218BF61C37}"/>
+																<SwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
 																<ItemList>
-																	<ItemRef Name="BoltSlideEnd" ID="{9970233E-02F5-4192-8202-4C02B158FB5C}"/>
+																	<ItemRef Name="shotgunPumpEnd" ID="{024E4B4F-8DDF-4E03-97E2-BE5FF5957FBB}"/>
 																</ItemList>
 															</Grouping>
 														</GroupingList>
@@ -191,13 +236,13 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 														</Reference>
 														<Reference Name="DefaultSwitchOrState">
-															<ObjectRef Name="gunRifle" ID="{BE14D35F-9EA7-42A7-A259-3EA0AC7BD1B0}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+															<ObjectRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
 														</Reference>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
 														</Reference>
 														<Reference Name="SwitchGroupOrStateGroup">
-															<ObjectRef Name="weapon_switch" ID="{9209FE2F-2627-4661-8AC5-92FD74E05B26}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+															<ObjectRef Name="weaponSwitch" ID="{9209FE2F-2627-4661-8AC5-92FD74E05B26}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -216,9 +261,11 @@
 															<ChildrenList>
 																<AudioFileSource Name="Shotgun PumpStart" ID="{C1AE80AE-B592-48C4-B910-971B1FEA3051}">
 																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0208354801056067"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0333367681689707"/>
 																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="0.35"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="0.75"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.3"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="1.5"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Shotgun PumpStart.wav</AudioFile>
@@ -246,9 +293,10 @@
 															<ChildrenList>
 																<AudioFileSource Name="RevolverClickOut" ID="{C0B5E43A-D5C7-4885-A967-C6C316CD2C73}">
 																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0301668806161746"/>
 																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="0.175"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="0.8"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.2"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.35"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>RevolverClickOut.wav</AudioFile>
@@ -262,6 +310,13 @@
 															</ActiveSourceList>
 														</Sound>
 														<Sound Name="BoltSlideStart" ID="{238B5350-34C7-4D81-A4AB-D25F6EA93A54}" ShortID="477113352">
+															<PropertyList>
+																<Property Name="Inclusion" Type="bool">
+																	<ValueList>
+																		<Value>False</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
@@ -273,9 +328,10 @@
 															<ChildrenList>
 																<AudioFileSource Name="BoltSlideStart" ID="{5689F6C3-9CDD-45C1-B500-D708C18A0EC2}">
 																	<PropertyList>
-																		<Property Name="LoopBegin" Type="Real64" Value="0.649871630295251"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.181322207958922"/>
 																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="0.566431322207959"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.627406931964057"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="1.2997432605905"/>
 																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>BoltSlideStart.wav</AudioFile>
@@ -286,6 +342,95 @@
 															</ChildrenList>
 															<ActiveSourceList>
 																<ActiveSource Name="BoltSlideStart" ID="{5689F6C3-9CDD-45C1-B500-D708C18A0EC2}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="FullSniperReload" ID="{E6B41EFD-5DFB-4A4C-B26F-C5ECFE44D9D8}" ShortID="201782391">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="OverrideEffect" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+																</Reference>
+																<Reference Name="Effect0">
+																	<Custom>
+																		<Effect Name="Time Stretch (Custom)" ID="{8DD2CF2A-CA92-4297-B577-1923CE0D10BC}" ShortID="1071208984" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+																			<PropertyList>
+																				<Property Name="QualityEnable" Type="int16" Value="1"/>
+																				<Property Name="WindowSize" Type="int32" Value="3840"/>
+																			</PropertyList>
+																			<ObjectLists>
+																				<ObjectList Name="RTPC">
+																					<Reference>
+																						<Local>
+																							<RTPC Name="" ID="{FAED5E1D-C237-4008-8608-02BA532BF7E9}" ShortID="295943478">
+																								<PropertyList>
+																									<Property Name="PropertyName" Type="string" Value="TimeStretch"/>
+																								</PropertyList>
+																								<ReferenceList>
+																									<Reference Name="ControlInput">
+																										<ObjectRef Name="RoFIncrease" ID="{E70800F6-73EE-43F2-8486-7AA8F77040B3}" WorkUnitID="{0D4AAB79-89A2-4AF4-BBF7-17FDD436801C}"/>
+																									</Reference>
+																									<Reference Name="Curve">
+																										<Custom>
+																											<Curve Name="" ID="{9B30678E-F0C5-4DA9-ADB2-B2BE7D433AA5}">
+																												<PropertyList>
+																													<Property Name="Flags" Type="int32" Value="1"/>
+																												</PropertyList>
+																												<PointList>
+																													<Point>
+																														<XPos>0</XPos>
+																														<YPos>100</YPos>
+																														<Flags>5</Flags>
+																													</Point>
+																													<Point>
+																														<XPos>25</XPos>
+																														<YPos>25</YPos>
+																														<Flags>0</Flags>
+																													</Point>
+																													<Point>
+																														<XPos>100</XPos>
+																														<YPos>25</YPos>
+																														<Flags>37</Flags>
+																													</Point>
+																												</PointList>
+																											</Curve>
+																										</Custom>
+																									</Reference>
+																								</ReferenceList>
+																							</RTPC>
+																						</Local>
+																					</Reference>
+																				</ObjectList>
+																			</ObjectLists>
+																		</Effect>
+																	</Custom>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="FullSniperReload" ID="{832A4EEF-CFF8-4248-826E-9FE10E38BB55}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.65"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="2.5"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>FullSniperReload.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="518432802"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="FullSniperReload" ID="{832A4EEF-CFF8-4248-826E-9FE10E38BB55}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
 													</ChildrenList>
@@ -299,6 +444,9 @@
 															</GroupingBehavior>
 															<GroupingBehavior>
 																<ItemRef Name="revolverClickOut" ID="{228349EB-DACB-4DA4-8584-3534B48F615F}"/>
+															</GroupingBehavior>
+															<GroupingBehavior>
+																<ItemRef Name="FullSniperReload" ID="{E6B41EFD-5DFB-4A4C-B26F-C5ECFE44D9D8}"/>
 															</GroupingBehavior>
 														</GroupingBehaviorList>
 														<GroupingList>
@@ -317,7 +465,7 @@
 															<Grouping>
 																<SwitchRef Name="gunSniper" ID="{9D5924F8-18FF-46FE-85AF-BC218BF61C37}"/>
 																<ItemList>
-																	<ItemRef Name="BoltSlideStart" ID="{238B5350-34C7-4D81-A4AB-D25F6EA93A54}"/>
+																	<ItemRef Name="FullSniperReload" ID="{E6B41EFD-5DFB-4A4C-B26F-C5ECFE44D9D8}"/>
 																</ItemList>
 															</Grouping>
 														</GroupingList>
@@ -331,10 +479,11 @@
 										</RandomSequenceContainer>
 										<SwitchContainer Name="soulReload" ID="{7E076551-CFD0-40FC-BD04-EF2728A2B64C}" ShortID="622688196">
 											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-10</Value>
+														<Value>-4</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -342,17 +491,32 @@
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 												</Reference>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
 												</Reference>
 												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="weapon_switch" ID="{9209FE2F-2627-4661-8AC5-92FD74E05B26}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+													<ObjectRef Name="weaponSwitch" ID="{9209FE2F-2627-4661-8AC5-92FD74E05B26}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="soulReloadShotgun" ID="{816C1E59-614F-4678-B9DC-28B66C4C7876}" ShortID="141328039">
 													<PropertyList>
-														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{F8E67509-82CE-4F81-BCF7-217B1F6ED694}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="75"/>
+																			<Property Name="Min" Type="Real64" Value="-75"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -366,12 +530,12 @@
 														<AudioFileSource Name="Soul Reload" ID="{2E4A5C7D-1F69-48D0-B1DE-9F2B638167CA}">
 															<PropertyList>
 																<Property Name="CrossfadeShape" Type="int16" Value="0"/>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.217586649550706"/>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0365853658536585"/>
 																<Property Name="FadeInShape" Type="int16" Value="9"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.791720154043645"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0805221265291219"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.15596919127086"/>
-																<Property Name="TrimEnd" Type="Real64" Value="1.69396662387676"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.3"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.8"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Soul Reload.wav</AudioFile>
@@ -386,6 +550,24 @@
 												</Sound>
 												<Sound Name="soulReloadSniper" ID="{E4C47FBB-2E23-48B6-B998-658BBAEF4DD5}" ShortID="990287033">
 													<PropertyList>
+														<Property Name="Inclusion" Type="bool">
+															<ValueList>
+																<Value>False</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{FE14E3E6-5C56-4D13-8CCF-8F3EE06BF984}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="75"/>
+																			<Property Name="Min" Type="Real64" Value="-75"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 													</PropertyList>
 													<ReferenceList>
@@ -402,9 +584,9 @@
 																<Property Name="CrossfadeShape" Type="int16" Value="0"/>
 																<Property Name="FadeInDuration" Type="Real64" Value="0.217586649550706"/>
 																<Property Name="FadeInShape" Type="int16" Value="9"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.460526315789473"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.112002567394094"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="1.76521181001284"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Soul Reload.wav</AudioFile>
@@ -417,13 +599,82 @@
 														<ActiveSource Name="Soul Reload" ID="{510A06E9-FA2D-42FD-836B-252770F68986}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
-												<Sound Name="soulReloadRevolver" ID="{B885E6AC-8AB8-4D35-A27E-2EF5EED07C22}" ShortID="231931274">
+												<Sound Name="soulReloadRifle" ID="{9368CA33-A21E-467E-9841-093D3ECAB1D2}" ShortID="357376288">
 													<PropertyList>
+														<Property Name="LoopCount" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{4DBE0C5A-8A21-42A1-8664-FB62B126FDC2}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{71A4E7A5-1A21-45A4-9A25-FE10ED7AA2A6}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="75"/>
+																			<Property Name="Min" Type="Real64" Value="-75"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Soul Reload" ID="{56A69BE9-90F2-42FF-8560-09043E9E56BB}">
+															<PropertyList>
+																<Property Name="CrossfadeShape" Type="int16" Value="0"/>
+																<Property Name="FadeInShape" Type="int16" Value="9"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0976893453145095"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Soul Reload.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="196452524"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Soul Reload" ID="{56A69BE9-90F2-42FF-8560-09043E9E56BB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="soulReloadRevolver" ID="{B885E6AC-8AB8-4D35-A27E-2EF5EED07C22}" ShortID="231931274">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{9441726D-92E7-42D7-BA39-CECB8C8F3BB6}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="75"/>
+																			<Property Name="Min" Type="Real64" Value="-75"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+														</Reference>
+														<Reference Name="Effect0">
+															<Custom>
+																<Effect Name="Time Stretch (Custom)" ID="{22FA048F-5B22-472C-BFB6-7E3877B15F85}" ShortID="22539584" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3"/>
+															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -437,7 +688,8 @@
 																<Property Name="FadeInShape" Type="int16" Value="9"/>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.267650834403081"/>
 																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="2.14409499358151"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.5"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.5"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Soul Reload.wav</AudioFile>
@@ -454,6 +706,9 @@
 											<GroupingInfo>
 												<GroupingBehaviorList>
 													<GroupingBehavior>
+														<ItemRef Name="soulReloadRifle" ID="{9368CA33-A21E-467E-9841-093D3ECAB1D2}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
 														<ItemRef Name="soulReloadShotgun" ID="{816C1E59-614F-4678-B9DC-28B66C4C7876}"/>
 													</GroupingBehavior>
 													<GroupingBehavior>
@@ -468,6 +723,12 @@
 														<SwitchRef Name="gunRevolver" ID="{7BFB712C-0880-454A-B239-6DF4F86DC31C}"/>
 														<ItemList>
 															<ItemRef Name="soulReloadRevolver" ID="{B885E6AC-8AB8-4D35-A27E-2EF5EED07C22}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="gunRifle" ID="{BE14D35F-9EA7-42A7-A259-3EA0AC7BD1B0}"/>
+														<ItemList>
+															<ItemRef Name="soulReloadRifle" ID="{9368CA33-A21E-467E-9841-093D3ECAB1D2}"/>
 														</ItemList>
 													</Grouping>
 													<Grouping>
@@ -516,7 +777,7 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
 												</Reference>
 												<Reference Name="SwitchGroupOrStateGroup">
-													<ObjectRef Name="weapon_switch" ID="{9209FE2F-2627-4661-8AC5-92FD74E05B26}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+													<ObjectRef Name="weaponSwitch" ID="{9209FE2F-2627-4661-8AC5-92FD74E05B26}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -524,8 +785,20 @@
 													<PropertyList>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>3</Value>
+																<Value>6</Value>
 															</ValueList>
+														</Property>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{2A8BF5FB-4B6D-469D-9748-7206B0F4BAA1}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
 														</Property>
 													</PropertyList>
 													<ReferenceList>
@@ -551,8 +824,22 @@
 												</Sound>
 												<RandomSequenceContainer Name="Crystal Sniper" ID="{1DB28697-FD62-4105-82D0-513D6189B940}" ShortID="32871675">
 													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{547DD864-1298-44B7-BEB1-8C28E54EE81D}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 														<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+														<Property Name="Volume" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{0A01E917-F37B-4207-A70C-072DA4FFECD0}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
@@ -563,146 +850,294 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<Sound Name="sniperShot" ID="{263880EF-AECF-4E5A-B199-64ECE6AC97AC}" ShortID="19302137">
+														<RandomSequenceContainer Name="sniperExplode" ID="{000B8F83-CDCD-4D12-B53A-E883B867E11E}" ShortID="359567336">
 															<PropertyList>
-																<Property Name="MakeUpGain" Type="Real64">
+																<Property Name="OverrideGameAuxSends" Type="bool" Value="True"/>
+																<Property Name="Pitch" Type="int32">
 																	<ValueList>
-																		<Value>7</Value>
+																		<Value>-100</Value>
 																	</ValueList>
-																</Property>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>-4</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="Crystal Sniper" ID="{6DF49144-7579-4082-8DB9-600C99C4B094}">
-																	<PropertyList>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="1.50353016688062"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>Crystal Sniper.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="327693749"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="Crystal Sniper" ID="{6DF49144-7579-4082-8DB9-600C99C4B094}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="sniperExplosion" ID="{5FC1DD1B-EF1A-460B-8B40-C451EBE2A1DD}" ShortID="235604720">
-															<PropertyList>
-																<Property Name="MakeUpGain" Type="Real64">
-																	<ValueList>
-																		<Value>6</Value>
-																	</ValueList>
-																</Property>
-																<Property Name="OverrideEffect" Type="bool" Value="True"/>
-																<Property Name="Volume" Type="Real64">
-																	<ValueList>
-																		<Value>6</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="Sniper Explosion" ID="{C44800DF-729D-4398-BC76-B705813FE43A}">
-																	<Language>SFX</Language>
-																	<AudioFile>Sniper Explosion.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="621894801"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ObjectLists>
-																<ObjectList Name="RTPC">
-																	<Reference>
-																		<Local>
-																			<RTPC Name="" ID="{BA90BAC7-AC77-4475-8BB2-664AF8259258}" ShortID="829035911">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{BDF1844A-7D8A-475F-8D02-39FBB281EDD6}">
 																				<PropertyList>
-																					<Property Name="PropertyName" Type="string" Value="Volume"/>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="150"/>
+																					<Property Name="Min" Type="Real64" Value="-150"/>
 																				</PropertyList>
-																				<ReferenceList>
-																					<Reference Name="ControlInput">
-																						<ObjectRef Name="Distance" ID="{D9180EF3-D981-42DE-BD95-544A6FD63DBB}" WorkUnitID="{0D4AAB79-89A2-4AF4-BBF7-17FDD436801C}"/>
-																					</Reference>
-																					<Reference Name="Curve">
-																						<Custom>
-																							<Curve Name="" ID="{49287988-C52D-4867-86A2-3CBC195E937D}">
-																								<PropertyList>
-																									<Property Name="Flags" Type="int32" Value="3"/>
-																								</PropertyList>
-																								<PointList>
-																									<Point>
-																										<XPos>0</XPos>
-																										<YPos>0</YPos>
-																										<Flags>5</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>10</XPos>
-																										<YPos>-0</YPos>
-																										<Flags>0</Flags>
-																										<SegmentShape>Log3</SegmentShape>
-																									</Point>
-																									<Point>
-																										<XPos>85.02415</XPos>
-																										<YPos>-200</YPos>
-																										<Flags>0</Flags>
-																									</Point>
-																									<Point>
-																										<XPos>100</XPos>
-																										<YPos>-200</YPos>
-																										<Flags>37</Flags>
-																									</Point>
-																								</PointList>
-																							</Curve>
-																						</Custom>
-																					</Reference>
-																				</ReferenceList>
-																			</RTPC>
-																		</Local>
-																	</Reference>
-																</ObjectList>
-															</ObjectLists>
-															<ActiveSourceList>
-																<ActiveSource Name="Sniper Explosion" ID="{C44800DF-729D-4398-BC76-B705813FE43A}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="sniperExplosion" ID="{5FC1DD1B-EF1A-460B-8B40-C451EBE2A1DD}" ShortID="235604720">
+																	<PropertyList>
+																		<Property Name="OverrideEffect" Type="bool" Value="True"/>
+																		<Property Name="Volume" Type="Real64">
+																			<ValueList>
+																				<Value>12</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="Sniper Explosion" ID="{C44800DF-729D-4398-BC76-B705813FE43A}">
+																			<Language>SFX</Language>
+																			<AudioFile>Sniper Explosion.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="621894801"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ObjectLists>
+																		<ObjectList Name="RTPC">
+																			<Reference>
+																				<Local>
+																					<RTPC Name="" ID="{BA90BAC7-AC77-4475-8BB2-664AF8259258}" ShortID="829035911">
+																						<PropertyList>
+																							<Property Name="PropertyName" Type="string" Value="Volume"/>
+																						</PropertyList>
+																						<ReferenceList>
+																							<Reference Name="ControlInput">
+																								<ObjectRef Name="Distance" ID="{D9180EF3-D981-42DE-BD95-544A6FD63DBB}" WorkUnitID="{0D4AAB79-89A2-4AF4-BBF7-17FDD436801C}"/>
+																							</Reference>
+																							<Reference Name="Curve">
+																								<Custom>
+																									<Curve Name="" ID="{49287988-C52D-4867-86A2-3CBC195E937D}">
+																										<PropertyList>
+																											<Property Name="Flags" Type="int32" Value="3"/>
+																										</PropertyList>
+																										<PointList>
+																											<Point>
+																												<XPos>0</XPos>
+																												<YPos>0</YPos>
+																												<Flags>5</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>10</XPos>
+																												<YPos>0</YPos>
+																												<Flags>0</Flags>
+																												<SegmentShape>Log3</SegmentShape>
+																											</Point>
+																											<Point>
+																												<XPos>85.02415</XPos>
+																												<YPos>-200</YPos>
+																												<Flags>0</Flags>
+																											</Point>
+																											<Point>
+																												<XPos>100</XPos>
+																												<YPos>-200</YPos>
+																												<Flags>37</Flags>
+																											</Point>
+																										</PointList>
+																									</Curve>
+																								</Custom>
+																							</Reference>
+																						</ReferenceList>
+																					</RTPC>
+																				</Local>
+																			</Reference>
+																		</ObjectList>
+																	</ObjectLists>
+																	<ActiveSourceList>
+																		<ActiveSource Name="Sniper Explosion" ID="{C44800DF-729D-4398-BC76-B705813FE43A}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
+														<RandomSequenceContainer Name="sniperShoot" ID="{D07725BE-C085-4E11-AC32-AA98176153EF}" ShortID="432929994">
+															<PropertyList>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{4D30CA81-27FB-4D82-ADEE-2EC95CF9F530}">
+																				<PropertyList>
+																					<Property Name="Max" Type="Real64" Value="6"/>
+																					<Property Name="Min" Type="Real64" Value="-3"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{29E4E12C-B944-4179-AF8A-F215387047F6}">
+																				<PropertyList>
+																					<Property Name="Max" Type="Real64" Value="150"/>
+																					<Property Name="Min" Type="Real64" Value="-150"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<Sound Name="sniperShot" ID="{263880EF-AECF-4E5A-B199-64ECE6AC97AC}" ShortID="19302137">
+																	<PropertyList>
+																		<Property Name="MakeUpGain" Type="Real64">
+																			<ValueList>
+																				<Value>8</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<ReferenceList>
+																		<Reference Name="Conversion">
+																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+																		</Reference>
+																		<Reference Name="OutputBus">
+																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+																		</Reference>
+																	</ReferenceList>
+																	<ChildrenList>
+																		<AudioFileSource Name="Crystal Sniper" ID="{6DF49144-7579-4082-8DB9-600C99C4B094}">
+																			<PropertyList>
+																				<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																				<Property Name="TrimEnd" Type="Real64" Value="2"/>
+																			</PropertyList>
+																			<Language>SFX</Language>
+																			<AudioFile>Crystal Sniper.wav</AudioFile>
+																			<MediaIDList>
+																				<MediaID ID="327693749"/>
+																			</MediaIDList>
+																		</AudioFileSource>
+																	</ChildrenList>
+																	<ActiveSourceList>
+																		<ActiveSource Name="Crystal Sniper" ID="{6DF49144-7579-4082-8DB9-600C99C4B094}" Platform="Linked"/>
+																	</ActiveSourceList>
+																</Sound>
+															</ChildrenList>
+														</RandomSequenceContainer>
 													</ChildrenList>
 													<Playlist>
-														<ItemRef Name="sniperShot" ID="{263880EF-AECF-4E5A-B199-64ECE6AC97AC}"/>
-														<ItemRef Name="sniperExplosion" ID="{5FC1DD1B-EF1A-460B-8B40-C451EBE2A1DD}"/>
+														<ItemRef Name="sniperShoot" ID="{D07725BE-C085-4E11-AC32-AA98176153EF}"/>
+														<ItemRef Name="sniperExplode" ID="{000B8F83-CDCD-4D12-B53A-E883B867E11E}"/>
 													</Playlist>
 												</RandomSequenceContainer>
+												<Sound Name="Crystal Rifle" ID="{8DF8961F-BB35-416C-8A9C-C2D91DDE8E72}" ShortID="892095557">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{7B437D51-D76E-48AF-8895-5190D44AF3E1}">
+																		<PropertyList>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Crystal Rifle2" ID="{B2DBDFDA-12B9-4A46-B191-746A85BA702E}">
+															<Language>SFX</Language>
+															<AudioFile>Crystal Rifle2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="925791996"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Crystal Rifle2" ID="{B2DBDFDA-12B9-4A46-B191-746A85BA702E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="RevolverLaser" ID="{73A323B8-027B-404A-BF2E-106A2A189CAE}" ShortID="71303404">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>6</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="RevolverLaser" ID="{938E0565-4FD4-4645-82B5-260311190DCF}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.099297023045418"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="5"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>RevolverLaser.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="957101173"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="RevolverLaser" ID="{938E0565-4FD4-4645-82B5-260311190DCF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
 											<GroupingInfo>
 												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Crystal Rifle" ID="{8DF8961F-BB35-416C-8A9C-C2D91DDE8E72}"/>
+													</GroupingBehavior>
 													<GroupingBehavior>
 														<ItemRef Name="Crystal Sniper" ID="{1DB28697-FD62-4105-82D0-513D6189B940}"/>
 													</GroupingBehavior>
 													<GroupingBehavior>
 														<ItemRef Name="Crystal Shotgun" ID="{FF2656B4-BE9F-43FF-8091-04C3EDB7EB7B}"/>
 													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="RevolverLaser" ID="{73A323B8-027B-404A-BF2E-106A2A189CAE}"/>
+													</GroupingBehavior>
 												</GroupingBehaviorList>
 												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="gunRevolver" ID="{7BFB712C-0880-454A-B239-6DF4F86DC31C}"/>
+														<ItemList>
+															<ItemRef Name="RevolverLaser" ID="{73A323B8-027B-404A-BF2E-106A2A189CAE}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="gunRifle" ID="{BE14D35F-9EA7-42A7-A259-3EA0AC7BD1B0}"/>
+														<ItemList>
+															<ItemRef Name="Crystal Rifle" ID="{8DF8961F-BB35-416C-8A9C-C2D91DDE8E72}"/>
+														</ItemList>
+													</Grouping>
 													<Grouping>
 														<SwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
 														<ItemList>
@@ -720,7 +1155,93 @@
 										</SwitchContainer>
 									</ChildrenList>
 								</ActorMixer>
+								<Sound Name="EmptyClip" ID="{16E92FB7-E403-4E59-9690-0B87B5CAD841}" ShortID="429303610">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EmptyClip" ID="{ECC084DE-32B1-4319-A797-C67C2C325408}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0436892317902771"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.2"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>EmptyClip.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="544632092"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EmptyClip" ID="{ECC084DE-32B1-4319-A797-C67C2C325408}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Energy" ID="{95AD14AE-349B-4F8B-A530-E8C4D381DE41}" ShortID="284190492">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+						<ActorMixer Name="Health" ID="{AD88A00D-FC6D-46E5-9AFC-17D5D82D0DAB}" ShortID="531288375">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Monsters" ID="{37E7206D-D6EF-480A-B2DB-B030BEE04653}" ShortID="864245185">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Golem" ID="{6BF1F648-A024-4E62-8E16-ECBCEBE79877}" ShortID="253504332">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+						<ActorMixer Name="Goat" ID="{1E9440E6-947E-44BB-9A60-96FE84FA9D2D}" ShortID="579842256">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+								</Reference>
+							</ReferenceList>
 						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>

@@ -6,6 +6,7 @@
 				<SoundBank Name="GameplayLoop" ID="{0C8E0234-0513-445E-9C4B-9223118F94B6}">
 					<ObjectInclusionList>
 						<ObjectRef Name="gunReload" ID="{E3E1306A-DE9B-4107-99AF-8532CB2CE6B1}" WorkUnitID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="gunEmpty" ID="{2A86A847-9D2B-4A49-BF83-7C9FF422E156}" WorkUnitID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="gunShoot" ID="{2EEFE972-7AB9-4BC8-84C2-90D4E13A9F2B}" WorkUnitID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

@@ -1,30 +1,38 @@
 Event	ID	Name			Wwise Object Path	Notes
+	147436440	gunEmpty			\Default Work Unit\Main\Weapons\gunEmpty	
 	323245414	gunReload			\Default Work Unit\Main\Weapons\gunReload	
 	3194616450	gunShoot			\Default Work Unit\Main\Weapons\gunShoot	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
-	283915908	weapon_switch			\Default Work Unit\weapon_switch	
+	2107435045	weaponSwitch			\Default Work Unit\weaponSwitch	
 
 Switch	ID	Name	Switch Group			Notes
-	163030769	gunRifle	weapon_switch			
-	831777997	gunShotgun	weapon_switch			
-	998971168	gunSniper	weapon_switch			
-	2548468192	gunRevolver	weapon_switch			
+	163030769	gunRifle	weaponSwitch			
+	831777997	gunShotgun	weaponSwitch			
+	998971168	gunSniper	weaponSwitch			
+	2548468192	gunRevolver	weaponSwitch			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1240670792	Distance			\Default Work Unit\Distance	
+	2426350174	RoFIncrease			\Default Work Unit\RoFIncrease	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1071208984	Time Stretch (Custom)	Wwise Time Stretch			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	63354751	shotgunPumpStart	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Shotgun PumpStart_19E5A7F7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadStart\shotgunPumpStart		70656
-	77394988	soulReloadSniper	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Soul Reload_90EF86C7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\soulReload\soulReloadSniper		311480
-	92868043	revolverClickIn	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\RevolverClickIn_8347025C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadFinish\revolverClickIn		176496
-	176955351	soulReloadRevolver	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Soul Reload_E8E42B9B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\soulReload\soulReloadRevolver		378316
-	209860096	revolverClickOut	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\RevolverClickOut_7C80F26F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadStart\revolverClickOut		110344
+	63354751	shotgunPumpStart	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Shotgun PumpStart_053E7CBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadStart\shotgunPumpStart		211776
+	92868043	revolverClickIn	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\RevolverClickIn_66489822.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadFinish\revolverClickIn		150036
+	176955351	soulReloadRevolver	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Soul Reload_2588FD3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\soulReload\soulReloadRevolver		176496
+	196452524	soulReloadRifle	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Soul Reload_AE0C83A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\soulReload\soulReloadRifle		352896
+	209860096	revolverClickOut	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\RevolverClickOut_A0F3EDC1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadStart\revolverClickOut		26556
 	244355290	Crystal Shotgun	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Crystal Shotgun_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\GunsShooting\SwitchGunShoot\Crystal Shotgun		529296
-	327693749	sniperShot	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Crystal Sniper_4B7D086F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\GunsShooting\SwitchGunShoot\Crystal Sniper\sniperShot		265320
-	395550836	BoltSlideStart	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\BoltSlideStart_BC84C130.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadStart\BoltSlideStart		341176
-	460143773	shotgunPumpEnd	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Shotgun PumpEnd_F04D4B6F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadFinish\shotgunPumpEnd		44196
-	486002857	soulReloadShotgun	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Soul Reload_E6508C14.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\soulReload\soulReloadShotgun		271400
-	621894801	sniperExplosion	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Sniper Explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\GunsShooting\SwitchGunShoot\Crystal Sniper\sniperExplosion		649248
-	665260187	BoltSlideEnd	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\BoltSlideEnd_20899F11.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadFinish\BoltSlideEnd		159060
+	327693749	sniperShot	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Crystal Sniper_7DD473B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\GunsShooting\SwitchGunShoot\Crystal Sniper\sniperShoot\sniperShot		352896
+	460143773	shotgunPumpEnd	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Shotgun PumpEnd_8321EBBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadFinish\shotgunPumpEnd		53016
+	486002857	soulReloadShotgun	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Soul Reload_067C6D0C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\soulReload\soulReloadShotgun		264696
+	518432802	FullSniperReload	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\FullSniperReload_A6388769.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadStart\FullSniperReload		326436
+	544632092	EmptyClip	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\EmptyClip_7516CE02.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\EmptyClip		35376
+	621894801	sniperExplosion	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Sniper Explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\GunsShooting\SwitchGunShoot\Crystal Sniper\sniperExplode\sniperExplosion		649248
+	774037349	Rifle Reload	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Rifle Reload_8B1AD062.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\Reload\Reloading\gunReloadFinish\Rifle Reload		352896
+	925791996	Crystal Rifle	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Crystal Rifle2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\GunsShooting\SwitchGunShoot\Crystal Rifle		461312
+	957101173	RevolverLaser	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\RevolverLaser_7E427492.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Weapons\GunsShooting\SwitchGunShoot\RevolverLaser		882096
 

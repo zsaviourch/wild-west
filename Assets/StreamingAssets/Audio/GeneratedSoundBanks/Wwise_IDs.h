@@ -13,15 +13,16 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID GUNEMPTY = 147436440U;
         static const AkUniqueID GUNRELOAD = 323245414U;
         static const AkUniqueID GUNSHOOT = 3194616450U;
     } // namespace EVENTS
 
     namespace SWITCHES
     {
-        namespace WEAPON_SWITCH
+        namespace WEAPONSWITCH
         {
-            static const AkUniqueID GROUP = 283915908U;
+            static const AkUniqueID GROUP = 2107435045U;
 
             namespace SWITCH
             {
@@ -30,7 +31,7 @@ namespace AK
                 static const AkUniqueID GUNSHOTGUN = 831777997U;
                 static const AkUniqueID GUNSNIPER = 998971168U;
             } // namespace SWITCH
-        } // namespace WEAPON_SWITCH
+        } // namespace WEAPONSWITCH
 
     } // namespace SWITCHES
 
@@ -38,6 +39,7 @@ namespace AK
     {
         static const AkUniqueID DISTANCE = 1240670792U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID ROFINCREASE = 2426350174U;
         static const AkUniqueID SFXVOLUME = 988953028U;
     } // namespace GAME_PARAMETERS
 
