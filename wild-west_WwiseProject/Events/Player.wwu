@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" SchemaVersion="110" RootDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" ParentDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}">
+	<Events>
+		<WorkUnit Name="Player" ID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" OwnerID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="General" ID="{4F0DACD6-41EB-40C0-947A-B2F8927CEF0D}" ShortID="487368113">
+					<ChildrenList>
+						<Event Name="gunEmpty" ID="{2A86A847-9D2B-4A49-BF83-7C9FF422E156}">
+							<ChildrenList>
+								<Action Name="" ID="{750A4418-2DA7-49A1-81CC-148486455785}" ShortID="462601841">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="emptyClip" ID="{16E92FB7-E403-4E59-9690-0B87B5CAD841}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gunReload" ID="{E3E1306A-DE9B-4107-99AF-8532CB2CE6B1}">
+							<ChildrenList>
+								<Action Name="" ID="{CF63E414-DF95-45FB-80C7-29FF9A1EF65B}" ShortID="88635330">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Reloading" ID="{26DED26A-F49A-4483-9217-38A6B28EB5FE}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BD103BD8-F76F-4270-BCC3-699BEA10173C}" ShortID="95043481">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="soulReload" ID="{7E076551-CFD0-40FC-BD04-EF2728A2B64C}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="gunShoot" ID="{2EEFE972-7AB9-4BC8-84C2-90D4E13A9F2B}">
+							<ChildrenList>
+								<Action Name="" ID="{79304784-FBB3-4906-A007-235770B04E2A}" ShortID="59079265">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SwitchGunShoot" ID="{C61173D1-2523-45AE-96BF-955AA788DD0E}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerHurt" ID="{4D8D52F2-0EC2-4046-866A-7AF2954A7D0E}"/>
+						<Event Name="playerDie" ID="{9058AAA9-8F66-48E8-9074-E7BCD08B587A}"/>
+						<Event Name="soulPickUp" ID="{65401D85-77DA-463A-B4E4-1F8C2D1AF365}"/>
+						<Event Name="sniperExplode" ID="{8D2EA042-A4C3-4F15-981D-DF35FDD55E0C}">
+							<ChildrenList>
+								<Action Name="" ID="{FC8FC55D-6776-4B04-B342-99FEF5F95209}" ShortID="890423813">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="sniperExplode" ID="{000B8F83-CDCD-4D12-B53A-E883B867E11E}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerDash" ID="{535AE50B-7C4D-4558-AB6D-A8A4B46254B4}"/>
+						<Event Name="playerHealthMax" ID="{DE5F43CE-DA03-4203-88E2-236298827C6D}"/>
+						<Event Name="playerHealthLow" ID="{009B7011-4F3D-4D3C-8DA8-8594DC277430}"/>
+						<Event Name="playerEnergyMax" ID="{D7DACC84-FE88-4BFE-9118-D9230365A41E}"/>
+						<Event Name="playerEnergyLow" ID="{C486F123-83F6-4C14-BF42-8581E1407A72}"/>
+						<Event Name="playerEnergyEmpty" ID="{773D51E0-38A1-423A-AE9D-2D18C1294C07}"/>
+						<Event Name="playerHealthPickUp" ID="{2936D239-8F69-45AE-AD59-E3553C81B2E2}"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

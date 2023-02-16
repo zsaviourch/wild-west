@@ -26,6 +26,8 @@ public class GeneralGun : MonoBehaviour
     public bool reloadInitiated;
     public int energyConsumePerBullet;
 
+    public Transform shootingPos;
+
     // Constructor
     public GeneralGun(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
         float minimumReloadingTime, float fullyReloadedTime, GameObject bulletPrefab, BulletType bulletType)
@@ -154,6 +156,7 @@ public class GeneralGun : MonoBehaviour
         energyConsumePerBullet = FindEnergyConsumePerBullet(this.bulletType);
         currentShootingTime = 0f;
         shootInitiated = true;
+        shootingPos = GameObject.FindWithTag("shootingPos").transform;
 
     }
 
@@ -164,7 +167,7 @@ public class GeneralGun : MonoBehaviour
         {
             reloadInitiated = true;
             currentReloadTime += Time.deltaTime;
-            Reload(Time.deltaTime);
+            Reload();
         }
 
         // Shoot
@@ -186,12 +189,12 @@ public class GeneralGun : MonoBehaviour
     }
 
     // methods
-    public void Reload(float reloadingTime)
+    public void Reload()
     {
         // Play reloading animation here
 
         // Replenish one unit energy
-        currentEnergyAmount += (int) (reloadingTime / energyRegeneratePerSecond);
+        currentEnergyAmount += energyRegeneratePerSecond;
     }
 
     public int FindEnergyConsumePerBullet (BulletType type)
@@ -223,7 +226,7 @@ public class GeneralGun : MonoBehaviour
     {
         if (shootInitiated == true)
         {
-            Instantiate(bulletPrefab, gameObject.transform.position, Quaternion.identity);
+            Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;

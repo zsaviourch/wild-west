@@ -6,6 +6,9 @@ TagManager:
   tags:
   - enemy
   - obstacle
+  - jasperRifle
+  - shootingPos
+  - ground
   layers:
   - Default
   - TransparentFX

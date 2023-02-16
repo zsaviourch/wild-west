@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" SchemaVersion="110" RootDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" ParentDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}">
+	<Events>
+		<WorkUnit Name="Enemies" ID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" OwnerID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" PersistMode="Nested">
+			<ChildrenList>
+				<Folder Name="Lamia" ID="{6D94C795-D119-4D23-8EF9-1EEF1BCA8F62}" ShortID="10284555">
+					<ChildrenList>
+						<Event Name="lamiaAttack" ID="{A1099B03-81F1-4FBC-884A-5DD171C6B068}">
+							<ChildrenList>
+								<Action Name="" ID="{A7D76F1F-A243-4D9B-970E-4A60BEF20D79}" ShortID="1000616900">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="lamiaAttack" ID="{F95F889C-1C95-4265-9024-8F3CC4122669}" WorkUnitID="{8AC3C847-CE75-42CE-8C10-B61AB0E0011E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="lamiaHurt" ID="{8D73B84A-D7EE-460F-A3B8-04323C1AE830}">
+							<ChildrenList>
+								<Action Name="" ID="{369D68DA-F0AB-407F-8630-4B948A7CF0C7}" ShortID="294120764">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="lamiaHurt" ID="{83B05967-8E4F-44C2-8696-2E397CAA9420}" WorkUnitID="{8AC3C847-CE75-42CE-8C10-B61AB0E0011E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="lamiaDie" ID="{8C6AC4DA-9EE3-4876-BCBC-C6FE7307A39F}">
+							<ChildrenList>
+								<Action Name="" ID="{ED6D3041-23EA-4BEE-AD86-16A0D716D708}" ShortID="473437459">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="lamiaDie" ID="{A648F0B6-9C65-461A-A420-FE4AE73D6FF4}" WorkUnitID="{8AC3C847-CE75-42CE-8C10-B61AB0E0011E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Amber Golem" ID="{ED1D4DB0-3855-468C-A559-4D5966485A6F}" ShortID="228078647">
+					<ChildrenList>
+						<Event Name="golemHurt" ID="{82266AE4-DCB1-4711-8481-E546D87307B9}"/>
+						<Event Name="golemAttack" ID="{AD100515-6BA8-4786-A4E7-257D7CB7F2E4}"/>
+						<Event Name="golemDie" ID="{E91C0C15-43E6-43EC-9FE8-D2A7F56278F3}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ice Goat" ID="{C26EB4F8-D960-427F-95FC-F14EDFBCC872}" ShortID="986249903">
+					<ChildrenList>
+						<Event Name="goatAttack" ID="{422D8CEB-A397-494F-ADB5-00C3A603C90C}">
+							<ChildrenList>
+								<Action Name="" ID="{118D3B93-E556-4254-A45D-C75B8F9DA40F}" ShortID="560307838">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="iceGoatAttack" ID="{BC30B8D3-3D09-452D-B38C-A3E698F173B7}" WorkUnitID="{93BA759F-C997-4D76-934A-909046F9BDA7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="goatHurt" ID="{62CB2535-9D17-4A6C-86AE-760DE1546DBB}">
+							<ChildrenList>
+								<Action Name="" ID="{B2EC1B72-592E-4C77-94B5-765B07869049}" ShortID="1038813559">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="IceGoatHurt" ID="{F04DFE17-E9B2-4AD9-8D10-777FB4A09079}" WorkUnitID="{93BA759F-C997-4D76-934A-909046F9BDA7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="goatDie" ID="{A8795B55-1C53-478E-8C1C-BF4C8ADCB3B6}">
+							<ChildrenList>
+								<Action Name="" ID="{62101A3D-1D36-4C8D-8DDD-A7BB47C07EDB}" ShortID="928992370">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="iceGoatDie" ID="{FF57682C-FB04-4562-93C8-4B152482ADEC}" WorkUnitID="{93BA759F-C997-4D76-934A-909046F9BDA7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Tikbalang" ID="{5BDC152C-0BD7-4584-9711-1D93565ECDAF}" ShortID="427211991">
+					<ChildrenList>
+						<Event Name="tikbalangHurt" ID="{52139911-4740-4104-A9AC-757AB2CF3E9F}"/>
+						<Event Name="tikbalangDie" ID="{C04B97BD-AB4C-42D5-A7FD-370A710CF2AC}"/>
+						<Event Name="tikbalangAttack" ID="{CF9972DB-54C9-429D-B922-A705659D1137}"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Wendigo" ID="{B53E1CDE-38C7-4545-9144-67F1B7C61063}" ShortID="431475252">
+					<ChildrenList>
+						<Event Name="wendigoSlam" ID="{BE515E43-67A9-483B-8EED-FA71FED3A45C}"/>
+						<Event Name="wendigoSlash" ID="{9EAB7885-2B3B-4B95-8E54-941ADB2B750E}"/>
+						<Event Name="wendigoHurt" ID="{A7800EBC-1C31-443F-831F-B51DB5E42C99}"/>
+						<Event Name="wendigoDie" ID="{BAC702CB-54AF-4FE8-8A14-C1AC2E5C6B7D}"/>
+						<Event Name="wendigoMissile" ID="{B1AFB99D-7DBB-4DA4-BBD1-2F952FC66CE8}"/>
+						<Event Name="wendigoCharge" ID="{F1DAEC66-C640-41A3-B318-2D67C8491743}"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
