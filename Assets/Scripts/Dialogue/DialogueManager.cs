@@ -27,6 +27,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private Image _speaker;
 
+    [Header("Character Data")]
+    private List<DialogueSpeaker> _speakerList;
+
+
     private Dictionary<int, Dialogue> _dialogues = new Dictionary<int, Dialogue>();
 
     private static DialogueManager s_instance;

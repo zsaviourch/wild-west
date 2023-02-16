@@ -36,6 +36,7 @@ public class DialogueSpeaker
 {
     public string Name;
     public Sprite Speaker;
+    public Color Color;
 }
 
 public enum DialogueTownLevel
