@@ -28,6 +28,7 @@ public class DialogueManager : MonoBehaviour
     private Image _speaker;
 
     [Header("Character Data")]
+    [SerializeField]
     private List<DialogueSpeaker> _speakerList;
 
 
@@ -175,6 +176,16 @@ public class DialogueManager : MonoBehaviour
         }
 
         DialogueSentence dialog = _dialogueSentences.Dequeue();
+        Color color = Color.black;
+        foreach (DialogueSpeaker speaker in _speakerList)
+        {
+            if (speaker.Name.Contains(dialog.Name, StringComparison.CurrentCultureIgnoreCase))
+            {
+                color = speaker.Color;
+            }
+        }
+
+        _nameText.color = color;
         _nameText.text = dialog.Name;
         _descriptionText.text = dialog.Description;
     }

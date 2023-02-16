@@ -914,6 +914,55 @@ MonoBehaviour:
   _dialogueAsset: {fileID: 4900000, guid: e66ab455de1f08b468f908c249cd022d, type: 3}
   _animator: {fileID: 1611322595009320153}
   _speaker: {fileID: 0}
+  _speakerList:
+  - Name: Weston
+    Speaker: {fileID: 0}
+    Color: {r: 1, g: 0.4655665, b: 0, a: 1}
+  - Name: Gangster
+    Speaker: {fileID: 0}
+    Color: {r: 0, g: 0, b: 0, a: 1}
+  - Name: Marev
+    Speaker: {fileID: 0}
+    Color: {r: 1, g: 0, b: 0.599278, a: 1}
+  - Name: Sarah
+    Speaker: {fileID: 0}
+    Color: {r: 0.94698524, g: 0, b: 1, a: 1}
+  - Name: Nick
+    Speaker: {fileID: 0}
+    Color: {r: 0.53671026, g: 0, b: 1, a: 1}
+  - Name: Joel
+    Speaker: {fileID: 0}
+    Color: {r: 0.05724907, g: 0, b: 1, a: 1}
+  - Name: Nicole
+    Speaker: {fileID: 0}
+    Color: {r: 0, g: 0.4833598, b: 1, a: 1}
+  - Name: Frank
+    Speaker: {fileID: 0}
+    Color: {r: 0, g: 0.7544613, b: 1, a: 1}
+  - Name: Samantha
+    Speaker: {fileID: 0}
+    Color: {r: 0, g: 0.9853697, b: 1, a: 1}
+  - Name: Carlos
+    Speaker: {fileID: 0}
+    Color: {r: 0, g: 1, b: 0.5419581, a: 1}
+  - Name: Hector
+    Speaker: {fileID: 0}
+    Color: {r: 0, g: 1, b: 0.16528296, a: 1}
+  - Name: Tony
+    Speaker: {fileID: 0}
+    Color: {r: 0.25894284, g: 1, b: 0, a: 1}
+  - Name: Luna
+    Speaker: {fileID: 0}
+    Color: {r: 0.7021512, g: 1, b: 0, a: 1}
+  - Name: Mary
+    Speaker: {fileID: 0}
+    Color: {r: 1, g: 0.93744016, b: 0, a: 1}
+  - Name: Katherine
+    Speaker: {fileID: 0}
+    Color: {r: 1, g: 0.70506436, b: 0, a: 1}
+  - Name: Wendigo
+    Speaker: {fileID: 0}
+    Color: {r: 1, g: 0, b: 0.023768902, a: 1}
 --- !u!95 &1611322595009320153
 Animator:
   serializedVersion: 5
