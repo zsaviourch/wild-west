@@ -44,7 +44,9 @@
 							<Value>50</Value>
 						</RTPCValue>
 					</RTPCValueList>
-					<CurrentStateList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="musicLevel" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="gunSniper" ID="{9D5924F8-18FF-46FE-85AF-BC218BF61C37}"/>
 					</CurrentSwitchList>

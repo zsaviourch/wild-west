@@ -4,12 +4,15 @@
 		<WorkUnit Name="Player" ID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}" OwnerID="{C5F2B8FC-B476-4FCD-B50C-F831B9A10B43}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="Player" ID="{39E7FAF4-5C56-4A2D-BB2A-003CE5A4CB7D}" ShortID="825704313">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+							<ObjectRef Name="Player" ID="{D722E6F7-BA3D-432A-8E3B-8E04018C7FAB}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -65,7 +68,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 														</Reference>
 														<Reference Name="DefaultSwitchOrState">
-															<ObjectRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+															<ObjectRef Name="gunRifle" ID="{BE14D35F-9EA7-42A7-A259-3EA0AC7BD1B0}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
 														</Reference>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -130,40 +133,6 @@
 																<ActiveSource Name="Shotgun PumpEnd" ID="{C69C147B-9666-4281-BC26-2A339E4317DA}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
-														<Sound Name="BoltSlideEnd" ID="{9970233E-02F5-4192-8202-4C02B158FB5C}" ShortID="271207581">
-															<PropertyList>
-																<Property Name="Inclusion" Type="bool">
-																	<ValueList>
-																		<Value>False</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="BoltSlideEnd" ID="{ABFF3D63-466E-48DA-9474-F6A62788BA4D}">
-																	<PropertyList>
-																		<Property Name="LoopBegin" Type="Real64" Value="0.0988446726572529"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="0.0988446726572529"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>BoltSlideEnd.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="665260187"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="BoltSlideEnd" ID="{ABFF3D63-466E-48DA-9474-F6A62788BA4D}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
 														<Sound Name="Rifle Reload" ID="{11AD7A97-98DB-45EB-8ECD-A5EC4CB2E8FE}" ShortID="796264930">
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -195,9 +164,6 @@
 													</ChildrenList>
 													<GroupingInfo>
 														<GroupingBehaviorList>
-															<GroupingBehavior>
-																<ItemRef Name="BoltSlideEnd" ID="{9970233E-02F5-4192-8202-4C02B158FB5C}"/>
-															</GroupingBehavior>
 															<GroupingBehavior>
 																<ItemRef Name="revolverClickIn" ID="{44B7644D-E32D-4CA4-9DAE-44A1DC5D2179}"/>
 															</GroupingBehavior>
@@ -236,7 +202,7 @@
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 														</Reference>
 														<Reference Name="DefaultSwitchOrState">
-															<ObjectRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+															<ObjectRef Name="gunRifle" ID="{BE14D35F-9EA7-42A7-A259-3EA0AC7BD1B0}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
 														</Reference>
 														<Reference Name="OutputBus">
 															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -307,41 +273,6 @@
 															</ChildrenList>
 															<ActiveSourceList>
 																<ActiveSource Name="RevolverClickOut" ID="{C0B5E43A-D5C7-4885-A967-C6C316CD2C73}" Platform="Linked"/>
-															</ActiveSourceList>
-														</Sound>
-														<Sound Name="BoltSlideStart" ID="{238B5350-34C7-4D81-A4AB-D25F6EA93A54}" ShortID="477113352">
-															<PropertyList>
-																<Property Name="Inclusion" Type="bool">
-																	<ValueList>
-																		<Value>False</Value>
-																	</ValueList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<AudioFileSource Name="BoltSlideStart" ID="{5689F6C3-9CDD-45C1-B500-D708C18A0EC2}">
-																	<PropertyList>
-																		<Property Name="FadeOutDuration" Type="Real64" Value="0.181322207958922"/>
-																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																		<Property Name="TrimBegin" Type="Real64" Value="0.627406931964057"/>
-																		<Property Name="TrimEnd" Type="Real64" Value="1.2997432605905"/>
-																	</PropertyList>
-																	<Language>SFX</Language>
-																	<AudioFile>BoltSlideStart.wav</AudioFile>
-																	<MediaIDList>
-																		<MediaID ID="395550836"/>
-																	</MediaIDList>
-																</AudioFileSource>
-															</ChildrenList>
-															<ActiveSourceList>
-																<ActiveSource Name="BoltSlideStart" ID="{5689F6C3-9CDD-45C1-B500-D708C18A0EC2}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
 														<Sound Name="FullSniperReload" ID="{E6B41EFD-5DFB-4A4C-B26F-C5ECFE44D9D8}" ShortID="201782391">
@@ -437,9 +368,6 @@
 													<GroupingInfo>
 														<GroupingBehaviorList>
 															<GroupingBehavior>
-																<ItemRef Name="BoltSlideStart" ID="{238B5350-34C7-4D81-A4AB-D25F6EA93A54}"/>
-															</GroupingBehavior>
-															<GroupingBehavior>
 																<ItemRef Name="shotgunPumpStart" ID="{F5B17088-DBBD-4B97-8309-355E0CFA7A25}"/>
 															</GroupingBehavior>
 															<GroupingBehavior>
@@ -492,7 +420,7 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 												</Reference>
 												<Reference Name="DefaultSwitchOrState">
-													<ObjectRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+													<ObjectRef Name="gunRifle" ID="{BE14D35F-9EA7-42A7-A259-3EA0AC7BD1B0}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
 												</Reference>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -546,57 +474,6 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="Soul Reload" ID="{2E4A5C7D-1F69-48D0-B1DE-9F2B638167CA}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="soulReloadSniper" ID="{E4C47FBB-2E23-48B6-B998-658BBAEF4DD5}" ShortID="990287033">
-													<PropertyList>
-														<Property Name="Inclusion" Type="bool">
-															<ValueList>
-																<Value>False</Value>
-															</ValueList>
-														</Property>
-														<Property Name="Pitch" Type="int32">
-															<ModifierList>
-																<ModifierInfo>
-																	<Modifier Name="" ID="{FE14E3E6-5C56-4D13-8CCF-8F3EE06BF984}">
-																		<PropertyList>
-																			<Property Name="Enabled" Type="bool" Value="True"/>
-																			<Property Name="Max" Type="Real64" Value="75"/>
-																			<Property Name="Min" Type="Real64" Value="-75"/>
-																		</PropertyList>
-																	</Modifier>
-																</ModifierInfo>
-															</ModifierList>
-														</Property>
-														<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Soul Reload" ID="{510A06E9-FA2D-42FD-836B-252770F68986}">
-															<PropertyList>
-																<Property Name="CrossfadeShape" Type="int16" Value="0"/>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.217586649550706"/>
-																<Property Name="FadeInShape" Type="int16" Value="9"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.112002567394094"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="2"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>Soul Reload.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="77394988"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Soul Reload" ID="{510A06E9-FA2D-42FD-836B-252770F68986}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="soulReloadRifle" ID="{9368CA33-A21E-467E-9841-093D3ECAB1D2}" ShortID="357376288">
@@ -714,9 +591,6 @@
 													<GroupingBehavior>
 														<ItemRef Name="soulReloadRevolver" ID="{B885E6AC-8AB8-4D35-A27E-2EF5EED07C22}"/>
 													</GroupingBehavior>
-													<GroupingBehavior>
-														<ItemRef Name="soulReloadSniper" ID="{E4C47FBB-2E23-48B6-B998-658BBAEF4DD5}"/>
-													</GroupingBehavior>
 												</GroupingBehaviorList>
 												<GroupingList>
 													<Grouping>
@@ -735,12 +609,6 @@
 														<SwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
 														<ItemList>
 															<ItemRef Name="soulReloadShotgun" ID="{816C1E59-614F-4678-B9DC-28B66C4C7876}"/>
-														</ItemList>
-													</Grouping>
-													<Grouping>
-														<SwitchRef Name="gunSniper" ID="{9D5924F8-18FF-46FE-85AF-BC218BF61C37}"/>
-														<ItemList>
-															<ItemRef Name="soulReloadSniper" ID="{E4C47FBB-2E23-48B6-B998-658BBAEF4DD5}"/>
 														</ItemList>
 													</Grouping>
 												</GroupingList>
@@ -1154,6 +1022,58 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Footsteps" ID="{09BD4B2D-D6DB-4F3C-97E0-4CF17412E1A6}" ShortID="897344502">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<Sound Name="Player Dash" ID="{68727313-2F43-42D3-A1E7-FFD950859859}" ShortID="331748736">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>800</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Dash" ID="{25A9556B-A4AB-47D1-9AF0-D95BBBB5CA97}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0314374787142072"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.229377159507363"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.574025074300152"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Player Dash.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="148884185"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Dash" ID="{25A9556B-A4AB-47D1-9AF0-D95BBBB5CA97}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Pickup" ID="{245E2B17-B846-49F2-8B1B-5896C088D8CC}" ShortID="688301910">
 							<ReferenceList>
@@ -1164,6 +1084,19 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<SwitchContainer Name="PickupType" ID="{71ECCB37-2BB1-407E-8165-E7FDDF037FBA}" ShortID="322869324">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+										</Reference>
+									</ReferenceList>
+									<GroupingInfo/>
+								</SwitchContainer>
+							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>

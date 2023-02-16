@@ -20,6 +20,7 @@
 										<Bus Name="Dialogue" ID="{349DD9AE-9D48-4FB6-99D7-0EE70EC98B24}"/>
 									</ChildrenList>
 								</Bus>
+								<Bus Name="Objects" ID="{0F100DE2-6917-43F8-BC98-EBC530DA3889}"/>
 							</ChildrenList>
 						</Bus>
 						<Bus Name="Non-World" ID="{C05F8D4D-CBA9-4A02-8680-B0C60EF85197}">

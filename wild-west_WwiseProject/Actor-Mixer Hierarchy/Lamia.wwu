@@ -174,7 +174,8 @@
 												<Property Name="FadeInDuration" Type="Real64" Value="0.0464163311880165"/>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0601302472208396"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.600247555590486"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.113930994734222"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.45466906231898"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Lamia Hurt.wav</AudioFile>

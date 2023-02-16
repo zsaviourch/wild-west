@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3E3014C6-4447-4AE7-87B6-99DBA3D1A1DB}" SchemaVersion="110" RootDocumentID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}" ParentDocumentID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}">
+	<AudioObjects>
+		<WorkUnit Name="UI" ID="{3E3014C6-4447-4AE7-87B6-99DBA3D1A1DB}" OwnerID="{14525E30-6230-416B-BF25-76183F755397}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="UI" ID="{EAADC0F9-BF69-4CA0-A6F8-343649F5B5D3}" ShortID="237517152">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Buttons" ID="{A420013F-962D-403B-AAA3-B86B5DF0135A}" ShortID="576996302">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

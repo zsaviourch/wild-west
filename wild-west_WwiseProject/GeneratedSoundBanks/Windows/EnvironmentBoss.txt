@@ -1,8 +1,17 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1016938702	wendigoCharge			\Default Work Unit\Enemies\Wendigo\wendigoCharge	
+	947858520	wendigoShieldHit			\Default Work Unit\Enemies\Wendigo\wendigoShieldHit	
 	1753832348	wendigoDie			\Default Work Unit\Enemies\Wendigo\wendigoDie	
 	1823178165	wendigoSlash			\Default Work Unit\Enemies\Wendigo\wendigoSlash	
 	2286643954	wendigoMissile			\Default Work Unit\Enemies\Wendigo\wendigoMissile	
-	3438274769	wendigoSlam			\Default Work Unit\Enemies\Wendigo\wendigoSlam	
+	4157141718	wendigoSmash			\Default Work Unit\Enemies\Wendigo\wendigoSmash	
 	4294852885	wendigoHurt			\Default Work Unit\Enemies\Wendigo\wendigoHurt	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	32132433	Wendigo Hurt	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Wendigo Hurt_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoHurt\Wendigo Hurt		264696
+	266832190	wendigoSmash2	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Ice Goat Attack2_343F3CD6.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoSmash\wendigoSmash2		138852
+	272332325	Wendigo Die	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Wendigo Die_EAADB52E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoDie\Wendigo Die		313268
+	499674927	wendigoSmash1	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Ice Goat Attack1_5FC8F211.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoSmash\wendigoSmash1		161656
+	736210807	golemShieldHit	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Goelm Shield Hit_C8774590.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoShield\golemShieldHit		51468
+	937120721	Wendigo Missile	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Wendigo Missile_B19020D1.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoMissile\Wendigo Missile		165688
+	940912880	Wendigo Slash	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Wendigo Slash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoSlash\Wendigo Slash		352896
 

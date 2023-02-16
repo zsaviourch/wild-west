@@ -4,6 +4,7 @@
 		<WorkUnit Name="Objects" ID="{F4E28F67-05B8-4BD9-98C0-E62661DE4C23}" OwnerID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" PersistMode="Nested">
 			<ChildrenList>
 				<Event Name="soulDrop" ID="{722DB41A-B8C1-44D8-81D8-48472809F11F}"/>
+				<Event Name="healthDrop" ID="{B7A5CE90-0257-4682-BE7F-10A05BAB00A8}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
