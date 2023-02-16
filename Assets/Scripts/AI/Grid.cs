@@ -7,6 +7,14 @@ public class Node
     public Vector2 worldPosition;
     public int gridX;
     public int gridY;
+    public Node parent;
+    
+    // gCost is the cost of moving to a node from the starting node
+    public int gCost;
+    // hCost is the heuristic cost of moving from a node to the end node
+    public int hCost;
+    // fCost is the sum of gCost and hCost
+    public int fCost { get { return gCost + hCost; } }
 
     public Node(bool isWalkable, Vector2 worldPosition, int gridX, int gridY)
     {
@@ -16,6 +24,7 @@ public class Node
         this.gridY = gridY;
     }
 }
+
 
 
 public class Grid : MonoBehaviour
