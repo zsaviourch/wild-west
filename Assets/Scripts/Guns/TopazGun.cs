@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneralGun : MonoBehaviour
+public class TopazGun : MonoBehaviour
 {
     // References
     [SerializeField] int energyInitialAmount;
@@ -27,10 +27,14 @@ public class GeneralGun : MonoBehaviour
     public int energyConsumePerBullet;
 
     public Transform shootingPos;
+    public bool mouseButtonDown;
+    public bool shootingPrepared;
+    [SerializeField] float shootingPreparationTime;
+    public float currentShootingPreparationTime;
 
     // Constructor
-    public GeneralGun(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
-        float minimumReloadingTime, float fullyReloadedTime, GameObject bulletPrefab, BulletType bulletType)
+    public TopazGun(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
+        float minimumReloadingTime, float fullyReloadedTime, GameObject bulletPrefab, BulletType bulletType, float shootingPreparationTime)
     {
         this.energyInitialAmount = energyInitialAmount;
         this.firingFrequencyInterval = firingFrequencyInterval;
@@ -40,6 +44,7 @@ public class GeneralGun : MonoBehaviour
         this.fullyReloadedTime = fullyReloadedTime;
         this.bulletType = bulletType;
         this.bulletPrefab = bulletPrefab;
+        this.shootingPreparationTime = shootingPreparationTime;
     }
 
     // property access
@@ -157,6 +162,9 @@ public class GeneralGun : MonoBehaviour
         currentShootingTime = 0f;
         shootInitiated = true;
         shootingPos = GameObject.FindWithTag("shootingPos").transform;
+        mouseButtonDown = false;
+        shootingPrepared = false;
+        currentShootingPreparationTime = 0f;
 
     }
 
@@ -170,8 +178,18 @@ public class GeneralGun : MonoBehaviour
             Reload();
         }
 
+        // Check whether the mouse button has been held down constantly
+        if (Input.GetMouseButtonDown(0))
+        {
+            mouseButtonDown = true;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            mouseButtonDown = false;
+        }
+
         // Shoot
-        if (Input.GetKeyUp(KeyCode.Mouse0) && currentEnergyAmount > energyConsumePerBullet)
+        if (shootingPrepared && mouseButtonDown && shootInitiated && currentEnergyAmount > energyConsumePerBullet)
         {
             Shoot();
         }
@@ -180,12 +198,34 @@ public class GeneralGun : MonoBehaviour
         if (currentShootingTime <= firingFrequencyInterval)
         {
             currentShootingTime += Time.deltaTime;
+            shootInitiated = false;
         }
         else
         {
             shootInitiated = true;
             currentShootingTime = 0f;
         }
+
+        // Shooting 2s preparation time update
+        if (mouseButtonDown)
+        {
+            if (currentShootingPreparationTime < shootingPreparationTime)
+            {
+                currentShootingPreparationTime += Time.deltaTime;
+                shootingPrepared = false;
+            }
+            else
+            {
+                shootingPrepared = true;
+            }
+        }
+        else
+        {
+            currentShootingPreparationTime = 0f;
+            shootingPrepared = false;
+        }
+        
+        
     }
 
     // methods
@@ -197,7 +237,7 @@ public class GeneralGun : MonoBehaviour
         currentEnergyAmount += energyRegeneratePerSecond;
     }
 
-    public int FindEnergyConsumePerBullet (BulletType type)
+    public int FindEnergyConsumePerBullet(BulletType type)
     {
         int cost = -1;
         switch (type)
@@ -212,7 +252,7 @@ public class GeneralGun : MonoBehaviour
                 cost = 15;
                 break;
             case BulletType.TopazGunBullet:
-                cost = 20;
+                cost = 1;
                 break;
         }
         if (cost == -1)
@@ -226,11 +266,12 @@ public class GeneralGun : MonoBehaviour
     {
         if (shootInitiated == true)
         {
-            Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            bullet.transform.forward = -shootingPos.up;
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
+
         }
     }
-
 }

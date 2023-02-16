@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneralGun : MonoBehaviour
+public class BerylShotgun : MonoBehaviour
 {
     // References
     [SerializeField] int energyInitialAmount;
@@ -29,7 +29,7 @@ public class GeneralGun : MonoBehaviour
     public Transform shootingPos;
 
     // Constructor
-    public GeneralGun(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
+    public BerylShotgun(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
         float minimumReloadingTime, float fullyReloadedTime, GameObject bulletPrefab, BulletType bulletType)
     {
         this.energyInitialAmount = energyInitialAmount;
@@ -197,7 +197,7 @@ public class GeneralGun : MonoBehaviour
         currentEnergyAmount += energyRegeneratePerSecond;
     }
 
-    public int FindEnergyConsumePerBullet (BulletType type)
+    public int FindEnergyConsumePerBullet(BulletType type)
     {
         int cost = -1;
         switch (type)
@@ -226,11 +226,24 @@ public class GeneralGun : MonoBehaviour
     {
         if (shootInitiated == true)
         {
-            Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            GameObject Bullet1 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet1.transform.forward = -shootingPos.up;
+            Bullet1.transform.Rotate(new Vector3(0, 30, 0));
+            GameObject Bullet2 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet2.transform.forward = -shootingPos.up;
+            Bullet2.transform.Rotate(new Vector3(0, 15, 0));
+            GameObject Bullet3 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet3.transform.forward = -shootingPos.up;
+            GameObject Bullet4 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet4.transform.forward = -shootingPos.up;
+            Bullet4.transform.Rotate(new Vector3(0, -15, 0));
+            GameObject Bullet5 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet5.transform.forward = -shootingPos.up;
+            Bullet5.transform.Rotate(new Vector3(0, -30, 0));
+            
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
         }
     }
-
 }

@@ -14,6 +14,10 @@ public class JasperRifleBullet : MonoBehaviour
     [SerializeField] float bulletTravelTime;
     public float currentBulletTravelTime;
     public Rigidbody rb;
+    public Transform shootingPosTransform;
+    public bool closestEnemyFound;
+    public bool seekingEnemyInitiated;
+    public Vector3 closestEnemyPos;
 
     // constructor
     public JasperRifleBullet(int energyConsumedPerBullet, int bulletDamage, int bulletSpeedScaler, bool bulletFollowEnemy,
@@ -147,6 +151,9 @@ public class JasperRifleBullet : MonoBehaviour
     {
         currentBulletTravelTime = 0f;
         rb = GetComponent<Rigidbody>();
+        shootingPosTransform = GameObject.FindWithTag("shootingPos").transform;
+        closestEnemyFound = false;
+        seekingEnemyInitiated = false;
     }
 
 
@@ -172,7 +179,34 @@ public class JasperRifleBullet : MonoBehaviour
     {
         currentBulletTravelTime += Time.deltaTime;
         DestroyBulletWhenExistingTooLong();
-        rb.AddForce(Vector3.forward * bulletSpeedScaler, ForceMode.Acceleration);
+
+        if (closestEnemyFound)
+        {
+
+            if (Vector3.Distance(transform.position, closestEnemyPos) > 5)
+            {
+                rb.AddForce(-shootingPosTransform.up * bulletSpeedScaler, ForceMode.Acceleration);
+                rb.AddForce(((closestEnemyPos - transform.position).normalized) * 2f * bulletSpeedScaler, ForceMode.Acceleration);
+            }
+            else
+            {
+                Vector3 followingTargetDirection = Vector3.MoveTowards(transform.position, closestEnemyPos, bulletSpeedScaler * Time.deltaTime);
+                Vector3 upDirection = Vector3.MoveTowards(transform.position, -shootingPosTransform.up, bulletSpeedScaler * Time.deltaTime);
+                transform.position = followingTargetDirection;
+            }
+            
+        }
+        else
+        {
+            if (seekingEnemyInitiated == false)
+            {
+                closestEnemyPos = ReturnClosestEnemyPosition();
+                seekingEnemyInitiated = true;
+            }
+
+            rb.AddForce(-shootingPosTransform.up * bulletSpeedScaler, ForceMode.Acceleration);
+        }
+        
         
     }
 
@@ -182,5 +216,42 @@ public class JasperRifleBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    // Return the closest enemy position, it returns Vector3.zero if no enemy found
+    public Vector3 ReturnClosestEnemyPosition ()
+    {
+        float minimumDistance = Mathf.Infinity;
+        Vector3 closestEnemyPos = Vector3.zero;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        if (enemies != null)
+        {
+            foreach (GameObject enemy in enemies)
+            {
+
+                Vector3 enemyPosition = enemy.transform.position;
+                float distance = Vector3.Distance(enemyPosition, transform.position);
+                if (distance < minimumDistance)
+                {
+                    minimumDistance = distance;
+                    closestEnemyPos = enemyPosition;
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("There is no enemy!");
+        }
+
+        if (closestEnemyPos != Vector3.zero)
+        {
+            closestEnemyFound = true;
+        }
+        else
+        {
+            closestEnemyFound = false;
+        }
+   
+        return closestEnemyPos;
     }
 }

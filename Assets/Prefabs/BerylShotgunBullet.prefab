@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 229193747146238009}
   - component: {fileID: 229193747146238008}
   - component: {fileID: 229193747146238011}
-  - component: {fileID: 229193747146238010}
   - component: {fileID: 8905264303773702188}
+  - component: {fileID: -1252812056663785639}
   m_Layer: 0
-  m_Name: JasperBullet
+  m_Name: BerylShotgunBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,33 +130,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &229193747146238010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229193747146238013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33dd78252aef547d399123bb44f176cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energyConsumedPerBullet: 5
-  bulletDamage: 10
-  bulletSpeedScaler: 100
-  bulletFollowEnemy: 1
-  aoeDamage: 0
-  aoeDamageAmount: 0
-  bulletTravelTime: 3
-  currentBulletTravelTime: 0
-  rb: {fileID: 0}
-  shootingPosTransform: {fileID: 0}
 --- !u!96 &8905264303773702188
 TrailRenderer:
   serializedVersion: 3
@@ -178,7 +156,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b56a5056d1c884dfbb8cc1627f56bcea, type: 2}
+  - {fileID: 2100000, guid: f6834bd5f9b4c407f962dfa6c0308568, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -230,7 +208,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 1, b: 0.95960426, a: 1}
+      key0: {r: 0.52716553, g: 1, b: 0, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -270,3 +248,23 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &-1252812056663785639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229193747146238013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfdb6dd07fb4b4161855e0644ed36908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyConsumedPerBullet: 20
+  bulletDamage: 10
+  bulletSpeedScaler: 60
+  bulletFollowEnemy: 0
+  aoeDamage: 0
+  aoeDamageAmount: 0
+  bulletTravelTime: 1
+  currentBulletTravelTime: 0

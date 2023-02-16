@@ -170,6 +170,7 @@ public class TopazGunBullet : MonoBehaviour
     {
         currentBulletTravelTime += Time.deltaTime;
         DestroyBulletWhenExistingTooLong();
+        transform.position += transform.forward * bulletSpeedScaler * Time.deltaTime;
     }
 
     public void DestroyBulletWhenExistingTooLong()
