@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F4E28F67-05B8-4BD9-98C0-E62661DE4C23}" SchemaVersion="110" RootDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" ParentDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}">
+	<Events>
+		<WorkUnit Name="Objects" ID="{F4E28F67-05B8-4BD9-98C0-E62661DE4C23}" OwnerID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="soulDrop" ID="{722DB41A-B8C1-44D8-81D8-48472809F11F}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0EAABD15-3BB4-485E-9C8D-C75DE83C0679}" SchemaVersion="110" RootDocumentID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}" ParentDocumentID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}">
+	<AudioObjects>
+		<WorkUnit Name="Enemies" ID="{0EAABD15-3BB4-485E-9C8D-C75DE83C0679}" OwnerID="{C5F2B8FC-B476-4FCD-B50C-F831B9A10B43}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="Enemies" ID="{37E7206D-D6EF-480A-B2DB-B030BEE04653}" ShortID="864245185">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Enemies" ID="{10587636-42E1-4CDA-887E-80978A9943E7}" WorkUnitID="{A6FC31E0-593B-4710-9DD0-9CABF381A6A8}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Enemies" ID="{ED768A83-EF3E-4A85-952F-95C2F3973ED6}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="Amber Golem" ID="{19DBD657-755C-4E74-9179-57416A4923D6}" PersistMode="Reference"/>
+						<WorkUnit Name="Ice Goat" ID="{93BA759F-C997-4D76-934A-909046F9BDA7}" PersistMode="Reference"/>
+						<WorkUnit Name="Lamia" ID="{8AC3C847-CE75-42CE-8C10-B61AB0E0011E}" PersistMode="Reference"/>
+						<WorkUnit Name="Tikbalang" ID="{633E715A-F294-4DA4-A0EA-AC705D592421}" PersistMode="Reference"/>
+						<WorkUnit Name="Wendigo" ID="{BEA9EF7D-88A9-4535-8EC1-AC2889C673CB}" PersistMode="Reference"/>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

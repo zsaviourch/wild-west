@@ -9,11 +9,19 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="863592867" Type="User" Language="SFX" Hash="{C59718E0-19AB-1371-9812-F20C96268CD9}">
+		<SoundBank Id="863592867" Type="User" Language="SFX" Hash="{F55EC177-6ADD-DAE7-DF95-EA42D0D18735}">
 			<ShortName>EnvironmentBoss</ShortName>
 			<Path>EnvironmentBoss.bnk</Path>
+			<Events>
+				<Event Id="1016938702" Name="wendigoCharge" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1753832348" Name="wendigoDie" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4294852885" Name="wendigoHurt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2286643954" Name="wendigoMissile" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3438274769" Name="wendigoSlam" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1823178165" Name="wendigoSlash" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4F5612D3-7655-8306-A351-FCF781075041}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6B0FC5C3-FEC9-2E03-49E3-A2D00D26BD44}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -23,7 +31,16 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="77978275" Name="Ambient"/>
+				<Bus Id="838047381" Name="Non-World"/>
+				<Bus Id="1069431850" Name="Player"/>
+				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="2242381963" Name="Enemies"/>
+				<Bus Id="2609808943" Name="World"/>
+				<Bus Id="3170124113" Name="Voice"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3930136735" Name="Dialogue"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="988953028" Name="sfxVolume"/>
@@ -42,17 +59,25 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{3586AFDA-2894-C1AB-1C1F-9E25008134CA}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{65826D9C-A45B-A3B4-52ED-D23F1F55F275}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
+				<File Id="4330535" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lamia Die.wav</ShortName>
+					<CachePath>SFX/Lamia Die_FCF59F2E.wem</CachePath>
+				</File>
 				<File Id="63354751" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun PumpStart.wav</ShortName>
-					<CachePath>SFX/Shotgun PumpStart_053E7CBE.wem</CachePath>
+					<CachePath>SFX/Shotgun PumpStart_07FABA0E.wem</CachePath>
 				</File>
 				<File Id="92868043" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RevolverClickIn.wav</ShortName>
 					<CachePath>SFX/RevolverClickIn_66489822.wem</CachePath>
+				</File>
+				<File Id="108690042" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ice Goat Attack1.wav</ShortName>
+					<CachePath>SFX/Ice Goat Attack1_DF67A223.wem</CachePath>
 				</File>
 				<File Id="176955351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Reload.wav</ShortName>
@@ -74,13 +99,17 @@
 					<ShortName>Crystal Sniper.wav</ShortName>
 					<CachePath>SFX/Crystal Sniper_7DD473B3.wem</CachePath>
 				</File>
+				<File Id="354361320" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lamia Hurt.wav</ShortName>
+					<CachePath>SFX/Lamia Hurt_B4A6FA31.wem</CachePath>
+				</File>
 				<File Id="460143773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun PumpEnd.wav</ShortName>
 					<CachePath>SFX/Shotgun PumpEnd_8321EBBE.wem</CachePath>
 				</File>
 				<File Id="486002857" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Reload.wav</ShortName>
-					<CachePath>SFX/Soul Reload_067C6D0C.wem</CachePath>
+					<CachePath>SFX/Soul Reload_5673C7EF.wem</CachePath>
 				</File>
 				<File Id="518432802" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FullSniperReload.wav</ShortName>
@@ -88,7 +117,7 @@
 				</File>
 				<File Id="544632092" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EmptyClip.wav</ShortName>
-					<CachePath>SFX/EmptyClip_7516CE02.wem</CachePath>
+					<CachePath>SFX/EmptyClip_6481F61E.wem</CachePath>
 				</File>
 				<File Id="621894801" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Sniper Explosion.wav</ShortName>
@@ -98,13 +127,29 @@
 					<ShortName>Rifle Reload.wav</ShortName>
 					<CachePath>SFX/Rifle Reload_8B1AD062.wem</CachePath>
 				</File>
+				<File Id="919833067" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ice Goat Die.wav</ShortName>
+					<CachePath>SFX/Ice Goat Die_1B0C66CD.wem</CachePath>
+				</File>
 				<File Id="925791996" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crystal Rifle2.wav</ShortName>
 					<CachePath>SFX/Crystal Rifle2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="957101173" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RevolverLaser.wav</ShortName>
-					<CachePath>SFX/RevolverLaser_7E427492.wem</CachePath>
+					<CachePath>SFX/RevolverLaser_124D9DF1.wem</CachePath>
+				</File>
+				<File Id="993015536" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ice Goat Attack2.wav</ShortName>
+					<CachePath>SFX/Ice Goat Attack2_B806D885.wem</CachePath>
+				</File>
+				<File Id="1026484854" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lamia Attack.wav</ShortName>
+					<CachePath>SFX/Lamia Attack_2D68A8E1.wem</CachePath>
+				</File>
+				<File Id="1045187845" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ice Goat Hurt.wav</ShortName>
+					<CachePath>SFX/Ice Goat Hurt_5A35E68E.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -113,6 +158,25 @@
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="720364476" Name="goatAttack" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.7144916" DurationMax="0.9279404">
+					<MediaRefs>
+						<MediaRef Id="108690042"/>
+						<MediaRef Id="993015536"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="404655026" Name="goatDie" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.71271896" DurationMax="0.89796966">
+					<MediaRefs>
+						<MediaRef Id="919833067"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2445642675" Name="goatHurt" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.2301136" DurationMax="0.28992495">
+					<MediaRefs>
+						<MediaRef Id="1045187845"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4272317039" Name="golemAttack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="838703051" Name="golemDie" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2573158568" Name="golemHurt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="147436440" Name="gunEmpty" DurationType="OneShot" DurationMin="0.2" DurationMax="0.2">
 					<MediaRefs>
 						<MediaRef Id="544632092"/>
@@ -181,7 +245,7 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="3194616450" Name="gunShoot" DurationType="OneShot" DurationMin="2.6146033" DurationMax="6.251698">
+				<Event Id="3194616450" Name="gunShoot" DurationType="OneShot" DurationMin="2" DurationMax="5">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="2107435045" Id="2548468192"/>
@@ -205,11 +269,44 @@
 							<SwitchValue GroupType="Switch" GroupId="2107435045" Id="998971168"/>
 							<MediaRefs>
 								<MediaRef Id="327693749"/>
-								<MediaRef Id="621894801"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="1609923659" Name="lamiaAttack" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.9794317" DurationMax="1.099375">
+					<MediaRefs>
+						<MediaRef Id="1026484854"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3060973567" Name="lamiaDie" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.87388426" DurationMax="0.980902">
+					<MediaRefs>
+						<MediaRef Id="4330535"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4077017716" Name="lamiaHurt" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5665582" DurationMax="0.6359402">
+					<MediaRefs>
+						<MediaRef Id="354361320"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2525052962" Name="playerDash" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3966601280" Name="playerDie" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2374849433" Name="playerEnergyEmpty" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1839772676" Name="playerEnergyLow" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1605033336" Name="playerEnergyMax" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="583027834" Name="playerHealthLow" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4173482238" Name="playerHealthMax" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3292114096" Name="playerHealthPickUp" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3537581393" Name="playerHurt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="734204211" Name="sniperExplode" DurationType="OneShot" DurationMin="5.4734573" DurationMax="5.8988247">
+					<MediaRefs>
+						<MediaRef Id="621894801"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2940614623" Name="soulDrop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3739246548" Name="soulPickUp" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2408912248" Name="tikbalangAttack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2437003014" Name="tikbalangDie" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="382555423" Name="tikbalangHurt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1240670792" Name="Distance"/>
@@ -235,5 +332,5 @@
 			<Path>Environment2.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2B0A099E-8AC4-0C8C-D79D-8AFC73AA5D55}</FileHash>
+	<FileHash>{E96A5F34-5255-0725-9095-D5EB393B1BA1}</FileHash>
 </SoundBanksInfo>
