@@ -59,7 +59,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="playerDash" ID="{535AE50B-7C4D-4558-AB6D-A8A4B46254B4}"/>
+						<Event Name="playerDash" ID="{535AE50B-7C4D-4558-AB6D-A8A4B46254B4}">
+							<ChildrenList>
+								<Action Name="" ID="{79A2005B-0A01-42F7-9BDF-91687267FD52}" ShortID="715594372">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player Dash" ID="{68727313-2F43-42D3-A1E7-FFD950859859}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="playerHealthMax" ID="{DE5F43CE-DA03-4203-88E2-236298827C6D}"/>
 						<Event Name="playerHealthLow" ID="{009B7011-4F3D-4D3C-8DA8-8594DC277430}"/>
 						<Event Name="playerEnergyMax" ID="{D7DACC84-FE88-4BFE-9118-D9230365A41E}"/>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1620AB33-9BC8-46C4-ABB4-8423C9CC735E}" SchemaVersion="110" RootDocumentID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" ParentDocumentID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}">
+	<SoundBanks>
+		<WorkUnit Name="General" ID="{1620AB33-9BC8-46C4-ABB4-8423C9CC735E}" OwnerID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" PersistMode="Nested">
+			<ChildrenList>
+				<SoundBank Name="GameplayLoop" ID="{0C8E0234-0513-445E-9C4B-9223118F94B6}">
+					<ObjectInclusionList>
+						<ObjectRef Name="playerHurt" ID="{4D8D52F2-0EC2-4046-866A-7AF2954A7D0E}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="tikbalangHurt" ID="{52139911-4740-4104-A9AC-757AB2CF3E9F}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="gunReload" ID="{E3E1306A-DE9B-4107-99AF-8532CB2CE6B1}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerHealthMax" ID="{DE5F43CE-DA03-4203-88E2-236298827C6D}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerEnergyEmpty" ID="{773D51E0-38A1-423A-AE9D-2D18C1294C07}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="tikbalangAttack" ID="{CF9972DB-54C9-429D-B922-A705659D1137}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="tikbalangDie" ID="{C04B97BD-AB4C-42D5-A7FD-370A710CF2AC}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="golemDie" ID="{E91C0C15-43E6-43EC-9FE8-D2A7F56278F3}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="soulDrop" ID="{722DB41A-B8C1-44D8-81D8-48472809F11F}" WorkUnitID="{F4E28F67-05B8-4BD9-98C0-E62661DE4C23}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerDash" ID="{535AE50B-7C4D-4558-AB6D-A8A4B46254B4}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="golemShieldHit" ID="{6271B543-FBB9-4561-ACB3-E97799871970}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerHealthPickUp" ID="{2936D239-8F69-45AE-AD59-E3553C81B2E2}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="lamiaHurt" ID="{8D73B84A-D7EE-460F-A3B8-04323C1AE830}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="soulPickUp" ID="{65401D85-77DA-463A-B4E4-1F8C2D1AF365}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="healthDrop" ID="{B7A5CE90-0257-4682-BE7F-10A05BAB00A8}" WorkUnitID="{F4E28F67-05B8-4BD9-98C0-E62661DE4C23}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="golemHurt" ID="{82266AE4-DCB1-4711-8481-E546D87307B9}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="golemAttack" ID="{AD100515-6BA8-4786-A4E7-257D7CB7F2E4}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="goatDie" ID="{A8795B55-1C53-478E-8C1C-BF4C8ADCB3B6}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="lamiaDie" ID="{8C6AC4DA-9EE3-4876-BCBC-C6FE7307A39F}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerDie" ID="{9058AAA9-8F66-48E8-9074-E7BCD08B587A}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="goatAttack" ID="{422D8CEB-A397-494F-ADB5-00C3A603C90C}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="gunEmpty" ID="{2A86A847-9D2B-4A49-BF83-7C9FF422E156}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="goatHurt" ID="{62CB2535-9D17-4A6C-86AE-760DE1546DBB}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="gunShoot" ID="{2EEFE972-7AB9-4BC8-84C2-90D4E13A9F2B}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerEnergyMax" ID="{D7DACC84-FE88-4BFE-9118-D9230365A41E}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerEnergyLow" ID="{C486F123-83F6-4C14-BF42-8581E1407A72}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerHealthLow" ID="{009B7011-4F3D-4D3C-8DA8-8594DC277430}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="sniperExplode" ID="{8D2EA042-A4C3-4F15-981D-DF35FDD55E0C}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="lamiaAttack" ID="{A1099B03-81F1-4FBC-884A-5DD171C6B068}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="TitleScreen" ID="{82DD8809-EB20-4BB2-92AE-FE88D5AB3F22}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Credits" ID="{862282C9-53C0-4404-BE6E-CBC4198DB541}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

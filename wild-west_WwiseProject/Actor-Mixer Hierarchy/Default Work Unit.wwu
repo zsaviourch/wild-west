@@ -18,6 +18,19 @@
 						<WorkUnit Name="Objects" ID="{8D7D92CF-576B-469E-BF0A-36044D3EB1C6}" PersistMode="Reference"/>
 					</ChildrenList>
 				</ActorMixer>
+				<ActorMixer Name="Non-World" ID="{14525E30-6230-416B-BF25-76183F755397}" ShortID="742394647">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<WorkUnit Name="UI" ID="{3E3014C6-4447-4AE7-87B6-99DBA3D1A1DB}" PersistMode="Reference"/>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

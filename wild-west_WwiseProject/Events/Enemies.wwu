@@ -42,9 +42,50 @@
 				</Folder>
 				<Folder Name="Amber Golem" ID="{ED1D4DB0-3855-468C-A559-4D5966485A6F}" ShortID="228078647">
 					<ChildrenList>
-						<Event Name="golemHurt" ID="{82266AE4-DCB1-4711-8481-E546D87307B9}"/>
-						<Event Name="golemAttack" ID="{AD100515-6BA8-4786-A4E7-257D7CB7F2E4}"/>
-						<Event Name="golemDie" ID="{E91C0C15-43E6-43EC-9FE8-D2A7F56278F3}"/>
+						<Event Name="golemHurt" ID="{82266AE4-DCB1-4711-8481-E546D87307B9}">
+							<ChildrenList>
+								<Action Name="" ID="{A1A4B657-493E-4647-85EB-521D4C618409}" ShortID="976423293">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="golemHurt" ID="{763731D2-0E1E-4A4D-98AE-E8E9C3751848}" WorkUnitID="{19DBD657-755C-4E74-9179-57416A4923D6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="golemAttack" ID="{AD100515-6BA8-4786-A4E7-257D7CB7F2E4}">
+							<ChildrenList>
+								<Action Name="" ID="{EEF46285-1076-4F06-92CA-423D7FEEF739}" ShortID="166317692">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="golemAttack" ID="{E94160D7-05D4-429C-BC64-9E04FC688B86}" WorkUnitID="{19DBD657-755C-4E74-9179-57416A4923D6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="golemDie" ID="{E91C0C15-43E6-43EC-9FE8-D2A7F56278F3}">
+							<ChildrenList>
+								<Action Name="" ID="{D90A15DC-BE53-4D16-8C08-E1785B01908E}" ShortID="215442964">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="golemDie" ID="{3D7B35FC-16D5-4A0B-B5CB-30D31CF2CA8F}" WorkUnitID="{19DBD657-755C-4E74-9179-57416A4923D6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="golemShieldHit" ID="{6271B543-FBB9-4561-ACB3-E97799871970}">
+							<ChildrenList>
+								<Action Name="" ID="{D04F7B62-F5A8-4DAB-AAA9-74D568619481}" ShortID="335180418">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="golemShieldHit" ID="{4C366B72-AFA0-49EC-9269-7A7FF720322A}" WorkUnitID="{19DBD657-755C-4E74-9179-57416A4923D6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ice Goat" ID="{C26EB4F8-D960-427F-95FC-F14EDFBCC872}" ShortID="986249903">
@@ -86,19 +127,109 @@
 				</Folder>
 				<Folder Name="Tikbalang" ID="{5BDC152C-0BD7-4584-9711-1D93565ECDAF}" ShortID="427211991">
 					<ChildrenList>
-						<Event Name="tikbalangHurt" ID="{52139911-4740-4104-A9AC-757AB2CF3E9F}"/>
-						<Event Name="tikbalangDie" ID="{C04B97BD-AB4C-42D5-A7FD-370A710CF2AC}"/>
-						<Event Name="tikbalangAttack" ID="{CF9972DB-54C9-429D-B922-A705659D1137}"/>
+						<Event Name="tikbalangHurt" ID="{52139911-4740-4104-A9AC-757AB2CF3E9F}">
+							<ChildrenList>
+								<Action Name="" ID="{F696C437-0B21-408C-B476-183A1D2E225B}" ShortID="664448933">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tikbalangHurt" ID="{742CA97A-0BBA-4AE3-8811-842771B8F0D4}" WorkUnitID="{633E715A-F294-4DA4-A0EA-AC705D592421}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tikbalangDie" ID="{C04B97BD-AB4C-42D5-A7FD-370A710CF2AC}">
+							<ChildrenList>
+								<Action Name="" ID="{A0CF9399-80A8-4A4C-9429-7DD13B47FB04}" ShortID="220870021">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tikbalangDie" ID="{9243CA20-835A-45AC-9175-0429362405D8}" WorkUnitID="{633E715A-F294-4DA4-A0EA-AC705D592421}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="tikbalangAttack" ID="{CF9972DB-54C9-429D-B922-A705659D1137}">
+							<ChildrenList>
+								<Action Name="" ID="{76279C1E-51E7-4EA8-854B-7FFFB86228B0}" ShortID="331123916">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="tikbalangAttack" ID="{6877BE43-6A65-4DCD-9B77-FFA5200CD37A}" WorkUnitID="{633E715A-F294-4DA4-A0EA-AC705D592421}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Wendigo" ID="{B53E1CDE-38C7-4545-9144-67F1B7C61063}" ShortID="431475252">
 					<ChildrenList>
-						<Event Name="wendigoSlam" ID="{BE515E43-67A9-483B-8EED-FA71FED3A45C}"/>
-						<Event Name="wendigoSlash" ID="{9EAB7885-2B3B-4B95-8E54-941ADB2B750E}"/>
-						<Event Name="wendigoHurt" ID="{A7800EBC-1C31-443F-831F-B51DB5E42C99}"/>
-						<Event Name="wendigoDie" ID="{BAC702CB-54AF-4FE8-8A14-C1AC2E5C6B7D}"/>
-						<Event Name="wendigoMissile" ID="{B1AFB99D-7DBB-4DA4-BBD1-2F952FC66CE8}"/>
-						<Event Name="wendigoCharge" ID="{F1DAEC66-C640-41A3-B318-2D67C8491743}"/>
+						<Event Name="wendigoShieldHit" ID="{BE515E43-67A9-483B-8EED-FA71FED3A45C}">
+							<ChildrenList>
+								<Action Name="" ID="{2CF15453-713A-4812-A74C-D7C84BF1E006}" ShortID="103358383">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wendigoShield" ID="{620A2B5C-32A3-4A4C-AF3C-F833652EBCE8}" WorkUnitID="{BEA9EF7D-88A9-4535-8EC1-AC2889C673CB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="wendigoSlash" ID="{9EAB7885-2B3B-4B95-8E54-941ADB2B750E}">
+							<ChildrenList>
+								<Action Name="" ID="{55C08083-A314-42B3-9FCC-90E40FF5CE73}" ShortID="57349303">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wendigoSlash" ID="{8AA944B9-4C81-440C-9A16-2CC88821BBAE}" WorkUnitID="{BEA9EF7D-88A9-4535-8EC1-AC2889C673CB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="wendigoHurt" ID="{A7800EBC-1C31-443F-831F-B51DB5E42C99}">
+							<ChildrenList>
+								<Action Name="" ID="{492E91FC-02F5-485A-9443-DA6AE22D714B}" ShortID="388281008">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wendigoHurt" ID="{AADCAF8B-0C05-46C6-91B4-A6F8CE755165}" WorkUnitID="{BEA9EF7D-88A9-4535-8EC1-AC2889C673CB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="wendigoDie" ID="{BAC702CB-54AF-4FE8-8A14-C1AC2E5C6B7D}">
+							<ChildrenList>
+								<Action Name="" ID="{0961ED96-8230-46CD-9AD8-2A848BEB956A}" ShortID="755395012">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wendigoDie" ID="{E0B77116-B326-483F-94C1-6F2FFF23CF02}" WorkUnitID="{BEA9EF7D-88A9-4535-8EC1-AC2889C673CB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="wendigoMissile" ID="{B1AFB99D-7DBB-4DA4-BBD1-2F952FC66CE8}">
+							<ChildrenList>
+								<Action Name="" ID="{3A7E5D84-CA83-463E-A9AC-FC55C3B22112}" ShortID="685554654">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wendigoMissile" ID="{C42F420C-613B-4FB1-A778-D38DB6FBF777}" WorkUnitID="{BEA9EF7D-88A9-4535-8EC1-AC2889C673CB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="wendigoSmash" ID="{F1DAEC66-C640-41A3-B318-2D67C8491743}">
+							<ChildrenList>
+								<Action Name="" ID="{A99712B9-59D8-482C-853E-126FC9A10C05}" ShortID="349346266">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="wendigoSmash" ID="{48CBAE5C-18FF-4416-BFA7-5AC44BFE210F}" WorkUnitID="{BEA9EF7D-88A9-4535-8EC1-AC2889C673CB}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
