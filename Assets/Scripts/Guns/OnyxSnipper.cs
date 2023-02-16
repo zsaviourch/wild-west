@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneralGun : MonoBehaviour
+public class OnyxSnipper : MonoBehaviour
 {
     // References
     [SerializeField] int energyInitialAmount;
@@ -29,7 +29,7 @@ public class GeneralGun : MonoBehaviour
     public Transform shootingPos;
 
     // Constructor
-    public GeneralGun(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
+    public OnyxSnipper(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
         float minimumReloadingTime, float fullyReloadedTime, GameObject bulletPrefab, BulletType bulletType)
     {
         this.energyInitialAmount = energyInitialAmount;
@@ -197,7 +197,7 @@ public class GeneralGun : MonoBehaviour
         currentEnergyAmount += energyRegeneratePerSecond;
     }
 
-    public int FindEnergyConsumePerBullet (BulletType type)
+    public int FindEnergyConsumePerBullet(BulletType type)
     {
         int cost = -1;
         switch (type)
@@ -226,11 +226,11 @@ public class GeneralGun : MonoBehaviour
     {
         if (shootInitiated == true)
         {
-            Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            bullet.transform.forward = -shootingPos.up;
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
         }
     }
-
 }
