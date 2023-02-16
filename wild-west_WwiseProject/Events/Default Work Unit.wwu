@@ -3,58 +3,12 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="Main" ID="{C6A61EAE-96DB-428F-AE45-9D1B30B04FD4}" ShortID="660221044">
-					<ChildrenList>
-						<Folder Name="Weapons" ID="{50933FCF-3FCD-4600-AD3E-F4400F7C475D}" ShortID="720478637">
-							<ChildrenList>
-								<Event Name="gunReload" ID="{E3E1306A-DE9B-4107-99AF-8532CB2CE6B1}">
-									<ChildrenList>
-										<Action Name="" ID="{CF63E414-DF95-45FB-80C7-29FF9A1EF65B}" ShortID="88635330">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Reloading" ID="{26DED26A-F49A-4483-9217-38A6B28EB5FE}" WorkUnitID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-										<Action Name="" ID="{BD103BD8-F76F-4270-BCC3-699BEA10173C}" ShortID="95043481">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="soulReload" ID="{7E076551-CFD0-40FC-BD04-EF2728A2B64C}" WorkUnitID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="gunShoot" ID="{2EEFE972-7AB9-4BC8-84C2-90D4E13A9F2B}">
-									<ChildrenList>
-										<Action Name="" ID="{79304784-FBB3-4906-A007-235770B04E2A}" ShortID="59079265">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="SwitchGunShoot" ID="{C61173D1-2523-45AE-96BF-955AA788DD0E}" WorkUnitID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="gunEmpty" ID="{2A86A847-9D2B-4A49-BF83-7C9FF422E156}">
-									<ChildrenList>
-										<Action Name="" ID="{750A4418-2DA7-49A1-81CC-148486455785}" ShortID="462601841">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="EmptyClip" ID="{16E92FB7-E403-4E59-9690-0B87B5CAD841}" WorkUnitID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="Player" ID="{D478E676-B0BA-4889-817D-5F04D5266ED2}" ShortID="434548409"/>
-						<Folder Name="Enemies" ID="{2BADF1DD-C5DC-4C34-A016-6A23F4C8A7D9}" ShortID="678085496"/>
-						<Folder Name="Footsteps" ID="{4AF97C4A-178B-44B0-8531-3663B4F8C73A}" ShortID="70670837"/>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="Music" ID="{6BC79CB6-BD1A-422B-8108-CF53CD408B26}" ShortID="230688604"/>
+				<WorkUnit Name="Player" ID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" PersistMode="Reference"/>
+				<WorkUnit Name="Enemies" ID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" PersistMode="Reference"/>
+				<WorkUnit Name="Music" ID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" PersistMode="Reference"/>
+				<WorkUnit Name="NPCs" ID="{59ADAD36-25BE-4751-9DB2-E6DD9BBB378F}" PersistMode="Reference"/>
+				<WorkUnit Name="Objects" ID="{F4E28F67-05B8-4BD9-98C0-E62661DE4C23}" PersistMode="Reference"/>
+				<WorkUnit Name="UI" ID="{A4E56E97-9388-481B-98AC-BBDC5EE08BF3}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

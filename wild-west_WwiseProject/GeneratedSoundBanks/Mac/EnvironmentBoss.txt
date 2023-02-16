@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1016938702	wendigoCharge			\Default Work Unit\Enemies\Wendigo\wendigoCharge	
+	1753832348	wendigoDie			\Default Work Unit\Enemies\Wendigo\wendigoDie	
+	1823178165	wendigoSlash			\Default Work Unit\Enemies\Wendigo\wendigoSlash	
+	2286643954	wendigoMissile			\Default Work Unit\Enemies\Wendigo\wendigoMissile	
+	3438274769	wendigoSlam			\Default Work Unit\Enemies\Wendigo\wendigoSlam	
+	4294852885	wendigoHurt			\Default Work Unit\Enemies\Wendigo\wendigoHurt	
+
