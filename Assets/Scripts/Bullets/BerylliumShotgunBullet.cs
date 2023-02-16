@@ -13,6 +13,8 @@ public class BerylliumShotgunBullet : MonoBehaviour
     [SerializeField] int aoeDamageAmount;
     [SerializeField] float bulletTravelTime;
     public float currentBulletTravelTime;
+    private Rigidbody rb;
+    public Transform shootingPosTransform;
 
     // constructor
     public BerylliumShotgunBullet(int energyConsumedPerBullet, int bulletDamage, int bulletSpeedScaler, bool bulletFollowEnemy,
@@ -145,6 +147,8 @@ public class BerylliumShotgunBullet : MonoBehaviour
     private void Awake()
     {
         currentBulletTravelTime = 0f;
+        rb = GetComponent<Rigidbody>();
+        shootingPosTransform = GameObject.FindWithTag("shootingPos").transform;
     }
 
 
@@ -170,6 +174,9 @@ public class BerylliumShotgunBullet : MonoBehaviour
     {
         currentBulletTravelTime += Time.deltaTime;
         DestroyBulletWhenExistingTooLong();
+        //Vector3 forwardDirection = Vector3.MoveTowards(transform.position, shootingPosTransform.forward, bulletSpeedScaler * Time.deltaTime);
+        transform.position += transform.forward * bulletSpeedScaler * Time.deltaTime;
+        //rb.velocity = transform.forward * bulletSpeedScaler;
     }
 
     public void DestroyBulletWhenExistingTooLong()
