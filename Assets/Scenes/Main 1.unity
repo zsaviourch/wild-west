@@ -2638,7 +2638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!156049354 &1627798168
 Grid:
   m_ObjectHideFlags: 0
@@ -2784,6 +2784,10 @@ PrefabInstance:
     - target: {fileID: 890111096628259182, guid: 060212b820c77ba4c8a0ede4887c92e7, type: 3}
       propertyPath: m_Name
       value: Straight Road Grid
+      objectReference: {fileID: 0}
+    - target: {fileID: 890111096628259182, guid: 060212b820c77ba4c8a0ede4887c92e7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 890111096741370150, guid: 060212b820c77ba4c8a0ede4887c92e7, type: 3}
       propertyPath: m_TileColorArray.Array.size

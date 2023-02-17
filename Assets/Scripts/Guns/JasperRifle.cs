@@ -175,11 +175,7 @@ public class JasperRifle : MonoBehaviour
         }
 
         // Shoot
-<<<<<<< HEAD
-        if (Input.GetKeyUp(KeyCode.Mouse0) && currentEnergyAmount >= energyConsumePerBullet)
-=======
         if (Input.GetKeyDown(KeyCode.Mouse0) && currentEnergyAmount > energyConsumePerBullet)
->>>>>>> main2
         {
             Debug.Log("shoot");
             Shoot();
