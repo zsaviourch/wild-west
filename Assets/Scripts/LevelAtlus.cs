@@ -15,6 +15,8 @@ public class LevelAtlus : ScriptableObject
 
         public int RoomsInSingleRun;
 
+        public int numVisits;
+
         public GameObject[] PossibleRooms;
     }
 
