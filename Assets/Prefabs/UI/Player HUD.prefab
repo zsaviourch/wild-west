@@ -411,19 +411,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_SizeDelta.x
@@ -463,11 +463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -750
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -420
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -595,6 +595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 6427018413353679155, guid: 6b65853948d1c5649aea61530f7b91f4, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -683,7 +687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8071252759711124311, guid: 117f75947ce09f34c816cfc18fdad399, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -615
+      value: -745
       objectReference: {fileID: 0}
     - target: {fileID: 8071252759711124311, guid: 117f75947ce09f34c816cfc18fdad399, type: 3}
       propertyPath: m_AnchoredPosition.y
