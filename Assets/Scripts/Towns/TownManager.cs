@@ -34,7 +34,7 @@ public class TownManager : MonoBehaviour
         InstantiateNextTown();
 
         // Use this code to test town transitions
-        // Invoke("ProgressTown", 10.0f);
+        Invoke("ProgressTown", 10.0f);
     }
 
     private void InstantiateNextTown()
