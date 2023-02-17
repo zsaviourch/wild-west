@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6880515258320694958}
   - component: {fileID: 58434216942958573}
   m_Layer: 0
-  m_Name: TownManager
+  m_Name: LevelAtlus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,5 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   townPrefabs:
-  - {fileID: 890111096628259182, guid: 060212b820c77ba4c8a0ede4887c92e7, type: 3}
-  - {fileID: 890111096628259182, guid: 853d3854f15004e16ac5c00bfd90c633, type: 3}
+  - TownName: Placeholder Town
+    room: {fileID: 890111096628259182, guid: 060212b820c77ba4c8a0ede4887c92e7, type: 3}
+  - TownName: Test Town
+    room: {fileID: 890111096628259182, guid: 853d3854f15004e16ac5c00bfd90c633, type: 3}
+  - TownName: 
+    room: {fileID: 0}

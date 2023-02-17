@@ -39,7 +39,7 @@ public class PlayerProgression : MonoBehaviour
         PRE_RUN, MID_RUN, ALL_TOWNS_CLEAR
     }
 
-    public LevelAtlus levelAtlus;
+    public LevelAtlus_Old levelAtlus;
 
     public int numRoomsCompletedInCurrentTown;
     public ProgressState currentProgress;
@@ -91,7 +91,7 @@ public class PlayerProgression : MonoBehaviour
             }
             else //if (currentProgress == ProgressState.ALL_TOWNS_CLEAR)
             {
-                foreach (LevelAtlus.TownSet town in levelAtlus.Towns)
+                foreach (LevelAtlus_Old.TownSet town in levelAtlus.Towns)
                 {
                     completedRooms += town.RoomsInSingleRun;
                 }

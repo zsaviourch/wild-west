@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "NewLevelAtlus", menuName = "ScriptableObjects/Level Atlus")]
-public class LevelAtlus : ScriptableObject
+public class LevelAtlus_Old : ScriptableObject
 {
     public GameObject StartRoom1, StartRoom2;
 
