@@ -13,9 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BOSSSTART = 2978173602U;
         static const AkUniqueID BUTTONCLICK = 4051332235U;
         static const AkUniqueID BUTTONHOVER = 3035572085U;
         static const AkUniqueID BUTTONSTARTGAME = 282606109U;
+        static const AkUniqueID CREDITSSTART = 2994446543U;
         static const AkUniqueID GOATATTACK = 720364476U;
         static const AkUniqueID GOATDIE = 404655026U;
         static const AkUniqueID GOATHURT = 2445642675U;
@@ -26,9 +28,15 @@ namespace AK
         static const AkUniqueID GUNEMPTY = 147436440U;
         static const AkUniqueID GUNRELOAD = 323245414U;
         static const AkUniqueID GUNSHOOT = 3194616450U;
+        static const AkUniqueID INTENSITYHIGH = 272640944U;
+        static const AkUniqueID INTENSITYLOW = 1343576922U;
+        static const AkUniqueID INTENSITYMID = 773284954U;
         static const AkUniqueID LAMIAATTACK = 1609923659U;
         static const AkUniqueID LAMIADIE = 3060973567U;
         static const AkUniqueID LAMIAHURT = 4077017716U;
+        static const AkUniqueID LEVEL1START = 3438030758U;
+        static const AkUniqueID LEVEL2START = 192279183U;
+        static const AkUniqueID MUSICSTART = 1122283870U;
         static const AkUniqueID PLAYERDASH = 2525052962U;
         static const AkUniqueID PLAYERDIE = 3966601280U;
         static const AkUniqueID PLAYERENERGYEMPTY = 2374849433U;
@@ -60,17 +68,41 @@ namespace AK
             {
                 static const AkUniqueID MUSICBOSS = 2935806393U;
                 static const AkUniqueID MUSICCREDITS = 435872092U;
-                static const AkUniqueID MUSICDEFEAT = 3743649387U;
-                static const AkUniqueID MUSICLEVEL = 543979504U;
+                static const AkUniqueID MUSICLEVEL1 = 4206939873U;
+                static const AkUniqueID MUSICLEVEL2 = 4206939874U;
                 static const AkUniqueID MUSICMENU = 4082046343U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace MUSICREGIONS
 
+        namespace PLAYERLIFE
+        {
+            static const AkUniqueID GROUP = 444815956U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID PLAYERALIVE = 2557321869U;
+                static const AkUniqueID PLAYERDEFEATED = 818777268U;
+            } // namespace STATE
+        } // namespace PLAYERLIFE
+
     } // namespace STATES
 
     namespace SWITCHES
     {
+        namespace MUSICINTENSITY
+        {
+            static const AkUniqueID GROUP = 1301299809U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HIGHINT = 3420765524U;
+                static const AkUniqueID LOWINT = 3325438800U;
+                static const AkUniqueID MIDINT = 487624844U;
+            } // namespace SWITCH
+        } // namespace MUSICINTENSITY
+
         namespace PICKUPSWITCH
         {
             static const AkUniqueID GROUP = 2159605653U;
@@ -120,7 +152,6 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID CREDITS = 2201105581U;
         static const AkUniqueID ENVIRONMENT1 = 3761286873U;
         static const AkUniqueID ENVIRONMENT2 = 3761286874U;
         static const AkUniqueID ENVIRONMENTBOSS = 863592867U;

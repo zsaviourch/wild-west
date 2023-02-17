@@ -12,24 +12,24 @@
 						<State Name="musicBoss" ID="{553FB8C7-A4FC-4833-97DD-D5B79F9DBE76}"/>
 						<State Name="musicMenu" ID="{C9454A63-4133-459A-90AC-76B2F0F64F03}"/>
 						<State Name="musicCredits" ID="{C78E47D7-5665-4416-A4EE-EDFE17C3E876}"/>
-						<State Name="musicLevel" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
-						<State Name="musicDefeat" ID="{733319AE-4FF4-4D5B-ADB7-0CC89EE55DD3}"/>
+						<State Name="musicLevel1" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
+						<State Name="musicLevel2" ID="{E2DD3D01-CB1E-4158-A634-1A490E3CF55E}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>
 							<StartState Name="musicMenu" ID="{C9454A63-4133-459A-90AC-76B2F0F64F03}"/>
-							<EndState Name="musicLevel" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
+							<EndState Name="musicLevel1" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
 							<Time>1.5</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 						<Transition>
-							<StartState Name="musicLevel" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
+							<StartState Name="musicLevel1" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
 							<EndState Name="musicMenu" ID="{C9454A63-4133-459A-90AC-76B2F0F64F03}"/>
 							<Time>2</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 						<Transition>
-							<StartState Name="musicLevel" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
+							<StartState Name="musicLevel1" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
 							<EndState Name="musicBoss" ID="{553FB8C7-A4FC-4833-97DD-D5B79F9DBE76}"/>
 							<Time>3</Time>
 							<IsShared>false</IsShared>
@@ -41,24 +41,19 @@
 							<IsShared>false</IsShared>
 						</Transition>
 						<Transition>
-							<StartState Name="musicLevel" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
-							<EndState Name="musicDefeat" ID="{733319AE-4FF4-4D5B-ADB7-0CC89EE55DD3}"/>
-							<Time>1.5</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-						<Transition>
-							<StartState Name="musicBoss" ID="{553FB8C7-A4FC-4833-97DD-D5B79F9DBE76}"/>
-							<EndState Name="musicDefeat" ID="{733319AE-4FF4-4D5B-ADB7-0CC89EE55DD3}"/>
-							<Time>1.5</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-						<Transition>
 							<StartState Name="musicBoss" ID="{553FB8C7-A4FC-4833-97DD-D5B79F9DBE76}"/>
 							<EndState Name="musicMenu" ID="{C9454A63-4133-459A-90AC-76B2F0F64F03}"/>
 							<Time>2</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 					</TransitionList>
+				</StateGroup>
+				<StateGroup Name="PlayerLife" ID="{0C24A291-E602-4042-9FCA-DA30CABA616B}">
+					<ChildrenList>
+						<State Name="None" ID="{724DA6B8-F9EB-443B-BEA8-A850B83B6F8C}"/>
+						<State Name="playerAlive" ID="{32B0F653-6B3C-4BB0-B237-2343492DF765}"/>
+						<State Name="playerDefeated" ID="{611C58CE-D8A6-4692-9B31-D93B6652D2FB}"/>
+					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>

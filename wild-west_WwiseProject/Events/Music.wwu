@@ -1,6 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" SchemaVersion="110" RootDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" ParentDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}">
 	<Events>
-		<WorkUnit Name="Music" ID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" OwnerID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" PersistMode="Nested"/>
+		<WorkUnit Name="Music" ID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" OwnerID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="musicStart" ID="{84386058-9B6D-40A0-BBD5-2D0D16ED0D94}">
+					<ChildrenList>
+						<Action Name="" ID="{EEF3F2D7-E2A4-46FA-9DCE-CCBA3517BB07}" ShortID="389567912">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musicGameSwitch" ID="{42BF7466-7345-4D3B-8587-5ACE1AD54A67}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{054B7148-8336-433E-A250-767912D9EAF8}" ShortID="300985542">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musicMenu" ID="{C9454A63-4133-459A-90AC-76B2F0F64F03}" WorkUnitID="{DD7FCEB5-9FA3-47A2-A776-90F3020EA510}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6FD91BE3-9EC5-446F-AA6A-88D725AC324B}" ShortID="576114136">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lowInt" ID="{BBA1C1EC-BB92-4198-8D07-FF05DEE09C5C}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9FBCCC2D-58EA-457B-AB45-83C032F41EBF}" ShortID="362654616">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musicGameSwitch" ID="{42BF7466-7345-4D3B-8587-5ACE1AD54A67}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="bossStart" ID="{912AF976-A4B0-4E10-B4BE-280BB50675A9}">
+					<ChildrenList>
+						<Action Name="" ID="{B9CF4460-2B95-4E6B-BC32-9AED3450517C}" ShortID="638714596">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musicBoss" ID="{553FB8C7-A4FC-4833-97DD-D5B79F9DBE76}" WorkUnitID="{DD7FCEB5-9FA3-47A2-A776-90F3020EA510}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="level1Start" ID="{BCCE80D0-10E7-4234-91A3-52DA337BE59B}">
+					<ChildrenList>
+						<Action Name="" ID="{AE4CF2FD-589F-43D2-A53D-D02379FAC41E}" ShortID="1003649434">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="musicLevel1" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}" WorkUnitID="{DD7FCEB5-9FA3-47A2-A776-90F3020EA510}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="level2Start" ID="{C3B3DB71-24CE-400B-A159-DE139E90D640}"/>
+				<Event Name="creditsStart" ID="{F12EE366-D075-4A4D-B8F4-1BE90764601C}"/>
+				<Event Name="intensityMid" ID="{D3584236-679C-459A-9220-86861BDDFFE7}">
+					<ChildrenList>
+						<Action Name="" ID="{53E9682B-E706-4CDE-ADB3-3ED41FF83B05}" ShortID="386671391">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="midInt" ID="{108C0C21-B08E-4F1E-81D1-10F67C841CB9}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="intensityHigh" ID="{0E10FFEE-43AF-4350-8247-32A9C389E249}">
+					<ChildrenList>
+						<Action Name="" ID="{014CF2B3-F20E-4EF6-8A26-933FD2B13500}" ShortID="814833816">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="highInt" ID="{59B4356C-419D-43F1-BE7B-7577BF0B088B}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="intensityLow" ID="{BD747405-D189-4D51-9098-85AC7934E313}">
+					<ChildrenList>
+						<Action Name="" ID="{DF1EEEC0-E8E4-4BC8-A236-ED8CAF5048D2}" ShortID="436300646">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lowInt" ID="{BBA1C1EC-BB92-4198-8D07-FF05DEE09C5C}" WorkUnitID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

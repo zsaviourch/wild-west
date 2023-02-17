@@ -9,11 +9,175 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="152105657" Type="User" Language="SFX" Hash="{7D31F7BA-6BE3-2929-7FB0-7EDDF513E1A3}">
+		<SoundBank Id="152105657" Type="User" Language="SFX" Hash="{D091E66F-83A0-977C-5635-C05B3053B1A6}">
 			<ShortName>TitleScreen</ShortName>
 			<Path>TitleScreen.bnk</Path>
+			<Media>
+				<File Id="20960124" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityHigh-002.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityHigh-002_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="224791011" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityMid-002.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityMid-002_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="239999480" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityLow-003.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityLow-003_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="310412876" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityHigh-003.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityHigh-003_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="343659696" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityHigh-001.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityHigh-001_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="469791924" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityLow-001.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityLow-001_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="522819470" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestBossTrack-002.wav</ShortName>
+					<CachePath>SFX/WildWestBossTrack-002_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="550634096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityLow-002.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityLow-002_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="609982359" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityHigh-004.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityHigh-004_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="635594137" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestBossTrack-001.wav</ShortName>
+					<CachePath>SFX/WildWestBossTrack-001_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="666953101" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityMid-003.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityMid-003_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="711704489" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityLow-004.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityLow-004_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="741515912" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityMid-004.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityMid-004_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="783135946" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Main_Menu_Mixdown_V1_BrackeysGameJam2023.wav</ShortName>
+					<CachePath>SFX/Main_Menu_Mixdown_V1_BrackeysGameJam2023_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1032971319" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WildWestLevel1IntensityMid-001.wav</ShortName>
+					<CachePath>SFX/WildWestLevel1IntensityMid-001_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1122283870" Name="musicStart" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2753803885" Id="2935806393"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1301299809" Id="0"/>
+									<MediaRefs>
+										<MediaRef Id="522819470"/>
+										<MediaRef Id="635594137"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2753803885" Id="435872092"/>
+							<Children/>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2753803885" Id="4082046343"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1301299809" Id="0"/>
+									<MediaRefs>
+										<MediaRef Id="783135946"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2753803885" Id="4206939873"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1301299809" Id="3325438800"/>
+									<MediaRefs>
+										<MediaRef Id="239999480"/>
+										<MediaRef Id="469791924"/>
+										<MediaRef Id="550634096"/>
+										<MediaRef Id="711704489"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2753803885" Id="4206939873"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1301299809" Id="487624844"/>
+									<MediaRefs>
+										<MediaRef Id="224791011"/>
+										<MediaRef Id="666953101"/>
+										<MediaRef Id="741515912"/>
+										<MediaRef Id="1032971319"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="2753803885" Id="4206939873"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="1301299809" Id="3420765524"/>
+									<MediaRefs>
+										<MediaRef Id="20960124"/>
+										<MediaRef Id="310412876"/>
+										<MediaRef Id="343659696"/>
+										<MediaRef Id="609982359"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2753803885" Id="4082046343" Name="musicMenu"/>
+					</ActionSetState>
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="1301299809" Id="3325438800" Name="lowInt"/>
+					</ActionSetSwitch>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="2753803885" Name="MusicRegions">
+					<States>
+						<State Id="435872092" Name="musicCredits"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2935806393" Name="musicBoss"/>
+						<State Id="4082046343" Name="musicMenu"/>
+						<State Id="4206939873" Name="musicLevel1"/>
+						<State Id="4206939874" Name="musicLevel2"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1301299809" Name="musicIntensity">
+					<Switches>
+						<Switch Id="487624844" Name="midInt"/>
+						<Switch Id="3325438800" Name="lowInt"/>
+						<Switch Id="3420765524" Name="highInt"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="863592867" Type="User" Language="SFX" Hash="{67F93568-1AB7-2D61-AFF9-DB95F9A078EB}">
+		<SoundBank Id="863592867" Type="User" Language="SFX" Hash="{582FB550-B097-15E7-712F-04D53DF63BC6}">
 			<ShortName>EnvironmentBoss</ShortName>
 			<Path>EnvironmentBoss.bnk</Path>
 			<Media>
@@ -47,6 +211,11 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="2978173602" Name="bossStart" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2753803885" Id="2935806393" Name="musicBoss"/>
+					</ActionSetState>
+				</Event>
 				<Event Id="1753832348" Name="wendigoDie" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.7753531" DurationMax="1.7753531">
 					<MediaRefs>
 						<MediaRef Id="272332325"/>
@@ -79,8 +248,20 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="2753803885" Name="MusicRegions">
+					<States>
+						<State Id="435872092" Name="musicCredits"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2935806393" Name="musicBoss"/>
+						<State Id="4082046343" Name="musicMenu"/>
+						<State Id="4206939873" Name="musicLevel1"/>
+						<State Id="4206939874" Name="musicLevel2"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{003852DA-E8D2-B6B2-3C0F-D15257BF42B1}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2DB33A97-45DA-3F82-05B0-EF21DE5666A2}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -109,14 +290,21 @@
 				<GameParameter Id="2426350174" Name="RoFIncrease"/>
 			</GameParameters>
 			<StateGroups>
+				<StateGroup Id="444815956" Name="PlayerLife">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="818777268" Name="playerDefeated"/>
+						<State Id="2557321869" Name="playerAlive"/>
+					</States>
+				</StateGroup>
 				<StateGroup Id="2753803885" Name="MusicRegions">
 					<States>
 						<State Id="435872092" Name="musicCredits"/>
-						<State Id="543979504" Name="musicLevel"/>
 						<State Id="748895195" Name="None"/>
 						<State Id="2935806393" Name="musicBoss"/>
-						<State Id="3743649387" Name="musicDefeat"/>
 						<State Id="4082046343" Name="musicMenu"/>
+						<State Id="4206939873" Name="musicLevel1"/>
+						<State Id="4206939874" Name="musicLevel2"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -126,6 +314,13 @@
 						<Switch Id="45539941" Name="woodTerrain"/>
 						<Switch Id="887657946" Name="sandTerrain"/>
 						<Switch Id="1110108097" Name="winterTerrain"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1301299809" Name="musicIntensity">
+					<Switches>
+						<Switch Id="487624844" Name="midInt"/>
+						<Switch Id="3325438800" Name="lowInt"/>
+						<Switch Id="3420765524" Name="highInt"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="2107435045" Name="weaponSwitch">
@@ -144,7 +339,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{7AF1CAE8-AC75-CAFC-0114-26D150030AD2}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{1652D0E8-6508-B9C7-7C87-B789A8602E26}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -158,7 +353,7 @@
 				</File>
 				<File Id="7374812" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wood Footstep-005.wav</ShortName>
-					<CachePath>SFX/Wood Footstep-005_41A587B2.wem</CachePath>
+					<CachePath>SFX/Wood Footstep-005_2CFE0F3F.wem</CachePath>
 				</File>
 				<File Id="45659975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Whip Crack.wav</ShortName>
@@ -198,7 +393,7 @@
 				</File>
 				<File Id="186090430" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PlayerHurt3.wav</ShortName>
-					<CachePath>SFX/PlayerHurt3_FFEAFE3A.wem</CachePath>
+					<CachePath>SFX/PlayerHurt3_F2C3BA0D.wem</CachePath>
 				</File>
 				<File Id="191823970" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Sand Footsteps-004.wav</ShortName>
@@ -214,11 +409,11 @@
 				</File>
 				<File Id="211216072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Winter Footsteps-009.wav</ShortName>
-					<CachePath>SFX/Winter Footsteps-009_429419B1.wem</CachePath>
+					<CachePath>SFX/Winter Footsteps-009_D11DD730.wem</CachePath>
 				</File>
 				<File Id="234401108" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wood Footstep-004.wav</ShortName>
-					<CachePath>SFX/Wood Footstep-004_9282E80F.wem</CachePath>
+					<CachePath>SFX/Wood Footstep-004_54F76320.wem</CachePath>
 				</File>
 				<File Id="235859214" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Goelm Shield Hit.wav</ShortName>
@@ -226,7 +421,7 @@
 				</File>
 				<File Id="241897521" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Winter Footsteps-001.wav</ShortName>
-					<CachePath>SFX/Winter Footsteps-001_868D6785.wem</CachePath>
+					<CachePath>SFX/Winter Footsteps-001_22C5DD5B.wem</CachePath>
 				</File>
 				<File Id="244355290" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crystal Shotgun.wav</ShortName>
@@ -234,23 +429,23 @@
 				</File>
 				<File Id="264027759" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Energy Low.wav</ShortName>
-					<CachePath>SFX/Energy Low_2B4B0CC6.wem</CachePath>
+					<CachePath>SFX/Energy Low_CB416643.wem</CachePath>
 				</File>
 				<File Id="271582514" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Drop.wav</ShortName>
-					<CachePath>SFX/Soul Drop_31129DF7.wem</CachePath>
+					<CachePath>SFX/Soul Drop_6CE3C496.wem</CachePath>
 				</File>
 				<File Id="287835315" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player Die.wav</ShortName>
-					<CachePath>SFX/Player Die_16AC5E7E.wem</CachePath>
+					<CachePath>SFX/Player Die_1EAA7A5F.wem</CachePath>
 				</File>
 				<File Id="302009345" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PlayerHurt2.wav</ShortName>
-					<CachePath>SFX/PlayerHurt2_D04CCF33.wem</CachePath>
+					<CachePath>SFX/PlayerHurt2_F4483861.wem</CachePath>
 				</File>
 				<File Id="305762705" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Winter Footsteps-010.wav</ShortName>
-					<CachePath>SFX/Winter Footsteps-010_4060DBD8.wem</CachePath>
+					<CachePath>SFX/Winter Footsteps-010_E9C3216E.wem</CachePath>
 				</File>
 				<File Id="307538766" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Sand Footsteps-001.wav</ShortName>
@@ -266,11 +461,11 @@
 				</File>
 				<File Id="329278512" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Energy Empty.wav</ShortName>
-					<CachePath>SFX/Energy Empty_DE0FCD80.wem</CachePath>
+					<CachePath>SFX/Energy Empty_4434E38E.wem</CachePath>
 				</File>
 				<File Id="341767214" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Winter Footsteps-002.wav</ShortName>
-					<CachePath>SFX/Winter Footsteps-002_507F1A52.wem</CachePath>
+					<CachePath>SFX/Winter Footsteps-002_62C436F7.wem</CachePath>
 				</File>
 				<File Id="354361320" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lamia Hurt.wav</ShortName>
@@ -278,7 +473,7 @@
 				</File>
 				<File Id="411260814" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Winter Footsteps-006.wav</ShortName>
-					<CachePath>SFX/Winter Footsteps-006_B22D8C9A.wem</CachePath>
+					<CachePath>SFX/Winter Footsteps-006_238B4E95.wem</CachePath>
 				</File>
 				<File Id="414944709" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Sand Footsteps-010.wav</ShortName>
@@ -298,7 +493,7 @@
 				</File>
 				<File Id="468921770" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Winter Footsteps-004.wav</ShortName>
-					<CachePath>SFX/Winter Footsteps-004_6D306A4D.wem</CachePath>
+					<CachePath>SFX/Winter Footsteps-004_943FFEB5.wem</CachePath>
 				</File>
 				<File Id="471983534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Golem Attack.wav</ShortName>
@@ -330,7 +525,7 @@
 				</File>
 				<File Id="627538433" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PlayerHurt1.wav</ShortName>
-					<CachePath>SFX/PlayerHurt1_DD44314A.wem</CachePath>
+					<CachePath>SFX/PlayerHurt1_F9B96D5A.wem</CachePath>
 				</File>
 				<File Id="673794957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tikbalang Slash.wav</ShortName>
@@ -342,11 +537,11 @@
 				</File>
 				<File Id="720531424" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Winter Footsteps-008.wav</ShortName>
-					<CachePath>SFX/Winter Footsteps-008_734FED00.wem</CachePath>
+					<CachePath>SFX/Winter Footsteps-008_1F71E444.wem</CachePath>
 				</File>
 				<File Id="738347848" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Pickup.wav</ShortName>
-					<CachePath>SFX/Soul Pickup_6BE663C8.wem</CachePath>
+					<CachePath>SFX/Soul Pickup_8F16FA3A.wem</CachePath>
 				</File>
 				<File Id="745892146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Golem Die.wav</ShortName>
@@ -358,15 +553,15 @@
 				</File>
 				<File Id="795595915" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wood Footstep-001.wav</ShortName>
-					<CachePath>SFX/Wood Footstep-001_C297DCCA.wem</CachePath>
+					<CachePath>SFX/Wood Footstep-001_3149963C.wem</CachePath>
 				</File>
 				<File Id="861393736" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Winter Footsteps-007.wav</ShortName>
-					<CachePath>SFX/Winter Footsteps-007_83D27A95.wem</CachePath>
+					<CachePath>SFX/Winter Footsteps-007_A62B2D56.wem</CachePath>
 				</File>
 				<File Id="904322900" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player LowHealth.wav</ShortName>
-					<CachePath>SFX/Player LowHealth_CDB264CA.wem</CachePath>
+					<CachePath>SFX/Player LowHealth_D1317769.wem</CachePath>
 				</File>
 				<File Id="919833067" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ice Goat Die.wav</ShortName>
@@ -374,7 +569,7 @@
 				</File>
 				<File Id="920346827" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wood Footstep-008.wav</ShortName>
-					<CachePath>SFX/Wood Footstep-008_B4136648.wem</CachePath>
+					<CachePath>SFX/Wood Footstep-008_F8875463.wem</CachePath>
 				</File>
 				<File Id="925791996" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crystal Rifle2.wav</ShortName>
@@ -382,7 +577,7 @@
 				</File>
 				<File Id="931609436" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wood Footstep-007.wav</ShortName>
-					<CachePath>SFX/Wood Footstep-007_91501CA0.wem</CachePath>
+					<CachePath>SFX/Wood Footstep-007_3FE35A3A.wem</CachePath>
 				</File>
 				<File Id="936783376" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Sand Footsteps-009.wav</ShortName>
@@ -390,7 +585,7 @@
 				</File>
 				<File Id="947896078" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wood Footstep-006.wav</ShortName>
-					<CachePath>SFX/Wood Footstep-006_C39D58C5.wem</CachePath>
+					<CachePath>SFX/Wood Footstep-006_6CCD79B3.wem</CachePath>
 				</File>
 				<File Id="957101173" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RevolverLaser.wav</ShortName>
@@ -398,7 +593,7 @@
 				</File>
 				<File Id="983523845" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wood Footstep-002.wav</ShortName>
-					<CachePath>SFX/Wood Footstep-002_B4136648.wem</CachePath>
+					<CachePath>SFX/Wood Footstep-002_F8875463.wem</CachePath>
 				</File>
 				<File Id="993015536" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ice Goat Attack2.wav</ShortName>
@@ -406,7 +601,7 @@
 				</File>
 				<File Id="1023986073" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Winter Footsteps-003.wav</ShortName>
-					<CachePath>SFX/Winter Footsteps-003_49C77BAF.wem</CachePath>
+					<CachePath>SFX/Winter Footsteps-003_8918B118.wem</CachePath>
 				</File>
 				<File Id="1026484854" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lamia Attack.wav</ShortName>
@@ -422,7 +617,7 @@
 				</File>
 				<File Id="1057160664" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wood Footstep-003.wav</ShortName>
-					<CachePath>SFX/Wood Footstep-003_9282E80F.wem</CachePath>
+					<CachePath>SFX/Wood Footstep-003_54F76320.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -446,6 +641,7 @@
 						<MediaRef Id="45659975"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2994446543" Name="creditsStart" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="720364476" Name="goatAttack" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.7144916" DurationMax="0.9279404">
 					<MediaRefs>
 						<MediaRef Id="108690042"/>
@@ -578,6 +774,21 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="272640944" Name="intensityHigh" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="1301299809" Id="3420765524" Name="highInt"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="1343576922" Name="intensityLow" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="1301299809" Id="3325438800" Name="lowInt"/>
+					</ActionSetSwitch>
+				</Event>
+				<Event Id="773284954" Name="intensityMid" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetSwitch>
+						<ActionSetSwitchEntry GroupId="1301299809" Id="487624844" Name="midInt"/>
+					</ActionSetSwitch>
+				</Event>
 				<Event Id="1609923659" Name="lamiaAttack" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.9794317" DurationMax="1.099375">
 					<MediaRefs>
 						<MediaRef Id="1026484854"/>
@@ -593,6 +804,12 @@
 						<MediaRef Id="354361320"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3438030758" Name="level1Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2753803885" Id="4206939873" Name="musicLevel1"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="192279183" Name="level2Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2525052962" Name="playerDash" DurationType="OneShot" DurationMin="0.21711458" DurationMax="0.21711458">
 					<MediaRefs>
 						<MediaRef Id="148884185"/>
@@ -706,12 +923,31 @@
 				<GameParameter Id="1240670792" Name="Distance"/>
 				<GameParameter Id="2426350174" Name="RoFIncrease"/>
 			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="2753803885" Name="MusicRegions">
+					<States>
+						<State Id="435872092" Name="musicCredits"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2935806393" Name="musicBoss"/>
+						<State Id="4082046343" Name="musicMenu"/>
+						<State Id="4206939873" Name="musicLevel1"/>
+						<State Id="4206939874" Name="musicLevel2"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="461894747" Name="terrainMaterial">
 					<Switches>
 						<Switch Id="45539941" Name="woodTerrain"/>
 						<Switch Id="887657946" Name="sandTerrain"/>
 						<Switch Id="1110108097" Name="winterTerrain"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1301299809" Name="musicIntensity">
+					<Switches>
+						<Switch Id="487624844" Name="midInt"/>
+						<Switch Id="3325438800" Name="lowInt"/>
+						<Switch Id="3420765524" Name="highInt"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="2107435045" Name="weaponSwitch">
@@ -724,18 +960,36 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2201105581" Type="User" Language="SFX" Hash="{EE80BA4F-235D-8559-EA2A-112A07AEE2EC}">
-			<ShortName>Credits</ShortName>
-			<Path>Credits.bnk</Path>
-		</SoundBank>
-		<SoundBank Id="3761286873" Type="User" Language="SFX" Hash="{F654DEE9-2E7A-686E-0E4E-204095CEE384}">
+		<SoundBank Id="3761286873" Type="User" Language="SFX" Hash="{AE6B8184-FD1C-DF32-FA93-BAE5764D69C2}">
 			<ShortName>Environment1</ShortName>
 			<Path>Environment1.bnk</Path>
+			<Events>
+				<Event Id="3438030758" Name="level1Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2753803885" Id="4206939873" Name="musicLevel1"/>
+					</ActionSetState>
+				</Event>
+			</Events>
+			<StateGroups>
+				<StateGroup Id="2753803885" Name="MusicRegions">
+					<States>
+						<State Id="435872092" Name="musicCredits"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2935806393" Name="musicBoss"/>
+						<State Id="4082046343" Name="musicMenu"/>
+						<State Id="4206939873" Name="musicLevel1"/>
+						<State Id="4206939874" Name="musicLevel2"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3761286874" Type="User" Language="SFX" Hash="{722482B1-9B8F-34DD-A7C2-40608E788126}">
+		<SoundBank Id="3761286874" Type="User" Language="SFX" Hash="{A1A0B685-8851-52FF-68C1-B09546668FF6}">
 			<ShortName>Environment2</ShortName>
 			<Path>Environment2.bnk</Path>
+			<Events>
+				<Event Id="192279183" Name="level2Start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0F10041A-190D-E8D9-2DBE-7BB38176FA9B}</FileHash>
+	<FileHash>{E91C36F8-4D0C-AA6B-4438-847891F92D00}</FileHash>
 </SoundBanksInfo>
