@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID PLAYERDIE = 3966601280U;
         static const AkUniqueID PLAYERENERGYEMPTY = 2374849433U;
         static const AkUniqueID PLAYERENERGYLOW = 1839772676U;
+        static const AkUniqueID PLAYERFOOTSTEP = 3542290436U;
         static const AkUniqueID PLAYERHEALTHLOW = 583027834U;
         static const AkUniqueID PLAYERHURT = 3537581393U;
         static const AkUniqueID SNIPEREXPLODE = 734204211U;
@@ -70,16 +71,28 @@ namespace AK
 
     namespace SWITCHES
     {
-        namespace PICKUPGROUP
+        namespace PICKUPSWITCH
         {
-            static const AkUniqueID GROUP = 1363147826U;
+            static const AkUniqueID GROUP = 2159605653U;
 
             namespace SWITCH
             {
                 static const AkUniqueID HEALTHSWITCH = 3237077415U;
                 static const AkUniqueID SOULSWITCH = 3942412836U;
             } // namespace SWITCH
-        } // namespace PICKUPGROUP
+        } // namespace PICKUPSWITCH
+
+        namespace TERRAINMATERIAL
+        {
+            static const AkUniqueID GROUP = 461894747U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID SANDTERRAIN = 887657946U;
+                static const AkUniqueID WINTERTERRAIN = 1110108097U;
+                static const AkUniqueID WOODTERRAIN = 45539941U;
+            } // namespace SWITCH
+        } // namespace TERRAINMATERIAL
 
         namespace WEAPONSWITCH
         {

@@ -144,13 +144,21 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{3B3021C9-C34B-1C55-379F-2DA21C3A20CB}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{7AF1CAE8-AC75-CAFC-0114-26D150030AD2}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
+				<File Id="1643904" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sand Footsteps-007.wav</ShortName>
+					<CachePath>SFX/Sand Footsteps-007_10C4C929.wem</CachePath>
+				</File>
 				<File Id="4330535" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lamia Die.wav</ShortName>
 					<CachePath>SFX/Lamia Die_D6AD3289.wem</CachePath>
+				</File>
+				<File Id="7374812" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wood Footstep-005.wav</ShortName>
+					<CachePath>SFX/Wood Footstep-005_41A587B2.wem</CachePath>
 				</File>
 				<File Id="45659975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Whip Crack.wav</ShortName>
@@ -172,6 +180,10 @@
 					<ShortName>Button Hover.wav</ShortName>
 					<CachePath>SFX/Button Hover_32327EC5.wem</CachePath>
 				</File>
+				<File Id="136961335" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sand Footsteps-005.wav</ShortName>
+					<CachePath>SFX/Sand Footsteps-005_10C4C929.wem</CachePath>
+				</File>
 				<File Id="148884185" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player Dash.wav</ShortName>
 					<CachePath>SFX/Player Dash_63A6E44B.wem</CachePath>
@@ -180,9 +192,17 @@
 					<ShortName>Soul Reload.wav</ShortName>
 					<CachePath>SFX/Soul Reload_2588FD3D.wem</CachePath>
 				</File>
+				<File Id="185750398" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sand Footsteps-003.wav</ShortName>
+					<CachePath>SFX/Sand Footsteps-003_10C4C929.wem</CachePath>
+				</File>
 				<File Id="186090430" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PlayerHurt3.wav</ShortName>
 					<CachePath>SFX/PlayerHurt3_FFEAFE3A.wem</CachePath>
+				</File>
+				<File Id="191823970" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sand Footsteps-004.wav</ShortName>
+					<CachePath>SFX/Sand Footsteps-004_10C4C929.wem</CachePath>
 				</File>
 				<File Id="196452524" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Reload.wav</ShortName>
@@ -192,9 +212,21 @@
 					<ShortName>RevolverClickOut.wav</ShortName>
 					<CachePath>SFX/RevolverClickOut_A0F3EDC1.wem</CachePath>
 				</File>
+				<File Id="211216072" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Winter Footsteps-009.wav</ShortName>
+					<CachePath>SFX/Winter Footsteps-009_429419B1.wem</CachePath>
+				</File>
+				<File Id="234401108" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wood Footstep-004.wav</ShortName>
+					<CachePath>SFX/Wood Footstep-004_9282E80F.wem</CachePath>
+				</File>
 				<File Id="235859214" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Goelm Shield Hit.wav</ShortName>
 					<CachePath>SFX/Goelm Shield Hit_10C4C929.wem</CachePath>
+				</File>
+				<File Id="241897521" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Winter Footsteps-001.wav</ShortName>
+					<CachePath>SFX/Winter Footsteps-001_868D6785.wem</CachePath>
 				</File>
 				<File Id="244355290" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crystal Shotgun.wav</ShortName>
@@ -216,6 +248,14 @@
 					<ShortName>PlayerHurt2.wav</ShortName>
 					<CachePath>SFX/PlayerHurt2_D04CCF33.wem</CachePath>
 				</File>
+				<File Id="305762705" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Winter Footsteps-010.wav</ShortName>
+					<CachePath>SFX/Winter Footsteps-010_4060DBD8.wem</CachePath>
+				</File>
+				<File Id="307538766" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sand Footsteps-001.wav</ShortName>
+					<CachePath>SFX/Sand Footsteps-001_10C4C929.wem</CachePath>
+				</File>
 				<File Id="319552313" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tikbalang Die.wav</ShortName>
 					<CachePath>SFX/Tikbalang Die_2E418084.wem</CachePath>
@@ -228,9 +268,25 @@
 					<ShortName>Energy Empty.wav</ShortName>
 					<CachePath>SFX/Energy Empty_DE0FCD80.wem</CachePath>
 				</File>
+				<File Id="341767214" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Winter Footsteps-002.wav</ShortName>
+					<CachePath>SFX/Winter Footsteps-002_507F1A52.wem</CachePath>
+				</File>
 				<File Id="354361320" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lamia Hurt.wav</ShortName>
 					<CachePath>SFX/Lamia Hurt_1FC45384.wem</CachePath>
+				</File>
+				<File Id="411260814" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Winter Footsteps-006.wav</ShortName>
+					<CachePath>SFX/Winter Footsteps-006_B22D8C9A.wem</CachePath>
+				</File>
+				<File Id="414944709" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sand Footsteps-010.wav</ShortName>
+					<CachePath>SFX/Sand Footsteps-010_10C4C929.wem</CachePath>
+				</File>
+				<File Id="416043945" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sand Footsteps-008.wav</ShortName>
+					<CachePath>SFX/Sand Footsteps-008_10C4C929.wem</CachePath>
 				</File>
 				<File Id="433725598" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tikbalang Hurt.wav</ShortName>
@@ -240,13 +296,25 @@
 					<ShortName>Shotgun PumpEnd.wav</ShortName>
 					<CachePath>SFX/Shotgun PumpEnd_8321EBBE.wem</CachePath>
 				</File>
+				<File Id="468921770" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Winter Footsteps-004.wav</ShortName>
+					<CachePath>SFX/Winter Footsteps-004_6D306A4D.wem</CachePath>
+				</File>
 				<File Id="471983534" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Golem Attack.wav</ShortName>
 					<CachePath>SFX/Golem Attack_10C4C929.wem</CachePath>
 				</File>
+				<File Id="485331998" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sand Footsteps-006.wav</ShortName>
+					<CachePath>SFX/Sand Footsteps-006_10C4C929.wem</CachePath>
+				</File>
 				<File Id="486002857" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Reload.wav</ShortName>
 					<CachePath>SFX/Soul Reload_5673C7EF.wem</CachePath>
+				</File>
+				<File Id="488097967" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sand Footsteps-002.wav</ShortName>
+					<CachePath>SFX/Sand Footsteps-002_10C4C929.wem</CachePath>
 				</File>
 				<File Id="518432802" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FullSniperReload.wav</ShortName>
@@ -272,6 +340,10 @@
 					<ShortName>Click_01.wav</ShortName>
 					<CachePath>SFX/Click_01_19179A0A.wem</CachePath>
 				</File>
+				<File Id="720531424" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Winter Footsteps-008.wav</ShortName>
+					<CachePath>SFX/Winter Footsteps-008_734FED00.wem</CachePath>
+				</File>
 				<File Id="738347848" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Pickup.wav</ShortName>
 					<CachePath>SFX/Soul Pickup_6BE663C8.wem</CachePath>
@@ -284,6 +356,14 @@
 					<ShortName>Rifle Reload.wav</ShortName>
 					<CachePath>SFX/Rifle Reload_8B1AD062.wem</CachePath>
 				</File>
+				<File Id="795595915" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wood Footstep-001.wav</ShortName>
+					<CachePath>SFX/Wood Footstep-001_C297DCCA.wem</CachePath>
+				</File>
+				<File Id="861393736" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Winter Footsteps-007.wav</ShortName>
+					<CachePath>SFX/Winter Footsteps-007_83D27A95.wem</CachePath>
+				</File>
 				<File Id="904322900" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player LowHealth.wav</ShortName>
 					<CachePath>SFX/Player LowHealth_CDB264CA.wem</CachePath>
@@ -292,17 +372,41 @@
 					<ShortName>Ice Goat Die.wav</ShortName>
 					<CachePath>SFX/Ice Goat Die_87C77564.wem</CachePath>
 				</File>
+				<File Id="920346827" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wood Footstep-008.wav</ShortName>
+					<CachePath>SFX/Wood Footstep-008_B4136648.wem</CachePath>
+				</File>
 				<File Id="925791996" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crystal Rifle2.wav</ShortName>
 					<CachePath>SFX/Crystal Rifle2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="931609436" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wood Footstep-007.wav</ShortName>
+					<CachePath>SFX/Wood Footstep-007_91501CA0.wem</CachePath>
+				</File>
+				<File Id="936783376" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Sand Footsteps-009.wav</ShortName>
+					<CachePath>SFX/Sand Footsteps-009_10C4C929.wem</CachePath>
+				</File>
+				<File Id="947896078" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wood Footstep-006.wav</ShortName>
+					<CachePath>SFX/Wood Footstep-006_C39D58C5.wem</CachePath>
 				</File>
 				<File Id="957101173" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RevolverLaser.wav</ShortName>
 					<CachePath>SFX/RevolverLaser_124D9DF1.wem</CachePath>
 				</File>
+				<File Id="983523845" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wood Footstep-002.wav</ShortName>
+					<CachePath>SFX/Wood Footstep-002_B4136648.wem</CachePath>
+				</File>
 				<File Id="993015536" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ice Goat Attack2.wav</ShortName>
 					<CachePath>SFX/Ice Goat Attack2_63423618.wem</CachePath>
+				</File>
+				<File Id="1023986073" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Winter Footsteps-003.wav</ShortName>
+					<CachePath>SFX/Winter Footsteps-003_49C77BAF.wem</CachePath>
 				</File>
 				<File Id="1026484854" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lamia Attack.wav</ShortName>
@@ -315,6 +419,10 @@
 				<File Id="1045187845" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ice Goat Hurt.wav</ShortName>
 					<CachePath>SFX/Ice Goat Hurt_260EA649.wem</CachePath>
+				</File>
+				<File Id="1057160664" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Wood Footstep-003.wav</ShortName>
+					<CachePath>SFX/Wood Footstep-003_9282E80F.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -505,6 +613,52 @@
 						<MediaRef Id="264027759"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3542290436" Name="playerFootstep" DurationType="OneShot" DurationMin="0.18046662" DurationMax="0.5730602">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="461894747" Id="1110108097"/>
+							<MediaRefs>
+								<MediaRef Id="211216072"/>
+								<MediaRef Id="241897521"/>
+								<MediaRef Id="305762705"/>
+								<MediaRef Id="341767214"/>
+								<MediaRef Id="411260814"/>
+								<MediaRef Id="468921770"/>
+								<MediaRef Id="720531424"/>
+								<MediaRef Id="861393736"/>
+								<MediaRef Id="1023986073"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="461894747" Id="887657946" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="1643904"/>
+								<MediaRef Id="136961335"/>
+								<MediaRef Id="185750398"/>
+								<MediaRef Id="191823970"/>
+								<MediaRef Id="307538766"/>
+								<MediaRef Id="414944709"/>
+								<MediaRef Id="416043945"/>
+								<MediaRef Id="485331998"/>
+								<MediaRef Id="488097967"/>
+								<MediaRef Id="936783376"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="461894747" Id="45539941"/>
+							<MediaRefs>
+								<MediaRef Id="7374812"/>
+								<MediaRef Id="234401108"/>
+								<MediaRef Id="795595915"/>
+								<MediaRef Id="920346827"/>
+								<MediaRef Id="931609436"/>
+								<MediaRef Id="947896078"/>
+								<MediaRef Id="983523845"/>
+								<MediaRef Id="1057160664"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="583027834" Name="playerHealthLow" DurationType="OneShot" DurationMin="1.5693196" DurationMax="1.5693196">
 					<MediaRefs>
 						<MediaRef Id="904322900"/>
@@ -553,6 +707,13 @@
 				<GameParameter Id="2426350174" Name="RoFIncrease"/>
 			</GameParameters>
 			<SwitchGroups>
+				<SwitchGroup Id="461894747" Name="terrainMaterial">
+					<Switches>
+						<Switch Id="45539941" Name="woodTerrain"/>
+						<Switch Id="887657946" Name="sandTerrain"/>
+						<Switch Id="1110108097" Name="winterTerrain"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="2107435045" Name="weaponSwitch">
 					<Switches>
 						<Switch Id="163030769" Name="gunRifle"/>
@@ -576,5 +737,5 @@
 			<Path>Environment2.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E9055972-644E-73B5-3CB0-DFFEE7812F40}</FileHash>
+	<FileHash>{0F10041A-190D-E8D9-2DBE-7BB38176FA9B}</FileHash>
 </SoundBanksInfo>

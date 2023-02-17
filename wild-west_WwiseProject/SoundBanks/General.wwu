@@ -32,6 +32,7 @@
 						<ObjectRef Name="playerEnergyLow" ID="{C486F123-83F6-4C14-BF42-8581E1407A72}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerHealthLow" ID="{009B7011-4F3D-4D3C-8DA8-8594DC277430}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="sniperExplode" ID="{8D2EA042-A4C3-4F15-981D-DF35FDD55E0C}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="playerFootstep" ID="{1696172C-7C73-4F65-9B9F-1C7B0613F914}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="lamiaAttack" ID="{A1099B03-81F1-4FBC-884A-5DD171C6B068}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

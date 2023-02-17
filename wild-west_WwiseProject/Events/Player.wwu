@@ -133,6 +133,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="playerFootstep" ID="{1696172C-7C73-4F65-9B9F-1C7B0613F914}">
+							<ChildrenList>
+								<Action Name="" ID="{5989E37D-66BD-49CC-AAD0-6FAD2150C57C}" ShortID="825754111">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footstep Switch" ID="{C476C181-D284-4659-AA1B-BE5E401D0D21}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
