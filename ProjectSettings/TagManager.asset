@@ -9,6 +9,8 @@ TagManager:
   - jasperRifle
   - shootingPos
   - ground
+  - Undefined
+  - explosion
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,11 @@ TagManager:
   - Water
   - UI
   - Player
+<<<<<<< HEAD
+  - Bullet
+=======
   - Obstacle
+>>>>>>> main2
   - 
   - 
   - 
@@ -48,4 +54,13 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: static_obstacles
+    uniqueID: 1677201295
+    locked: 0
+  - name: grass
+    uniqueID: 632732077
+    locked: 0
+  - name: bullet
+    uniqueID: 2203893057
     locked: 0
