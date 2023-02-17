@@ -8,8 +8,8 @@ public class MainMenu : MonoBehaviour
 {
     public SettingsMenu settingsMenu;
     public GameObject creditsPage;
-    [Tooltip("Name of the first level to load when the player presses the start button")]
-    public string sceneToLoad;
+    /*[Tooltip("Name of the first level to load when the player presses the start button")]
+    public string sceneToLoad;*/
 
     private void Awake()
     {
@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(sceneToLoad);
+        // SceneManager.LoadScene(sceneToLoad);
     }
     
     // Toggles the visibility of the settings menu
