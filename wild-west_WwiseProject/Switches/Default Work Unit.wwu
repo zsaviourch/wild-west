@@ -3,12 +3,25 @@
 	<Switches>
 		<WorkUnit Name="Default Work Unit" ID="{E5B97B11-FE33-401C-9BDA-3C0481F05091}" PersistMode="Standalone">
 			<ChildrenList>
-				<SwitchGroup Name="weapon_switch" ID="{9209FE2F-2627-4661-8AC5-92FD74E05B26}">
+				<SwitchGroup Name="weaponSwitch" ID="{9209FE2F-2627-4661-8AC5-92FD74E05B26}">
 					<ChildrenList>
 						<Switch Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
 						<Switch Name="gunSniper" ID="{9D5924F8-18FF-46FE-85AF-BC218BF61C37}"/>
 						<Switch Name="gunRifle" ID="{BE14D35F-9EA7-42A7-A259-3EA0AC7BD1B0}"/>
 						<Switch Name="gunRevolver" ID="{7BFB712C-0880-454A-B239-6DF4F86DC31C}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="pickupSwitch" ID="{C66B96C8-1FE1-48E9-A595-48BFAD812188}">
+					<ChildrenList>
+						<Switch Name="soulSwitch" ID="{A8BF8B4B-E98C-4BF7-A044-EEDF93CCF748}"/>
+						<Switch Name="healthSwitch" ID="{13F5027A-F550-4843-AB67-4B8A5022EE12}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="terrainMaterial" ID="{C3C1D1C6-EB57-440B-B8A4-3F2A4194C477}">
+					<ChildrenList>
+						<Switch Name="sandTerrain" ID="{53E18930-8380-48B6-A5ED-5BF6ADDCD666}"/>
+						<Switch Name="woodTerrain" ID="{499DD051-A939-4296-B6A7-9808944F5096}"/>
+						<Switch Name="winterTerrain" ID="{1B6E7929-8518-4F1E-8240-5F6A8EBAAA23}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

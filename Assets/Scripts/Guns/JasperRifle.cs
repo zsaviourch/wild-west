@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class JasperRifle : MonoBehaviour
@@ -170,10 +171,15 @@ public class JasperRifle : MonoBehaviour
             reloadInitiated = true;
             currentReloadTime += Time.deltaTime;
             Reload();
+            AkSoundEngine.PostEvent("gunReload", player);
         }
 
         // Shoot
+<<<<<<< HEAD
         if (Input.GetKeyUp(KeyCode.Mouse0) && currentEnergyAmount >= energyConsumePerBullet)
+=======
+        if (Input.GetKeyDown(KeyCode.Mouse0) && currentEnergyAmount > energyConsumePerBullet)
+>>>>>>> main2
         {
             Debug.Log("shoot");
             Shoot();
@@ -259,6 +265,7 @@ public class JasperRifle : MonoBehaviour
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
+            AkSoundEngine.PostEvent("gunShoot", player);
         }
     }
 }

@@ -9,6 +9,27 @@
 							<ObjectRef Name="System" ID="{46593FE3-3D49-4E04-8892-84171C4B88A5}" WorkUnitID="{A1AC42F3-D833-4C20-BFA1-12FCDE8B3E07}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="World" ID="{FC96FCDD-89F5-4BDC-8C18-6F838D55F890}">
+							<ChildrenList>
+								<Bus Name="Ambient" ID="{D45753FA-F282-4987-9020-6CA619E8AA2F}"/>
+								<Bus Name="Player" ID="{D722E6F7-BA3D-432A-8E3B-8E04018C7FAB}"/>
+								<Bus Name="Enemies" ID="{ED768A83-EF3E-4A85-952F-95C2F3973ED6}"/>
+								<Bus Name="Voice" ID="{AB016AAE-CB09-4A9F-B9A9-881F65851378}">
+									<ChildrenList>
+										<Bus Name="Dialogue" ID="{349DD9AE-9D48-4FB6-99D7-0EE70EC98B24}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="Objects" ID="{0F100DE2-6917-43F8-BC98-EBC530DA3889}"/>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="Non-World" ID="{C05F8D4D-CBA9-4A02-8680-B0C60EF85197}">
+							<ChildrenList>
+								<Bus Name="Music" ID="{AD90F237-E9C4-4458-855F-E9732C66321C}"/>
+								<Bus Name="UI" ID="{00D28BF3-AF33-4E9D-8F81-E84541122841}"/>
+							</ChildrenList>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

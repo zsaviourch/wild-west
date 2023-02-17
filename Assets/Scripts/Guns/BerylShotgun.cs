@@ -170,6 +170,7 @@ public class BerylShotgun : MonoBehaviour
             reloadInitiated = true;
             currentReloadTime += Time.deltaTime;
             Reload();
+            AkSoundEngine.PostEvent("gunReload", gameObject);
         }
 
         // Shoot
@@ -287,6 +288,7 @@ public class BerylShotgun : MonoBehaviour
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
+            AkSoundEngine.PostEvent("gunShoot", gameObject);
         }
     }
 }

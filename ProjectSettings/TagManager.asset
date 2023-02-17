@@ -19,7 +19,11 @@ TagManager:
   - Water
   - UI
   - Player
+<<<<<<< HEAD
   - Bullet
+=======
+  - Obstacle
+>>>>>>> main2
   - 
   - 
   - 
@@ -45,6 +49,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4284302353
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

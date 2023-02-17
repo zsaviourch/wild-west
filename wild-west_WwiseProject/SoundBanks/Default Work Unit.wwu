@@ -3,6 +3,7 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" PersistMode="Standalone">
 			<ChildrenList>
+<<<<<<< HEAD
 				<SoundBank Name="Gameplay" ID="{0C8E0234-0513-445E-9C4B-9223118F94B6}">
 					<ObjectInclusionList>
 <<<<<<< Updated upstream
@@ -62,6 +63,10 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+=======
+				<WorkUnit Name="General" ID="{1620AB33-9BC8-46C4-ABB4-8423C9CC735E}" PersistMode="Reference"/>
+				<WorkUnit Name="Region" ID="{42DDE63C-A626-4721-A0EB-D0719B074697}" PersistMode="Reference"/>
+>>>>>>> main2
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

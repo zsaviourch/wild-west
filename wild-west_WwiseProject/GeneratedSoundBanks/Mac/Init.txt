@@ -1,5 +1,26 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	2753803885	MusicRegions			\Default Work Unit\Music\MusicRegions	
+
+State	ID	Name	State Group			Notes
+	435872092	musicCredits	MusicRegions			
+	543979504	musicLevel	MusicRegions			
+	748895195	None	MusicRegions			
+	2935806393	musicBoss	MusicRegions			
+	3743649387	musicDefeat	MusicRegions			
+	4082046343	musicMenu	MusicRegions			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	77978275	Ambient			\Default Work Unit\Master Audio Bus\World\Ambient	
+	838047381	Non-World			\Default Work Unit\Master Audio Bus\Non-World	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\World\Player	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\Non-World\UI	
+	1695690031	Objects			\Default Work Unit\Master Audio Bus\World\Objects	
+	2242381963	Enemies			\Default Work Unit\Master Audio Bus\World\Enemies	
+	2609808943	World			\Default Work Unit\Master Audio Bus\World	
+	3170124113	Voice			\Default Work Unit\Master Audio Bus\World\Voice	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3930136735	Dialogue			\Default Work Unit\Master Audio Bus\World\Voice\Dialogue	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Non-World\Music	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

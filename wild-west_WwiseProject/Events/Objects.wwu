@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F4E28F67-05B8-4BD9-98C0-E62661DE4C23}" SchemaVersion="110" RootDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" ParentDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}">
+	<Events>
+		<WorkUnit Name="Objects" ID="{F4E28F67-05B8-4BD9-98C0-E62661DE4C23}" OwnerID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="soulDrop" ID="{722DB41A-B8C1-44D8-81D8-48472809F11F}">
+					<ChildrenList>
+						<Action Name="" ID="{7C3E7264-9F11-4023-8981-6FF5580BADFA}" ShortID="635643503">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SoulDrop" ID="{826A0613-EF4C-4341-B399-885E7903BE75}" WorkUnitID="{8D7D92CF-576B-469E-BF0A-36044D3EB1C6}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

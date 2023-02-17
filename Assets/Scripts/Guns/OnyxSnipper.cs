@@ -168,12 +168,14 @@ public class OnyxSnipper : MonoBehaviour
             reloadInitiated = true;
             currentReloadTime += Time.deltaTime;
             Reload();
+            AkSoundEngine.PostEvent("gunReload", gameObject);
         }
 
         // Shoot
         if (Input.GetMouseButtonDown(0) && currentEnergyAmount > energyConsumePerBullet)
         {
             Shoot();
+            AkSoundEngine.PostEvent("gunShoot", gameObject);
         }
 
         // Shooting flag adjustment

@@ -3,14 +3,19 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{0D4AAB79-89A2-4AF4-BBF7-17FDD436801C}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="reloadLength" ID="{3BD1A413-A85D-4543-AE6F-031D261762A3}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="1"/>
-						<Property Name="Max" Type="Real64" Value="5"/>
-					</PropertyList>
-				</GameParameter>
 				<GameParameter Name="sfxVolume" ID="{D0301090-F454-48A3-849F-9001B777AF2D}"/>
 				<GameParameter Name="musicVolume" ID="{20814FDD-C28C-45C3-BE1E-26E2CE7C38C0}"/>
+				<GameParameter Name="Distance" ID="{D9180EF3-D981-42DE-BD95-544A6FD63DBB}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="RoFIncrease" ID="{E70800F6-73EE-43F2-8486-7AA8F77040B3}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
