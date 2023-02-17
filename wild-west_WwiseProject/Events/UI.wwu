@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A4E56E97-9388-481B-98AC-BBDC5EE08BF3}" SchemaVersion="110" RootDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" ParentDocumentID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}">
 	<Events>
-		<WorkUnit Name="UI" ID="{A4E56E97-9388-481B-98AC-BBDC5EE08BF3}" OwnerID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" PersistMode="Nested"/>
+		<WorkUnit Name="UI" ID="{A4E56E97-9388-481B-98AC-BBDC5EE08BF3}" OwnerID="{CC930A4C-8D9F-484C-A075-2120DA1491F2}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="buttonStartGame" ID="{731C9755-2E75-458C-9C91-F62871EF7512}">
+					<ChildrenList>
+						<Action Name="" ID="{BF70B4C1-478B-4F58-86CF-07492C1C344A}" ShortID="188454229">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="buttonStartGame" ID="{3BC7D098-23C0-4089-9110-FC3D491F3956}" WorkUnitID="{3E3014C6-4447-4AE7-87B6-99DBA3D1A1DB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="buttonHover" ID="{FAEB5332-1DAD-4400-BD73-399859FD2685}">
+					<ChildrenList>
+						<Action Name="" ID="{1A664FF7-3819-4B65-8A11-984ABC790547}" ShortID="162499135">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="buttonHover" ID="{29808AF5-6DBE-4886-8CD2-AAA0952698A5}" WorkUnitID="{3E3014C6-4447-4AE7-87B6-99DBA3D1A1DB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="buttonClick" ID="{D5C98B6D-3D43-4973-B62A-F42CC2EE08EE}">
+					<ChildrenList>
+						<Action Name="" ID="{2BCC1E57-6F53-4FEB-ADD5-4D4AC6AC5E34}" ShortID="723728919">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="buttonClick" ID="{21EBB230-23BB-4E35-A84F-86CDE5FE6870}" WorkUnitID="{3E3014C6-4447-4AE7-87B6-99DBA3D1A1DB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

@@ -13,7 +13,7 @@
 			<ShortName>TitleScreen</ShortName>
 			<Path>TitleScreen.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="863592867" Type="User" Language="SFX" Hash="{47759D71-21D3-0E98-8E1D-D6B07BBBC9A7}">
+		<SoundBank Id="863592867" Type="User" Language="SFX" Hash="{67F93568-1AB7-2D61-AFF9-DB95F9A078EB}">
 			<ShortName>EnvironmentBoss</ShortName>
 			<Path>EnvironmentBoss.bnk</Path>
 			<Media>
@@ -23,23 +23,23 @@
 				</File>
 				<File Id="266832190" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ice Goat Attack2.wav</ShortName>
-					<CachePath>SFX/Ice Goat Attack2_343F3CD6.wem</CachePath>
+					<CachePath>SFX/Ice Goat Attack2_EDE86F10.wem</CachePath>
 				</File>
 				<File Id="272332325" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wendigo Die.wav</ShortName>
-					<CachePath>SFX/Wendigo Die_EAADB52E.wem</CachePath>
+					<CachePath>SFX/Wendigo Die_4E67D237.wem</CachePath>
 				</File>
 				<File Id="499674927" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ice Goat Attack1.wav</ShortName>
-					<CachePath>SFX/Ice Goat Attack1_5FC8F211.wem</CachePath>
+					<CachePath>SFX/Ice Goat Attack1_834F70FD.wem</CachePath>
 				</File>
 				<File Id="736210807" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Goelm Shield Hit.wav</ShortName>
-					<CachePath>SFX/Goelm Shield Hit_C8774590.wem</CachePath>
+					<CachePath>SFX/Goelm Shield Hit_4E223B27.wem</CachePath>
 				</File>
 				<File Id="937120721" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wendigo Missile.wav</ShortName>
-					<CachePath>SFX/Wendigo Missile_B19020D1.wem</CachePath>
+					<CachePath>SFX/Wendigo Missile_4EB655F9.wem</CachePath>
 				</File>
 				<File Id="940912880" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wendigo Slash.wav</ShortName>
@@ -131,13 +131,17 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{04557459-B15C-8D09-04BF-D6B05C921520}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{50628BB3-21B7-CE32-58CF-57A5D9461557}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
 				<File Id="4330535" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lamia Die.wav</ShortName>
 					<CachePath>SFX/Lamia Die_D6AD3289.wem</CachePath>
+				</File>
+				<File Id="45659975" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Whip Crack.wav</ShortName>
+					<CachePath>SFX/Whip Crack_AA335C4E.wem</CachePath>
 				</File>
 				<File Id="63354751" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun PumpStart.wav</ShortName>
@@ -150,6 +154,10 @@
 				<File Id="108690042" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ice Goat Attack1.wav</ShortName>
 					<CachePath>SFX/Ice Goat Attack1_C653923D.wem</CachePath>
+				</File>
+				<File Id="120091524" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Button Hover.wav</ShortName>
+					<CachePath>SFX/Button Hover_AC055D3E.wem</CachePath>
 				</File>
 				<File Id="148884185" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player Dash.wav</ShortName>
@@ -177,7 +185,7 @@
 				</File>
 				<File Id="319552313" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tikbalang Die.wav</ShortName>
-					<CachePath>SFX/Tikbalang Die_E686F41E.wem</CachePath>
+					<CachePath>SFX/Tikbalang Die_2E418084.wem</CachePath>
 				</File>
 				<File Id="327693749" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Crystal Sniper.wav</ShortName>
@@ -185,11 +193,11 @@
 				</File>
 				<File Id="354361320" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Lamia Hurt.wav</ShortName>
-					<CachePath>SFX/Lamia Hurt_4C5D8E08.wem</CachePath>
+					<CachePath>SFX/Lamia Hurt_1FC45384.wem</CachePath>
 				</File>
 				<File Id="433725598" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tikbalang Hurt.wav</ShortName>
-					<CachePath>SFX/Tikbalang Hurt_33739190.wem</CachePath>
+					<CachePath>SFX/Tikbalang Hurt_4A7DE27A.wem</CachePath>
 				</File>
 				<File Id="460143773" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun PumpEnd.wav</ShortName>
@@ -217,7 +225,11 @@
 				</File>
 				<File Id="673794957" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tikbalang Slash.wav</ShortName>
-					<CachePath>SFX/Tikbalang Slash_09FAD3CE.wem</CachePath>
+					<CachePath>SFX/Tikbalang Slash_639BBC9D.wem</CachePath>
+				</File>
+				<File Id="688485637" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Click_01.wav</ShortName>
+					<CachePath>SFX/Click_01_39D05272.wem</CachePath>
 				</File>
 				<File Id="745892146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Golem Die.wav</ShortName>
@@ -262,6 +274,21 @@
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="4051332235" Name="buttonClick" DurationType="OneShot" DurationMin="0.20192222" DurationMax="0.20192222">
+					<MediaRefs>
+						<MediaRef Id="120091524"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3035572085" Name="buttonHover" DurationType="OneShot" DurationMin="0.06844566" DurationMax="0.06844566">
+					<MediaRefs>
+						<MediaRef Id="688485637"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="282606109" Name="buttonStartGame" DurationType="OneShot" DurationMin="1.165597" DurationMax="1.165597">
+					<MediaRefs>
+						<MediaRef Id="45659975"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="720364476" Name="goatAttack" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.7144916" DurationMax="0.9279404">
 					<MediaRefs>
 						<MediaRef Id="108690042"/>
@@ -423,7 +450,7 @@
 				<Event Id="4173482238" Name="playerHealthMax" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3292114096" Name="playerHealthPickUp" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3537581393" Name="playerHurt" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="734204211" Name="sniperExplode" DurationType="OneShot" DurationMin="5.4734573" DurationMax="5.8988247">
+				<Event Id="734204211" Name="sniperExplode" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.4734573" DurationMax="3.8988245">
 					<MediaRefs>
 						<MediaRef Id="621894801"/>
 					</MediaRefs>
@@ -474,5 +501,5 @@
 			<Path>Environment2.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{82E86091-6DAE-0F17-2794-5D92E73B6814}</FileHash>
+	<FileHash>{7233C6E5-EFCB-8365-3DC9-E23AE19C1A1A}</FileHash>
 </SoundBanksInfo>

@@ -13,6 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BUTTONCLICK = 4051332235U;
+        static const AkUniqueID BUTTONHOVER = 3035572085U;
+        static const AkUniqueID BUTTONSTARTGAME = 282606109U;
         static const AkUniqueID GOATATTACK = 720364476U;
         static const AkUniqueID GOATDIE = 404655026U;
         static const AkUniqueID GOATHURT = 2445642675U;

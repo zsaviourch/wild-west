@@ -13,9 +13,11 @@
 						<ObjectRef Name="tikbalangAttack" ID="{CF9972DB-54C9-429D-B922-A705659D1137}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="tikbalangDie" ID="{C04B97BD-AB4C-42D5-A7FD-370A710CF2AC}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="golemDie" ID="{E91C0C15-43E6-43EC-9FE8-D2A7F56278F3}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="buttonHover" ID="{FAEB5332-1DAD-4400-BD73-399859FD2685}" WorkUnitID="{A4E56E97-9388-481B-98AC-BBDC5EE08BF3}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="soulDrop" ID="{722DB41A-B8C1-44D8-81D8-48472809F11F}" WorkUnitID="{F4E28F67-05B8-4BD9-98C0-E62661DE4C23}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerDash" ID="{535AE50B-7C4D-4558-AB6D-A8A4B46254B4}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="golemShieldHit" ID="{6271B543-FBB9-4561-ACB3-E97799871970}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="buttonStartGame" ID="{731C9755-2E75-458C-9C91-F62871EF7512}" WorkUnitID="{A4E56E97-9388-481B-98AC-BBDC5EE08BF3}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerHealthPickUp" ID="{2936D239-8F69-45AE-AD59-E3553C81B2E2}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="lamiaHurt" ID="{8D73B84A-D7EE-460F-A3B8-04323C1AE830}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="soulPickUp" ID="{65401D85-77DA-463A-B4E4-1F8C2D1AF365}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
@@ -26,6 +28,7 @@
 						<ObjectRef Name="lamiaDie" ID="{8C6AC4DA-9EE3-4876-BCBC-C6FE7307A39F}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerDie" ID="{9058AAA9-8F66-48E8-9074-E7BCD08B587A}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="goatAttack" ID="{422D8CEB-A397-494F-ADB5-00C3A603C90C}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="buttonClick" ID="{D5C98B6D-3D43-4973-B62A-F42CC2EE08EE}" WorkUnitID="{A4E56E97-9388-481B-98AC-BBDC5EE08BF3}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="gunEmpty" ID="{2A86A847-9D2B-4A49-BF83-7C9FF422E156}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="goatHurt" ID="{62CB2535-9D17-4A6C-86AE-760DE1546DBB}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="gunShoot" ID="{2EEFE972-7AB9-4BC8-84C2-90D4E13A9F2B}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>

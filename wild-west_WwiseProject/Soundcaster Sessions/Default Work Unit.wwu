@@ -25,11 +25,15 @@
 							<ObjectRef Name="goatAttack" ID="{422D8CEB-A397-494F-ADB5-00C3A603C90C}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}"/>
 							<Position X="2" Y="2"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="sniperExplode" ID="{8D2EA042-A4C3-4F15-981D-DF35FDD55E0C}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
+							<Position X="3" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="Distance" ID="{D9180EF3-D981-42DE-BD95-544A6FD63DBB}"/>
-							<Value>64</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="RoFIncrease" ID="{E70800F6-73EE-43F2-8486-7AA8F77040B3}"/>

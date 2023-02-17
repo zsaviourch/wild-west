@@ -210,12 +210,14 @@ public class OnyxSnipperBullet : MonoBehaviour
             if (hitStuff && hitPosition != Vector3.zero)
             {
                 Explode(hitPosition);
+                AkSoundEngine.PostEvent("sniperExplode", gameObject);
             }
             else
             {
                 Explode(transform.position);
+                AkSoundEngine.PostEvent("sniperExplode", gameObject);
             }
-            
+
         }
     }
 
