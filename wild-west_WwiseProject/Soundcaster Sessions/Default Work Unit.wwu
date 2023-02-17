@@ -52,7 +52,9 @@
 						<CurrentStateRef Name="musicLevel" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="gunSniper" ID="{9D5924F8-18FF-46FE-85AF-BC218BF61C37}"/>
+						<CurrentSwitchRef Name="sandTerrain" ID="{53E18930-8380-48B6-A5ED-5BF6ADDCD666}"/>
+						<CurrentSwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
+						<CurrentSwitchRef Name="healthSwitch" ID="{13F5027A-F550-4843-AB67-4B8A5022EE12}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

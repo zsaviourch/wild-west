@@ -5,11 +5,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	382555423	tikbalangHurt			\Default Work Unit\Enemies\Tikbalang\tikbalangHurt	
 	404655026	goatDie			\Default Work Unit\Enemies\Ice Goat\goatDie	
 	583027834	playerHealthLow			\Default Work Unit\Player\General\playerHealthLow	
-	604915824	healthDrop			\Default Work Unit\Objects\healthDrop	
 	720364476	goatAttack			\Default Work Unit\Enemies\Ice Goat\goatAttack	
 	734204211	sniperExplode			\Default Work Unit\Player\General\sniperExplode	
 	838703051	golemDie			\Default Work Unit\Enemies\Amber Golem\golemDie	
-	1605033336	playerEnergyMax			\Default Work Unit\Player\General\playerEnergyMax	
 	1609923659	lamiaAttack			\Default Work Unit\Enemies\Lamia\lamiaAttack	
 	1839772676	playerEnergyLow			\Default Work Unit\Player\General\playerEnergyLow	
 	2374849433	playerEnergyEmpty			\Default Work Unit\Player\General\playerEnergyEmpty	
@@ -23,13 +21,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	3060973567	lamiaDie			\Default Work Unit\Enemies\Lamia\lamiaDie	
 	3112440327	golemShieldHit			\Default Work Unit\Enemies\Amber Golem\golemShieldHit	
 	3194616450	gunShoot			\Default Work Unit\Player\General\gunShoot	
-	3292114096	playerHealthPickUp			\Default Work Unit\Player\General\playerHealthPickUp	
 	3537581393	playerHurt			\Default Work Unit\Player\General\playerHurt	
 	3739246548	soulPickUp			\Default Work Unit\Player\General\soulPickUp	
 	3966601280	playerDie			\Default Work Unit\Player\General\playerDie	
 	4051332235	buttonClick			\Default Work Unit\UI\buttonClick	
 	4077017716	lamiaHurt			\Default Work Unit\Enemies\Lamia\lamiaHurt	
-	4173482238	playerHealthMax			\Default Work Unit\Player\General\playerHealthMax	
 	4272317039	golemAttack			\Default Work Unit\Enemies\Amber Golem\golemAttack	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
@@ -57,12 +53,18 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	120091524	buttonClick	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Button Hover_32327EC5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\Buttons\buttonClick		35716
 	148884185	Player Dash	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Player Dash_63A6E44B.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Player Dash		60892
 	176955351	soulReloadRevolver	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Soul Reload_2588FD3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\soulReload\soulReloadRevolver		176496
+	186090430	PlayerHurt3	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\PlayerHurt3_FFEAFE3A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Health\playerHurt\PlayerHurt3		117392
 	196452524	soulReloadRifle	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Soul Reload_AE0C83A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\soulReload\soulReloadRifle		352896
 	209860096	revolverClickOut	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\RevolverClickOut_A0F3EDC1.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\Reloading\gunReloadStart\revolverClickOut		26556
 	235859214	golemShieldHit	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Goelm Shield Hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Amber Golem\amberGolem\amberGolemShieldHit\golemShieldHit		242640
 	244355290	Crystal Shotgun	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Crystal Shotgun_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\GunsShooting\SwitchGunShoot\Crystal Shotgun		529296
+	264027759	Energy Low	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Energy Low_2B4B0CC6.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Energy\Energy Low		97116
+	271582514	Soul Drop	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Soul Drop_31129DF7.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Souls\SoulDrop\Soul Drop		176496
+	287835315	Player Die	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Player Die_16AC5E7E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Health\Player Die		285756
+	302009345	PlayerHurt2	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\PlayerHurt2_D04CCF33.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Health\playerHurt\PlayerHurt2		122152
 	319552313	Tikbalang Die	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Tikbalang Die_2E418084.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Tikbalang\tikbalang\tikbalangDie\Tikbalang Die		124624
 	327693749	sniperShot	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Crystal Sniper_7DD473B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\GunsShooting\SwitchGunShoot\sniperShot		352896
+	329278512	Energy Empty	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Energy Empty_DE0FCD80.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Energy\Energy Empty		71092
 	354361320	Lamia Hurt	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Lamia Hurt_1FC45384.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Lamia\lamia\lamiaHurt\Lamia Hurt		60204
 	433725598	Tikbalang Hurt	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Tikbalang Hurt_4A7DE27A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Tikbalang\tikbalang\tikbalangHurt\Tikbalang Hurt		66672
 	460143773	shotgunPumpEnd	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Shotgun PumpEnd_8321EBBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\Reloading\gunReloadFinish\shotgunPumpEnd		53016
@@ -71,10 +73,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	518432802	FullSniperReload	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\FullSniperReload_A6388769.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\Reloading\gunReloadStart\FullSniperReload		326436
 	544632092	emptyClip	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\EmptyClip_6481F61E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\emptyClip		35376
 	621894801	sniperExplosion	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Sniper Explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\GunsShooting\SwitchGunShoot\sniperExplode\sniperExplosion		649248
+	627538433	PlayerHurt1	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\PlayerHurt1_DD44314A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Health\playerHurt\PlayerHurt1		104712
 	673794957	Tikbalang Slash	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Tikbalang Slash_639BBC9D.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Tikbalang\tikbalang\tikbalangAttack\Tikbalang Slash		128660
 	688485637	buttonHover	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Click_01_19179A0A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\Buttons\buttonHover		11804
+	738347848	Soul Pickup	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Soul Pickup_6BE663C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Pickup\Soul Pickup		146820
 	745892146	golemDie	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Golem Die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Amber Golem\amberGolem\amberGolemDie\golemDie		264696
 	774037349	Rifle Reload	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Rifle Reload_8B1AD062.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\Reloading\gunReloadFinish\Rifle Reload		352896
+	904322900	Player LowHealth	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Player LowHealth_CDB264CA.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Health\Player LowHealth		276924
 	919833067	iceGoatDie	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Ice Goat Die_87C77564.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Ice Goat\iceGoat\iceGoatDie\iceGoatDie		141216
 	925791996	Crystal Rifle	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Crystal Rifle2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\GunsShooting\SwitchGunShoot\Crystal Rifle		461312
 	957101173	RevolverLaser	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\RevolverLaser_124D9DF1.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\GunsShooting\SwitchGunShoot\RevolverLaser		882096

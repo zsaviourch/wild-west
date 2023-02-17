@@ -11,6 +11,19 @@
 						<Switch Name="gunRevolver" ID="{7BFB712C-0880-454A-B239-6DF4F86DC31C}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="pickupSwitch" ID="{C66B96C8-1FE1-48E9-A595-48BFAD812188}">
+					<ChildrenList>
+						<Switch Name="soulSwitch" ID="{A8BF8B4B-E98C-4BF7-A044-EEDF93CCF748}"/>
+						<Switch Name="healthSwitch" ID="{13F5027A-F550-4843-AB67-4B8A5022EE12}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="terrainMaterial" ID="{C3C1D1C6-EB57-440B-B8A4-3F2A4194C477}">
+					<ChildrenList>
+						<Switch Name="sandTerrain" ID="{53E18930-8380-48B6-A5ED-5BF6ADDCD666}"/>
+						<Switch Name="woodTerrain" ID="{499DD051-A939-4296-B6A7-9808944F5096}"/>
+						<Switch Name="winterTerrain" ID="{1B6E7929-8518-4F1E-8240-5F6A8EBAAA23}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

@@ -26,7 +26,6 @@ namespace AK
         static const AkUniqueID GUNEMPTY = 147436440U;
         static const AkUniqueID GUNRELOAD = 323245414U;
         static const AkUniqueID GUNSHOOT = 3194616450U;
-        static const AkUniqueID HEALTHDROP = 604915824U;
         static const AkUniqueID LAMIAATTACK = 1609923659U;
         static const AkUniqueID LAMIADIE = 3060973567U;
         static const AkUniqueID LAMIAHURT = 4077017716U;
@@ -34,10 +33,7 @@ namespace AK
         static const AkUniqueID PLAYERDIE = 3966601280U;
         static const AkUniqueID PLAYERENERGYEMPTY = 2374849433U;
         static const AkUniqueID PLAYERENERGYLOW = 1839772676U;
-        static const AkUniqueID PLAYERENERGYMAX = 1605033336U;
         static const AkUniqueID PLAYERHEALTHLOW = 583027834U;
-        static const AkUniqueID PLAYERHEALTHMAX = 4173482238U;
-        static const AkUniqueID PLAYERHEALTHPICKUP = 3292114096U;
         static const AkUniqueID PLAYERHURT = 3537581393U;
         static const AkUniqueID SNIPEREXPLODE = 734204211U;
         static const AkUniqueID SOULDROP = 2940614623U;
@@ -74,6 +70,17 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace PICKUPGROUP
+        {
+            static const AkUniqueID GROUP = 1363147826U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID HEALTHSWITCH = 3237077415U;
+                static const AkUniqueID SOULSWITCH = 3942412836U;
+            } // namespace SWITCH
+        } // namespace PICKUPGROUP
+
         namespace WEAPONSWITCH
         {
             static const AkUniqueID GROUP = 2107435045U;
