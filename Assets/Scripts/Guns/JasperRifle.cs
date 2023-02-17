@@ -173,10 +173,9 @@ public class JasperRifle : MonoBehaviour
         }
 
         // Shoot
-        if (Input.GetKeyUp(KeyCode.Mouse0) && currentEnergyAmount > energyConsumePerBullet)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && currentEnergyAmount > energyConsumePerBullet)
         {
             Shoot();
-            AkSoundEngine.PostEvent("gunShoot", player);
         }
 
         // Shooting flag adjustment
@@ -234,6 +233,7 @@ public class JasperRifle : MonoBehaviour
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
+            AkSoundEngine.PostEvent("gunShoot", player);
         }
     }
 }

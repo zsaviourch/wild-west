@@ -175,7 +175,6 @@ public class BerylShotgun : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse0) && currentEnergyAmount > energyConsumePerBullet)
         {
             Shoot();
-            AkSoundEngine.PostEvent("gunShoot", gameObject);
         }
 
         // Shooting flag adjustment
@@ -246,6 +245,7 @@ public class BerylShotgun : MonoBehaviour
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
+            AkSoundEngine.PostEvent("gunShoot", gameObject);
         }
     }
 }
