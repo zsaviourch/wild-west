@@ -171,7 +171,7 @@ public class JasperRifle : MonoBehaviour
             reloadInitiated = true;
             currentReloadTime += Time.deltaTime;
             Reload();
-            AkSoundEngine.PostEvent("gunReload", player);
+            // AkSoundEngine.PostEvent("gunReload", player);
         }
 
         // Shoot
@@ -261,7 +261,7 @@ public class JasperRifle : MonoBehaviour
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
-            AkSoundEngine.PostEvent("gunShoot", player);
+            // AkSoundEngine.PostEvent("gunShoot", player);
         }
     }
 }
