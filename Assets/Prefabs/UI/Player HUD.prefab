@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6085410263388185571
 RectTransform:
   m_ObjectHideFlags: 0
@@ -168,12 +168,12 @@ RectTransform:
   m_Children:
   - {fileID: 6085410264517403484}
   - {fileID: 6085410264125868590}
-  - {fileID: 5605154728317774823}
   - {fileID: 8948667651425890091}
+  - {fileID: 5605154728317774823}
   - {fileID: 6085410264214913016}
   - {fileID: 6085410263388185571}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -259,7 +259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6085410264214913016
 RectTransform:
   m_ObjectHideFlags: 0
@@ -463,11 +463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -885
+      value: -750
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -284
+      value: -420
       objectReference: {fileID: 0}
     - target: {fileID: 8839657871391574639, guid: f6f504e172d0e864faa131ee75445e77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -615,7 +615,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8071252759711124310, guid: 117f75947ce09f34c816cfc18fdad399, type: 3}
       propertyPath: m_Name
-      value: Curent Weapon
+      value: Current Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 8071252759711124311, guid: 117f75947ce09f34c816cfc18fdad399, type: 3}
       propertyPath: m_Pivot.x
@@ -683,7 +683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8071252759711124311, guid: 117f75947ce09f34c816cfc18fdad399, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -750
+      value: -615
       objectReference: {fileID: 0}
     - target: {fileID: 8071252759711124311, guid: 117f75947ce09f34c816cfc18fdad399, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -814,18 +814,6 @@ PrefabInstance:
     - target: {fileID: 960541114979063263, guid: fd7cb281f8ef55a4ba72104a56e53b35, type: 3}
       propertyPath: m_Name
       value: Energy Slider
-      objectReference: {fileID: 0}
-    - target: {fileID: 960541115932582624, guid: fd7cb281f8ef55a4ba72104a56e53b35, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4784314
-      objectReference: {fileID: 0}
-    - target: {fileID: 960541115932582624, guid: fd7cb281f8ef55a4ba72104a56e53b35, type: 3}
-      propertyPath: m_Color.g
-      value: 0.3254902
-      objectReference: {fileID: 0}
-    - target: {fileID: 960541115932582624, guid: fd7cb281f8ef55a4ba72104a56e53b35, type: 3}
-      propertyPath: m_Color.r
-      value: 0.23529413
       objectReference: {fileID: 0}
     - target: {fileID: 960541115932582625, guid: fd7cb281f8ef55a4ba72104a56e53b35, type: 3}
       propertyPath: m_AnchorMax.x
