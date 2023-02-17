@@ -13,8 +13,11 @@ public class BerylliumShotgunBullet : MonoBehaviour
     [SerializeField] int aoeDamageAmount;
     [SerializeField] float bulletTravelTime;
     public float currentBulletTravelTime;
-    private Rigidbody rb;
+    private Rigidbody2D rb;
     public Transform shootingPosTransform;
+    public TrailRenderer trail;
+    public bool bulletDirectionDecided;
+    public Vector3 decidedDirection;
 
     // constructor
     public BerylliumShotgunBullet(int energyConsumedPerBullet, int bulletDamage, int bulletSpeedScaler, bool bulletFollowEnemy,
@@ -147,13 +150,17 @@ public class BerylliumShotgunBullet : MonoBehaviour
     private void Awake()
     {
         currentBulletTravelTime = 0f;
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         shootingPosTransform = GameObject.FindWithTag("shootingPos").transform;
+        trail = GetComponent<TrailRenderer>();
+        bulletDirectionDecided = false;
+        decidedDirection = Vector3.zero;
+
     }
 
 
     // hit enermy or obstacles
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         // hit the enemy
         if (collision.gameObject.CompareTag("enemy"))
@@ -175,8 +182,27 @@ public class BerylliumShotgunBullet : MonoBehaviour
         currentBulletTravelTime += Time.deltaTime;
         DestroyBulletWhenExistingTooLong();
         //Vector3 forwardDirection = Vector3.MoveTowards(transform.position, shootingPosTransform.forward, bulletSpeedScaler * Time.deltaTime);
-        transform.position += transform.forward * bulletSpeedScaler * Time.deltaTime;
+        //transform.position += transform.right * bulletSpeedScaler * Time.deltaTime;
         //rb.velocity = transform.forward * bulletSpeedScaler;
+
+        // Keep the bullet direction consistent when the player turns
+        if (bulletDirectionDecided == false)
+        {
+            if (GameObject.FindWithTag("Player").GetComponent<Transform>().localScale.x == 1)
+            {
+                decidedDirection = transform.right;
+                bulletDirectionDecided = true;
+                
+            }
+            else
+            {
+                decidedDirection = -transform.right;
+                bulletDirectionDecided = true;
+            }
+            rb.AddForce(decidedDirection * bulletSpeedScaler, ForceMode2D.Force);
+
+        }
+
     }
 
     public void DestroyBulletWhenExistingTooLong()
@@ -185,5 +211,12 @@ public class BerylliumShotgunBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        trail.transform.parent = null;
+        trail.autodestruct = true;
+        trail = null;
     }
 }

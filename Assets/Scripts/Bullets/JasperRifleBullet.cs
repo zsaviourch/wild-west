@@ -13,11 +13,16 @@ public class JasperRifleBullet : MonoBehaviour
     [SerializeField] int aoeDamageAmount;
     [SerializeField] float bulletTravelTime;
     public float currentBulletTravelTime;
-    public Rigidbody rb;
+    public Rigidbody2D rb;
     public Transform shootingPosTransform;
     public bool closestEnemyFound;
     public bool seekingEnemyInitiated;
     public Vector3 closestEnemyPos;
+    public TrailRenderer trail;
+    public float distanceToClosestEnemy;
+    public bool distanceCalculated;
+    public bool bulletDirectionDecided;
+    public Vector3 decidedDirection;
 
     // constructor
     public JasperRifleBullet(int energyConsumedPerBullet, int bulletDamage, int bulletSpeedScaler, bool bulletFollowEnemy,
@@ -150,15 +155,18 @@ public class JasperRifleBullet : MonoBehaviour
     private void Awake()
     {
         currentBulletTravelTime = 0f;
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         shootingPosTransform = GameObject.FindWithTag("shootingPos").transform;
         closestEnemyFound = false;
         seekingEnemyInitiated = false;
+        trail = GetComponent<TrailRenderer>();
+        distanceCalculated = false;
+        bulletDirectionDecided = false;
     }
 
 
     // hit enermy or obstacles
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         // hit the enemy
         if (collision.gameObject.CompareTag("enemy"))
@@ -182,16 +190,20 @@ public class JasperRifleBullet : MonoBehaviour
 
         if (closestEnemyFound)
         {
-
-            if (Vector3.Distance(transform.position, closestEnemyPos) > 5)
+            if (distanceCalculated == false)
             {
-                rb.AddForce(-shootingPosTransform.up * bulletSpeedScaler, ForceMode.Acceleration);
-                rb.AddForce(((closestEnemyPos - transform.position).normalized) * 2f * bulletSpeedScaler, ForceMode.Acceleration);
+                distanceToClosestEnemy = Vector3.Distance(transform.position, closestEnemyPos);
+                distanceCalculated = true;
+            }
+            if (Vector3.Distance(transform.position, closestEnemyPos) > distanceToClosestEnemy * 0.3)
+            {
+                rb.AddForce(shootingPosTransform.forward * bulletSpeedScaler, ForceMode2D.Force);
+                rb.AddForce(((closestEnemyPos - transform.position).normalized) * 2f * bulletSpeedScaler, ForceMode2D.Force);
             }
             else
             {
                 Vector3 followingTargetDirection = Vector3.MoveTowards(transform.position, closestEnemyPos, bulletSpeedScaler * Time.deltaTime);
-                Vector3 upDirection = Vector3.MoveTowards(transform.position, -shootingPosTransform.up, bulletSpeedScaler * Time.deltaTime);
+                Vector3 upDirection = Vector3.MoveTowards(transform.position, shootingPosTransform.forward, bulletSpeedScaler * Time.deltaTime);
                 transform.position = followingTargetDirection;
             }
             
@@ -204,7 +216,24 @@ public class JasperRifleBullet : MonoBehaviour
                 seekingEnemyInitiated = true;
             }
 
-            rb.AddForce(-shootingPosTransform.up * bulletSpeedScaler, ForceMode.Acceleration);
+
+            
+            if (bulletDirectionDecided == false)
+            {
+                if (GameObject.FindWithTag("Player").GetComponent<Transform>().localScale.x == 1)
+                {
+                    decidedDirection = shootingPosTransform.right;
+                    bulletDirectionDecided = true;
+                }
+                else
+                {
+                    decidedDirection = -shootingPosTransform.right;
+                    bulletDirectionDecided = true;
+                }
+            }
+            rb.AddForce(decidedDirection * bulletSpeedScaler, ForceMode2D.Force);
+
+
         }
         
         
@@ -253,5 +282,12 @@ public class JasperRifleBullet : MonoBehaviour
         }
    
         return closestEnemyPos;
+    }
+
+    private void OnDestroy()
+    {
+        trail.transform.parent = null;
+        trail.autodestruct = true;
+        trail = null;
     }
 }

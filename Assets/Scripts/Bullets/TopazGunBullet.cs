@@ -14,6 +14,11 @@ public class TopazGunBullet : MonoBehaviour
     [SerializeField] float bulletTravelTime;
     public float currentBulletTravelTime;
 
+    public bool bulletDirectionDecided;
+    public Vector3 decidedDirection;
+    public Transform shootingPosTransform;
+    public Rigidbody2D rb;
+
     // constructor
     public TopazGunBullet(int energyConsumedPerBullet, int bulletDamage, int bulletSpeedScaler, bool bulletFollowEnemy,
          bool aoeDamage, int aoeDamageAmount, float bulletTravelTime)
@@ -145,11 +150,14 @@ public class TopazGunBullet : MonoBehaviour
     private void Awake()
     {
         currentBulletTravelTime = 0f;
+        bulletDirectionDecided = false;
+        shootingPosTransform = GameObject.FindWithTag("shootingPos").transform;
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
     // hit enermy or obstacles
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         // hit the enemy
         if (collision.gameObject.CompareTag("enemy"))
@@ -171,6 +179,21 @@ public class TopazGunBullet : MonoBehaviour
         currentBulletTravelTime += Time.deltaTime;
         DestroyBulletWhenExistingTooLong();
         transform.position += transform.forward * bulletSpeedScaler * Time.deltaTime;
+
+        if (bulletDirectionDecided == false)
+        {
+            if (GameObject.FindWithTag("Player").GetComponent<Transform>().localScale.x == 1)
+            {
+                decidedDirection = shootingPosTransform.right;
+                bulletDirectionDecided = true;
+            }
+            else
+            {
+                decidedDirection = -shootingPosTransform.right;
+                bulletDirectionDecided = true;
+            }
+        }
+        rb.AddForce(decidedDirection * bulletSpeedScaler, ForceMode2D.Force);
     }
 
     public void DestroyBulletWhenExistingTooLong()
