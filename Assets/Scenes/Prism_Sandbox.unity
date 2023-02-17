@@ -560,10 +560,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af041150c9844824da6e32bc4d872409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TestingPlayerLived: 0
   levelAtlus: {fileID: 11400000, guid: df47edeaef013bb47a6369f262c5803f, type: 2}
-  numRoomsCompletedInTown: 0
-  StartTownIndex: 0
-  CurrentTownIndex: 0
+  numRoomsCompletedInCurrentTown: 0
+  currentProgress: 1
+  startTownIndex: 0
+  <UnmodulatedTownIndex>k__BackingField: 5
 --- !u!1 &2019335575
 GameObject:
   m_ObjectHideFlags: 0

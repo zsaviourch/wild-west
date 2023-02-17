@@ -17,17 +17,25 @@ MonoBehaviour:
   Towns:
   - TownName: '1) '
     RoomsInSingleRun: 3
+    numVisits: 0
     PossibleRooms:
     - {fileID: 890111096628259182, guid: 060212b820c77ba4c8a0ede4887c92e7, type: 3}
-    - {fileID: 2523386840548711033, guid: 0d293ddc48193f546a18d64e10006050, type: 3}
+    - {fileID: 890111096628259182, guid: 060212b820c77ba4c8a0ede4887c92e7, type: 3}
   - TownName: 2)
     RoomsInSingleRun: 3
-    PossibleRooms: []
+    numVisits: 0
+    PossibleRooms:
+    - {fileID: 0}
   - TownName: 3)
     RoomsInSingleRun: 3
-    PossibleRooms: []
+    numVisits: 0
+    PossibleRooms:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   - TownName: 4)
     RoomsInSingleRun: 3
+    numVisits: 0
     PossibleRooms: []
   FinalBossRoom: {fileID: 0}
   PostCreditsRoom: {fileID: 0}
