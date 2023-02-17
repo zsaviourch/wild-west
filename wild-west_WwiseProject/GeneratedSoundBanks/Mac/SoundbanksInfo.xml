@@ -131,7 +131,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{50628BB3-21B7-CE32-58CF-57A5D9461557}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{DB6F7867-9726-DFD2-BCCA-F6100E9A0C64}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -141,7 +141,7 @@
 				</File>
 				<File Id="45659975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Whip Crack.wav</ShortName>
-					<CachePath>SFX/Whip Crack_AA335C4E.wem</CachePath>
+					<CachePath>SFX/Whip Crack_28F106A5.wem</CachePath>
 				</File>
 				<File Id="63354751" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Shotgun PumpStart.wav</ShortName>
@@ -157,7 +157,7 @@
 				</File>
 				<File Id="120091524" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Button Hover.wav</ShortName>
-					<CachePath>SFX/Button Hover_AC055D3E.wem</CachePath>
+					<CachePath>SFX/Button Hover_32327EC5.wem</CachePath>
 				</File>
 				<File Id="148884185" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player Dash.wav</ShortName>
@@ -229,7 +229,7 @@
 				</File>
 				<File Id="688485637" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Click_01.wav</ShortName>
-					<CachePath>SFX/Click_01_39D05272.wem</CachePath>
+					<CachePath>SFX/Click_01_19179A0A.wem</CachePath>
 				</File>
 				<File Id="745892146" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Golem Die.wav</ShortName>
@@ -501,5 +501,5 @@
 			<Path>Environment2.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7233C6E5-EFCB-8365-3DC9-E23AE19C1A1A}</FileHash>
+	<FileHash>{DAB96FDB-7BFD-C462-C7A5-48457107543C}</FileHash>
 </SoundBanksInfo>
