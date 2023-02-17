@@ -36,7 +36,9 @@ public class PlayerProgression : MonoBehaviour
 
     public enum ProgressState
     {
-        PRE_RUN, MID_RUN, ALL_TOWNS_CLEAR
+        PRE_RUN, // First two towns
+        MID_RUN, // All remaining towns
+        ALL_TOWNS_CLEAR // All towns down. Fighting wendigo
     }
 
     public LevelAtlus_Old levelAtlus;
