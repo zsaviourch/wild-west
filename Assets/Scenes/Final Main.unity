@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8544f504ed45248a40b7af6f8174c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &8107587308194947356
+--- !u!1001 &572034840
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
