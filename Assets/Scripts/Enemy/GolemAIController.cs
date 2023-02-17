@@ -4,125 +4,160 @@ using UnityEngine;
 
 public class GolemAIController : MonoBehaviour
 {
-    public float movementSpeed = 2.0f;
-    public float tackleSpeed = 4.0f;
-    public float collisionDamage = 10.0f;
-    public float defensiveModeDamageReduction = 0.5f;
-    public float maxHealth = 100.0f;
+    [SerializeField] private Transform[] patrolPoints;
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float detectionRange = 5f;
+    [SerializeField] private float attackRange = 1.5f;
+    [SerializeField] private int maxHealth = 200;
+    [SerializeField] private int damagePerHit = 10;
+    [SerializeField] private float attackCooldown = 5f;
+    [SerializeField] private float proximityDamage = 5f;
+    [SerializeField] private float proximityCheckInterval = 1f;
+    [SerializeField] private float proximityRange = 2f;
+    [SerializeField] private Animator animator;
+    [SerializeField] private PlayerController playerController;
 
-    private float currentHealth;
-    private bool inDefensiveMode = false;
-    private bool playerInLOS = false;
-
-    private Transform player;
-    private Grid grid;
-    private Node currentNode;
-    private List<Node> path;
+    private int currentPatrolPointIndex = 0;
+    private Vector3 currentDestination;
+    private int currentHealth;
+    private bool isDefensive = false;
+    private bool isCoolingDown = false;
+    private bool isProximityAttacking = false;
+    private bool isBurstAttacking = false;
+    private float lastProximityCheckTime = 0f;
+    private float lastAttackTime = 0f;
+    private float shellEndTime = 0f;
+    private bool isDead = false;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        Debug.Log("plaher is "+player);
-        grid = FindObjectOfType<Grid>();
-        currentNode = grid.NodeFromWorldPoint(transform.position);
         currentHealth = maxHealth;
+        currentDestination = patrolPoints[currentPatrolPointIndex].position;
+        animator.SetBool("isPatrolling", true);
     }
 
     private void Update()
     {
-        if (CanSeePlayer())
+        if (isDead)
         {
-            inDefensiveMode = true;
-            // TODO: Set up defensive mode behavior
+            return;
         }
-        else
+
+        if (isDefensive)
         {
-            inDefensiveMode = false;
-            path = Pathfinding.FindPath(grid, transform.position, player.position);
-            if (path != null && path.Count > 0)
+            if (Time.time > shellEndTime)
             {
-                currentNode = path[0];
+                isDefensive = false;
+                animator.SetBool("isShell", false);
             }
         }
 
-        if (inDefensiveMode)
+        if (isBurstAttacking)
         {
-            // TODO: Set up defensive mode behavior
+            return;
         }
-        else
+
+        if (isProximityAttacking)
         {
-            // Move towards player if not in defensive mode and player is visible
-            if (playerInLOS)
+            if (Vector3.Distance(transform.position, playerController.transform.position) > proximityRange)
             {
-                transform.position = Vector3.MoveTowards(transform.position, player.position, movementSpeed * Time.deltaTime);
+                isProximityAttacking = false;
             }
-            // Follow path if it exists and player is not visible
-            else if (path != null && path.Count > 0)
+            else if (Time.time - lastProximityCheckTime > proximityCheckInterval)
             {
-                if (Vector3.Distance(transform.position, currentNode.worldPosition) < 0.1f)
-                {
-                    path.RemoveAt(0);
-                    if (path.Count > 0)
-                    {
-                        currentNode = path[0];
-                    }
-                }
-                else
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, currentNode.worldPosition, movementSpeed * Time.deltaTime);
-                }
+                lastProximityCheckTime = Time.time;
+                playerController.TakeDamage(proximityDamage);
             }
+        }
+
+        if (Vector3.Distance(transform.position, playerController.transform.position) < detectionRange)
+        {
+            isDefensive = true;
+            isProximityAttacking = false;
+            animator.SetBool("isShell", true);
+
+            if (!isCoolingDown && Time.time - lastAttackTime > attackCooldown)
+            {
+                isCoolingDown = true;
+                lastAttackTime = Time.time;
+                animator.SetBool("isBurst", true);
+                StartCoroutine(DoBurstAttack());
+            }
+        }
+
+        if (!isDefensive && !isBurstAttacking)
+        {
+            if (Vector3.Distance(transform.position, currentDestination) < 0.1f)
+            {
+                currentPatrolPointIndex = (currentPatrolPointIndex + 1) % patrolPoints.Length;
+                currentDestination = patrolPoints[currentPatrolPointIndex].position;
+            }
+
+            transform.position = Vector3.MoveTowards(transform.position, currentDestination, moveSpeed * Time.deltaTime);
+            animator.SetFloat("moveX", currentDestination.x - transform.position.x);
+            animator.SetFloat("moveY", currentDestination.y - transform.position.y);
         }
     }
 
-    private bool CanSeePlayer()
+    private IEnumerator DoBurstAttack()
+{
+    isBurstAttacking = true;
+    yield return new WaitForSeconds(0.5f);
+
+    if (Vector3.Distance(transform.position, playerController.transform.position) < attackRange)
     {
-        // TODO: Improvise the hit for CanSeePlayer
-        Vector3 viewDirection = (transform.position + transform.right * 2.0f) - transform.position;
-        float maxRaycastDistance = 5.0f;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, viewDirection, maxRaycastDistance, LayerMask.GetMask("Player"));
-
-        Debug.DrawRay(transform.position, viewDirection, Color.black);
-
-        if (hit.collider != null && hit.collider.tag == "Player")
-        {
-            playerInLOS = true;
-            return true;
-        }
-        else
-        {
-            playerInLOS = false;
-            return false;
-        }
+        playerController.TakeDamage(damagePerHit);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    isProximityAttacking = true;
+    animator.SetBool("isBurst", false);
+    yield return new WaitForSeconds(0.5f);
+    isBurstAttacking = false;
+}
+
+private void OnCollisionStay2D(Collision2D collision)
+{
+    if (isProximityAttacking && collision.gameObject.CompareTag("Player"))
     {
-        if (collision.gameObject.tag == "Player")
+        if (Time.time - lastProximityCheckTime > proximityCheckInterval)
         {
-            // Deal collision damage to player
-            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-            if (playerController != null)
-            {
-                playerController.TakeDamage(collisionDamage);
-            }
-
-            // Tackle player
-            Vector3 playerDirection = collision.transform.position - transform.position;
-            collision.rigidbody.AddForce(playerDirection.normalized * tackleSpeed, ForceMode2D.Impulse);
-
-            // Take damage when tackling player
-            currentHealth -= collisionDamage;
-            if (currentHealth <= 0)
-            {
-                Die();
-            }
+            lastProximityCheckTime = Time.time;
+            playerController.TakeDamage(proximityDamage);
         }
     }
+}
 
-    private void Die()
+public void TakeDamage(int damage)
+{
+    if (isDefensive)
     {
-        // TODO: Implement death behavior
-        Destroy(gameObject);
+        currentHealth -= Mathf.FloorToInt(damage * 0.5f);
     }
+    else
+    {
+        currentHealth -= damage;
+    }
+
+    if (currentHealth <= 0)
+    {
+        isDead = true;
+        animator.SetBool("isDead", true);
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
+    }
+}
+
+private IEnumerator ResetCooldown()
+{
+    yield return new WaitForSeconds(attackCooldown);
+    isCoolingDown = false;
+}
+
+private void OnDrawGizmosSelected()
+{
+    Gizmos.color = Color.red;
+    Gizmos.DrawWireSphere(transform.position, detectionRange);
+    Gizmos.color = Color.yellow;
+    Gizmos.DrawWireSphere(transform.position, proximityRange);
+}
 }
