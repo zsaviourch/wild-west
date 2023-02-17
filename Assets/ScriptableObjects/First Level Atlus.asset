@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d880014009ea4241bd98cfce179d164, type: 3}
+  m_Name: First Level Atlus
+  m_EditorClassIdentifier: 
+  StartRoom1: {fileID: 0}
+  StartRoom2: {fileID: 0}
+  Towns:
+  - TownName: '1) '
+    RoomsInSingleRun: 3
+    PossibleRooms:
+    - {fileID: 890111096628259182, guid: 060212b820c77ba4c8a0ede4887c92e7, type: 3}
+    - {fileID: 2523386840548711033, guid: 0d293ddc48193f546a18d64e10006050, type: 3}
+  - TownName: 2)
+    RoomsInSingleRun: 3
+    PossibleRooms: []
+  - TownName: 3)
+    RoomsInSingleRun: 3
+    PossibleRooms: []
+  - TownName: 4)
+    RoomsInSingleRun: 3
+    PossibleRooms: []
+  FinalBossRoom: {fileID: 0}
+  PostCreditsRoom: {fileID: 0}
