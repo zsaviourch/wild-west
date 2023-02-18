@@ -25,7 +25,6 @@ public class LevelAtlus : MonoBehaviour
         }
     }
 
-
     [System.Serializable]
     public struct TownSet
     {
@@ -33,9 +32,34 @@ public class LevelAtlus : MonoBehaviour
 
         // public int RoomsInSingleRun;
 
-        // public int numVisits;
+        public int numVisits;
 
-        public GameObject room;
+        public GameObject[] roomPrefabs;
+
+        public int CurrentInstantiatedIndex { get; private set; }
+        //to un-instanciate all rooms in the town (i.e. to leave that town), simply pass in a negative number
+        public void SetInstantiatedIndex(int newIndex)
+        {
+            //clean up any previous towns
+            //foreach(GameObject townPrefab in instantiatedTowns)
+            //{
+            //    Destroy(townPrefab);
+            //}
+            //instantiatedTowns.Clear();
+            if (CurrentInstantiatedTown != null)
+            {
+                Destroy(CurrentInstantiatedTown);
+            }
+            if (newIndex < 0 || newIndex >= roomPrefabs.Length)
+            {
+                CurrentInstantiatedIndex = newIndex;
+                CurrentInstantiatedTown = null;
+                return;
+            }
+            CurrentInstantiatedTown = Instantiate(roomPrefabs[newIndex], Instance.transform);
+        }
+
+        public GameObject CurrentInstantiatedTown { get; private set; }
 
         // public GameObject RandomRoom
         // {
@@ -53,59 +77,59 @@ public class LevelAtlus : MonoBehaviour
         // }
     }
 
-    public int NumTownRoomsToComplete
+    public TownSet[] Towns => towns;
+    private TownSet[] towns;
+
+    //out-of-bounds indices for the list of town are acceptable, just use the modulus to loop it around
+    //indices below 0 just means that the player isn't in a town right now
+    public int UnmodulatedTownIndex { get => unmodulatedTownIndex; private set => unmodulatedTownIndex = value; }
+    [SerializeField] private int unmodulatedTownIndex = 0;
+    public int CurrentTownIndex => unmodulatedTownIndex < 0 ? -1 : UnmodulatedTownIndex % towns.Length;
+    public bool IsInATown => unmodulatedTownIndex >= 0;
+
+    public int NumRoomsToComplete
     {
         get
         {
             int sum = 0;
-            foreach(TownSet town in townPrefabs)
+            foreach (TownSet town in towns)
             {
-                sum += 1;
+                sum += town.roomPrefabs.Length;
             }
             return sum;
         }
     }
+    public int NumTownsCompleated => unmodulatedTownIndex - startTownIndex;
 
+    [Header("Player Progress")]
+    [SerializeField][Min(0)] private int startTownIndex;
+    public int deathCount;
 
-    public TownSet[] townPrefabs; 
-    private List<TownSet> instantiatedTowns = new List<TownSet>(); 
-    private int currentTownIndex = 0; 
-
-    private void Start()
+    public void ProgressTown(bool playerLived)
     {
-        InstantiateNextTown();
-
-        // Use this code to test town transitions
-        // Invoke("ProgressTown", 10.0f);
-    }
-
-    private void InstantiateNextTown()
-    {
-        // If there is a previous town, clean it up
-        if (instantiatedTowns.Count > 0)
+        //if the player defeated all enemies
+        //      he gets to move on to the next room
+        //      he keeps all of his progress
+        //      if he beat all rooms in all the towns, he gets to face the final boss
+        if (playerLived)
         {
-            Destroy(instantiatedTowns[instantiatedTowns.Count - 1].room);
-            instantiatedTowns.RemoveAt(instantiatedTowns.Count - 1);
+            ToNextRoom();
         }
-
-        // If we haven't instantiated all the town prefabs yet, instantiate the next one
-        if (currentTownIndex < townPrefabs.Length)
+        //else if he died
+        //      he gets kicked straight to the next room (index is modulated)
+        //          this town will also be considered his first
+        //      his death count goes up
+        else
         {
-            GameObject newTown = Instantiate(townPrefabs[currentTownIndex].room, transform);
-            TownSet newTownSet = new TownSet();
-            newTownSet.TownName = townPrefabs[currentTownIndex].TownName;
-            newTownSet.room = newTown;
-            instantiatedTowns.Add(newTownSet);
-            currentTownIndex++;
+            startTownIndex = CurrentTownIndex + 1;
+            GoToTown(startTownIndex);
+            deathCount++;
         }
     }
-
-    public void ProgressTown()
+    //use if you want to un-instantiate all towns
+    public void LeaveTown()
     {
-        // If we've instantiated all the town prefabs, do nothing
-        if (currentTownIndex == townPrefabs.Length) return;
-
-        InstantiateNextTown();
+        GoToTown(-1);
     }
 
     private void Awake()
@@ -119,6 +143,51 @@ public class LevelAtlus : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        if (IsInATown)
+        {
+            towns[CurrentTownIndex].SetInstantiatedIndex(0);
+        }
+
+        // Use this code to test town transitions
+        // Invoke("ProgressTown", 10.0f);
+    }
+
+    private void ToNextRoom()
+    {
+        if (IsInATown)
+        {
+            int nextRoomIndex = towns[CurrentTownIndex].CurrentInstantiatedIndex + 1;
+            //if the room we have now is the last in our current town, move to the next
+            if (nextRoomIndex >= towns[CurrentTownIndex].roomPrefabs.Length)
+            {
+                GoToTown(unmodulatedTownIndex + 1);
+                return;
+            }
+            //else just move to the next room in the same town
+            towns[CurrentTownIndex].SetInstantiatedIndex(nextRoomIndex);
+        }
+        else
+        {
+            GoToTown(startTownIndex);
+        }
+    }
+    //use negative values to leave all towns
+    private void GoToTown(int givenIndex)
+    {
+        //un-instantiate the last town
+        towns[CurrentTownIndex].SetInstantiatedIndex(-1);
+        //update the town index
+        unmodulatedTownIndex = givenIndex;
+        if (givenIndex < 0)
+        {
+            //instantiate the first room in the new town
+            towns[CurrentTownIndex].SetInstantiatedIndex(0);
+            towns[CurrentTownIndex].numVisits++;
         }
     }
 }
