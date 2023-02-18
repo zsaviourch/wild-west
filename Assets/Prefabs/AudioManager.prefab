@@ -271,3 +271,5 @@ MonoBehaviour:
     type: 1
     loop: 0
     volume: 1
+  masterBGMVolume: 1
+  masterSFXVolume: 1
