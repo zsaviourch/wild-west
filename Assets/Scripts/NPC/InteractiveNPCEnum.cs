@@ -1,0 +1,20 @@
+public enum InteractiveNPCEnum
+{
+    Gangster,
+    Weston,
+    Marev,
+    Sarah,
+    Nick,
+    Joel,
+    Nicole,
+    Frank,
+    Samantha,
+    Carlos,
+    Hector,
+    Tony,
+    Luna,
+    Mary,
+    Katherine,
+    Wendigo,
+    Lufacon,
+}
