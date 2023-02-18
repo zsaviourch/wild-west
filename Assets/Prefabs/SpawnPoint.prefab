@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &229224493511529672
 MonoBehaviour:
@@ -51,4 +51,49 @@ MonoBehaviour:
   - type: 1
     prefabs:
     - {fileID: 4717353440870715094, guid: 3c44508ea7620470981eeb8256fff7df, type: 3}
+  - type: 8
+    prefabs:
+    - {fileID: 6752422728409235326, guid: 49df42fc7b5477042acf70eeed23bdde, type: 3}
+  - type: 6
+    prefabs:
+    - {fileID: 6752422728409235326, guid: 76792934a7e807d4c842dacbfea14b5f, type: 3}
+  - type: 7
+    prefabs:
+    - {fileID: 6752422728409235326, guid: 522f4ad0fab9daf44ad93722b75e313e, type: 3}
+  - type: 9
+    prefabs:
+    - {fileID: 6752422728409235326, guid: 8ad968d853a47534d8b2dcae8038d5ea, type: 3}
+  - type: 10
+    prefabs:
+    - {fileID: 6752422728409235326, guid: b15617978e344b041ad4d8ed7370a98f, type: 3}
+  - type: 11
+    prefabs:
+    - {fileID: 6752422728409235326, guid: 5cf5aac7223f87746846cddecb97800b, type: 3}
+  - type: 12
+    prefabs:
+    - {fileID: 6752422728409235326, guid: 5fdfe82ad04d3004590c4771c6199e41, type: 3}
+  - type: 13
+    prefabs:
+    - {fileID: 6752422728409235326, guid: 0179146d790f724428f5a934e7029715, type: 3}
+  - type: 14
+    prefabs:
+    - {fileID: 6752422728409235326, guid: b525899412984ab499c94f87d614ecb3, type: 3}
+  - type: 15
+    prefabs:
+    - {fileID: 6752422728409235326, guid: 20138f00b1533584a84f9b152bbbfec1, type: 3}
+  - type: 16
+    prefabs:
+    - {fileID: 6752422728409235326, guid: bf213581991a7624b978ca1f178338ad, type: 3}
+  - type: 17
+    prefabs:
+    - {fileID: 6752422728409235326, guid: 4c9b84d6175a763418ea28bd0e77f06e, type: 3}
+  - type: 18
+    prefabs:
+    - {fileID: 6752422728409235326, guid: c31b4d55a194d4a468103d38244914c4, type: 3}
+  - type: 19
+    prefabs:
+    - {fileID: 6752422728409235326, guid: d91766e4063cf7046906473faec91f93, type: 3}
+  - type: 20
+    prefabs:
+    - {fileID: 6752422728409235326, guid: bff1f61b9817a2c449a58c1e3ff21e6f, type: 3}
   spawnType: 1
