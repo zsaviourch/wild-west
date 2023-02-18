@@ -225,6 +225,7 @@ public class BerylShotgun : MonoBehaviour
         // Replenish one unit energy
         currentEnergyAmount = energyInitialAmount;
         player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
+        AudioManager.Instance.Play("shotgunReload");
     }
 
     public int FindEnergyConsumePerBullet(BulletType type)
@@ -265,7 +266,7 @@ public class BerylShotgun : MonoBehaviour
             currentReloadTime = 0f;
             shootInitiated = false;
             // AkSoundEngine.PostEvent("gunShoot", gameObject);
-            /*AudioManager.Instance.Play("jasperShot");*/
+            AudioManager.Instance.Play("shotgunShot");
         }
     }
 

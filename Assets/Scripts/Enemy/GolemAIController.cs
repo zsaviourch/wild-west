@@ -108,13 +108,22 @@ else if (!isDefensive && !isBurstAttacking)
 
     public override void TakeDamage(int damage)
     {
-        if(isDefensive)
+        if (isDefensive)
+        {
+            AudioManager.Instance.Play("golemShieldHit");
             return;
+        }
+        //return;
 
         base.TakeDamage(damage);
+        AudioManager.Instance.Play("golemHurt");
+        if (isDead)
+        {
+            AudioManager.Instance.Play("golemDie");
+        }
     }
 
- private IEnumerator DoBurstAttack()
+    private IEnumerator DoBurstAttack()
 {
     isBurstAttacking = true;
 
@@ -149,7 +158,8 @@ else if (!isDefensive && !isBurstAttacking)
     isCoolingDown = false;
     isBurstAttacking = false;
     lastAttackTime = Time.time;
-}
+        AudioManager.Instance.Play("golemAttack");
+    }
 
     private void OnDrawGizmosSelected()
     {
