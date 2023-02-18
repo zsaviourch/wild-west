@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - explosion
+  - shootingPos
+  - enemy
+  - obstacle
+  - playerSpawnPoint
   layers:
   - Default
   - TransparentFX
@@ -13,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Obstacle
-  - 
+  - Player
   - 
   - 
   - 
@@ -45,18 +49,45 @@ TagManager:
   - name: ground
     uniqueID: 48345423
     locked: 0
+  - name: grass
+    uniqueID: 3771125767
+    locked: 0
+  - name: thingsAttachedToGround
+    uniqueID: 3715858209
+    locked: 0
   - name: stonewall
     uniqueID: 2516450865
+    locked: 0
+  - name: ice
+    uniqueID: 2064818533
     locked: 0
   - name: road
     uniqueID: 1913769023
     locked: 0
+  - name: pond
+    uniqueID: 1505389049
+    locked: 0
+  - name: bridge
+    uniqueID: 3335211585
+    locked: 0
   - name: building
     uniqueID: 1411495647
+    locked: 0
+  - name: player
+    uniqueID: 3295076093
     locked: 0
   - name: trees
     uniqueID: 2264639365
     locked: 0
   - name: waterfall
     uniqueID: 92931881
+    locked: 0
+  - name: bullet
+    uniqueID: 4119588125
+    locked: 0
+  - name: hill
+    uniqueID: 4016619229
+    locked: 0
+  - name: hill grass
+    uniqueID: 1689360909
     locked: 0
