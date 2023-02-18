@@ -4,11 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - explosion
   - enemy
-  - obstacle
-  - jasperRifle
   - shootingPos
-  - ground
   layers:
   - Default
   - TransparentFX
@@ -16,7 +14,6 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
   - Obstacle
   - 
   - 
@@ -42,9 +39,25 @@ TagManager:
   - 
   - 
   - 
+  - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 4284302353
+  - name: ground
+    uniqueID: 48345423
+    locked: 0
+  - name: stonewall
+    uniqueID: 2516450865
+    locked: 0
+  - name: road
+    uniqueID: 1913769023
+    locked: 0
+  - name: building
+    uniqueID: 1411495647
+    locked: 0
+  - name: trees
+    uniqueID: 2264639365
+    locked: 0
+  - name: waterfall
+    uniqueID: 92931881
     locked: 0
   - name: Default
     uniqueID: 0

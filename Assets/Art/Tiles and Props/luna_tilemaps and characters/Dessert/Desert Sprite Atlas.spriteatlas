@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Desert Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - c66d73e96016b4648ac4f4045ee1b8bc: 1453394867
+    - c66d73e96016b4648ac4f4045ee1b8bc: 1309957425
+    - c66d73e96016b4648ac4f4045ee1b8bc: 525723320
+    - c66d73e96016b4648ac4f4045ee1b8bc: 1806544320
+    - c66d73e96016b4648ac4f4045ee1b8bc: 1699358393
+    - c66d73e96016b4648ac4f4045ee1b8bc: 177967240
+    - c66d73e96016b4648ac4f4045ee1b8bc: -161175771
+    - c66d73e96016b4648ac4f4045ee1b8bc: 1546112733
+    - c66d73e96016b4648ac4f4045ee1b8bc: 1568499642
+    - c66d73e96016b4648ac4f4045ee1b8bc: -1408682658
+    - c66d73e96016b4648ac4f4045ee1b8bc: 1519714574
+    - c66d73e96016b4648ac4f4045ee1b8bc: 1593623112
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 1453394867, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: 1309957425, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: 525723320, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: 1806544320, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: 1699358393, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: 177967240, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: -161175771, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: 1546112733, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: 1568499642, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: -1408682658, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: 1519714574, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  - {fileID: 1593623112, guid: c66d73e96016b4648ac4f4045ee1b8bc, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Desert1_8
+  - Desert1_9
+  - Desert1_0
+  - Desert1_1
+  - Desert1_2
+  - Desert1_3
+  - Desert1_4
+  - Desert1_5
+  - Desert1_6
+  - Desert1_7
+  - Desert1_11
+  - Desert1_10
+  m_RenderDataMap: {}
+  m_Tag: Desert Sprite Atlas
+  m_IsVariant: 0

@@ -532,6 +532,8 @@ Transform:
   m_Father: {fileID: 1292987417}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
 --- !u!1 &914217250
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +616,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> main
 --- !u!1 &948702908
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,8 +935,16 @@ MonoBehaviour:
   currentReloadTime: 0
   reloadInitiated: 0
   energyConsumePerBullet: 0
+<<<<<<< HEAD
+  shootingPos: {fileID: 0}
+<<<<<<< HEAD
+  currentReloadPreparationTime: 0
+=======
+--- !u!114 &1292987419
+=======
   shootingPos: {fileID: 882676709}
 --- !u!114 &1292987422
+>>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -957,6 +968,7 @@ MonoBehaviour:
   groupIdInternal: 0
   valueGuidInternal: 
   groupGuidInternal: 
+>>>>>>> main2
 --- !u!1 &1600516909
 GameObject:
   m_ObjectHideFlags: 0

@@ -163,19 +163,19 @@ public class OnyxSnipper : MonoBehaviour
     private void Update()
     {
         // Reload
-        if (Input.GetKeyDown(KeyCode.R) && currentEnergyAmount < energyInitialAmount)
+        if (Input.GetMouseButtonDown(1) && currentEnergyAmount < energyInitialAmount)
         {
             reloadInitiated = true;
             currentReloadTime += Time.deltaTime;
             Reload();
-            AkSoundEngine.PostEvent("gunReload", gameObject);
+            // AkSoundEngine.PostEvent("gunReload", gameObject);
         }
 
         // Shoot
-        if (Input.GetKeyUp(KeyCode.Mouse0) && currentEnergyAmount > energyConsumePerBullet)
+        if (Input.GetMouseButtonDown(0) && currentEnergyAmount > energyConsumePerBullet)
         {
             Shoot();
-            AkSoundEngine.PostEvent("gunShoot", gameObject);
+            // AkSoundEngine.PostEvent("gunShoot", gameObject);
         }
 
         // Shooting flag adjustment
@@ -196,7 +196,7 @@ public class OnyxSnipper : MonoBehaviour
         // Play reloading animation here
 
         // Replenish one unit energy
-        currentEnergyAmount += energyRegeneratePerSecond;
+        currentEnergyAmount = energyInitialAmount;
     }
 
     public int FindEnergyConsumePerBullet(BulletType type)
@@ -229,7 +229,7 @@ public class OnyxSnipper : MonoBehaviour
         if (shootInitiated == true)
         {
             GameObject bullet = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-            bullet.transform.forward = -shootingPos.up;
+            bullet.transform.right = shootingPos.right;
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;

@@ -166,7 +166,11 @@ Transform:
   m_Children:
   - {fileID: 1154642901}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
+  m_RootOrder: 2
+=======
   m_RootOrder: 3
+>>>>>>> main2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &544533780
 GameObject:
@@ -8149,6 +8153,8 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+<<<<<<< HEAD
+=======
 --- !u!1 &1516526830
 GameObject:
   m_ObjectHideFlags: 0
@@ -8206,6 +8212,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> main2
 --- !u!1 &1702499976
 GameObject:
   m_ObjectHideFlags: 0
