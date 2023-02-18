@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4717353440870715095
 SpriteRenderer:
@@ -120,8 +120,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolPoints: []
   moveSpeed: 2
-  detectionRange: 5
+  detectionRange: 7
   attackRange: 1.5
+  agressiveRange: 5
   maxHealth: 100
   damagePerHit: 10
   attackCooldown: 5

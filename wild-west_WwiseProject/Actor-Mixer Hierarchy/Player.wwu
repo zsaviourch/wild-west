@@ -890,6 +890,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Crystal Rifle2" ID="{B2DBDFDA-12B9-4A46-B191-746A85BA702E}">
+															<PropertyList>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0956562137049943"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.09920736801353"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Crystal Rifle2.wav</AudioFile>
 															<MediaIDList>

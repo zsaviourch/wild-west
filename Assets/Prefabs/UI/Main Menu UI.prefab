@@ -87,6 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6361555750239873939}
+  - component: {fileID: 1942499493}
   m_Layer: 0
   m_Name: Main Menu UI
   m_TagString: Untagged
@@ -110,8 +111,104 @@ Transform:
   - {fileID: 6361555748265624652}
   - {fileID: 6361555749924091523}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1942499493
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6361555750239873938}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 3c2fe1e6e3e62e345aadb7373c967b23, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 2a13b90c3f318c440a55ef72c65d169a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &3348085721769000186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,276 +217,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6361555750239873939}
     m_Modifications:
-    - target: {fileID: 8520250869410475174, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869410475174, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869499356014, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869499356014, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869499356014, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869499356014, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869573915290, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 259
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869580206554, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 259
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869656679880, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869656679880, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869656679880, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869656679880, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869656679880, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869656679880, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870003253478, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 259
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120934, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120934, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120934, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120936, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120937, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -369.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120937, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -276.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120937, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120937, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120937, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120937, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.0012817383
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120937, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.00024414062
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870045083325, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_text
-      value: Jesus Luna - Character & Animation
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870045083325, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870045083325, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870045083325, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870045083325, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870175876753, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870175876753, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870175876753, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870175876753, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870261377495, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870261377495, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870261377495, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870261377495, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870280013162, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_text
-      value: Artist
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870280013162, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870280013162, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870280013162, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870280013162, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870387759759, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1600
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870387759759, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870441009916, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_text
-      value: 'Evan Seamans - SFX and Wwise Implementation
-
-
-        Max Nattrass
-        - Music'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870441009916, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870441009916, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870441009916, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870441009916, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870540707382, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870540707382, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870540707382, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870540707382, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870756582384, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_text
-      value: 'Ming Chen - Gun System
-
-
-        The Crzy Potato - UI Functionality
-        & Design
-
-
-        ajyang2000 - Dialogue System
-
-
-        Zeno Saviour -
-        NPCs
-
-
-        Jason A. Long - Levels & Player Progression
-
-
-        BeeWarrior
-        - Player Controller'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870756582384, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontSize
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870756582384, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870756582384, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870756582384, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870756582384, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250871094499390, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 259
-      objectReference: {fileID: 0}
     - target: {fileID: 8520250871172800498, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
       propertyPath: settingsMenu
       value: 
@@ -441,22 +268,6 @@ PrefabInstance:
     - target: {fileID: 8520250871172800503, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
       propertyPath: m_Name
       value: MainMenu Container
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250871451274743, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250871451274743, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250871451274743, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250871451274743, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

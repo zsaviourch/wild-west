@@ -10,12 +10,32 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="musicStart" ID="{84386058-9B6D-40A0-BBD5-2D0D16ED0D94}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="gunReload" ID="{E3E1306A-DE9B-4107-99AF-8532CB2CE6B1}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="lamiaAttack" ID="{A1099B03-81F1-4FBC-884A-5DD171C6B068}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}"/>
 							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="level1Start" ID="{BCCE80D0-10E7-4234-91A3-52DA337BE59B}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="level2Start" ID="{C3B3DB71-24CE-400B-A159-DE139E90D640}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="bossStart" ID="{912AF976-A4B0-4E10-B4BE-280BB50675A9}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="1" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="creditsStart" ID="{F12EE366-D075-4A4D-B8F4-1BE90764601C}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="1" Y="7"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="gunEmpty" ID="{2A86A847-9D2B-4A49-BF83-7C9FF422E156}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
@@ -26,8 +46,52 @@
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="intensityLow" ID="{BD747405-D189-4D51-9098-85AC7934E313}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="sniperExplode" ID="{8D2EA042-A4C3-4F15-981D-DF35FDD55E0C}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
 							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="wendigoSmash" ID="{F1DAEC66-C640-41A3-B318-2D67C8491743}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="intensityMid" ID="{D3584236-679C-459A-9220-86861BDDFFE7}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="victoryStart" ID="{318961EB-70B1-40EE-BDFC-588A7E5A7B06}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="3" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="wendigoDie" ID="{BAC702CB-54AF-4FE8-8A14-C1AC2E5C6B7D}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="intensityHigh" ID="{0E10FFEE-43AF-4350-8247-32A9C389E249}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="creditsStart" ID="{F12EE366-D075-4A4D-B8F4-1BE90764601C}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="4" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="playerDie" ID="{9058AAA9-8F66-48E8-9074-E7BCD08B587A}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
+							<Position X="6" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="playerFootstep" ID="{1696172C-7C73-4F65-9B9F-1C7B0613F914}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
+							<Position X="6" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="playerHurt" ID="{4D8D52F2-0EC2-4046-866A-7AF2954A7D0E}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
+							<Position X="6" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="playerHealthLow" ID="{009B7011-4F3D-4D3C-8DA8-8594DC277430}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
+							<Position X="6" Y="4"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -49,11 +113,13 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="musicLevel" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
+						<CurrentStateRef Name="playerAlive" ID="{32B0F653-6B3C-4BB0-B237-2343492DF765}"/>
+						<CurrentStateRef Name="musicBoss" ID="{553FB8C7-A4FC-4833-97DD-D5B79F9DBE76}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="highInt" ID="{59B4356C-419D-43F1-BE7B-7577BF0B088B}"/>
 						<CurrentSwitchRef Name="sandTerrain" ID="{53E18930-8380-48B6-A5ED-5BF6ADDCD666}"/>
-						<CurrentSwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
+						<CurrentSwitchRef Name="gunRevolver" ID="{7BFB712C-0880-454A-B239-6DF4F86DC31C}"/>
 						<CurrentSwitchRef Name="healthSwitch" ID="{13F5027A-F550-4843-AB67-4B8A5022EE12}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
