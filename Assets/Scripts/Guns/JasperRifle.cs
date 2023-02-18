@@ -31,6 +31,8 @@ public class JasperRifle : MonoBehaviour
     public Transform shootingPos;
     public float currentReloadPreparationTime;
 
+    public bool energyInitiated;
+
     // Constructor
     public JasperRifle(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
         float minimumReloadingTime, float fullyReloadedTime, GameObject bulletPrefab, BulletType bulletType)
@@ -151,12 +153,13 @@ public class JasperRifle : MonoBehaviour
 
     }
 
-    private void Awake()
+    private void Start()
     {
         gunName = "JasperRifle";
         player = GameObject.FindWithTag("Player");
         currentReloadTime = 0f;
-        currentEnergyAmount = energyInitialAmount;
+        energyInitialAmount = player.GetComponent<HealthAndEnergy>().energyInitialAmount;
+        
         reloadInitiated = false;
         energyConsumePerBullet = FindEnergyConsumePerBullet(this.bulletType);
         currentShootingTime = 0f;
@@ -164,13 +167,25 @@ public class JasperRifle : MonoBehaviour
         shootingPos = GameObject.FindWithTag("shootingPos").transform;
         currentReloadPreparationTime = 0f;
 
-        energyInitialAmount = player.GetComponent<HealthAndEnergy>().energyInitialAmount;
+        currentEnergyAmount = energyInitialAmount;
+
+        energyInitiated = false;
+
 
     }
 
     private void Update()
     {
-        currentEnergyAmount = player.GetComponent<HealthAndEnergy>().currentEnergyAmount;
+
+        if (energyInitiated == false)
+        {
+            currentEnergyAmount = energyInitialAmount;
+            energyInitiated = true;
+        }
+        else
+        {
+            currentEnergyAmount = player.GetComponent<HealthAndEnergy>().currentEnergyAmount;
+        }
 
         // Reload
         if (Input.GetMouseButtonDown(1) && currentEnergyAmount < energyInitialAmount)
@@ -187,7 +202,7 @@ public class JasperRifle : MonoBehaviour
             Debug.Log("shoot");
             Shoot();
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0) && currentEnergyAmount < energyConsumePerBullet)
+        else if (Input.GetKeyDown(KeyCode.Mouse0) && currentEnergyAmount < energyConsumePerBullet)
         {
             Debug.Log("empty clip");
             //AkSoundEngine.PostEvent("EmptyClip", gameObject);

@@ -424,6 +424,7 @@ MonoBehaviour:
   energyConsumePerBullet: 0
   shootingPos: {fileID: 0}
   currentReloadPreparationTime: 0
+  energyInitiated: 0
 --- !u!114 &6399319027950843512
 MonoBehaviour:
   m_ObjectHideFlags: 0

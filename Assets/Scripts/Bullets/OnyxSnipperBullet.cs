@@ -170,12 +170,14 @@ public class OnyxSnipperBullet : MonoBehaviour
 
 
         // stop when hitting enemy, obstacle, or ground
-        if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("obstacle") || collision.gameObject.CompareTag("ground"))
+        if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("obstacle"))
         {
 
             GetComponent<Rigidbody2D>().isKinematic = true;
             Destroy(GetComponent<TrailRenderer>());
             hitStuff = true;
+            Transform parent = collision.gameObject.transform;
+            gameObject.transform.SetParent(parent);
         }
             //collision.gameObject.GetComponent<Enemy_Test>().health -= bulletDamage;
             //Destroy(gameObject);
@@ -251,7 +253,7 @@ public class OnyxSnipperBullet : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.forward, 0.01f);
         if (hit)
         {
-            if (hit.collider.gameObject.CompareTag("enemy") || hit.collider.gameObject.CompareTag("obstacle") || hit.collider.gameObject.CompareTag("ground"))
+            if (hit.collider.gameObject.CompareTag("enemy") || hit.collider.gameObject.CompareTag("obstacle"))
             {
                 hitPos = hit.point;
             }

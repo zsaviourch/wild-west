@@ -167,6 +167,7 @@ public class TopazGun : MonoBehaviour
         mouseButtonDown = false;
         shootingPrepared = false;
         currentShootingPreparationTime = 0f;
+        player = GameObject.FindWithTag("cowboy");
 
     }
 
@@ -215,10 +216,12 @@ public class TopazGun : MonoBehaviour
             {
                 currentShootingPreparationTime += Time.deltaTime;
                 shootingPrepared = false;
+                player.GetComponent<Animator>().SetBool("charge", true);
             }
             else
             {
                 shootingPrepared = true;
+                player.GetComponent<Animator>().SetBool("charge", false);
             }
         }
         else

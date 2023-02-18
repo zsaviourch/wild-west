@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - obstacle
   - playerSpawnPoint
+  - cowboy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Obstacle
   - Player
   - Bullet
-  - 
+  - ground
   - 
   - 
   - 

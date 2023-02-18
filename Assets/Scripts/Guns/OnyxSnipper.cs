@@ -6,7 +6,7 @@ public class OnyxSnipper : MonoBehaviour
 {
     // References
     public string gunName;
-    [SerializeField] int energyInitialAmount;
+    public int energyInitialAmount;
     public int currentEnergyAmount;
     [SerializeField] float firingFrequencyInterval;
     public float currentShootingTime;
@@ -28,6 +28,8 @@ public class OnyxSnipper : MonoBehaviour
     public int energyConsumePerBullet;
 
     public Transform shootingPos;
+
+    public float currentReloadPreparationTime;
 
     // Constructor
     public OnyxSnipper(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
@@ -153,17 +155,22 @@ public class OnyxSnipper : MonoBehaviour
     {
         gunName = "OnyxSnipper";
         currentReloadTime = 0f;
+        player = GameObject.FindWithTag("Player");
+        energyInitialAmount = player.GetComponent<HealthAndEnergy>().energyInitialAmount;
         currentEnergyAmount = energyInitialAmount;
         reloadInitiated = false;
         energyConsumePerBullet = FindEnergyConsumePerBullet(this.bulletType);
         currentShootingTime = 0f;
         shootInitiated = true;
         shootingPos = GameObject.FindWithTag("shootingPos").transform;
+        currentReloadPreparationTime = 0f;
+        
 
     }
 
     private void Update()
     {
+        currentEnergyAmount = player.GetComponent<HealthAndEnergy>().currentEnergyAmount;
         // Reload
         if (Input.GetMouseButtonDown(1) && currentEnergyAmount < energyInitialAmount)
         {
@@ -190,6 +197,25 @@ public class OnyxSnipper : MonoBehaviour
             shootInitiated = true;
             currentShootingTime = 0f;
         }
+
+        // Add energy when idle
+        if (!Input.GetMouseButtonUp(1) && !Input.GetMouseButtonUp(0) && Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+        {
+            currentReloadPreparationTime += Time.deltaTime;
+        }
+        else
+        {
+            currentReloadPreparationTime = 0f;
+        }
+
+        if (currentReloadPreparationTime >= minimumReloadingTime)
+        {
+            if (currentEnergyAmount <= EnergyIntialAmount)
+            {
+                currentEnergyAmount += (int)System.Math.Round(energyRegeneratePerSecond * Time.deltaTime);
+                player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
+            }
+        }
     }
 
     // methods
@@ -199,6 +225,7 @@ public class OnyxSnipper : MonoBehaviour
 
         // Replenish one unit energy
         currentEnergyAmount = energyInitialAmount;
+        player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
     }
 
     public int FindEnergyConsumePerBullet(BulletType type)
@@ -233,6 +260,7 @@ public class OnyxSnipper : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
             bullet.transform.right = shootingPos.right;
             currentEnergyAmount -= energyConsumePerBullet;
+            player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
             currentReloadTime = 0f;
             shootInitiated = false;
         }

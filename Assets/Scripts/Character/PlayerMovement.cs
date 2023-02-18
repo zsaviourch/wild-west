@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponentInChildren<Animator>();
+        animator = GameObject.FindWithTag("cowboy").GetComponent<Animator>();
         if (animator == null)
         {
             Debug.Log("No animator");
@@ -30,11 +30,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
 
         if (!Input.GetMouseButtonDown(0)) Move();
-        
+
         if (EnoughAmmo(whichGun)) Shoot();
 
         if (Input.GetMouseButtonDown(1))
@@ -86,8 +86,9 @@ public class PlayerMovement : MonoBehaviour
     // Shoot
     private void Shoot()
     {
-        if (Input.GetMouseButtonDown(0) && StartToShot(whichGun))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && StartToShot(whichGun))
         {
+            Debug.Log("animation");
             StartCoroutine(PlayShootAnimation());
         }
 
