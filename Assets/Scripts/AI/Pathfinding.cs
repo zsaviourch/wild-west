@@ -5,13 +5,18 @@ using UnityEngine;
 public static class Pathfinding {
 
     public static List<Node> FindPath(Grid grid, Vector3 startPos, Vector3 targetPos) {
+        
+       Debug.Log("Entering FindPath" + grid);
         Node startNode = grid.NodeFromWorldPoint(startPos);
         Node targetNode = grid.NodeFromWorldPoint(targetPos);
+
+               Debug.Log("Start and Target nOde set");
 
         List<Node> openSet = new List<Node>();
         HashSet<Node> closedSet = new HashSet<Node>();
         openSet.Add(startNode);
 
+               Debug.Log("Starting while loop");
         while (openSet.Count > 0) {
             Node currentNode = openSet[0];
             for (int i = 1; i < openSet.Count; i++) {

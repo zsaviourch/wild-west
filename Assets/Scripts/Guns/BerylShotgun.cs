@@ -5,7 +5,8 @@ using UnityEngine;
 public class BerylShotgun : MonoBehaviour
 {
     // References
-    [SerializeField] int energyInitialAmount;
+    public string gunName;
+    public int energyInitialAmount;
     public int currentEnergyAmount;
     [SerializeField] float firingFrequencyInterval;
     public float currentShootingTime;
@@ -151,19 +152,25 @@ public class BerylShotgun : MonoBehaviour
 
     private void Awake()
     {
+        gunName = "BerylShotgun";
+        player = GameObject.FindWithTag("Player");
         currentReloadTime = 0f;
+        energyInitialAmount = player.GetComponent<HealthAndEnergy>().energyInitialAmount;
         currentEnergyAmount = energyInitialAmount;
         reloadInitiated = false;
         energyConsumePerBullet = FindEnergyConsumePerBullet(this.bulletType);
         currentShootingTime = 0f;
-        shootInitiated = true;
+        shootInitiated = false;
         shootingPos = GameObject.FindWithTag("shootingPos").transform;
         currentReloadPreparationTime = 0f;
+
 
     }
 
     private void Update()
     {
+        currentEnergyAmount = player.GetComponent<HealthAndEnergy>().currentEnergyAmount;
+
         // Reload
         if (Input.GetMouseButtonDown(1) && currentEnergyAmount < energyInitialAmount)
         {
@@ -205,6 +212,7 @@ public class BerylShotgun : MonoBehaviour
             if (currentEnergyAmount <= EnergyIntialAmount)
             {
                 currentEnergyAmount += (int)System.Math.Round(energyRegeneratePerSecond * Time.deltaTime);
+                player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
             }
         }
     }
@@ -216,6 +224,7 @@ public class BerylShotgun : MonoBehaviour
 
         // Replenish one unit energy
         currentEnergyAmount = energyInitialAmount;
+        player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
     }
 
     public int FindEnergyConsumePerBullet(BulletType type)
@@ -224,16 +233,16 @@ public class BerylShotgun : MonoBehaviour
         switch (type)
         {
             case BulletType.JasperRifleBullet:
-                cost = 5;
+                cost = 8;
                 break;
             case BulletType.BerylliumShotgunBullet:
-                cost = 10;
+                cost = 20;
                 break;
             case BulletType.OnyxSniperBullet:
-                cost = 15;
+                cost = 30;
                 break;
             case BulletType.TopazGunBullet:
-                cost = 20;
+                cost = 1;
                 break;
         }
         if (cost == -1)
@@ -247,48 +256,57 @@ public class BerylShotgun : MonoBehaviour
     {
         if (shootInitiated == true)
         {
-            if (gameObject.transform.localScale.x == 1)
-            {
-                GameObject Bullet1 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-                Bullet1.transform.localScale = new Vector3 (-1, 1, 1);
-                Bullet1.transform.Rotate(new Vector3(0, 0, 30));
-                GameObject Bullet2 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-                Bullet2.transform.localScale = new Vector3 (-1, 1, 1);
-                Bullet2.transform.Rotate(new Vector3(0, 0, 15));
-                GameObject Bullet3 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-                Bullet3.transform.localScale = new Vector3 (-1, 1, 1);
-                Bullet2.transform.Rotate(new Vector3(0, 0, 0));
-                GameObject Bullet4 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-                Bullet4.transform.localScale = new Vector3(-1, 1, 1);
-                Bullet4.transform.Rotate(new Vector3(0, 0, -15));
-                GameObject Bullet5 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-                Bullet5.transform.localScale = new Vector3(-1, 1, 1);
-                Bullet5.transform.Rotate(new Vector3(0, 0, -30));
-            }
-            else
-            {
-                GameObject Bullet6 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-                Bullet6.transform.right = shootingPos.right;
-                Bullet6.transform.Rotate(new Vector3(0, 0, 30));
-                GameObject Bullet7 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-                Bullet7.transform.right = shootingPos.right;
-                Bullet7.transform.Rotate(new Vector3(0, 0, 15));
-                GameObject Bullet8 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-                Bullet8.transform.right = shootingPos.right;
-                GameObject Bullet9 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-                Bullet9.transform.right = shootingPos.right;
-                Bullet9.transform.Rotate(new Vector3(0, 0, -15));
-                GameObject Bullet10 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
-                Bullet10.transform.right = shootingPos.right;
-                Bullet10.transform.Rotate(new Vector3(0, 0, -30));
-            }
 
-            
+            StartCoroutine(InstantiateBullets());
+
 
             currentEnergyAmount -= energyConsumePerBullet;
+            player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
             currentReloadTime = 0f;
             shootInitiated = false;
             // AkSoundEngine.PostEvent("gunShoot", gameObject);
+            /*AudioManager.Instance.Play("jasperShot");*/
         }
+    }
+
+    private IEnumerator InstantiateBullets()
+    {
+        if (gameObject.transform.localScale.x == 1)
+        {
+            GameObject Bullet1 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet1.transform.localScale = new Vector3(-1, 1, 1);
+            Bullet1.transform.Rotate(new Vector3(0, 0, 22.5f));
+            GameObject Bullet2 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet2.transform.localScale = new Vector3(-1, 1, 1);
+            Bullet2.transform.Rotate(new Vector3(0, 0, 11.25f));
+            GameObject Bullet3 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet3.transform.localScale = new Vector3(-1, 1, 1);
+            Bullet2.transform.Rotate(new Vector3(0, 0, 0));
+            GameObject Bullet4 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet4.transform.localScale = new Vector3(-1, 1, 1);
+            Bullet4.transform.Rotate(new Vector3(0, 0, -11.25f));
+            GameObject Bullet5 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet5.transform.localScale = new Vector3(-1, 1, 1);
+            Bullet5.transform.Rotate(new Vector3(0, 0, -22.5f));
+        }
+        else
+        {
+            GameObject Bullet6 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet6.transform.right = shootingPos.right;
+            Bullet6.transform.Rotate(new Vector3(0, 0, 22.5f));
+            GameObject Bullet7 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet7.transform.right = shootingPos.right;
+            Bullet7.transform.Rotate(new Vector3(0, 0, 11.25f));
+            GameObject Bullet8 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet8.transform.right = shootingPos.right;
+            GameObject Bullet9 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet9.transform.right = shootingPos.right;
+            Bullet9.transform.Rotate(new Vector3(0, 0, -11.25f));
+            GameObject Bullet10 = Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            Bullet10.transform.right = shootingPos.right;
+            Bullet10.transform.Rotate(new Vector3(0, 0, -22.5f));
+        }
+
+        yield return new WaitForSeconds(0f);
     }
 }

@@ -165,15 +165,17 @@ public class BerylliumShotgunBullet : MonoBehaviour
         // hit the enemy
         if (collision.gameObject.CompareTag("enemy"))
         {
-            collision.gameObject.GetComponent<Enemy_Test>().health -= bulletDamage;
-            Destroy(gameObject);
+            collision.gameObject.GetComponent<AIController>().TakeDamage(bulletDamage);
+            rb.isKinematic = true;
+            //Destroy(gameObject);
         }
 
         // hit the obstacle
-        if (collision.gameObject.CompareTag("obstacle"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
             Destroy(gameObject);
         }
+        /*Destroy(gameObject);*/
     }
 
     // destroy the bullet if it exceeds the travel length

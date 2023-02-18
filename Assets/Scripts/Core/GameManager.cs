@@ -11,23 +11,25 @@ public class GameManager : MonoBehaviour
 {
     public GameState currentState;
     public GameObject townManagerPrefab; 
+    public GameObject eventSystemPrefab;
+    public GameObject dialogueSystemPrefab;
+    public GameObject audioManagerPrefab;
     private GameObject townManagerInstance; 
+    private GameObject eventSystemInstance;
+    private GameObject dialogueSystemInstance;
+    private GameObject audioManagerInstance;
 
     private void Start()
     {
-        // Set the initial state of the game to START
         Debug.Log("Entering Gamestate START");
         currentState = GameState.START;
     }
 
     private void Update()
     {
-        // Check the current state of the game
         switch (currentState)
         {
             case GameState.START:
-                // Do any necessary initialization for the game
-                // and transition to the GAME_LOOP state
                 Debug.Log("Entering Gamestate GAME_LOOP");
                 currentState = GameState.GAME_LOOP;
                 break;
@@ -38,6 +40,24 @@ public class GameManager : MonoBehaviour
                     townManagerInstance = Instantiate(townManagerPrefab);
                 }
 
+                // Spawn the Event System prefab if it hasn't been spawned yet
+                if (eventSystemInstance == null && eventSystemPrefab != null)
+                {
+                    eventSystemInstance = Instantiate(eventSystemPrefab);
+                }
+
+                // Spawn the Dialogue System prefab if it hasn't been spawned yet
+                if (dialogueSystemInstance == null && dialogueSystemPrefab != null)
+                {
+                    dialogueSystemInstance = Instantiate(dialogueSystemPrefab);
+                }
+
+                // Spawn the Dialogue System prefab if it hasn't been spawned yet
+                if (audioManagerInstance == null && audioManagerPrefab != null)
+                {
+                    audioManagerInstance = Instantiate(audioManagerPrefab);
+                }
+
                 if (false)
                 {
                     // If the game is over, transition to the END state
@@ -46,7 +66,6 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case GameState.END:
-                // Do any necessary clean up for the game
                 if(false)
                 {
                     Debug.Log("Entering Gamestate START");

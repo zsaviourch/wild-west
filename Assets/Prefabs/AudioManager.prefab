@@ -1,0 +1,280 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7427134052145803195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5230698702200511537}
+  - component: {fileID: 7204694163384330904}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5230698702200511537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7427134052145803195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6000318, y: 10.730195, z: -0.26287377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7204694163384330904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7427134052145803195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cfbbf4afa745449593a8fb82d04ab97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmData:
+  - name: bossTheme
+    clip: {fileID: 8300000, guid: 3f927fa91cd6b084681d108d4c2ac4d6, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelOneHigh
+    clip: {fileID: 8300000, guid: 6b7e29116fc5f9d4187b1daa48b6cd0d, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelOneLow
+    clip: {fileID: 8300000, guid: 2fe72508b1e0b2f4ca84469e4b2c9f67, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelOneMid
+    clip: {fileID: 8300000, guid: 96d32286758f99441a4091f4c84341eb, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: menuTheme
+    clip: {fileID: 8300000, guid: 7218642138c226b4d855e50de94da29b, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  sfxData:
+  - name: golemAttack
+    clip: {fileID: 8300000, guid: cbe4b79d883b1f340b3e66f09c62a521, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: golemDie
+    clip: {fileID: 8300000, guid: cdd52ded1f40b684086dd0eb2c83c61e, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: golemHurt
+    clip: {fileID: 8300000, guid: 88772c2bd3af8c44b9da949cdd345281, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: golemShieldHit
+    clip: {fileID: 8300000, guid: 31ea4c715cc7b4645b19f4c7913af4ee, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: iceGoatAttack1
+    clip: {fileID: 8300000, guid: 6687502d3889c5a47ab0b68c58ac42b4, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: iceGoatAttack2
+    clip: {fileID: 8300000, guid: d797a84e4f549304cb27c77e316357e4, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: iceGoatDie
+    clip: {fileID: 8300000, guid: 59485e502a47e7e4b8cad4b3d5984161, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: iceGoatHurt
+    clip: {fileID: 8300000, guid: 7eb15a8e7044c8f43908c43a13eefbbe, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: lamiaAttack
+    clip: {fileID: 8300000, guid: d935bc64f3fb5154f98bc97222924099, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: lamiaHurt
+    clip: {fileID: 8300000, guid: d211e63b1ea764842a20bdbc13a82796, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: lamiaDie
+    clip: {fileID: 8300000, guid: 7235bdcfa04c7974e992e1acf8ba7862, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: tikbalangDie
+    clip: {fileID: 8300000, guid: 8ce0d844b90417148aa820d136a225ae, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: tikbalangHurt
+    clip: {fileID: 8300000, guid: c679ca1e07cd72c4cb04af4de4e530f9, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: tikbalangAttack
+    clip: {fileID: 8300000, guid: 30f2eb9e5a0a9d9489000e4fa7cdfb56, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: wendigoDie
+    clip: {fileID: 8300000, guid: 7aed8bbf41ccf704c910ad7c4c99d628, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: wendigoHurt
+    clip: {fileID: 8300000, guid: 02d074458da827746bffd78dd68178ff, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: wendigoMissile
+    clip: {fileID: 8300000, guid: 44a2af4c2618eee46945a006de359e23, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: wendigoShieldHit
+    clip: {fileID: 8300000, guid: 070830d56e7751244ab2828c1e05737f, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: wendigoAttack
+    clip: {fileID: 8300000, guid: 41157518f5538ff48a7a941860afe7e6, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: soulPickup
+    clip: {fileID: 8300000, guid: 567bbb6494ea87d41b24de10bb45e62e, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: soulDrop
+    clip: {fileID: 8300000, guid: da2ac7bca6e99dc4aacb95a4c2e36e4c, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: sniperExplode
+    clip: {fileID: 8300000, guid: a55765ab977ee9b478fac5f1901ff9a7, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: emptyClip
+    clip: {fileID: 8300000, guid: e161888733ff0c34a8534b3346fb46ed, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: startGameSFX
+    clip: {fileID: 8300000, guid: fddcb195bc1aea44e94c4e803ce5333e, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: transitionSFX
+    clip: {fileID: 8300000, guid: e5665028a7fda9f42a52256093a684a1, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: buttonHover
+    clip: {fileID: 8300000, guid: 56bcaad2dab554448b13e2d73e35ed23, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: buttonClick
+    clip: {fileID: 8300000, guid: 050e1920c9c291e478bd61b5e3bdfccb, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: playerHurt
+    clip: {fileID: 8300000, guid: 498d2475fe2c00c429077bf8a4da61c2, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: playerDie
+    clip: {fileID: 8300000, guid: 97d608593a3889c4f81fb0dcdd1c51ba, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: playerDash
+    clip: {fileID: 8300000, guid: e95f77d895c00ab41908e8443e748a12, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: energyLow
+    clip: {fileID: 8300000, guid: 7aeb4db83cd0b174e848556126c022f4, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: energyEmpty
+    clip: {fileID: 8300000, guid: c49a3494567a0074eab287c0af3dd073, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: playerLowHealth
+    clip: {fileID: 8300000, guid: f0711c7c6205dd847af3b927568c0eee, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: sniperShot
+    clip: {fileID: 8300000, guid: d9a61538c5915ff45b870fa8838fa612, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: topazShot
+    clip: {fileID: 8300000, guid: 5c3c5fadcf6688342b9d78ab09331e8d, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: jasperShot
+    clip: {fileID: 8300000, guid: 61e0b150fa4c00d46b0318c6f7a88b6f, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: shotgunShot
+    clip: {fileID: 8300000, guid: e4f09e985a86f9446b97ea8009282f0c, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: topazReload
+    clip: {fileID: 8300000, guid: 3033724367d5fab4cbbe5249e38559c0, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: shotgunReload
+    clip: {fileID: 8300000, guid: 6c7ea7e07352c3740a84751e436bab3c, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: sniperReload
+    clip: {fileID: 8300000, guid: 42eb51fb339d1f747b0896090786dc7a, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  - name: jasperReload
+    clip: {fileID: 8300000, guid: 694f1fb9cbd40ca40b04173f45ad8a21, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
+  masterBGMVolume: 1
+  masterSFXVolume: 1

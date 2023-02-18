@@ -2,26 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GolemAIController : MonoBehaviour
+public class GolemAIController : AIController
 {
-    [SerializeField] private Transform[] patrolPoints;
     [SerializeField] private float moveSpeed = 2f;
+        [SerializeField] private float burstSpeed = 4f;
     [SerializeField] private float detectionRange = 5f;
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private float agressiveRange = 3f;
-    [SerializeField] private int maxHealth = 200;
-    [SerializeField] private int damagePerHit = 10;
     [SerializeField] private float attackCooldown = 5f;
     [SerializeField] private float proximityDamage = 5f;
     [SerializeField] private float proximityCheckInterval = 1f;
     [SerializeField] private float proximityRange = 2f;
-    [SerializeField] private Animator animator;
-    [SerializeField] private PlayerController playerController;
-    [SerializeField] public Grid navigationMesh;
 
+    public Transform[] patrolPoints;
+
+    private Grid navigationMesh;
     private int currentPatrolPointIndex = 0;
-    private Vector3 currentDestination;
-    private int currentHealth;
     private bool isDefensive = false;
     private bool isCoolingDown = false;
     private bool isProximityAttacking = false;
@@ -29,18 +25,17 @@ public class GolemAIController : MonoBehaviour
     private float lastProximityCheckTime = 0f;
     private float lastAttackTime = 0f;
     private float shellEndTime = 0f;
-    private bool isDead = false;
 
     private void Start()
     {
-        currentHealth = maxHealth;
-        currentDestination = patrolPoints[currentPatrolPointIndex].position;
+        patrolPoints = EnemyPatrolPoints.Instance.GetUnusedPatrolPoints(EnemyPatrolPoints.EnemyType.Golem);
+        navigationMesh = Grid.Instance;
         animator.SetBool("isPatrolling", true);
     }
 
     private void Update()
     {
-        if (isDead)
+        if (IsDead)
         {
             return;
         }
@@ -61,70 +56,82 @@ public class GolemAIController : MonoBehaviour
 
         if (isProximityAttacking)
         {
-            if (Vector3.Distance(transform.position, playerController.transform.position) > proximityRange)
+            if (Vector3.Distance(transform.position, PlayerController.Instance.transform.position) > proximityRange)
             {
                 isProximityAttacking = false;
             }
             else if (Time.time - lastProximityCheckTime > proximityCheckInterval)
             {
                 lastProximityCheckTime = Time.time;
-                playerController.TakeDamage(proximityDamage);
+                PlayerController.Instance.TakeDamage(proximityDamage);
             }
         }
 
-        if (Vector3.Distance(transform.position, playerController.transform.position) < detectionRange)
-        {
-            isDefensive = true;
-            isProximityAttacking = false;
-            animator.SetBool("isShell", true);
+if (Vector3.Distance(transform.position, PlayerController.Instance.transform.position) < detectionRange)
+{
+    isDefensive = true;
+    isProximityAttacking = false;
+    animator.SetBool("isShell", true);
 
-            if (!isCoolingDown && Time.time - lastAttackTime > attackCooldown && Vector3.Distance(transform.position, playerController.transform.position) < agressiveRange)
-            {
-                isCoolingDown = true;
-                lastAttackTime = Time.time;
-                animator.SetBool("isBurst", true);
-                StartCoroutine(DoBurstAttack());
-            }
-        }
+    if (!isCoolingDown && Time.time - lastAttackTime > attackCooldown && Vector3.Distance(transform.position, PlayerController.Instance.transform.position) < agressiveRange)
+    {
+        isCoolingDown = true;
+        lastAttackTime = Time.time;
+        animator.SetBool("isBurst", true);
+        StartCoroutine(DoBurstAttack());
+    }
+}
+else if (!isDefensive && !isBurstAttacking)
+{
+    // Move towards the next patrol point
+    Vector3 targetPosition = patrolPoints[currentPatrolPointIndex].position;
+    if (Vector3.Distance(transform.position, targetPosition) > 0.1f)
+    {
+        // Calculate the direction towards the target position
+        Vector3 direction = (targetPosition - transform.position).normalized;
 
-        if (!isDefensive && !isBurstAttacking)
-        {
-            if (Vector3.Distance(transform.position, currentDestination) < 0.1f)
-            {
-                currentPatrolPointIndex = (currentPatrolPointIndex + 1) % patrolPoints.Length;
-                currentDestination = patrolPoints[currentPatrolPointIndex].position;
-            }
+        // Move the enemy towards the target position
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-            transform.position = Vector3.MoveTowards(transform.position, currentDestination, moveSpeed * Time.deltaTime);
-            animator.SetFloat("moveX", currentDestination.x - transform.position.x);
-            animator.SetFloat("moveY", currentDestination.y - transform.position.y);
-        }
+        // Set the animation parameters for the movement direction
+        animator.SetFloat("moveX", direction.x);
+        animator.SetFloat("moveY", direction.y);
+    }
+    else
+    {
+        // Move to the next patrol point
+        currentPatrolPointIndex = (currentPatrolPointIndex + 1) % patrolPoints.Length;
+    }
+}
+
     }
 
-    
-private IEnumerator DoBurstAttack()
+    public override void TakeDamage(int damage)
+    {
+        if(isDefensive)
+            return;
+
+        base.TakeDamage(damage);
+    }
+
+ private IEnumerator DoBurstAttack()
 {
     isBurstAttacking = true;
 
     animator.SetBool("isChasing", true);
 
-    Vector2 targetPosition = playerController.transform.position;
-    List<Node> path = Pathfinding.FindPath(navigationMesh, transform.position, targetPosition);
+    Vector2 targetPosition = PlayerController.Instance.transform.position;
 
-    // Move towards player using pathfinding
-    int pathIndex = 0;
-    while (pathIndex < path.Count)
+    // Determine the direction to the player
+    Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
+
+    // Move towards player in a straight line
+    while (Vector2.Distance(transform.position, targetPosition) > attackRange)
     {
-        Vector2 direction = ((Vector2)path[pathIndex].worldPosition - (Vector2)transform.position).normalized;
-        transform.position = transform.position + (Vector3)direction * moveSpeed * Time.deltaTime;
+        transform.position = transform.position + (Vector3)direction * burstSpeed * Time.deltaTime;
         animator.SetFloat("moveX", direction.x);
         animator.SetFloat("moveY", direction.y);
         yield return null;
-
-        if (Vector2.Distance(transform.position, path[pathIndex].worldPosition) < 0.1f)
-        {
-            pathIndex++;
-        }
     }
 
     animator.SetBool("isChasing", false);
@@ -144,21 +151,18 @@ private IEnumerator DoBurstAttack()
     lastAttackTime = Time.time;
 }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
 
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, agressiveRange);
 
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, proximityRange);
 
-private void OnDrawGizmosSelected()
-{
-    Gizmos.color = Color.red;
-    Gizmos.DrawWireSphere(transform.position, detectionRange);
-
-    Gizmos.color = Color.yellow;
-    Gizmos.DrawWireSphere(transform.position, agressiveRange);
-
-    Gizmos.color = Color.green;
-    Gizmos.DrawWireSphere(transform.position, proximityRange);
-
-    Gizmos.color = Color.white;
-    Gizmos.DrawWireSphere(transform.position, attackRange);
-}
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
 }

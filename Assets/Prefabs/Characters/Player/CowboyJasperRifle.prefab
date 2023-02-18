@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5911997804280151676}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5911997804373860737}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: emptyclip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5911997805056938314}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: shootingPos
   m_TagString: shootingPos
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 5911997805195024031}
   - component: {fileID: 5911997805195024017}
   - component: {fileID: 5911997805195024018}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Cowboy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5911997805624776633}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: footstep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5911997805708163636}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: reload
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,9 @@ GameObject:
   - component: {fileID: 5911997805959121848}
   - component: {fileID: 5911997805959121850}
   - component: {fileID: 5911997805959121851}
-  m_Layer: 6
+  - component: {fileID: 6399319027950843512}
+  - component: {fileID: 2851512989883376524}
+  m_Layer: 7
   m_Name: CowboyJasperRifle
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -300,7 +302,7 @@ Transform:
   - {fileID: 5911997805056938314}
   - {fileID: 5911997804280151676}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5911997805959121849
 BoxCollider2D:
@@ -387,7 +389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedScaler: 4
-  animator: {fileID: 0}
+  animator: {fileID: 5911997805195024018}
+  whichGun: 
 --- !u!114 &5911997805959121851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,9 +403,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a5cd35d740c4c5dab0cff532c8853b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gunName: 
   energyInitialAmount: 200
   currentEnergyAmount: 0
-  firingFrequencyInterval: 1
+  firingFrequencyInterval: 0.2
   currentShootingTime: 0
   shootInitiated: 0
   energyRegeneratePerSecond: 66
@@ -420,6 +424,36 @@ MonoBehaviour:
   energyConsumePerBullet: 0
   shootingPos: {fileID: 0}
   currentReloadPreparationTime: 0
+  energyInitiated: 0
+--- !u!114 &6399319027950843512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5911997805959121798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6a0c8578a7cea4f9836f976e144fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyInitialAmount: 200
+  currentEnergyAmount: 0
+  health: 100
+  currentHealth: 0
+--- !u!114 &2851512989883376524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5911997805959121798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 685fefd147df647c4b70ac0d51a566dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &5911997806020312983
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5911997806020312968}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: shoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

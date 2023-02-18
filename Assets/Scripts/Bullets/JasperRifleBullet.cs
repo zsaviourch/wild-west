@@ -171,8 +171,9 @@ public class JasperRifleBullet : MonoBehaviour
         // hit the enemy
         if (collision.gameObject.CompareTag("enemy"))
         {
-            collision.gameObject.GetComponent<Enemy_Test>().health -= bulletDamage;
-            Destroy(gameObject);
+            collision.gameObject.GetComponent<AIController>().TakeDamage(bulletDamage);
+            rb.isKinematic = true;
+            //Destroy(gameObject);
         }
 
         // hit the obstacle
@@ -180,6 +181,7 @@ public class JasperRifleBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 
     // destroy the bullet if it exceeds the travel length

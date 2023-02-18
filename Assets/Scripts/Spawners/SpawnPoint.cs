@@ -10,10 +10,7 @@ public class SpawnPoint : MonoBehaviour
         public GameObject[] prefabs;
     }
 
-    [Header("Prefab Authoring")]
-    public CharacterPrefab[] prefabList;
-
-    public enum SpawnType
+        public enum SpawnType
     {
         Player_Weston,
         Enemy_Golem,
@@ -41,6 +38,9 @@ public class SpawnPoint : MonoBehaviour
 
     [Header("Spawn Settings")]
     public SpawnType spawnType;
+
+    [Header("Prefab Authoring")]
+    public CharacterPrefab[] prefabList;
 
     private Dictionary<SpawnType, GameObject[]> prefabMap = new Dictionary<SpawnType, GameObject[]>();
 

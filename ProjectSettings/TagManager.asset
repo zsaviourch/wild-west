@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - obstacle
   - playerSpawnPoint
+  - cowboy
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - Obstacle
   - Player
-  - 
-  - 
+  - Bullet
+  - ground
   - 
   - 
   - 
@@ -69,6 +70,12 @@ TagManager:
     locked: 0
   - name: building
     uniqueID: 1411495647
+    locked: 0
+  - name: enemy
+    uniqueID: 3101816645
+    locked: 0
+  - name: civilian
+    uniqueID: 1884711185
     locked: 0
   - name: player
     uniqueID: 3295076093

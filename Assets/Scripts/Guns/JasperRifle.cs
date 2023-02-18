@@ -6,7 +6,8 @@ using UnityEngine;
 public class JasperRifle : MonoBehaviour
 {
     // References
-    [SerializeField] int energyInitialAmount;
+    public string gunName;
+    public int energyInitialAmount;
     public int currentEnergyAmount;
     [SerializeField] float firingFrequencyInterval;
     public float currentShootingTime;
@@ -29,6 +30,8 @@ public class JasperRifle : MonoBehaviour
 
     public Transform shootingPos;
     public float currentReloadPreparationTime;
+
+    public bool energyInitiated;
 
     // Constructor
     public JasperRifle(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
@@ -150,21 +153,40 @@ public class JasperRifle : MonoBehaviour
 
     }
 
-    private void Awake()
+    private void Start()
     {
+        gunName = "JasperRifle";
+        player = GameObject.FindWithTag("Player");
         currentReloadTime = 0f;
-        currentEnergyAmount = energyInitialAmount;
+        energyInitialAmount = player.GetComponent<HealthAndEnergy>().energyInitialAmount;
+        
         reloadInitiated = false;
         energyConsumePerBullet = FindEnergyConsumePerBullet(this.bulletType);
         currentShootingTime = 0f;
-        shootInitiated = true;
+        shootInitiated = false;
         shootingPos = GameObject.FindWithTag("shootingPos").transform;
         currentReloadPreparationTime = 0f;
+
+        currentEnergyAmount = energyInitialAmount;
+
+        energyInitiated = false;
+
 
     }
 
     private void Update()
     {
+
+        if (energyInitiated == false)
+        {
+            currentEnergyAmount = energyInitialAmount;
+            energyInitiated = true;
+        }
+        else
+        {
+            currentEnergyAmount = player.GetComponent<HealthAndEnergy>().currentEnergyAmount;
+        }
+
         // Reload
         if (Input.GetMouseButtonDown(1) && currentEnergyAmount < energyInitialAmount)
         {
@@ -180,7 +202,7 @@ public class JasperRifle : MonoBehaviour
             Debug.Log("shoot");
             Shoot();
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0) && currentEnergyAmount < energyConsumePerBullet)
+        else if (Input.GetKeyDown(KeyCode.Mouse0) && currentEnergyAmount < energyConsumePerBullet)
         {
             Debug.Log("empty clip");
             //AkSoundEngine.PostEvent("EmptyClip", gameObject);
@@ -189,6 +211,7 @@ public class JasperRifle : MonoBehaviour
         // Shooting flag adjustment
         if (currentShootingTime <= firingFrequencyInterval)
         {
+            
             currentShootingTime += Time.deltaTime;
         }
         else
@@ -212,6 +235,7 @@ public class JasperRifle : MonoBehaviour
             if (currentEnergyAmount <= EnergyIntialAmount)
             {
                 currentEnergyAmount += (int) System.Math.Round(energyRegeneratePerSecond * Time.deltaTime);
+                player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
             }
         }
     }
@@ -223,7 +247,8 @@ public class JasperRifle : MonoBehaviour
 
         // Replenish all energy
         currentEnergyAmount = energyInitialAmount;
-        
+        player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
+
     }
 
     public int FindEnergyConsumePerBullet(BulletType type)
@@ -232,16 +257,16 @@ public class JasperRifle : MonoBehaviour
         switch (type)
         {
             case BulletType.JasperRifleBullet:
-                cost = 5;
+                cost = 8;
                 break;
             case BulletType.BerylliumShotgunBullet:
-                cost = 10;
+                cost = 20;
                 break;
             case BulletType.OnyxSniperBullet:
-                cost = 15;
+                cost = 30;
                 break;
             case BulletType.TopazGunBullet:
-                cost = 20;
+                cost = 1;
                 break;
         }
         if (cost == -1)
@@ -257,11 +282,21 @@ public class JasperRifle : MonoBehaviour
         {
             //AkSoundEngine.PostEvent("CrystalRifleShot", gameObject);
             Debug.Log("SoundPlayed");
+/*          StartCoroutine(PlayShootAnimation());*/          
             Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
             currentEnergyAmount -= energyConsumePerBullet;
+            player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
             currentReloadTime = 0f;
             shootInitiated = false;
             // AkSoundEngine.PostEvent("gunShoot", player);
+            AudioManager.Instance.Play("jasperShot");
         }
     }
+
+    /*private IEnumerator PlayShootAnimation()
+    {
+        player.GetComponentInChildren<Animator>().SetBool("shoot", true);
+        yield return new WaitForSeconds(0.25f);
+        player.GetComponentInChildren<Animator>().SetBool("shoot", false);
+    }*/
 }

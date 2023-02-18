@@ -10,12 +10,14 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Animator animator;
 
+    public string whichGun;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponentInChildren<Animator>();
+        animator = GetComponent<Animator>();
         if (animator == null)
         {
             Debug.Log("No animator");
@@ -24,14 +26,16 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log(animator.name);
         }
+        whichGun = FindGunName();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Move();
 
-        Shoot();
+        if (!Input.GetMouseButtonDown(0)) Move();
+
+        if (EnoughAmmo(whichGun)) Shoot();
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -82,15 +86,19 @@ public class PlayerMovement : MonoBehaviour
     // Shoot
     private void Shoot()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && StartToShot(whichGun))
         {
-            animator.SetBool("shoot", true);
-        }
-        else
-        {
-            animator.SetBool("shoot", false);
+            Debug.Log("animation");
+            StartCoroutine(PlayShootAnimation());
         }
 
+    }
+
+    private IEnumerator PlayShootAnimation()
+    {
+        animator.SetBool("shoot", true);
+        yield return new WaitForSeconds(0.25f);
+        animator.SetBool("shoot", false);
     }
 
     // MassiveShoot
@@ -107,5 +115,61 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("shoot_reload", false);        
 
     }
-    
+
+    // Find the gun name
+    private string FindGunName()
+    {
+        string gunName = null;
+        if (GetComponent<JasperRifle>() != null) gunName = "JasperRifle";
+        else if (GetComponent<BerylShotgun>() != null) gunName = "BerylShotgun";
+        else if (GetComponent<OnyxSnipper>() != null) gunName = "OnyxSnipper";
+        else if (GetComponent<TopazGun>() != null) gunName = "TopazGun";
+        return gunName;
+    }
+
+    // Find the gun shot initiation variable
+    private bool StartToShot(string gunName)
+    {
+        bool startToShoot = false;
+        switch (gunName)
+        {
+            case "JasperRifle":
+                startToShoot = GetComponent<JasperRifle>().shootInitiated;
+                break;
+            case "BerylShotgun":
+                startToShoot = GetComponent<BerylShotgun>().shootInitiated;
+                break;
+            case "OnyxSnipper":
+                startToShoot = GetComponent<OnyxSnipper>().shootInitiated;
+                break;
+            case "TopazGun":
+                startToShoot = GetComponent<TopazGun>().shootInitiated;
+                break;
+        }
+        return startToShoot;
+    }
+
+    // Find whether there is enough ammo
+    private bool EnoughAmmo(string gunName)
+    {
+        bool enoughEmmo = false;
+        int energy = GetComponent<HealthAndEnergy>().currentEnergyAmount;
+        switch (gunName)
+        {
+            case "JasperRifle":
+                enoughEmmo = energy >= GetComponent<JasperRifle>().energyConsumePerBullet;
+                break;
+            case "BerylShotgun":
+                enoughEmmo = energy >= GetComponent<BerylShotgun>().energyConsumePerBullet;
+                break;
+            case "OnyxSnipper":
+                enoughEmmo = energy >= GetComponent<OnyxSnipper>().energyConsumePerBullet;
+                break;
+            case "TopazGun":
+                enoughEmmo = energy >= GetComponent<TopazGun>().energyConsumePerBullet;
+                break;
+        }
+        return enoughEmmo;
+    }
+
 }
