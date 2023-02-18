@@ -65,6 +65,16 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{9BFC124F-68DB-43A3-8724-36923174319C}" ShortID="891412863">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="22"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="playerDefeated" ID="{611C58CE-D8A6-4692-9B31-D93B6652D2FB}" WorkUnitID="{DD7FCEB5-9FA3-47A2-A776-90F3020EA510}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="soulPickUp" ID="{65401D85-77DA-463A-B4E4-1F8C2D1AF365}">

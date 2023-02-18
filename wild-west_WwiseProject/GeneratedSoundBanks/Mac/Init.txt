@@ -1,13 +1,18 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	444815956	PlayerLife			\Default Work Unit\Music\PlayerLife	
 	2753803885	MusicRegions			\Default Work Unit\Music\MusicRegions	
 
 State	ID	Name	State Group			Notes
+	748895195	None	PlayerLife			
+	818777268	playerDefeated	PlayerLife			
+	2557321869	playerAlive	PlayerLife			
 	435872092	musicCredits	MusicRegions			
-	543979504	musicLevel	MusicRegions			
 	748895195	None	MusicRegions			
+	1359346036	musicVictory	MusicRegions			
 	2935806393	musicBoss	MusicRegions			
-	3743649387	musicDefeat	MusicRegions			
 	4082046343	musicMenu	MusicRegions			
+	4206939873	musicLevel1	MusicRegions			
+	4206939874	musicLevel2	MusicRegions			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	77978275	Ambient			\Default Work Unit\Master Audio Bus\World\Ambient	

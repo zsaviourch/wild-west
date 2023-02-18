@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{0BF15D3C-B01D-4F8F-BA9D-1705141ED497}" PersistMode="Standalone">
 			<ChildrenList>
 				<ActorMixer Name="World" ID="{C5F2B8FC-B476-4FCD-B50C-F831B9A10B43}" ShortID="899590303">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value Platform="Web">True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
@@ -19,6 +26,13 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Non-World" ID="{14525E30-6230-416B-BF25-76183F755397}" ShortID="742394647">
+					<PropertyList>
+						<Property Name="Inclusion" Type="bool">
+							<ValueList>
+								<Value Platform="Web">True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
