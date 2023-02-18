@@ -50,6 +50,7 @@ namespace AK
         static const AkUniqueID TIKBALANGATTACK = 2408912248U;
         static const AkUniqueID TIKBALANGDIE = 2437003014U;
         static const AkUniqueID TIKBALANGHURT = 382555423U;
+        static const AkUniqueID VICTORYSTART = 1460238139U;
         static const AkUniqueID WENDIGODIE = 1753832348U;
         static const AkUniqueID WENDIGOHURT = 4294852885U;
         static const AkUniqueID WENDIGOMISSILE = 2286643954U;
@@ -71,6 +72,7 @@ namespace AK
                 static const AkUniqueID MUSICLEVEL1 = 4206939873U;
                 static const AkUniqueID MUSICLEVEL2 = 4206939874U;
                 static const AkUniqueID MUSICMENU = 4082046343U;
+                static const AkUniqueID MUSICVICTORY = 1359346036U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace MUSICREGIONS

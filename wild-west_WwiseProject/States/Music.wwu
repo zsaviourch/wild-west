@@ -14,6 +14,7 @@
 						<State Name="musicCredits" ID="{C78E47D7-5665-4416-A4EE-EDFE17C3E876}"/>
 						<State Name="musicLevel1" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
 						<State Name="musicLevel2" ID="{E2DD3D01-CB1E-4158-A634-1A490E3CF55E}"/>
+						<State Name="musicVictory" ID="{29BF6F26-1A6C-49B1-94FD-562C8A00E11A}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>

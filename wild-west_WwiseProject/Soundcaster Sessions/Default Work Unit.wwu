@@ -54,12 +54,44 @@
 							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="wendigoSmash" ID="{F1DAEC66-C640-41A3-B318-2D67C8491743}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="intensityMid" ID="{D3584236-679C-459A-9220-86861BDDFFE7}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
 							<Position X="3" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="victoryStart" ID="{318961EB-70B1-40EE-BDFC-588A7E5A7B06}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="3" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="wendigoDie" ID="{BAC702CB-54AF-4FE8-8A14-C1AC2E5C6B7D}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="intensityHigh" ID="{0E10FFEE-43AF-4350-8247-32A9C389E249}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
 							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="creditsStart" ID="{F12EE366-D075-4A4D-B8F4-1BE90764601C}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="4" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="playerDie" ID="{9058AAA9-8F66-48E8-9074-E7BCD08B587A}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
+							<Position X="6" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="playerFootstep" ID="{1696172C-7C73-4F65-9B9F-1C7B0613F914}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
+							<Position X="6" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="playerHurt" ID="{4D8D52F2-0EC2-4046-866A-7AF2954A7D0E}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
+							<Position X="6" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="playerHealthLow" ID="{009B7011-4F3D-4D3C-8DA8-8594DC277430}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
+							<Position X="6" Y="4"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -81,8 +113,8 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{724DA6B8-F9EB-443B-BEA8-A850B83B6F8C}"/>
-						<CurrentStateRef Name="None" ID="{B08D902A-372F-48FF-A9A9-3EB19550EF9A}"/>
+						<CurrentStateRef Name="playerAlive" ID="{32B0F653-6B3C-4BB0-B237-2343492DF765}"/>
+						<CurrentStateRef Name="musicBoss" ID="{553FB8C7-A4FC-4833-97DD-D5B79F9DBE76}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="highInt" ID="{59B4356C-419D-43F1-BE7B-7577BF0B088B}"/>

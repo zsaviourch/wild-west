@@ -1,3 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	192279183	level2Start			\Default Work Unit\Music\level2Start	
+	272640944	intensityHigh			\Default Work Unit\Music\intensityHigh	
+	773284954	intensityMid			\Default Work Unit\Music\intensityMid	
+	1343576922	intensityLow			\Default Work Unit\Music\intensityLow	
+	1460238139	victoryStart			\Default Work Unit\Music\victoryStart	
 

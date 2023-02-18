@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlatformSettingsNameList:
   - Mac
+  - Web
   - Windows
   PlatformSettingsList:
   - {fileID: 11400000, guid: 76a4285037f03f64e992cbf416121578, type: 2}
+  - {fileID: 11400000, guid: 558cf81567cd8e24aa75b41e8eb6c317, type: 2}
   - {fileID: 11400000, guid: 56319b4b0e4fc1c4ea8e8e229cc65fa7, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
@@ -25,7 +27,7 @@ MonoBehaviour:
     m_EngineLogging: 1
     m_MaximumNumberOfPositioningPaths: 255
     m_CommandQueueSize: 262144
-    m_SamplesPerFrame: 512
+    m_SamplesPerFrame: 1024
     m_MainOutputSettings:
       m_AudioDeviceShareset: 
       m_DeviceID: 0
@@ -61,7 +63,7 @@ MonoBehaviour:
     m_MaximumHardwareTimeoutMs: 1000
     m_DebugOutOfRangeCheckEnabled: 0
     m_DebugOutOfRangeLimit: 16
-    m_RenderDuringFocusLoss: 0
+    m_RenderDuringFocusLoss: 1
     m_SoundBankPersistentDataPath: 
     m_UseAsyncOpen: 0
     m_MemoryAllocationSizeLimit: 0

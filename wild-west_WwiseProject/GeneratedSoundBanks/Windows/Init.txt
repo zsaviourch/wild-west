@@ -8,6 +8,7 @@ State	ID	Name	State Group			Notes
 	2557321869	playerAlive	PlayerLife			
 	435872092	musicCredits	MusicRegions			
 	748895195	None	MusicRegions			
+	1359346036	musicVictory	MusicRegions			
 	2935806393	musicBoss	MusicRegions			
 	4082046343	musicMenu	MusicRegions			
 	4206939873	musicLevel1	MusicRegions			

@@ -10,11 +10,16 @@ Switch	ID	Name	Switch Group			Notes
 	3420765524	highInt	musicIntensity			
 
 State Group	ID	Name			Wwise Object Path	Notes
+	444815956	PlayerLife			\Default Work Unit\Music\PlayerLife	
 	2753803885	MusicRegions			\Default Work Unit\Music\MusicRegions	
 
 State	ID	Name	State Group			Notes
+	748895195	None	PlayerLife			
+	818777268	playerDefeated	PlayerLife			
+	2557321869	playerAlive	PlayerLife			
 	435872092	musicCredits	MusicRegions			
 	748895195	None	MusicRegions			
+	1359346036	musicVictory	MusicRegions			
 	2935806393	musicBoss	MusicRegions			
 	4082046343	musicMenu	MusicRegions			
 	4206939873	musicLevel1	MusicRegions			
@@ -22,6 +27,9 @@ State	ID	Name	State Group			Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	20960124	WildWestLevel1IntensityHigh-002	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\WildWestLevel1IntensityHigh-002_D79FB2B7.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel1High\WildWestLevel1IntensityHigh-002\WildWestLevel1IntensityHigh-002		3676648
+	23283344	Granular Abstract Ambient Atmosphere (24)	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Granular Abstract Ambient Atmosphere (24)_D79FB2B7.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicCredits\Credits Placeholder\Granular Abstract Ambient Atmosphere (24)		11520096
+	42340954	EM1 Dead Space 1	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\EM1 Dead Space 1_D79FB2B7.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicDefeat\Dead Placeholder\EM1 Dead Space 1		11520096
+	169571724	Success 2a	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Success 2a_D79FB2B7.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicVictory\Victory Placeholder\Success 2a		453176
 	224791011	WildWestLevel1IntensityMid-002	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\WildWestLevel1IntensityMid-002_D79FB2B7.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel1Mid\WildWestLevel1IntensityMid-002\WildWestLevel1IntensityMid-002		3676648
 	239999480	WildWestLevel1IntensityLow-003	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\WildWestLevel1IntensityLow-003_D79FB2B7.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel1Low\WildWestLevel1IntensityLow-003\WildWestLevel1IntensityLow-003		3676644
 	310412876	WildWestLevel1IntensityHigh-003	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\WildWestLevel1IntensityHigh-003_D79FB2B7.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel1High\WildWestLevel1IntensityHigh-003\WildWestLevel1IntensityHigh-003		3676648

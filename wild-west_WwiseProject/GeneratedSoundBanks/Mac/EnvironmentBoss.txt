@@ -1,9 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
 	947858520	wendigoShieldHit			\Default Work Unit\Enemies\Wendigo\wendigoShieldHit	
+	1460238139	victoryStart			\Default Work Unit\Music\victoryStart	
 	1753832348	wendigoDie			\Default Work Unit\Enemies\Wendigo\wendigoDie	
 	1823178165	wendigoSlash			\Default Work Unit\Enemies\Wendigo\wendigoSlash	
 	2286643954	wendigoMissile			\Default Work Unit\Enemies\Wendigo\wendigoMissile	
 	2978173602	bossStart			\Default Work Unit\Music\bossStart	
+	2994446543	creditsStart			\Default Work Unit\Music\creditsStart	
 	4157141718	wendigoSmash			\Default Work Unit\Enemies\Wendigo\wendigoSmash	
 	4294852885	wendigoHurt			\Default Work Unit\Enemies\Wendigo\wendigoHurt	
 
