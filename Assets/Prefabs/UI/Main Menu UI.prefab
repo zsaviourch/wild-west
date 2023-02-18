@@ -121,24 +121,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 6361555750239873939}
     m_Modifications:
     - target: {fileID: 8520250869573915291, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869573915291, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869573915291, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MapTransition, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250869573915291, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8520250870008120937, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.0012207031
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8520250871172800498, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
       propertyPath: settingsMenu

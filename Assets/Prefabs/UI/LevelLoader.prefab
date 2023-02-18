@@ -1002,7 +1002,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6616195287869058473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e666b0fea59cba4e9cc6839f7f3c43a, type: 3}
+  m_Script: {fileID: 11500000, guid: 613be4861a3a20f4e8cb2b42857f8a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mapCanvas: {fileID: 1676943026}
@@ -1013,4 +1013,4 @@ MonoBehaviour:
   currentLocation: {fileID: 166517559}
   destination: {fileID: 1639874407}
   transitionTime: 1
-  readyButton: {fileID: 1862574882}
+  readyButton: {fileID: 0}
