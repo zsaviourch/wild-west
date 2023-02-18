@@ -913,7 +913,7 @@ MonoBehaviour:
   _descriptionText: {fileID: 1611322593986743556}
   _dialogueAsset: {fileID: 4900000, guid: e66ab455de1f08b468f908c249cd022d, type: 3}
   _animator: {fileID: 1611322595009320153}
-  _speaker: {fileID: 0}
+  _speaker: {fileID: 1611322594446920793}
   _speakerList:
   - Name: Weston
     Speaker: {fileID: 0}

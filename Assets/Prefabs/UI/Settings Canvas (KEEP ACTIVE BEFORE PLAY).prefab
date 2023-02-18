@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: -80
   m_MaxValue: 0
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e8327fca6e7a647b93facf0eebd4bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: a10700b5eeeaa4d4db6cfb8b7b5cefc0, type: 2}
+  audioMixer: {fileID: 24100000, guid: 3c2fe1e6e3e62e345aadb7373c967b23, type: 2}
   resolutionDropdown: {fileID: 3782304042937871859}
   debugMode: 1
 --- !u!1 &3782304042806670390

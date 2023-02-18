@@ -123,12 +123,12 @@ public class DialogueManager : MonoBehaviour
             dialogueType |= DialogueTypeEnum.NATURAL;
         }
 
-        if (didPlayerDieOnThisFloor)
+        if (didPlayerDieOnThisFloor && numDeaths < 4)
         {
             dialogueType |= DialogueTypeEnum.CONTIGUOUS_DEATH;
         }
 
-        if (didPlayerPassThroughThisFloor)
+        if (didPlayerPassThroughThisFloor && numDeaths < 4)
         {
             dialogueType |= DialogueTypeEnum.CONTIGUOUS_EXIT;
         }
@@ -146,9 +146,9 @@ public class DialogueManager : MonoBehaviour
                 StartDialogue(key);
                 return;
             }
-
-            Debug.Log($"No key found for enum {dialogueType} and town {level}");
         }
+
+        Debug.Log($"No key found for enum {dialogueType} and town {level}");
     }
 
     public void StartDialogueEpilogue(int numDeaths)
@@ -177,13 +177,18 @@ public class DialogueManager : MonoBehaviour
 
         DialogueSentence dialog = _dialogueSentences.Dequeue();
         Color color = Color.black;
+        bool isInList = false;
         foreach (DialogueSpeaker speaker in _speakerList)
         {
             if (speaker.Name.Contains(dialog.Name, StringComparison.CurrentCultureIgnoreCase))
             {
                 color = speaker.Color;
+                isInList = true;
+                break;
             }
         }
+
+        _speaker.gameObject.SetActive(isInList);
 
         _nameText.color = color;
         _nameText.text = dialog.Name;
