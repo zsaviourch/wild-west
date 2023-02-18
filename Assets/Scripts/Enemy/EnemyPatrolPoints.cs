@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrol : MonoBehaviour
+public class EnemyPatrolPoints : MonoBehaviour
 {
     [System.Serializable]
     public enum EnemyType
