@@ -2,26 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GolemAIController : MonoBehaviour
+public class GolemAIController : AIController
 {
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float detectionRange = 5f;
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private float agressiveRange = 3f;
-    [SerializeField] private int maxHealth = 200;
-    [SerializeField] private int damagePerHit = 10;
     [SerializeField] private float attackCooldown = 5f;
     [SerializeField] private float proximityDamage = 5f;
     [SerializeField] private float proximityCheckInterval = 1f;
     [SerializeField] private float proximityRange = 2f;
-    [SerializeField] private Animator animator;
     [SerializeField] public Grid navigationMesh;
 
     public Transform[] patrolPoints;
-    public PlayerController playerController;
     private int currentPatrolPointIndex = 0;
     private Vector3 currentDestination;
-    private int currentHealth;
     private bool isDefensive = false;
     private bool isCoolingDown = false;
     private bool isProximityAttacking = false;
@@ -29,20 +24,17 @@ public class GolemAIController : MonoBehaviour
     private float lastProximityCheckTime = 0f;
     private float lastAttackTime = 0f;
     private float shellEndTime = 0f;
-    private bool isDead = false;
 
     private void Start()
     {
-        playerController = PlayerController.Instance;
         patrolPoints = EnemyPatrolPoints.Instance.GetUnusedPatrolPoints(EnemyPatrolPoints.EnemyType.Golem);
         currentDestination = patrolPoints[currentPatrolPointIndex].position;
-        currentHealth = maxHealth;
         animator.SetBool("isPatrolling", true);
     }
 
     private void Update()
     {
-        if (isDead)
+        if (IsDead)
         {
             return;
         }
@@ -63,24 +55,24 @@ public class GolemAIController : MonoBehaviour
 
         if (isProximityAttacking)
         {
-            if (Vector3.Distance(transform.position, playerController.transform.position) > proximityRange)
+            if (Vector3.Distance(transform.position, PlayerController.Instance.transform.position) > proximityRange)
             {
                 isProximityAttacking = false;
             }
             else if (Time.time - lastProximityCheckTime > proximityCheckInterval)
             {
                 lastProximityCheckTime = Time.time;
-                playerController.TakeDamage(proximityDamage);
+                PlayerController.Instance.TakeDamage(proximityDamage);
             }
         }
 
-        if (Vector3.Distance(transform.position, playerController.transform.position) < detectionRange)
+        if (Vector3.Distance(transform.position, PlayerController.Instance.transform.position) < detectionRange)
         {
             isDefensive = true;
             isProximityAttacking = false;
             animator.SetBool("isShell", true);
 
-            if (!isCoolingDown && Time.time - lastAttackTime > attackCooldown && Vector3.Distance(transform.position, playerController.transform.position) < agressiveRange)
+            if (!isCoolingDown && Time.time - lastAttackTime > attackCooldown && Vector3.Distance(transform.position, PlayerController.Instance.transform.position) < agressiveRange)
             {
                 isCoolingDown = true;
                 lastAttackTime = Time.time;
@@ -103,64 +95,61 @@ public class GolemAIController : MonoBehaviour
         }
     }
 
-    
-private IEnumerator DoBurstAttack()
-{
-    isBurstAttacking = true;
-
-    animator.SetBool("isChasing", true);
-
-    Vector2 targetPosition = playerController.transform.position;
-    List<Node> path = Pathfinding.FindPath(navigationMesh, transform.position, targetPosition);
-
-    // Move towards player using pathfinding
-    int pathIndex = 0;
-    while (pathIndex < path.Count)
+    private IEnumerator DoBurstAttack()
     {
-        Vector2 direction = ((Vector2)path[pathIndex].worldPosition - (Vector2)transform.position).normalized;
-        transform.position = transform.position + (Vector3)direction * moveSpeed * Time.deltaTime;
-        animator.SetFloat("moveX", direction.x);
-        animator.SetFloat("moveY", direction.y);
-        yield return null;
+        isBurstAttacking = true;
 
-        if (Vector2.Distance(transform.position, path[pathIndex].worldPosition) < 0.1f)
+        animator.SetBool("isChasing", true);
+
+        Vector2 targetPosition = PlayerController.Instance.transform.position;
+        List<Node> path = Pathfinding.FindPath(navigationMesh, transform.position, targetPosition);
+
+        // Move towards player using pathfinding
+        int pathIndex = 0;
+        while (pathIndex < path.Count)
         {
-            pathIndex++;
+            Vector2 direction = ((Vector2)path[pathIndex].worldPosition - (Vector2)transform.position).normalized;
+            transform.position = transform.position + (Vector3)direction * moveSpeed * Time.deltaTime;
+            animator.SetFloat("moveX", direction.x);
+            animator.SetFloat("moveY", direction.y);
+            yield return null;
+
+            if (Vector2.Distance(transform.position, path[pathIndex].worldPosition) < 0.1f)
+            {
+                pathIndex++;
+            }
         }
+
+        animator.SetBool("isChasing", false);
+        animator.SetBool("isBurst", true);
+        yield return new WaitForSeconds(0.5f);
+
+        // Impact hit
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("Player"));
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<PlayerController>().TakeDamage(damagePerHit);
+        }
+
+        animator.SetBool("isBurst", false);
+        isCoolingDown = false;
+        isBurstAttacking = false;
+        lastAttackTime = Time.time;
     }
 
-    animator.SetBool("isChasing", false);
-    animator.SetBool("isBurst", true);
-    yield return new WaitForSeconds(0.5f);
 
-    // Impact hit
-    Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, LayerMask.GetMask("Player"));
-    foreach (Collider2D enemy in hitEnemies)
+    private void OnDrawGizmosSelected()
     {
-        enemy.GetComponent<PlayerController>().TakeDamage(damagePerHit);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, agressiveRange);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, proximityRange);
+
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
-
-    animator.SetBool("isBurst", false);
-    isCoolingDown = false;
-    isBurstAttacking = false;
-    lastAttackTime = Time.time;
-}
-
-
-
-
-private void OnDrawGizmosSelected()
-{
-    Gizmos.color = Color.red;
-    Gizmos.DrawWireSphere(transform.position, detectionRange);
-
-    Gizmos.color = Color.yellow;
-    Gizmos.DrawWireSphere(transform.position, agressiveRange);
-
-    Gizmos.color = Color.green;
-    Gizmos.DrawWireSphere(transform.position, proximityRange);
-
-    Gizmos.color = Color.white;
-    Gizmos.DrawWireSphere(transform.position, attackRange);
-}
 }

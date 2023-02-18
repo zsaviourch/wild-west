@@ -171,9 +171,9 @@ public class JasperRifleBullet : MonoBehaviour
         // hit the enemy
         if (collision.gameObject.CompareTag("enemy"))
         {
-            collision.gameObject.GetComponent<Enemy_Test>().health -= bulletDamage;
+            collision.gameObject.GetComponent<AIController>().TakeDamage(bulletDamage);
             rb.isKinematic = true;
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
         // hit the obstacle
