@@ -103,7 +103,9 @@ public class LevelLoader : MonoBehaviour
         // Set current location to diablo
         
         // Load Scene
+        mapCanvas.SetActive(false);
         SceneManager.LoadScene(sceneId);
+        crossfade.SetTrigger("End");
     }
     
     IEnumerator TownTransition(int sceneId) // sceneID is the Level's build order index
