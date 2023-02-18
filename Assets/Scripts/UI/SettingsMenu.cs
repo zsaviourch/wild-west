@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
+    [SerializeField] private AudioMixer audioMixer;
 
     [SerializeField] private TMP_Dropdown resolutionDropdown;
     private Resolution[] _resolutions;
@@ -78,9 +79,12 @@ public class SettingsMenu : MonoBehaviour
 
     #region Audio
 
-    public void SetVolume(float volume)
+    // On value change for volume slider, adjust master volume on the audioMixer
+    public void SetVolume(float sliderValue)
     {
-        audioMixer.SetFloat("volume", volume);
+        audioMixer.SetFloat("volume", sliderValue);
+        if (debugMode)
+            Debug.Log(sliderValue);
     }
 
     #endregion

@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ProjectInfo>
 	<Project Name="wild-west_WwiseProject" GUID="{EA1EACC6-A572-4A12-B013-B69347FF78D1}" Generator="2022.1.1.8100"/>
-	<CacheRoot>../../../../wild-west_WwiseProject/.cache</CacheRoot>
+	<CacheRoot>../../../../wild-west_WwiseProject/.cache/</CacheRoot>
 	<Platforms>
+<<<<<<< HEAD
+		<Platform Name="Mac" GUID="{0361A0EB-0F24-4DC1-9583-F479B96F0E4B}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../wild-west_WwiseProject/SoundBanks/"/>
+		<Platform Name="Windows" GUID="{254BB9EA-6C1C-4FC1-A333-D1267E4A9038}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../wild-west_WwiseProject/GeneratedSoundBanks/Windows/"/>
+=======
 		<Platform Name="Mac" GUID="{0361A0EB-0F24-4DC1-9583-F479B96F0E4B}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../wild-west_WwiseProject/GeneratedSoundBanks/Mac"/>
 		<Platform Name="Web" GUID="{7B1BA461-0528-4BD5-8280-447A6FD88EC0}" BasePlatform="Web" BasePlatformGUID="{639AD233-23F2-4C0F-9127-79F44C15E1DA}" Path="../../../../wild-west_WwiseProject/GeneratedSoundBanks/Web"/>
 		<Platform Name="Windows" GUID="{254BB9EA-6C1C-4FC1-A333-D1267E4A9038}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../wild-west_WwiseProject/GeneratedSoundBanks/Windows"/>
+>>>>>>> main
 	</Platforms>
 	<Languages>
 		<Language Name="English(US)" Id="684519430" GUID="{B21AE755-53CD-421E-A131-7E00DE4F053B}" Default="true" UseAsStandIn="true"/>
 	</Languages>
+<<<<<<< HEAD
+	<FileHash>{DDFF154D-F79B-80C8-E62A-B89DFF0B2608}</FileHash>
+=======
 	<FileHash>{03F6C873-C91C-C205-3DEE-6F586DFE6E54}</FileHash>
+>>>>>>> main
 </ProjectInfo>
