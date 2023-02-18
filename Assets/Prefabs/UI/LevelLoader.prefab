@@ -1006,11 +1006,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapCanvas: {fileID: 1676943026}
-  horseIcon: {fileID: 4232171641050530192}
-  horseIconSpeed: 100
   crossfade: {fileID: 6616195286438488691}
-  cities: []
+  horseIcon: {fileID: 4232171641050530192}
   currentLocation: {fileID: 166517559}
   destination: {fileID: 1639874407}
+  readyButton: {fileID: 1862574882}
+  cities: []
+  horseIconSpeed: 100
   transitionTime: 1
-  readyButton: {fileID: 0}
