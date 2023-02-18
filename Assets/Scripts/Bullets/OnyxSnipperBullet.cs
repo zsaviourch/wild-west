@@ -289,7 +289,7 @@ public class OnyxSnipperBullet : MonoBehaviour
         {
             if (c.gameObject.CompareTag("enemy"))
             {
-                c.gameObject.GetComponent<Enemy_Test>().health -= aoeDamageAmount;
+                c.gameObject.GetComponent<AIController>().TakeDamage(bulletDamage);
             }
         }
         StartCoroutine(ExplodeAnimation());
