@@ -174,6 +174,7 @@ public class BerylliumShotgunBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 
     // destroy the bullet if it exceeds the travel length

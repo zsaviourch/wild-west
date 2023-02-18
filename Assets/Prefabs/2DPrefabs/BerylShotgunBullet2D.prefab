@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1703770609713949579}
   - component: {fileID: 1703770609713949578}
   - component: {fileID: 8310875872051676936}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: BerylShotgunBullet2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -175379171
-  m_SortingLayer: 8
+  m_SortingLayer: -3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0513d87892a7e4e5aa44b8f2af4ab921, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

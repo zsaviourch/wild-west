@@ -32,9 +32,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
 
-        Shoot();
+        if (!Input.GetMouseButtonDown(0)) Move();
+        
+        if (EnoughAmmo(whichGun)) Shoot();
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -87,13 +88,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && StartToShot(whichGun))
         {
-            animator.SetBool("shoot", true);
-        }
-        else
-        {
-            animator.SetBool("shoot", false);
+            StartCoroutine(PlayShootAnimation());
         }
 
+    }
+
+    private IEnumerator PlayShootAnimation()
+    {
+        animator.SetBool("shoot", true);
+        yield return new WaitForSeconds(0.25f);
+        animator.SetBool("shoot", false);
     }
 
     // MassiveShoot
@@ -143,5 +147,28 @@ public class PlayerMovement : MonoBehaviour
         }
         return startToShoot;
     }
-    
+
+    // Find whether there is enough ammo
+    private bool EnoughAmmo(string gunName)
+    {
+        bool enoughEmmo = false;
+        int energy = GetComponent<HealthAndEnergy>().currentEnergyAmount;
+        switch (gunName)
+        {
+            case "JasperRifle":
+                enoughEmmo = energy >= GetComponent<JasperRifle>().energyConsumePerBullet;
+                break;
+            case "BerylShotgun":
+                enoughEmmo = energy >= GetComponent<BerylShotgun>().energyConsumePerBullet;
+                break;
+            case "OnyxSnipper":
+                enoughEmmo = energy >= GetComponent<OnyxSnipper>().energyConsumePerBullet;
+                break;
+            case "TopazGun":
+                enoughEmmo = energy >= GetComponent<TopazGun>().energyConsumePerBullet;
+                break;
+        }
+        return enoughEmmo;
+    }
+
 }

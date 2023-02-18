@@ -207,16 +207,16 @@ public class OnyxSnipper : MonoBehaviour
         switch (type)
         {
             case BulletType.JasperRifleBullet:
-                cost = 5;
+                cost = 8;
                 break;
             case BulletType.BerylliumShotgunBullet:
-                cost = 10;
+                cost = 20;
                 break;
             case BulletType.OnyxSniperBullet:
-                cost = 15;
+                cost = 30;
                 break;
             case BulletType.TopazGunBullet:
-                cost = 20;
+                cost = 1;
                 break;
         }
         if (cost == -1)
