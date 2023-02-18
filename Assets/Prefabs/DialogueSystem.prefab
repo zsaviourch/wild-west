@@ -915,54 +915,57 @@ MonoBehaviour:
   _animator: {fileID: 1611322595009320153}
   _speaker: {fileID: 1611322594446920793}
   _speakerList:
-  - Name: Weston
+  - Name: 1
     Speaker: {fileID: 0}
     Color: {r: 1, g: 0.4655665, b: 0, a: 1}
-  - Name: Gangster
+  - Name: 0
     Speaker: {fileID: 0}
     Color: {r: 0, g: 0, b: 0, a: 1}
-  - Name: Marev
+  - Name: 2
     Speaker: {fileID: 0}
     Color: {r: 1, g: 0, b: 0.599278, a: 1}
-  - Name: Sarah
+  - Name: 3
     Speaker: {fileID: 0}
     Color: {r: 0.94698524, g: 0, b: 1, a: 1}
-  - Name: Nick
+  - Name: 4
     Speaker: {fileID: 0}
     Color: {r: 0.53671026, g: 0, b: 1, a: 1}
-  - Name: Joel
+  - Name: 5
     Speaker: {fileID: 0}
     Color: {r: 0.05724907, g: 0, b: 1, a: 1}
-  - Name: Nicole
+  - Name: 6
     Speaker: {fileID: 0}
     Color: {r: 0, g: 0.4833598, b: 1, a: 1}
-  - Name: Frank
+  - Name: 7
     Speaker: {fileID: 0}
     Color: {r: 0, g: 0.7544613, b: 1, a: 1}
-  - Name: Samantha
+  - Name: 8
     Speaker: {fileID: 0}
     Color: {r: 0, g: 0.9853697, b: 1, a: 1}
-  - Name: Carlos
+  - Name: 9
     Speaker: {fileID: 0}
     Color: {r: 0, g: 1, b: 0.5419581, a: 1}
-  - Name: Hector
+  - Name: 10
     Speaker: {fileID: 0}
     Color: {r: 0, g: 1, b: 0.16528296, a: 1}
-  - Name: Tony
+  - Name: 11
     Speaker: {fileID: 0}
     Color: {r: 0.25894284, g: 1, b: 0, a: 1}
-  - Name: Luna
+  - Name: 12
     Speaker: {fileID: 0}
     Color: {r: 0.7021512, g: 1, b: 0, a: 1}
-  - Name: Mary
+  - Name: 13
     Speaker: {fileID: 0}
     Color: {r: 1, g: 0.93744016, b: 0, a: 1}
-  - Name: Katherine
+  - Name: 14
     Speaker: {fileID: 0}
     Color: {r: 1, g: 0.70506436, b: 0, a: 1}
-  - Name: Wendigo
+  - Name: 15
     Speaker: {fileID: 0}
     Color: {r: 1, g: 0, b: 0.023768902, a: 1}
+  - Name: 16
+    Speaker: {fileID: 0}
+    Color: {r: 1, g: 0, b: 0.7624655, a: 1}
 --- !u!95 &1611322595009320153
 Animator:
   serializedVersion: 5

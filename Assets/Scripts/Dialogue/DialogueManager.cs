@@ -180,7 +180,7 @@ public class DialogueManager : MonoBehaviour
         bool isInList = false;
         foreach (DialogueSpeaker speaker in _speakerList)
         {
-            if (speaker.Name.Contains(dialog.Name, StringComparison.CurrentCultureIgnoreCase))
+            if (speaker.Name.ToString().Contains(dialog.Name, StringComparison.CurrentCultureIgnoreCase))
             {
                 color = speaker.Color;
                 isInList = true;

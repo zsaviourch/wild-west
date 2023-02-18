@@ -34,7 +34,7 @@ public class DialogueSentence
 [Serializable]
 public class DialogueSpeaker
 {
-    public string Name;
+    public InteractiveNPCEnum Name;
     public Sprite Speaker;
     public Color Color;
 }
