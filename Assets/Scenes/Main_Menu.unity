@@ -354,7 +354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6616195287869058473, guid: 0c000d0245594fc4f99ab59ffcff0611, type: 3}
       propertyPath: m_Name
-      value: LevelLoader
+      value: Transition Manager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

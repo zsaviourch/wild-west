@@ -1,0 +1,251 @@
+***1 - Level 0 - Immovable Dialogue
+Gangster: Why did you betray the clan? It wasn't worth it.
+Weston: I protected my family. You all will go to jail. It WAS worth it.
+Gangster: Nobody will know. We'll take care of that. You will be remembered as the hopelessly corrupt cop that you are.
+Weston: That is not true!
+Gangster: *laughs* Please. Do you think that there were no other people affected by your hunger for money? You only put your foot in us to save what IS yours, idiot. Now die.
+Weston: No! Son of a…
+
+***2 - Level 0 - Immovable Dialogue
+Marev: What are you doing here, idiot? Everyone must hide until the raid ends.
+Weston: Hey? Where am I? What raid? I don't understand.
+Marev: Look. I'm in a hurry. I don't have time to deal with useless civilians… Wait. I feel the evil in you. You are an expert assassin, right?
+Weston: How do you know that?
+Marev: *sigh* I don't have time to explain. The Hybrids, the monsters that live in the Fog that surrounds the Old West, are invading four of our cities. Our sheriff is missing. I know… that you can help us.
+Weston: Are you serious?
+Marev: Listen. Follow my instructions: Enter the city, find an available magic gun, advance through the three zones of the city, and destroy whatever is attracting the hybrids to this city. I will try to communicate by… telegraph with other people who can help you. I have to go.
+Weston: What? *sigh* This is crazy.
+
+***3 - Level 1A - Immovable Dialogue
+Sarah: Hey stranger! I saw you were talking to Marev. We need all the help we can get to take down the hybrids. Take one of the Jasper Rifles.
+
+***4 - Level 1B - Natural Initial Dialogue
+Nick: I see Marev has sent someone. It seems you have the multiple souls of the hybrids in your pistol. It is a common practice to fuse those souls with our weapons.
+
+***5 - Level 1C - Natural Initial Dialogue
+Joel: *cough* Be careful sir. The hybrids in this area are protecting that pillar, that Antenna that drew the hybrids here. We have not succeeded in destroying it.
+
+***6 - Level 2A - Natural Initial Dialogue
+Nicole: What's up, visitor? We have learned how you single-handedly destroyed the Devil House Antenna thanks to a message from Marev, who also supplied that hair. That is fantastic! I'd give you one of our Beryllium Shotguns if I could, but as you know two gems can't be linked to one soul, but I don't think I needed it anyway, do you?
+
+***7 - Level 2B - Natural Initial Dialogue
+Frank: As the Eagle said, "there will be a final raid and we will all perish." That raid has finally arrived. It's not worth even fighting.
+
+***8 - Level 2C - Natural Initial Dialogue
+Samantha: Damn! Oh sorry stranger, I hadn't seen you. It is that we have not been able to destroy that damn Antenna. We hear that each town is being attacked by groups of different hybrids. Hopefully, we didn't get the most difficult group!
+
+***9 - Level 3A - Natural Initial Dialogue
+Carlos: Hello stranger. Marev has spoken highly of you, they say you are an expert in destroying Antennas. It's seriously too bad you can't use Coldmeadow's onyx snipers, though who knows if in another life...
+
+***10 - Level 3B - Natural Initial Dialogue
+Hector: You are the stranger that Marev found, aren't you? I have heard of you. Do you know what else I've heard in all this chaos? The last thing we heard before those Antennae showed up, was that there was an icy explosion in Fogfield. Perhaps that explains the appearance of the Antennae and the hordes of terrifying hybrids.
+
+***11 - Level 3C - Natural Initial Dialogue
+Tony: How about, stranger? Wait, how did you get in here? Is there a way out? We've been trying to get out of here for hours without success. We hope that when the Antenna is demolished, the same will happen with these walls.
+
+***12 - Level 4A - Natural Initial Dialogue
+Luna: Hello foreigner. You are just as Marev described you. Your win over the other city's Antenna has inspired us a lot. I'd like you to take one of our Topaz Guns, but I know it's not possible to have two guns at once.
+
+***13 - Level 4B - Natural Initial Dialogue
+Mary: Outsider, tell me: Aren't you worried that the Antennae are only in four cities in the Old West? I mean, I don't want other cities to be going through this, but I think there must be a reason for this.
+
+***14 - Level 4C - Natural Initial Dialogue
+Katherine: Hello traveler. He is likely to die today, and I wanted to share this with someone. I have sometimes visited the Cultists, those who guard the barrier between the Chaos of the Mists and the uneasy peace of the Old West and have seen their notes about the beasts outside. I have an idea which one of them might be causing this.
+
+***15 - Level E - Natural Initial Dialogue
+Wendigo: How dare you stand in my presence, mortal? *sniff* I don't notice anything special about you. How is it possible that someone has destroyed all four of my antennas? *snort* Never mind, I'll kill you just as quickly as I did the sheriff!
+
+***16 - PC Level - Final Conditional Dialogue - 0
+Katherine: Thank you very much, sir...
+Weston: Weston. Dallas Weston.
+Tony: We are forever in your debt, Mr. Weston. The truth is that we wanted to ask you something.
+Samantha: Do you think you could be the new sheriff of the Old West? We have no idea what caused that Raid, our towns were affected, so we need to ally with the other cities, and even with the Naturists.
+Weston: I…
+Joel: And we believe that you are the one to help us in this time of crisis. We don't know you completely, but we do know that you are a good man, self-sacrificing, and whom we trust.
+Weston: I… *cheerful sigh* I accept!
+All: Yeah!
+Marev: I still have no idea who that man is, Mayor Lufacon.
+Lufacon: I have a slight suspicion of who it might be, but for now, just keep an eye on him Marev. accompany him. Be his friend. Find out who is...
+
+***17 - Level 2A - Forced Initial Dialogue
+Nicole: Hello visitor. Marev told us that you might make it here, but we didn't think it would be that fast. It seems you don't have any linked weapons, so you can take a Beryllium Shotgun to help us fight the hybrids.
+
+***18 - Level 3A - Forced Initial Dialogue
+Carlos: How are you, stranger? Marev contacted me recently to advise me of an outsider with the potential to help all 4 cities, although I didn't think this would be the first one you'd help. Hurry, grab one of our Onyx Snipers. Apparently, that will be the first time you have a magical weapon in your life. Curious.
+
+***19 - Level 4A - Forced Initial Dialogue
+Luna: Oh hello, foreigner. Marev told us briefly about you. I thought that you would help other cities before you came and that you would already have a weapon, but it seems that is not the case. Here, take one of our Topaz Pistols.
+
+***20 - Level 1A - Natural Contiguous Dialogue - Player Exit Memory
+Sarah: Did you *cough* forget something, stranger?
+
+***21 - Level 1A - Natural Contiguous Dialogue - Player Death Memory
+Sarah: How is it possible? I saw you die in the clutches of the hybrids.
+
+***22 - Level 1B - Natural Contiguous Dialogue - Player Exit Memory
+nick: How strange to find you here again. By the way, I see you managed to upgrade your weapon. That will be very useful.
+
+***23 - Level 1B - Natural Contiguous Dialogue - Player Death Memory
+nick: Have you... revived? I don't think that's a side effect of loading the weapon with more souls.
+
+***24 - Level 1C - Natural Contiguous Dialogue - Player Exit Memory
+Joel: It's good that you're a stranger again. After a few hours of your escape, an Antenna fell here again.
+
+***25 - Tier 1C - Natural Contiguous Dialogue - Player Death Memory
+Joel: Do my eyes deceive me? Didn't you die there before destroying the Antenna?
+
+***26 - Level 2A - Natural Contiguous Dialogue - Player Exit Memory
+Nicole: It's unbelievable that you destroyed Casa Diablo's Antenna twice, outsider.
+
+***27 - Level 2A - Natural Contiguous Dialogue - Player Death Memory
+Nicole: This is impossible. I thought the hybrids had destroyed you, but here you are. Is it that you are…?
+
+***28 - Level 2B - Natural Contiguous Dialogue - Player Exit Memory
+Frank: Are you holding back the final raid? Was the whole prophecy false?
+
+***29 - Level 2B - Natural Contiguous Dialogue - Player Death Memory
+Frank: It's all over? Are we both dead? Will we be allowed to enter the reincarnation cycle again, or are our souls unworthy?
+
+***30 - Level 2C - Natural Contiguous Dialogue - Player Exit Memory
+Samantha: Curse! Sorry again stranger, but we were so close to getting out of here after you helped us, but another Antenna appeared here. And with the hybrids on the prowl, it's better to stay inside the city than outside, even if the cursed pretty much dominate both parts.
+
+***31 - Tier 2C - Natural Contiguous Dialogue - Player Death Memory
+Samantha: Get out of me! What are you, a spirit? I watched you die after trusting that you would help us, and now you are here again…. Sorry. I don't know anything about what's going on and I just scream without thinking.
+
+***32 - Level 3A - Natural Contiguous Dialogue - Player Exit Memory
+Carlos: Has Marev sent you here? Do you need anything else, stranger?
+
+***33 - Level 3A - Natural Contiguous Dialogue - Player Death Memory
+Carlos: It is impossible! I watched you die, how are you standing here?
+
+***34 - Level 3B - Natural Contiguous Dialogue - Player Exit Memory
+Hector: Hello again, stranger. What are you doing here again? Have you been able to check how the other cities are? I hope they're well.
+
+***35 - Level 3B - Natural Contiguous Dialogue - Player Death Memory
+Hector: No no no. This can not be. You died before my eyes. If I can see you, is it that we have also died and there is no hope? No!
+
+***36 - Level 3C - Natural Contiguous Dialogue - Player Exit Memory
+Tony: How are you? It looks like it wasn't worth trying to escape after you left since another Antenna fell from the sky which summoned the hybrids again. They almost devoured us outside the city.
+
+***37 - Level 3C - Natural Contiguous Dialogue - Player Death Memory
+Tony: Why are you alive?! Are you a new breed of zombie hybrid?
+
+***38 - Level 4A - Natural Contiguous Dialogue - Player Exit Memory
+Luna: How weird. Marev didn't tell us that you would have to go through this area again.
+
+***39 - Level 4A - Natural Contiguous Dialogue - Player Death Memory
+Luna: You've come back to life… Of course, I should have suspected that at the beginning. After all, no one in this rotten world can escape to an afterlife.
+
+***40 - Level 4B - Natural Contiguous Dialogue - Player Exit Memory
+Mary: Have you been able to visit any of the other cities before coming back? It seriously worries me and reassures me that my family in those areas has not yet been attacked by the hybrids.
+
+***41 - Tier 4B - Natural Contiguous Dialogue - Player Death Memory
+Mary: Is it you? I thought you were dead! *sigh* Apparently, it was like that.
+
+***42 - Level 4C - Natural Contiguous Dialogue - Player Exit Memory
+Katherine: I'm still here, sir… Weston, right? I don't know why, but it's only now that I've noticed the name on your license plate. Your desire to fight against these beasts for those who cannot have given me the strength to endure all this. Thank you.
+
+***43 - Tier 4C - Natural Contiguous Dialogue - Player Death Memory
+Katherine: Is it you or has a hybrid finally sent us to the afterlife? *short laugh*, Of course, it's you, no one can go to an afterlife. Not anymore at least...
+
+***44 - Tier E - Natural Contiguous Dialogue - Memory on Player Death
+wendigo: Impossible! At least now I know why your guts and body parts instantly disappeared. *sniff* I still can't detect if you belong to the "them" group. *sigh* It doesn't matter, I'll kill you faster this time so you don't try to thwart my plans again.
+
+***45 - PC Level - Final Conditional Dialogue - 1
+Katherine: Thank you very much, Weston.
+Tony: We are forever in your debt, Mr. Weston. The truth is that we wanted to ask you something.
+Samantha: Do you think you could be the new sheriff of the Old West? We have no idea what caused that Raid, our towns were affected, so we need to ally with the other cities, and even with the Naturists.
+Weston: I…
+Joel: And we believe that you are the one to help us in this time of crisis. We don't know you completely, but we do know that you are a good man, self-sacrificing, and whom we trust.
+Weston: I… *cheerful sigh* I accept!
+All: Yeah!
+Marev: That man managed to resurrect, Mayor Lufacon. We knew that no soul from the Wild West can go out into the multiverse, but his soul is different.
+Lufacon: It is more than clear that he is the one who speaks of the Eagle Prophecy. It appears that there is little time left for the final raid to happen. We have to prepare, Marev. You have to prepare it, without him noticing. This universe has to be saved...
+
+***46 - Level 1A - Forced Contiguous Dialogue - Player Exit Memory
+Sarah: How did you suddenly appear? And why do you say that the link with your weapon has been broken? That should be impossible, but *sigh* it seems to be so. Take that Jasper Rifle and help us.
+
+***47 - Level 1A - Forced Contiguous Dialogue - Player Death Memory
+Sarah: How is it possible? I saw you die in the clutches of the hybrids. Ah… that's why you don't have a linked weapon. I don't know what happened, but we don't have much of a chance to save our town. Take that Jasper Rifle.
+
+***48 - Level 2A - Forced Contiguous Dialogue - Player Exit Memory
+Nicole: The rumors that you seriously seem to spawn in different remote locations seem to be true. Oh! We need your help. Take that Beryllium Shotgun.
+
+***49 - Tier 2A - Forced Contiguous Dialogue - Player Death Memory
+Nicole: Impossible! Are you alive? How is that possible? *hum* Then… then there will be time to think about that. We seriously need your help now. Take that Beryllium Shotgun.
+
+***50 - Level 3A - Forced Contiguous Dialogue - Player Exit Memory
+Carlos: How did you get here so fast? It's unheard of. Well, that doesn't matter now. Pick up one of our Onyx Snipers.
+
+***51 - Level 3A - Forced Contiguous Dialogue - Player Death Memory
+Carlos: It is impossible! I watched you die, how are you standing here? You have… revived. But… *oh* I don't care. My people are in danger, stranger. Please pick up one of the Onyx Snipers.
+
+***52 - Level 4A - Forced Contiguous Dialogue - Player Exit Memory
+Luna: How weird. Marev didn't tell us that you'd have to pass through this area again, much less so suddenly. My people need help, outsider. Take one of our Topaz Guns.
+
+***53 - Level 4A - Forced Contiguous Dialogue - Player Death Memory
+Luna: You have revived. I can't believe it. But how? Oh. I get it. I should have been suspicious because we've never seen you around here… Weston. I haven't seen a police suit like this in a long time. Please help us. Take one of our Topaz Guns.
+
+***54 - Level 1A - Natural Difficult Dialogue
+Sarah: We are clear that the chief hybrid is the Wendigo. What is also clear to us is that the Wendigo has already realized your ability to resurrect and has sent more hybrids to each city to kill you as soon and often as possible.
+
+***55 - Level 1B - Natural Difficult Dialogue
+nick: There are more hybrids in every city. It is making it very difficult for us to fight them. However, now I know that you are the one to help us. Since there are a lot of them around here, you will be able to accumulate more souls in each area and deal better with more waves of enemies. Try your best not to die so you can collect more souls to fight against enemies.
+
+***56 - Level 1C - Natural Difficult Dialogue
+Joel: I still don't know how to get used to seeing you die so many times and then being here like nothing, but I trust that you will use your ability to destroy the new Antenna. I don't think we'll last much longer.
+
+***57 - Level 2A - Natural Difficult Dialogue
+Nicole: I knew you could destroy those Antennae again, Weston. Is that your name right? Through Marev's calls, we were informed of your name. It is a strong man's name. That's exactly what we need against all these extra waves that winter creature sends out.
+
+***58 - Level 2B - Natural Difficult Dialogue
+Frank: Even though our wretched souls can't go anywhere else, this feels like hell itself. Your constant failures have awakened the Dead Deer's wits so that he can torment us even more.
+
+***59 - Level 2C - Natural Difficult Dialogue
+Samantha: Why don't you just fucking die forever?! The Wendigo troops will exterminate us all just to kill constantly so you can't face that beast again. Why are you like this? *sob* No, forgive me, I didn't mean to! You've done nothing but help us and I spit in your face. *cry*
+
+***60 - Level 3A - Natural Difficult Dialogue
+Carlos: The attack on cities has increased. I don't know what you are or how you do to defy death and that your soul is not instantly consumed by this corrupted world, but I know that you will be able to destroy all the Antennae and defeat the Wendigo.
+
+***61 - Level 3B - Natural Difficult Dialogue
+Hector: I would like to be like you, stranger. There is nothing in the world that scares me more than dying, but if I could defy death over and over again, despite all the pain, I would be at peace. We no longer have an afterlife, so there is no consolation that everything will be fine after my miserable death.
+
+***62 - Level 3C - Natural Difficult Dialogue
+Tony: I and my family do not want to die from the multiple hordes of these abominable creatures. I've struggled to get out of here, to get back here and I'm tired. We trust in you, infinite man.
+
+***63 - Level 4A - Natural Difficult Dialogue
+Luna: You are a great survivor and fighter, outsider. I don't know if anyone has said this to you during all this chaos, confusion, and death, but thank you from the bottom of my heart. For not abandoning us.
+
+***64 - Level 4B - Natural Difficult Dialogue
+Mary: If we ever manage to get rid of the Wendigo and its large numbers of troops, I want to help you understand why you can revive over and over again. I feel like you have a bigger role here than you think.
+
+***65 - Level 4C - Natural Difficult Dialogue
+Katherine: More Wendigo minions have arrived in all cities, but especially in the areas where their pillars are. I have fought as hard as I could, thanks to your inspiration, Weston. I may only have one life, but I want to live it helping others to the end like you.
+
+***66 - Level E - Natural Difficult Dialogue
+Wendigo: I see that despite everything, you have managed to reach me, scum. You may not know it, but you and your ability to corrupt natural laws at all times make you much more of a freak and a danger than me. A danger that I will gut with pleasure!
+
+***67 - Level 1A - Forced Difficult Dialogue
+Sarah: Welcome back, Mr. Weston. What we are clear about is that the Wendigo already has noticed your ability to resurrect and has sent more hybrids to each city to kill you as soon and often as possible. Take my Jasper Shotgun and try to make this attempt the last.
+
+***68 - Level 2A - Forced Difficult Dialogue
+Nicole: Weston is your name, right? It's a strong man's name, which is exactly what we need here. And he is the name of a man to whom I would entrust my Beryllium Shotgun.
+
+***69 - Level 3A - Forced Difficult Dialogue
+Carlos: I don't know what you are or how you do to defy death and that your soul is not instantly consumed by this corrupted world, but I know with my Onyx Sniper, you will be able to defeat all the dangers that come your way.
+
+***70 - Level 4A - Forced Difficult Dialogue
+Luna: Thank you so much for continuing to fight for those who can't anymore, Weston. Take my Topaz Gun. I know it's not cool to say that one town's native weapon is better than another, but I seriously believe this is the best of all, and I hope it gives you the power to never have to die again.
+
+***71 - PC Level - Final Conditional Dialogue - 4 
+Katherine: Thank you very much, Weston.
+Tony: We are forever in your debt, Mr. Weston. The truth is that we wanted to ask you something.
+Samantha: Do you think you could be the new sheriff of the Old West? We have no idea how the Wendigo got so powerful, our towns were affected, there are many people injured, so we need to ally with the other cities, and even with the Naturists.
+Weston: I…
+Joel: And we believe that you are the one to help us in this time of crisis. We don't know you completely, but we do know that you are a good man, self-sacrificing, and whom we trust.
+Weston: I… *cheerful sigh* I accept!
+All: Yeah!
+Marev: That man managed to resurrect, Mayor Lufacon. We knew that no soul from the Wild West can go out into the multiverse, but his soul is different.
+Lufacon: It is more than clear that he is the one who speaks of the Eagle Prophecy. There is little time left for the final raid to happen. In addition to the hybrids, we have to worry about the Cultists. Those idiots weren't there to deal with this Raid.
+Marev: They went out on an expedition to North's Wate today, sir.
+Lufacon: We know that they hunt the few remaining angels and demons and that the Antennae were only placed in the cities where the demons live. This can't be a coincidence, Marev. We must prepare.Weston has to be ready. The final raid is drawing near and he is the only one who can save this universe...

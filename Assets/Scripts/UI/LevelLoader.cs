@@ -17,7 +17,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] private Transform currentLocation;
     [SerializeField] private Transform destination;
     public GameObject readyButton;
-    public List<Transform> cities;
+    // public List<Transform> cities;
 
     [Header("Variables")]
     public float horseIconSpeed = 100f;
@@ -60,10 +60,10 @@ public class LevelLoader : MonoBehaviour
             MoveHorseIcon();
     }
 
-    public void LoadScene(int sceneId)
+    /*public void LoadScene(int sceneId)
     {
-        StartCoroutine(LoadLevel(sceneId));
-    }
+        StartCoroutine(TownTransition(sceneId));
+    }*/
     
     public void LoadFirstLevel()
     {
@@ -106,7 +106,7 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(sceneId);
     }
     
-    IEnumerator LoadLevel(int sceneId) // sceneID is the Level's build order index
+    IEnumerator TownTransition(int sceneId) // sceneID is the Level's build order index
     {
         // Play Transition Animation
         crossfade.SetTrigger("Start");
@@ -133,7 +133,6 @@ public class LevelLoader : MonoBehaviour
 
         currentLocation = destination; // Our new current location is now what was our destination
         
-        // Load Scene
-        SceneManager.LoadScene(sceneId); // will probably c
+        // Town loads in
     }
 }

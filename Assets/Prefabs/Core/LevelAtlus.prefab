@@ -45,9 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   townPrefabs:
-  - TownName: Placeholder Town
-    room: {fileID: 890111096628259182, guid: 060212b820c77ba4c8a0ede4887c92e7, type: 3}
-  - TownName: Test Town
-    room: {fileID: 890111096628259182, guid: 853d3854f15004e16ac5c00bfd90c633, type: 3}
-  - TownName: 
-    room: {fileID: 0}
+  - TownName: CasaDiablo3
+    room: {fileID: 5557596238393897325, guid: 7e0ecd39d099b804ca80b0bc9cb83915, type: 3}
+  - TownName: RustBurrow2
+    room: {fileID: 5557596238393897325, guid: 7e0ecd39d099b804ca80b0bc9cb83915, type: 3}
+  - TownName: RustBurrow1
+    room: {fileID: 5557596238393897325, guid: 6cba06db1be3e7c48afab8bc57954790, type: 3}
+  - TownName: CasaDiablo3
+    room: {fileID: 5557596238393897325, guid: 2607721ce49f3c046b4911633bf77273, type: 3}
+  - TownName: CasaDiablo2
+    room: {fileID: 5557596238393897325, guid: dd1c79ce4d4a4f74cbc231a3361b399a, type: 3}
+  - TownName: CasaDiablo1
+    room: {fileID: 5557596238393897325, guid: 6d3f4ea40cfcaf549a07e20c197e066e, type: 3}
