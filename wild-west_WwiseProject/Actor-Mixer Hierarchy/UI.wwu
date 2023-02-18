@@ -4,12 +4,15 @@
 		<WorkUnit Name="UI" ID="{3E3014C6-4447-4AE7-87B6-99DBA3D1A1DB}" OwnerID="{14525E30-6230-416B-BF25-76183F755397}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="UI" ID="{EAADC0F9-BF69-4CA0-A6F8-343649F5B5D3}" ShortID="237517152">
+					<PropertyList>
+						<Property Name="OverrideOutput" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+							<ObjectRef Name="UI" ID="{00D28BF3-AF33-4E9D-8F81-E84541122841}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -22,6 +25,108 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="buttonClick" ID="{21EBB230-23BB-4E35-A84F-86CDE5FE6870}" ShortID="169485574">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Button Hover" ID="{EA4B7025-3C33-433F-9CFC-3E34C613F3B9}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0393451398531171"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.201922227170714"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Button Hover.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="120091524"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Button Hover" ID="{EA4B7025-3C33-433F-9CFC-3E34C613F3B9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="buttonStartGame" ID="{3BC7D098-23C0-4089-9110-FC3D491F3956}" ShortID="470347995">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Whip Crack" ID="{176552B1-9204-4A23-9A09-99DE84470721}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.174582798459563"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.16559691912709"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Whip Crack.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="45659975"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Whip Crack" ID="{176552B1-9204-4A23-9A09-99DE84470721}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="buttonHover" ID="{29808AF5-6DBE-4886-8CD2-AAA0952698A5}" ShortID="403271801">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-200</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Click_01" ID="{570C81F5-0EEC-4170-A44F-9E997D2BCB1B}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.339231078840394"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.400209229246898"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Click_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="688485637"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Click_01" ID="{570C81F5-0EEC-4170-A44F-9E997D2BCB1B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>

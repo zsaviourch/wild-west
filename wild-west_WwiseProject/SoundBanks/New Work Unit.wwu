@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0066D2C9-A5CB-41FF-9C21-16087E3BC6BA}" SchemaVersion="110">
+	<SoundBanks>
+		<WorkUnit Name="New Work Unit" ID="{0066D2C9-A5CB-41FF-9C21-16087E3BC6BA}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="New_GameplayLoop" ID="{2E59A4BF-456B-4FD1-903D-600DFA6ECC5F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="EmptyClip2" ID="{3A6CFA85-C493-4822-A80D-4BD426DDAF80}" WorkUnitID="{090278A5-F64D-4326-86FF-5C0D7C9F5BE6}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="CrystalRifleShot" ID="{0821F2DB-D342-4F8F-ABE8-D23FFBEFFA79}" WorkUnitID="{090278A5-F64D-4326-86FF-5C0D7C9F5BE6}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

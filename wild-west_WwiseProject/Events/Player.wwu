@@ -45,9 +45,39 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="playerHurt" ID="{4D8D52F2-0EC2-4046-866A-7AF2954A7D0E}"/>
-						<Event Name="playerDie" ID="{9058AAA9-8F66-48E8-9074-E7BCD08B587A}"/>
-						<Event Name="soulPickUp" ID="{65401D85-77DA-463A-B4E4-1F8C2D1AF365}"/>
+						<Event Name="playerHurt" ID="{4D8D52F2-0EC2-4046-866A-7AF2954A7D0E}">
+							<ChildrenList>
+								<Action Name="" ID="{2B823757-30EF-4F70-A588-90832F00BEE9}" ShortID="922193647">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="playerHurt" ID="{95E461A7-6E3A-48B4-95D2-993F61B671B8}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerDie" ID="{9058AAA9-8F66-48E8-9074-E7BCD08B587A}">
+							<ChildrenList>
+								<Action Name="" ID="{80E54678-7961-49A2-9D5E-AD5E89CE3E41}" ShortID="581056500">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player Die" ID="{66C81A09-7984-448E-8CE2-F2F69620B6B4}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="soulPickUp" ID="{65401D85-77DA-463A-B4E4-1F8C2D1AF365}">
+							<ChildrenList>
+								<Action Name="" ID="{87A4F2A2-CBFD-479C-B114-7364BE4B321B}" ShortID="330559343">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Soul Pickup" ID="{48F15626-221C-4EAE-81F0-566D85B6FF73}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="sniperExplode" ID="{8D2EA042-A4C3-4F15-981D-DF35FDD55E0C}">
 							<ChildrenList>
 								<Action Name="" ID="{FC8FC55D-6776-4B04-B342-99FEF5F95209}" ShortID="890423813">
@@ -70,12 +100,50 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="playerHealthMax" ID="{DE5F43CE-DA03-4203-88E2-236298827C6D}"/>
-						<Event Name="playerHealthLow" ID="{009B7011-4F3D-4D3C-8DA8-8594DC277430}"/>
-						<Event Name="playerEnergyMax" ID="{D7DACC84-FE88-4BFE-9118-D9230365A41E}"/>
-						<Event Name="playerEnergyLow" ID="{C486F123-83F6-4C14-BF42-8581E1407A72}"/>
-						<Event Name="playerEnergyEmpty" ID="{773D51E0-38A1-423A-AE9D-2D18C1294C07}"/>
-						<Event Name="playerHealthPickUp" ID="{2936D239-8F69-45AE-AD59-E3553C81B2E2}"/>
+						<Event Name="playerHealthLow" ID="{009B7011-4F3D-4D3C-8DA8-8594DC277430}">
+							<ChildrenList>
+								<Action Name="" ID="{1B405647-C599-4CC7-81CC-784BBB68FEB5}" ShortID="257638839">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player LowHealth" ID="{D675B98D-9896-49DB-AAD6-FEC43A518661}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerEnergyLow" ID="{C486F123-83F6-4C14-BF42-8581E1407A72}">
+							<ChildrenList>
+								<Action Name="" ID="{7117B4B7-1D1C-45C4-97E0-BE823C84F056}" ShortID="701129910">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Energy Low" ID="{40FE4D10-E5FC-44BA-A0D6-F43AA5998E7E}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerEnergyEmpty" ID="{773D51E0-38A1-423A-AE9D-2D18C1294C07}">
+							<ChildrenList>
+								<Action Name="" ID="{F082A5B6-3FEB-4025-9B51-AFFA1EE87976}" ShortID="536136015">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Energy Empty" ID="{2441ECA8-7C36-4E7C-96E4-025F70EFFA6D}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="playerFootstep" ID="{1696172C-7C73-4F65-9B9F-1C7B0613F914}">
+							<ChildrenList>
+								<Action Name="" ID="{5989E37D-66BD-49CC-AAD0-6FAD2150C57C}" ShortID="825754111">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Footstep Switch" ID="{C476C181-D284-4659-AA1B-BE5E401D0D21}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

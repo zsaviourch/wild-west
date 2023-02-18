@@ -4,8 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/CrzyPotato_Sandbox.unity
-    guid: de7e59c7a5633764caeac52fa9d99979
+  m_Scenes: []
   m_configObjects: {}

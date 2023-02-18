@@ -16,10 +16,16 @@ public class OnyxSnipperBullet : MonoBehaviour
     public float currentBulletTravelTime;
     public bool hitStuff;
     public Vector3 hitPosition;
+    public TrailRenderer trailRenderer;
+    public bool bulletDirectionDecided;
+    public Vector3 decidedDirection;
+    public Transform shootingPosTransform;
+    public Rigidbody2D rb;
+    [SerializeField] GameObject explosionPrefab;
 
     // constructor
     public OnyxSnipperBullet(int energyConsumedPerBullet, int bulletDamage, float aoeRadius, int bulletSpeedScaler, bool bulletFollowEnemy,
-         bool aoeDamage, int aoeDamageAmount, float bulletTravelTime)
+         bool aoeDamage, int aoeDamageAmount, float bulletTravelTime, GameObject explosionPrefab)
     {
         this.energyConsumedPerBullet = energyConsumedPerBullet;
         this.bulletDamage = bulletDamage;
@@ -29,6 +35,7 @@ public class OnyxSnipperBullet : MonoBehaviour
         this.aoeDamageAmount = aoeDamageAmount;
         this.aoeRadius = aoeRadius;
         this.bulletTravelTime = bulletTravelTime;
+        this.explosionPrefab = explosionPrefab;
     }
 
     // property access
@@ -150,11 +157,15 @@ public class OnyxSnipperBullet : MonoBehaviour
     {
         currentBulletTravelTime = 0f;
         hitStuff = false;
+        trailRenderer = GetComponent<TrailRenderer>();
+        bulletDirectionDecided = false;
+        shootingPosTransform = GameObject.FindWithTag("shootingPos").transform;
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
     // hit enermy or obstacles
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
 
 
@@ -162,7 +173,7 @@ public class OnyxSnipperBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("enemy") || collision.gameObject.CompareTag("obstacle") || collision.gameObject.CompareTag("ground"))
         {
 
-            GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<Rigidbody2D>().isKinematic = true;
             Destroy(GetComponent<TrailRenderer>());
             hitStuff = true;
         }
@@ -183,7 +194,7 @@ public class OnyxSnipperBullet : MonoBehaviour
         hitPosition = hitStop();
         if (hitPosition != Vector3.zero)
         {
-            GetComponent<Rigidbody>().isKinematic = true;
+            GetComponent<Rigidbody2D>().isKinematic = true;
             Destroy(GetComponent<TrailRenderer>());
             hitStuff = true;
             hitPosition = findHitPoint();
@@ -198,7 +209,20 @@ public class OnyxSnipperBullet : MonoBehaviour
         // Moving before hitting anything
         if (!hitStuff)
         {
-            transform.position += transform.forward * bulletSpeedScaler * Time.deltaTime;
+            if (bulletDirectionDecided == false)
+            {
+                if (GameObject.FindWithTag("Player").GetComponent<Transform>().localScale.x == 1)
+                {
+                    decidedDirection = shootingPosTransform.right;
+                    bulletDirectionDecided = true;
+                }
+                else
+                {
+                    decidedDirection = -shootingPosTransform.right;
+                    bulletDirectionDecided = true;
+                }
+                rb.AddForce(decidedDirection * bulletSpeedScaler, ForceMode2D.Force);
+            }
         }
             
     }
@@ -210,22 +234,24 @@ public class OnyxSnipperBullet : MonoBehaviour
             if (hitStuff && hitPosition != Vector3.zero)
             {
                 Explode(hitPosition);
+                // AkSoundEngine.PostEvent("sniperExplode", gameObject);
             }
             else
             {
                 Explode(transform.position);
+                // AkSoundEngine.PostEvent("sniperExplode", gameObject);
             }
-            
+
         }
     }
 
     public Vector3 hitStop()
     {
-        RaycastHit hit;
         Vector3 hitPos = Vector3.zero;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 0.01f))
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.forward, 0.01f);
+        if (hit)
         {
-            if (hit.rigidbody.gameObject.CompareTag("enemy") || hit.rigidbody.gameObject.CompareTag("obstacle") || hit.rigidbody.gameObject.CompareTag("ground"))
+            if (hit.collider.gameObject.CompareTag("enemy") || hit.collider.gameObject.CompareTag("obstacle") || hit.collider.gameObject.CompareTag("ground"))
             {
                 hitPos = hit.point;
             }
@@ -236,11 +262,11 @@ public class OnyxSnipperBullet : MonoBehaviour
     // shoot a ray backwards to reset the position
     public Vector3 findHitPoint()
     {
-        RaycastHit hit;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.forward, 0.01f);
         Vector3 hitPos = Vector3.zero;
-        if (Physics.Raycast(transform.position, -transform.forward, out hit, 1f))
+        if (hit)
         {
-            if (hit.rigidbody.gameObject.CompareTag("enemy") || hit.rigidbody.gameObject.CompareTag("obstacle") || hit.rigidbody.gameObject.CompareTag("ground"))
+            if (hit.collider.gameObject.CompareTag("enemy") || hit.collider.gameObject.CompareTag("obstacle") || hit.collider.gameObject.CompareTag("ground"))
             {
                 hitPos = hit.point;
                 // Deduct the first contact medium damage
@@ -256,14 +282,35 @@ public class OnyxSnipperBullet : MonoBehaviour
 
     public void Explode(Vector3 pos)
     {
-        Collider[] colliders = Physics.OverlapSphere(pos, aoeRadius);
-        foreach (Collider c in colliders)
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(pos, aoeRadius);
+        foreach (Collider2D c in colliders)
         {
             if (c.gameObject.CompareTag("enemy"))
             {
                 c.gameObject.GetComponent<Enemy_Test>().health -= aoeDamageAmount;
             }
         }
+        StartCoroutine(ExplodeAnimation());
         Destroy(gameObject);
     }
+
+    private IEnumerator ExplodeAnimation()
+    {
+        GameObject explosion = Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(2);
+        Destroy(explosion);
+        GameObject[] explosions = GameObject.FindGameObjectsWithTag("explosion");
+        foreach (GameObject e in explosions)
+        {
+            Destroy(e);
+        }
+        
+    }
+
+    //private void OnDestroy()
+    //{
+    //    trailRenderer.transform.parent = null;
+    //    trailRenderer.autodestruct = true;
+    //    trailRenderer = null;
+    //}
 }

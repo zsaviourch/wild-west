@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class JasperRifle : MonoBehaviour
@@ -27,6 +28,7 @@ public class JasperRifle : MonoBehaviour
     public int energyConsumePerBullet;
 
     public Transform shootingPos;
+    public float currentReloadPreparationTime;
 
     // Constructor
     public JasperRifle(int energyInitialAmount, float firingFrequencyInterval, int energyRegeneratePerSecond, bool rangeWeapon,
@@ -157,23 +159,31 @@ public class JasperRifle : MonoBehaviour
         currentShootingTime = 0f;
         shootInitiated = true;
         shootingPos = GameObject.FindWithTag("shootingPos").transform;
+        currentReloadPreparationTime = 0f;
 
     }
 
     private void Update()
     {
         // Reload
-        if (Input.GetKeyDown(KeyCode.R) && currentEnergyAmount < energyInitialAmount)
+        if (Input.GetMouseButtonDown(1) && currentEnergyAmount < energyInitialAmount)
         {
             reloadInitiated = true;
             currentReloadTime += Time.deltaTime;
             Reload();
+            // AkSoundEngine.PostEvent("gunReload", player);
         }
 
         // Shoot
-        if (Input.GetKeyUp(KeyCode.Mouse0) && currentEnergyAmount > energyConsumePerBullet)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && currentEnergyAmount > energyConsumePerBullet)
         {
+            Debug.Log("shoot");
             Shoot();
+        }
+        else if (Input.GetKeyUp(KeyCode.Mouse0) && currentEnergyAmount < energyConsumePerBullet)
+        {
+            Debug.Log("empty clip");
+            //AkSoundEngine.PostEvent("EmptyClip", gameObject);
         }
 
         // Shooting flag adjustment
@@ -186,6 +196,24 @@ public class JasperRifle : MonoBehaviour
             shootInitiated = true;
             currentShootingTime = 0f;
         }
+
+        // Add energy when idle
+        if (!Input.GetMouseButtonUp(1) && !Input.GetMouseButtonUp(0) && Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+        {
+            currentReloadPreparationTime += Time.deltaTime;
+        }
+        else
+        {
+            currentReloadPreparationTime = 0f;
+        }
+
+        if (currentReloadPreparationTime >= minimumReloadingTime)
+        {
+            if (currentEnergyAmount <= EnergyIntialAmount)
+            {
+                currentEnergyAmount += (int) System.Math.Round(energyRegeneratePerSecond * Time.deltaTime);
+            }
+        }
     }
 
     // methods
@@ -193,8 +221,8 @@ public class JasperRifle : MonoBehaviour
     {
         // Play reloading animation here
 
-        // Replenish one unit energy
-        currentEnergyAmount += energyRegeneratePerSecond;
+        // Replenish all energy
+        currentEnergyAmount = energyInitialAmount;
         
     }
 
@@ -227,10 +255,13 @@ public class JasperRifle : MonoBehaviour
     {
         if (shootInitiated == true)
         {
+            //AkSoundEngine.PostEvent("CrystalRifleShot", gameObject);
+            Debug.Log("SoundPlayed");
             Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
+            // AkSoundEngine.PostEvent("gunShoot", player);
         }
     }
 }
