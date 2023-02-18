@@ -29,6 +29,8 @@ public class Node
 
 public class Grid : MonoBehaviour
 {
+    public static Grid Instance { get; private set; }
+
     public bool drawDebug; // flag to enable/disable debug drawing
     public LayerMask obstacleMask;
     public Vector2 gridWorldSize;
@@ -37,6 +39,18 @@ public class Grid : MonoBehaviour
 
     float nodeDiameter;
     int gridSizeX, gridSizeY;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     void Start()
     {
