@@ -5,6 +5,7 @@ using UnityEngine;
 public class TopazGun : MonoBehaviour
 {
     // References
+    public string gunName;
     [SerializeField] int energyInitialAmount;
     public int currentEnergyAmount;
     [SerializeField] float firingFrequencyInterval;
@@ -155,6 +156,7 @@ public class TopazGun : MonoBehaviour
 
     private void Awake()
     {
+        gunName = "TopazGun";
         currentReloadTime = 0f;
         currentEnergyAmount = energyInitialAmount;
         reloadInitiated = false;

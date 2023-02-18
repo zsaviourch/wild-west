@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Animator animator;
 
+    public string whichGun;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log(animator.name);
         }
+        whichGun = FindGunName();
     }
 
     // Update is called once per frame
@@ -82,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
     // Shoot
     private void Shoot()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && StartToShot(whichGun))
         {
             animator.SetBool("shoot", true);
         }
@@ -106,6 +109,39 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(2);
         animator.SetBool("shoot_reload", false);        
 
+    }
+
+    // Find the gun name
+    private string FindGunName()
+    {
+        string gunName = null;
+        if (GetComponent<JasperRifle>() != null) gunName = "JasperRifle";
+        else if (GetComponent<BerylShotgun>() != null) gunName = "BerylShotgun";
+        else if (GetComponent<OnyxSnipper>() != null) gunName = "OnyxSnipper";
+        else if (GetComponent<TopazGun>() != null) gunName = "TopazGun";
+        return gunName;
+    }
+
+    // Find the gun shot initiation variable
+    private bool StartToShot(string gunName)
+    {
+        bool startToShoot = false;
+        switch (gunName)
+        {
+            case "JasperRifle":
+                startToShoot = GetComponent<JasperRifle>().shootInitiated;
+                break;
+            case "BerylShotgun":
+                startToShoot = GetComponent<BerylShotgun>().shootInitiated;
+                break;
+            case "OnyxSnipper":
+                startToShoot = GetComponent<OnyxSnipper>().shootInitiated;
+                break;
+            case "TopazGun":
+                startToShoot = GetComponent<TopazGun>().shootInitiated;
+                break;
+        }
+        return startToShoot;
     }
     
 }

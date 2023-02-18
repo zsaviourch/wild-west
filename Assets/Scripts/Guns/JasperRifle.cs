@@ -6,6 +6,7 @@ using UnityEngine;
 public class JasperRifle : MonoBehaviour
 {
     // References
+    public string gunName;
     [SerializeField] int energyInitialAmount;
     public int currentEnergyAmount;
     [SerializeField] float firingFrequencyInterval;
@@ -152,6 +153,7 @@ public class JasperRifle : MonoBehaviour
 
     private void Awake()
     {
+        gunName = "JasperRifle";
         currentReloadTime = 0f;
         currentEnergyAmount = energyInitialAmount;
         reloadInitiated = false;
