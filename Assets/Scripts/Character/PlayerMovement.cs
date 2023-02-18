@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GameObject.FindWithTag("cowboy").GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         if (animator == null)
         {
             Debug.Log("No animator");
