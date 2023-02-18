@@ -13,9 +13,11 @@ public class GameManager : MonoBehaviour
     public GameObject townManagerPrefab; 
     public GameObject eventSystemPrefab;
     public GameObject dialogueSystemPrefab;
+    public GameObject audioManagerPrefab;
     private GameObject townManagerInstance; 
     private GameObject eventSystemInstance;
     private GameObject dialogueSystemInstance;
+    private GameObject audioManagerInstance;
 
     private void Start()
     {
@@ -48,6 +50,12 @@ public class GameManager : MonoBehaviour
                 if (dialogueSystemInstance == null && dialogueSystemPrefab != null)
                 {
                     dialogueSystemInstance = Instantiate(dialogueSystemPrefab);
+                }
+
+                // Spawn the Dialogue System prefab if it hasn't been spawned yet
+                if (audioManagerInstance == null && audioManagerPrefab != null)
+                {
+                    audioManagerInstance = Instantiate(audioManagerPrefab);
                 }
 
                 if (false)

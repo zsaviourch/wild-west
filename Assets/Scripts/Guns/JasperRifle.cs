@@ -262,6 +262,7 @@ public class JasperRifle : MonoBehaviour
             currentReloadTime = 0f;
             shootInitiated = false;
             // AkSoundEngine.PostEvent("gunShoot", player);
+            AudioManager.Instance.Play("jasperShot");
         }
     }
 }

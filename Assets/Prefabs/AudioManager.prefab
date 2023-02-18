@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8107587307511753102
+--- !u!1 &7427134052145803195
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8107587307511753103}
-  - component: {fileID: 8107587307511753096}
+  - component: {fileID: 5230698702200511537}
+  - component: {fileID: 7204694163384330904}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8107587307511753103
+--- !u!4 &5230698702200511537
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8107587307511753102}
+  m_GameObject: {fileID: 7427134052145803195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9696326, y: -1.5262744, z: 0.078517504}
+  m_LocalPosition: {x: 0.6000318, y: 10.730195, z: -0.26287377}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8107587307511753096
+--- !u!114 &7204694163384330904
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8107587307511753102}
+  m_GameObject: {fileID: 7427134052145803195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd3906926e70c422398b744264b0849d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cfbbf4afa745449593a8fb82d04ab97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
-  townManagerPrefab: {fileID: 549721720628197501, guid: d0e336a253ace41c9a0057721550a2c8, type: 3}
-  eventSystemPrefab: {fileID: 7209201995300917565, guid: e8feab4c82e3e4ed6995c6da16bd4199, type: 3}
-  dialogueSystemPrefab: {fileID: 3420163739407436931, guid: 0aa2a92e92981c84ab32c251ce7922dd, type: 3}
-  audioManagerPrefab: {fileID: 7427134052145803195, guid: d5733874dab7744348b2719c7d9381f1, type: 3}
+  bgmData: []
+  sfxData:
+  - name: jasperShot
+    clip: {fileID: 8300000, guid: 61e0b150fa4c00d46b0318c6f7a88b6f, type: 3}
+    type: 0
+    loop: 0
+    volume: 1

@@ -289,6 +289,7 @@ public class BerylShotgun : MonoBehaviour
             currentReloadTime = 0f;
             shootInitiated = false;
             // AkSoundEngine.PostEvent("gunShoot", gameObject);
+            AudioManager.Instance.Play("jasperShot");
         }
     }
 }
