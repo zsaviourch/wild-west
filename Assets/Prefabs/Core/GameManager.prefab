@@ -46,3 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   townManagerPrefab: {fileID: 549721720628197501, guid: d0e336a253ace41c9a0057721550a2c8, type: 3}
+  eventSystemPrefab: {fileID: 7209201995300917565, guid: e8feab4c82e3e4ed6995c6da16bd4199, type: 3}
+  dialogueSystemPrefab: {fileID: 3420163739407436931, guid: 0aa2a92e92981c84ab32c251ce7922dd, type: 3}
