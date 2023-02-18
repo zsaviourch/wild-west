@@ -21,7 +21,6 @@ public class TopazGun : MonoBehaviour
     public Transform playerTransform;
     public Transform leftHand;
     public Transform rightHand;
-    public GameObject player;
 
     public float currentReloadTime;
     public bool reloadInitiated;
@@ -167,7 +166,6 @@ public class TopazGun : MonoBehaviour
         mouseButtonDown = false;
         shootingPrepared = false;
         currentShootingPreparationTime = 0f;
-        player = GameObject.FindWithTag("cowboy");
 
     }
 
@@ -216,12 +214,12 @@ public class TopazGun : MonoBehaviour
             {
                 currentShootingPreparationTime += Time.deltaTime;
                 shootingPrepared = false;
-                player.GetComponent<Animator>().SetBool("charge", true);
+                GetComponent<Animator>().SetBool("charge", true);
             }
             else
             {
                 shootingPrepared = true;
-                player.GetComponent<Animator>().SetBool("charge", false);
+                GetComponent<Animator>().SetBool("charge", false);
             }
         }
         else

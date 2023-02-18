@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7204694163384330904
 MonoBehaviour:
@@ -191,6 +191,11 @@ MonoBehaviour:
     type: 1
     loop: 0
     volume: 1
+  - name: transitionSFX
+    clip: {fileID: 8300000, guid: e5665028a7fda9f42a52256093a684a1, type: 3}
+    type: 1
+    loop: 0
+    volume: 1
   - name: buttonHover
     clip: {fileID: 8300000, guid: 56bcaad2dab554448b13e2d73e35ed23, type: 3}
     type: 1
@@ -271,3 +276,5 @@ MonoBehaviour:
     type: 1
     loop: 0
     volume: 1
+  masterBGMVolume: 1
+  masterSFXVolume: 1

@@ -1,71 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &86418124
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 86418127}
-  - component: {fileID: 86418126}
-  m_Layer: 0
-  m_Name: Audio Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &86418127
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86418124}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -195.68793, y: 295.36658, z: -4.767595}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6616195287869058472}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &86418126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86418124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cfbbf4afa745449593a8fb82d04ab97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgmData: []
-  sfxData:
-  - name: Button_Click
-    clip: {fileID: 8300000, guid: 050e1920c9c291e478bd61b5e3bdfccb, type: 3}
-    type: 1
-    loop: 0
-    volume: 1
-  - name: Button_Hover
-    clip: {fileID: 8300000, guid: 56bcaad2dab554448b13e2d73e35ed23, type: 3}
-    type: 1
-    loop: 0
-    volume: 1
-  - name: Whip_Crack
-    clip: {fileID: 8300000, guid: fddcb195bc1aea44e94c4e803ce5333e, type: 3}
-    type: 1
-    loop: 0
-    volume: 1
-  - name: Stage_Clear
-    clip: {fileID: 8300000, guid: e5665028a7fda9f42a52256093a684a1, type: 3}
-    type: 1
-    loop: 0
-    volume: 1
 --- !u!1 &166517558
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +712,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 86418126}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 5
@@ -788,18 +722,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Button_Click
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 86418124}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &2137130413
@@ -1157,7 +1079,6 @@ Transform:
   m_Children:
   - {fileID: 6616195287851466671}
   - {fileID: 1676943027}
-  - {fileID: 86418127}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1179,5 +1100,13 @@ MonoBehaviour:
   currentLocation: {fileID: 166517559}
   destination: {fileID: 1639874407}
   readyButton: {fileID: 1862574882}
+  audioManager: {fileID: 0}
+  levelAtlus: {fileID: 0}
+  townMapLocations:
+  - {fileID: 166517559}
+  - {fileID: 1639874407}
+  - {fileID: 192567125}
+  - {fileID: 2137130414}
+  - {fileID: 1737043937}
   horseIconSpeed: 100
   transitionTime: 1

@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 // To Do: Let the Level loader remember what city it got to previously to then choose the next one it hasn't been to
 
-public class LevelLoader : MonoBehaviour
+public class TransitionHandler : MonoBehaviour
 {
     [Header("References")]
     public GameObject mapCanvas; // This is essentially the loading screen
@@ -17,7 +17,9 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] private Transform currentLocation;
     [SerializeField] private Transform destination;
     public GameObject readyButton;
-    // public List<Transform> cities;
+    public AudioManager audioManager;
+    public LevelAtlus levelAtlus = null;
+    public Transform[] townMapLocations;
 
     [Header("Variables")]
     public float horseIconSpeed = 100f;
@@ -46,6 +48,7 @@ public class LevelLoader : MonoBehaviour
     
     private void Start()
     {
+        audioManager.Play("menuTheme");
         readyButton.SetActive(false);
         horseIcon.position = currentLocation.position; // I'm going to use this line when we load into the next scene so the horse icon knows where to start for the next map transition
         mapCanvas.SetActive(false);
@@ -60,14 +63,14 @@ public class LevelLoader : MonoBehaviour
             MoveHorseIcon();
     }
 
-    /*public void LoadScene(int sceneId)
-    {
-        StartCoroutine(TownTransition(sceneId));
-    }*/
-    
     public void LoadFirstLevel()
     {
-        StartCoroutine(LoadFirstLevel(1)); // I am hard coding to 1 since level 1A should be next after main menu scene in build order
+        StartCoroutine(LoadFirstLevel(1)); // I am hard coding to 1 since main scene should be next after main menu scene in build order
+    }
+
+    public void StartTownTransition() // This is the function you want to use for transitions. It starts the coroutine for town transitions in the main scene
+    {
+        StartCoroutine(TownTransition());
     }
 
     public void PlayerReadyToggle()
@@ -82,9 +85,16 @@ public class LevelLoader : MonoBehaviour
     
     IEnumerator LoadFirstLevel(int sceneId) // sceneID is the Level's build order index
     {
+        // Start game sfx
+        audioManager.Play("startGameSFX");
+
+        yield return new WaitForSeconds(1f);
+        
         // Play Transition Animation
         crossfade.SetTrigger("Start");
-        
+        audioManager.Stop("menuTheme");
+        audioManager.Play("transitionSFX");
+
         yield return new WaitForSeconds(transitionTime);
         
         mapCanvas.SetActive(true);
@@ -105,21 +115,44 @@ public class LevelLoader : MonoBehaviour
         // Load Scene
         mapCanvas.SetActive(false);
         SceneManager.LoadScene(sceneId);
+        levelAtlus = FindObjectOfType<LevelAtlus>();
+        
         crossfade.SetTrigger("End");
     }
     
-    IEnumerator TownTransition(int sceneId) // sceneID is the Level's build order index
+    IEnumerator TownTransition()
     {
         // Play Transition Animation
         crossfade.SetTrigger("Start");
+        audioManager.Play("transitionSFX");
         
         yield return new WaitForSeconds(transitionTime);
-        
+
         mapCanvas.SetActive(true);
         crossfade.SetTrigger("End");
         
         yield return new WaitForSeconds(transitionTime);
 
+        // Set the current location and town for horse icon
+        switch (levelAtlus.CurrentTownIndex)
+        {
+            case 4:
+                destination = townMapLocations[4];
+                break;
+            case 3:
+                destination = townMapLocations[3];
+                break;
+            case 2:
+                destination = townMapLocations[2];
+                break;
+            case 1:
+                destination = townMapLocations[1];
+                break;
+            default:
+                destination = townMapLocations[0]; // Dialbo by default
+                break;
+        }
+            
         canHorseMove = true;
 
         // Wait until the horse has arrived at the next city
