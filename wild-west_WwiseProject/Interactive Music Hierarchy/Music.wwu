@@ -2,6 +2,13 @@
 <WwiseDocument Type="WorkUnit" ID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" SchemaVersion="110">
 	<InteractiveMusic>
 		<WorkUnit Name="Music" ID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Inclusion" Type="bool">
+					<ValueList>
+						<Value Platform="Web">True</Value>
+					</ValueList>
+				</Property>
+			</PropertyList>
 			<ChildrenList>
 				<MusicSwitchContainer Name="musicGameSwitch" ID="{42BF7466-7345-4D3B-8587-5ACE1AD54A67}" ShortID="651271321">
 					<ReferenceList>
