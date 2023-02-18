@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GolemAIController : MonoBehaviour
 {
-    [SerializeField] private Transform[] patrolPoints;
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float detectionRange = 5f;
     [SerializeField] private float attackRange = 1.5f;
@@ -16,9 +15,10 @@ public class GolemAIController : MonoBehaviour
     [SerializeField] private float proximityCheckInterval = 1f;
     [SerializeField] private float proximityRange = 2f;
     [SerializeField] private Animator animator;
-    [SerializeField] private PlayerController playerController;
     [SerializeField] public Grid navigationMesh;
 
+    public Transform[] patrolPoints;
+    public PlayerController playerController;
     private int currentPatrolPointIndex = 0;
     private Vector3 currentDestination;
     private int currentHealth;
@@ -33,8 +33,10 @@ public class GolemAIController : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        playerController = PlayerController.Instance;
+        patrolPoints = EnemyPatrolPoints.Instance.GetUnusedPatrolPoints(EnemyPatrolPoints.EnemyType.Golem);
         currentDestination = patrolPoints[currentPatrolPointIndex].position;
+        currentHealth = maxHealth;
         animator.SetBool("isPatrolling", true);
     }
 
