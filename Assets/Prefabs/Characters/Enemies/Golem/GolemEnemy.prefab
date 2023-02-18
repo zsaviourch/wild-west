@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4717353440870715094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.98, y: 2.0104, z: 0.07749169}
-  m_LocalScale: {x: 0.20688172, y: 0.20345229, z: 1}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -118,7 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb0a7858ffc543659f1120463a3a44d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolPoints: []
   moveSpeed: 2
   detectionRange: 7
   attackRange: 1.5
@@ -130,4 +129,6 @@ MonoBehaviour:
   proximityCheckInterval: 1
   proximityRange: 2
   animator: {fileID: 2179476339337756128}
+  navigationMesh: {fileID: 0}
+  patrolPoints: []
   playerController: {fileID: 0}
