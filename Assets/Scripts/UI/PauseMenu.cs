@@ -13,11 +13,13 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pauseMenuContainer.SetActive(false);
+
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "Main_Menu")
         {
             if (gameIsPaused)
             {

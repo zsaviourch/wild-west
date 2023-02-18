@@ -8,7 +8,8 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    [SerializeField] private AudioMixer audioMixer;
+    // [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private AudioManager audioManager;
 
     [SerializeField] private TMP_Dropdown resolutionDropdown;
     private Resolution[] _resolutions;
@@ -22,6 +23,8 @@ public class SettingsMenu : MonoBehaviour
     
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+        
         if (gameObject.activeSelf)
             gameObject.SetActive(false); // Disabled by default, in case left active prior to playmode
     }
@@ -82,7 +85,8 @@ public class SettingsMenu : MonoBehaviour
     // On value change for volume slider, adjust master volume on the audioMixer
     public void SetVolume(float sliderValue)
     {
-        audioMixer.SetFloat("volume", sliderValue);
+        // audioManager.SetVolume("source", sliderValue);
+
         if (debugMode)
             Debug.Log(sliderValue);
     }

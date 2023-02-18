@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioData[] sfxData;
 
     private Dictionary<string, AudioSource> bgmSources = new Dictionary<string, AudioSource>();
-    private Dictionary<string, AudioSource> sfxSources = new Dictionary<string, AudioSource>();
+    public Dictionary<string, AudioSource> sfxSources = new Dictionary<string, AudioSource>();
 
     public float masterBGMVolume = 1f;
     public float masterSFXVolume = 1f;
