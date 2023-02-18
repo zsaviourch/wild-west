@@ -78,7 +78,7 @@ public class LevelAtlus : MonoBehaviour
     }
 
     public TownSet[] Towns => towns;
-    private TownSet[] towns;
+    [SerializeField] private TownSet[] towns;
 
     //out-of-bounds indices for the list of town are acceptable, just use the modulus to loop it around
     //indices below 0 just means that the player isn't in a town right now
