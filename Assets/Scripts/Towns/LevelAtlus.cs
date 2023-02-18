@@ -25,7 +25,6 @@ public class LevelAtlus : MonoBehaviour
         }
     }
 
-
     [System.Serializable]
     public struct TownSet
     {
@@ -78,7 +77,17 @@ public class LevelAtlus : MonoBehaviour
         // }
     }
 
-    public int NumTownRoomsToComplete
+    public TownSet[] Towns => towns;
+    private TownSet[] towns;
+
+    //out-of-bounds indices for the list of town are acceptable, just use the modulus to loop it around
+    //indices below 0 just means that the player isn't in a town right now
+    public int UnmodulatedTownIndex { get => unmodulatedTownIndex; private set => unmodulatedTownIndex = value; }
+    [SerializeField] private int unmodulatedTownIndex = 0;
+    public int CurrentTownIndex => unmodulatedTownIndex < 0 ? -1 : UnmodulatedTownIndex % towns.Length;
+    public bool IsInATown => unmodulatedTownIndex >= 0;
+
+    public int NumRoomsToComplete
     {
         get
         {
@@ -90,18 +99,52 @@ public class LevelAtlus : MonoBehaviour
             return sum;
         }
     }
-
-    public TownSet[] Towns => towns;
-    private TownSet[] towns;
-
-    //out-of-bounds indices for the list of town are acceptable, just use the modulus to loop it around
-    //indices below 0 just means that the player isn't in a town right now
-    public int UnmodulatedTownIndex { get => unmodulatedTownIndex; private set => unmodulatedTownIndex = value; }
-    [SerializeField] private int unmodulatedTownIndex = 0;
-    public int CurrentTownIndex => unmodulatedTownIndex < 0 ? -1 : UnmodulatedTownIndex % towns.Length;
-    public bool IsInATown => unmodulatedTownIndex >= 0;
-
     public int NumTownsCompleated => unmodulatedTownIndex - startTownIndex;
+
+    [Header("Player Progress")]
+    [SerializeField][Min(0)] private int startTownIndex;
+    public int deathCount;
+
+    public void ProgressTown(bool playerLived)
+    {
+        //if the player defeated all enemies
+        //      he gets to move on to the next room
+        //      he keeps all of his progress
+        //      if he beat all rooms in all the towns, he gets to face the final boss
+        if (playerLived)
+        {
+            ToNextRoom();
+        }
+        //else if he died
+        //      he gets kicked straight to the next room (index is modulated)
+        //          this town will also be considered his first
+        //      his death count goes up
+        else
+        {
+            startTownIndex = CurrentTownIndex + 1;
+            GoToTown(startTownIndex);
+            deathCount++;
+        }
+    }
+    //use if you want to un-instantiate all towns
+    public void LeaveTown()
+    {
+        GoToTown(-1);
+    }
+
+    private void Awake()
+    {
+        // Implement the singleton pattern
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -145,52 +188,6 @@ public class LevelAtlus : MonoBehaviour
             //instantiate the first room in the new town
             towns[CurrentTownIndex].SetInstantiatedIndex(0);
             towns[CurrentTownIndex].numVisits++;
-        }
-    }
-
-    [Header("Player Progress")]
-    [SerializeField][Min(0)] private int startTownIndex;
-    public int deathCount;
-
-
-    public void ProgressTown(bool playerLived)
-    {
-        //if the player defeated all enemies
-        //      he gets to move on to the next room
-        //      he keeps all of his progress
-        //      if he beat all rooms in all the towns, he gets to face the final boss
-        if (playerLived)
-        {
-            ToNextRoom();
-        }
-        //else if he died
-        //      he gets kicked straight to the next room (index is modulated)
-        //          this town will also be considered his first
-        //      his death count goes up
-        else
-        {
-            startTownIndex = CurrentTownIndex + 1;
-            GoToTown(startTownIndex);
-            deathCount++;
-        }
-    }
-    //use if you want to un-instantiate all towns
-    public void LeaveTown()
-    {
-        GoToTown(-1);
-    }
-
-    private void Awake()
-    {
-        // Implement the singleton pattern
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
         }
     }
 }
