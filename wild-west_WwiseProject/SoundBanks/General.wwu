@@ -3,7 +3,7 @@
 	<SoundBanks>
 		<WorkUnit Name="General" ID="{1620AB33-9BC8-46C4-ABB4-8423C9CC735E}" OwnerID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" PersistMode="Nested">
 			<ChildrenList>
-				<SoundBank Name="GameplayLoop" ID="{0C8E0234-0513-445E-9C4B-9223118F94B6}">
+				<SoundBank Name="GameplayLoop" ID="{6B747A19-8FDA-4FC6-A0CF-FD9F7BA83313}">
 					<ObjectInclusionList>
 						<ObjectRef Name="playerHurt" ID="{4D8D52F2-0EC2-4046-866A-7AF2954A7D0E}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="tikbalangHurt" ID="{52139911-4740-4104-A9AC-757AB2CF3E9F}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>

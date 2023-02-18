@@ -1,0 +1,122 @@
+Event	ID	Name			Wwise Object Path	Notes
+	147436440	gunEmpty			\Default Work Unit\Player\General\gunEmpty	
+	282606109	buttonStartGame			\Default Work Unit\UI\buttonStartGame	
+	323245414	gunReload			\Default Work Unit\Player\General\gunReload	
+	382555423	tikbalangHurt			\Default Work Unit\Enemies\Tikbalang\tikbalangHurt	
+	404655026	goatDie			\Default Work Unit\Enemies\Ice Goat\goatDie	
+	583027834	playerHealthLow			\Default Work Unit\Player\General\playerHealthLow	
+	720364476	goatAttack			\Default Work Unit\Enemies\Ice Goat\goatAttack	
+	734204211	sniperExplode			\Default Work Unit\Player\General\sniperExplode	
+	838703051	golemDie			\Default Work Unit\Enemies\Amber Golem\golemDie	
+	1609923659	lamiaAttack			\Default Work Unit\Enemies\Lamia\lamiaAttack	
+	1839772676	playerEnergyLow			\Default Work Unit\Player\General\playerEnergyLow	
+	2374849433	playerEnergyEmpty			\Default Work Unit\Player\General\playerEnergyEmpty	
+	2408912248	tikbalangAttack			\Default Work Unit\Enemies\Tikbalang\tikbalangAttack	
+	2437003014	tikbalangDie			\Default Work Unit\Enemies\Tikbalang\tikbalangDie	
+	2445642675	goatHurt			\Default Work Unit\Enemies\Ice Goat\goatHurt	
+	2525052962	playerDash			\Default Work Unit\Player\General\playerDash	
+	2573158568	golemHurt			\Default Work Unit\Enemies\Amber Golem\golemHurt	
+	2940614623	soulDrop			\Default Work Unit\Objects\soulDrop	
+	3035572085	buttonHover			\Default Work Unit\UI\buttonHover	
+	3060973567	lamiaDie			\Default Work Unit\Enemies\Lamia\lamiaDie	
+	3112440327	golemShieldHit			\Default Work Unit\Enemies\Amber Golem\golemShieldHit	
+	3194616450	gunShoot			\Default Work Unit\Player\General\gunShoot	
+	3537581393	playerHurt			\Default Work Unit\Player\General\playerHurt	
+	3542290436	playerFootstep			\Default Work Unit\Player\General\playerFootstep	
+	3739246548	soulPickUp			\Default Work Unit\Player\General\soulPickUp	
+	3966601280	playerDie			\Default Work Unit\Player\General\playerDie	
+	4051332235	buttonClick			\Default Work Unit\UI\buttonClick	
+	4077017716	lamiaHurt			\Default Work Unit\Enemies\Lamia\lamiaHurt	
+	4272317039	golemAttack			\Default Work Unit\Enemies\Amber Golem\golemAttack	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	461894747	terrainMaterial			\Default Work Unit\terrainMaterial	
+	2107435045	weaponSwitch			\Default Work Unit\weaponSwitch	
+
+Switch	ID	Name	Switch Group			Notes
+	45539941	woodTerrain	terrainMaterial			
+	887657946	sandTerrain	terrainMaterial			
+	1110108097	winterTerrain	terrainMaterial			
+	163030769	gunRifle	weaponSwitch			
+	831777997	gunShotgun	weaponSwitch			
+	998971168	gunSniper	weaponSwitch			
+	2548468192	gunRevolver	weaponSwitch			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1240670792	Distance			\Default Work Unit\Distance	
+	2426350174	RoFIncrease			\Default Work Unit\RoFIncrease	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1071208984	Time Stretch (Custom)	Wwise Time Stretch			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1643904	Sand Footsteps-007	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sand Footsteps-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\sandFootsteps\Sand Footsteps-007		68036
+	4330535	Lamia Die	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Lamia Die_D6AD3289.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Lamia\lamia\lamiaDie\Lamia Die		163416
+	7374812	Wood Footstep-005	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Wood Footstep-005_2CFE0F3F.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\woodFootsteps\Wood Footstep-005		65884
+	45659975	buttonStartGame	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Whip Crack_28F106A5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\Buttons\buttonStartGame		205708
+	63354751	shotgunPumpStart	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Shotgun PumpStart_07FABA0E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\Reloading\gunReloadStart\shotgunPumpStart		211776
+	92868043	revolverClickIn	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\RevolverClickIn_66489822.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\Reloading\gunReloadFinish\revolverClickIn		150036
+	108690042	iceGoatAttack1	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Ice Goat Attack1_C653923D.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Ice Goat\iceGoat\iceGoatAttack\iceGoatAttack1		145928
+	120091524	buttonClick	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Button Hover_32327EC5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\Buttons\buttonClick		35716
+	136961335	Sand Footsteps-005	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sand Footsteps-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\sandFootsteps\Sand Footsteps-005		68036
+	148884185	Player Dash	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Player Dash_63A6E44B.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Player Dash		60892
+	176955351	soulReloadRevolver	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Soul Reload_2588FD3D.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\soulReload\soulReloadRevolver		176496
+	185750398	Sand Footsteps-003	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sand Footsteps-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\sandFootsteps\Sand Footsteps-003		68036
+	186090430	PlayerHurt3	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\PlayerHurt3_F2C3BA0D.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Health\playerHurt\PlayerHurt3		117392
+	191823970	Sand Footsteps-004	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sand Footsteps-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\sandFootsteps\Sand Footsteps-004		68036
+	196452524	soulReloadRifle	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Soul Reload_AE0C83A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\soulReload\soulReloadRifle		352896
+	209860096	revolverClickOut	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\RevolverClickOut_A0F3EDC1.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\Reloading\gunReloadStart\revolverClickOut		26556
+	211216072	Winter Footsteps-009	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Winter Footsteps-009_D11DD730.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\winterFootsteps\Winter Footsteps-009		83376
+	234401108	Wood Footstep-004	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Wood Footstep-004_54F76320.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\woodFootsteps\Wood Footstep-004		65884
+	235859214	golemShieldHit	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Goelm Shield Hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Amber Golem\amberGolem\amberGolemShieldHit\golemShieldHit		242640
+	241897521	Winter Footsteps-001	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Winter Footsteps-001_22C5DD5B.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\winterFootsteps\Winter Footsteps-001		80608
+	244355290	Crystal Shotgun	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Crystal Shotgun_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\GunsShooting\SwitchGunShoot\Crystal Shotgun		529296
+	264027759	Energy Low	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Energy Low_CB416643.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Energy\Energy Low		97116
+	271582514	Soul Drop	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Soul Drop_6CE3C496.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Objects\Souls\SoulDrop\Soul Drop		176496
+	287835315	Player Die	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Player Die_1EAA7A5F.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Health\Player Die		285756
+	302009345	PlayerHurt2	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\PlayerHurt2_F4483861.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Health\playerHurt\PlayerHurt2		122152
+	305762705	Winter Footsteps-010	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Winter Footsteps-010_E9C3216E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\winterFootsteps\Winter Footsteps-010		59924
+	307538766	Sand Footsteps-001	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sand Footsteps-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\sandFootsteps\Sand Footsteps-001		68036
+	319552313	Tikbalang Die	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Tikbalang Die_2E418084.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Tikbalang\tikbalang\tikbalangDie\Tikbalang Die		124624
+	327693749	sniperShot	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Crystal Sniper_7DD473B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\GunsShooting\SwitchGunShoot\sniperShot		352896
+	329278512	Energy Empty	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Energy Empty_4434E38E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Energy\Energy Empty		71092
+	341767214	Winter Footsteps-002	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Winter Footsteps-002_62C436F7.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\winterFootsteps\Winter Footsteps-002		43860
+	354361320	Lamia Hurt	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Lamia Hurt_1FC45384.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Lamia\lamia\lamiaHurt\Lamia Hurt		60204
+	411260814	Winter Footsteps-006	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Winter Footsteps-006_238B4E95.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\winterFootsteps\Winter Footsteps-006		92792
+	414944709	Sand Footsteps-010	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sand Footsteps-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\sandFootsteps\Sand Footsteps-010		68036
+	416043945	Sand Footsteps-008	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sand Footsteps-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\sandFootsteps\Sand Footsteps-008		68036
+	433725598	Tikbalang Hurt	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Tikbalang Hurt_4A7DE27A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Tikbalang\tikbalang\tikbalangHurt\Tikbalang Hurt		66672
+	460143773	shotgunPumpEnd	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Shotgun PumpEnd_8321EBBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\Reloading\gunReloadFinish\shotgunPumpEnd		53016
+	468921770	Winter Footsteps-004	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Winter Footsteps-004_943FFEB5.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\winterFootsteps\Winter Footsteps-004		42752
+	471983534	golemAttack	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Golem Attack_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Amber Golem\amberGolem\amberGolemAttack\golemAttack		352896
+	485331998	Sand Footsteps-006	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sand Footsteps-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\sandFootsteps\Sand Footsteps-006		68036
+	486002857	soulReloadShotgun	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Soul Reload_5673C7EF.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\soulReload\soulReloadShotgun		264696
+	488097967	Sand Footsteps-002	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sand Footsteps-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\sandFootsteps\Sand Footsteps-002		68036
+	518432802	FullSniperReload	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\FullSniperReload_A6388769.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\Reloading\gunReloadStart\FullSniperReload		326436
+	544632092	emptyClip	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\EmptyClip_6481F61E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\emptyClip		35376
+	621894801	sniperExplosion	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sniper Explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\GunsShooting\SwitchGunShoot\sniperExplode\sniperExplosion		649248
+	627538433	PlayerHurt1	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\PlayerHurt1_F9B96D5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Health\playerHurt\PlayerHurt1		104712
+	673794957	Tikbalang Slash	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Tikbalang Slash_639BBC9D.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Tikbalang\tikbalang\tikbalangAttack\Tikbalang Slash		128660
+	688485637	buttonHover	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Click_01_19179A0A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Non-World\UI\UI\Buttons\buttonHover		11804
+	720531424	Winter Footsteps-008	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Winter Footsteps-008_1F71E444.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\winterFootsteps\Winter Footsteps-008		59740
+	738347848	Soul Pickup	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Soul Pickup_8F16FA3A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Pickup\Soul Pickup		146820
+	745892146	golemDie	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Golem Die_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Amber Golem\amberGolem\amberGolemDie\golemDie		264696
+	774037349	Rifle Reload	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Rifle Reload_8B1AD062.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Reload\Reloading\gunReloadFinish\Rifle Reload		352896
+	795595915	Wood Footstep-001	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Wood Footstep-001_3149963C.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\woodFootsteps\Wood Footstep-001		65884
+	861393736	Winter Footsteps-007	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Winter Footsteps-007_A62B2D56.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\winterFootsteps\Winter Footsteps-007		72668
+	904322900	Player LowHealth	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Player LowHealth_D1317769.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Health\Player LowHealth		276924
+	919833067	iceGoatDie	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Ice Goat Die_87C77564.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Ice Goat\iceGoat\iceGoatDie\iceGoatDie		141216
+	920346827	Wood Footstep-008	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Wood Footstep-008_F8875463.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\woodFootsteps\Wood Footstep-008		65884
+	925791996	Crystal Rifle	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Crystal Rifle2_A0E30E76.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\GunsShooting\SwitchGunShoot\Crystal Rifle		193996
+	931609436	Wood Footstep-007	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Wood Footstep-007_3FE35A3A.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\woodFootsteps\Wood Footstep-007		65884
+	936783376	Sand Footsteps-009	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Sand Footsteps-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\sandFootsteps\Sand Footsteps-009		68036
+	947896078	Wood Footstep-006	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Wood Footstep-006_6CCD79B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\woodFootsteps\Wood Footstep-006		65884
+	957101173	RevolverLaser	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\RevolverLaser_124D9DF1.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\GunsShooting\SwitchGunShoot\RevolverLaser		882096
+	983523845	Wood Footstep-002	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Wood Footstep-002_F8875463.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\woodFootsteps\Wood Footstep-002		65884
+	993015536	iceGoatAttack2	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Ice Goat Attack2_63423618.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Ice Goat\iceGoat\iceGoatAttack\iceGoatAttack2		141568
+	1023986073	Winter Footsteps-003	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Winter Footsteps-003_8918B118.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\winterFootsteps\Winter Footsteps-003		34812
+	1026484854	Lamia Attack	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Lamia Attack_C83A6742.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Lamia\lamia\lamiaAttack\Lamia Attack		183140
+	1039637777	golemHurt	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Golem Hurt_3C5FFE4B.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Amber Golem\amberGolem\amberGolemHurt\golemHurt		318704
+	1045187845	iceGoatHurt	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Ice Goat Hurt_260EA649.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Ice Goat\iceGoat\IceGoatHurt\iceGoatHurt		45660
+	1057160664	Wood Footstep-003	D:\Game Production\Unity Projects\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Wood Footstep-003_54F76320.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Movement\Footstep Switch\woodFootsteps\Wood Footstep-003		65884
+

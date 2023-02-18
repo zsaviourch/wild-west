@@ -53,7 +53,7 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="sandTerrain" ID="{53E18930-8380-48B6-A5ED-5BF6ADDCD666}"/>
-						<CurrentSwitchRef Name="gunShotgun" ID="{3EEADD7E-B26A-468F-8EE8-3B90034E60F4}"/>
+						<CurrentSwitchRef Name="gunRevolver" ID="{7BFB712C-0880-454A-B239-6DF4F86DC31C}"/>
 						<CurrentSwitchRef Name="healthSwitch" ID="{13F5027A-F550-4843-AB67-4B8A5022EE12}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

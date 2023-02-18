@@ -11,7 +11,7 @@
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
   <WwiseInstallationPathWindows>D:\Audio Integration\Wwise 2022.1.1.8100</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../wild-west_WwiseProject/wild-west_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../../wild-west/wild-west_WwiseProject/wild-west_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>
