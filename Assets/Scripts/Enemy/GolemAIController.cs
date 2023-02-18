@@ -95,6 +95,14 @@ public class GolemAIController : AIController
         }
     }
 
+    public override void TakeDamage(int damage)
+    {
+        if(isDefensive)
+            return;
+
+        base.TakeDamage(damage);
+    }
+
     private IEnumerator DoBurstAttack()
     {
         isBurstAttacking = true;
