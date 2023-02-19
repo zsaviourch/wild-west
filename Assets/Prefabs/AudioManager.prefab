@@ -69,7 +69,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7218642138c226b4d855e50de94da29b, type: 3}
     type: 0
     loop: 1
-    volume: 0.8
+    volume: 0.6
   sfxData:
   - name: golemAttack
     clip: {fileID: 8300000, guid: cbe4b79d883b1f340b3e66f09c62a521, type: 3}
