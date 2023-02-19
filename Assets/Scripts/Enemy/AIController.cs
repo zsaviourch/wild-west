@@ -12,6 +12,9 @@ public class AIController : MonoBehaviour
     protected int currentHealth;
     protected bool isDead = false;
 
+    public delegate void OnDiedHandler(AIController sender);
+    public event OnDiedHandler OnDied;
+
     public bool IsDead 
     {
         get { return isDead; }
@@ -31,6 +34,7 @@ public class AIController : MonoBehaviour
             currentHealth = 0;
             isDead = true;
             animator.SetBool("isDead", true);
+            OnDied?.Invoke(this);
         }
     }
 }

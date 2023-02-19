@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class RoomQuest : MonoBehaviour
 {
-    public List<AIController> enemiesToBeat;
-
     public enum ChallengeState
     {
         PENDING,
@@ -19,6 +17,23 @@ public class RoomQuest : MonoBehaviour
 
     public void StartChallenge()
     {
+        foreach(SpawnPoint point in spawnPoints)
+        {
+            GameObject spawnedObject = point.Spawn();
+            if (spawnedObject != null)
+            {
+                if (spawnedObject.tag == "enemy")
+                {
+                    AIController enemy = spawnedObject.GetComponent<AIController>();
+                    enemy.OnDied += cleanUpEnemyList;
+                    enemiesToBeat.Add(enemy);
+                }
+                else if (spawnedObject.tag == "Player")
+                {
+                    playerHealth = spawnedObject.GetComponent<HealthAndEnergy>();
+                }
+            }
+        }
         if (state == ChallengeState.PENDING)
         {
             state = ChallengeState.ACTIVE;
@@ -45,10 +60,33 @@ public class RoomQuest : MonoBehaviour
             LevelAtlus.Instance.ProgressTown(playerWin);
         }
     }
+    private List<AIController> enemiesToBeat = new();
+    private HealthAndEnergy playerHealth;
+    private SpawnPoint[] spawnPoints;
+
+    private void Awake()
+    {
+        spawnPoints = GetComponentsInChildren<SpawnPoint>();
+    }
 
     private void Start()//IEnumerator
     {
         //yield return new WaitForSeconds(3);
         StartChallenge();
+    }
+
+    private void cleanUpEnemyList(AIController deadEnemy)
+    {
+        deadEnemy.OnDied -= cleanUpEnemyList;
+        enemiesToBeat.Remove(deadEnemy);
+        if (enemiesToBeat.Count <= 0)
+        {
+            EndChallenge(true);
+        }
+    }
+    private void reactToPlayerDeath(HealthAndEnergy deadPlayer)
+    {
+        deadPlayer.OnDied -= reactToPlayerDeath;
+        EndChallenge(false);
     }
 }

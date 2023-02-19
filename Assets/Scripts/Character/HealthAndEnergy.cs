@@ -20,6 +20,9 @@ public class HealthAndEnergy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+    public delegate void OnDiedHandler(HealthAndEnergy sender);
+    public event OnDiedHandler OnDied;
 }
