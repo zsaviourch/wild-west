@@ -83,9 +83,17 @@ public class SettingsMenu : MonoBehaviour
     #region Audio
 
     // On value change for volume slider, adjust master volume on the audioMixer
-    public void SetVolume(float sliderValue)
+    public void SetBGMVolume(float sliderValue)
     {
-        // audioManager.SetVolume("source", sliderValue);
+        audioManager.masterBGMVolume = Mathf.Log10(sliderValue) * 20;
+
+        if (debugMode)
+            Debug.Log(sliderValue);
+    }
+    
+    public void SetSFXVolume(float sliderValue)
+    {
+        audioManager.masterSFXVolume = Mathf.Log10(sliderValue) * 20;
 
         if (debugMode)
             Debug.Log(sliderValue);

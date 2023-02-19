@@ -5,7 +5,7 @@ using UnityEngine;
 public class GolemAIController : AIController
 {
     [SerializeField] private float moveSpeed = 2f;
-        [SerializeField] private float burstSpeed = 4f;
+    [SerializeField] private float burstSpeed = 4f;
     [SerializeField] private float detectionRange = 5f;
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private float agressiveRange = 3f;
@@ -29,6 +29,7 @@ public class GolemAIController : AIController
     private void Start()
     {
         patrolPoints = EnemyPatrolPoints.Instance.GetUnusedPatrolPoints(EnemyPatrolPoints.EnemyType.Golem);
+        //Debug.Log("golem patrol points are " + patrolPoints.length);
         navigationMesh = Grid.Instance;
         animator.SetBool("isPatrolling", true);
     }
@@ -108,13 +109,22 @@ else if (!isDefensive && !isBurstAttacking)
 
     public override void TakeDamage(int damage)
     {
-        if(isDefensive)
+        if (isDefensive)
+        {
+            AudioManager.Instance.Play("golemShieldHit");
             return;
+        }
+        //return;
 
         base.TakeDamage(damage);
+        AudioManager.Instance.Play("golemHurt");
+        if (isDead)
+        {
+            AudioManager.Instance.Play("golemDie");
+        }
     }
 
- private IEnumerator DoBurstAttack()
+    private IEnumerator DoBurstAttack()
 {
     isBurstAttacking = true;
 
@@ -149,7 +159,8 @@ else if (!isDefensive && !isBurstAttacking)
     isCoolingDown = false;
     isBurstAttacking = false;
     lastAttackTime = Time.time;
-}
+        AudioManager.Instance.Play("golemAttack");
+    }
 
     private void OnDrawGizmosSelected()
     {

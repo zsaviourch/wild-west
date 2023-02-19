@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2179476339337756128}
   - component: {fileID: 4403195136986463040}
   - component: {fileID: 380640550165984916}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LamiaEnemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5586386, y: -2.79319}
+  m_Offset: {x: -1.5508442, y: -0.31270123}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -151,7 +151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 62.262047, y: 68.96571}
+  m_Size: {x: 40.43372, y: 43.499344}
   m_EdgeRadius: 0
 --- !u!114 &380640550165984916
 MonoBehaviour:
@@ -169,10 +169,11 @@ MonoBehaviour:
   damagePerHit: 10
   animator: {fileID: 2179476339337756128}
   moveSpeed: 2
-  chaseRange: 5
-  shootingRange: 3
+  bulletSpeed: 4
+  chaseRange: 7
+  shootingRange: 5
   shootPoint: {fileID: 1580164750912160318}
-  bulletPrefab: {fileID: 229193747146238013, guid: 45fa0664a9a0a4b9f8a708b0e8c49e46, type: 3}
+  bulletPrefab: {fileID: 1703770609713949572, guid: 694ac5110f36f44458f8f01d337bc400, type: 3}
   patrolPoints: []
 --- !u!1 &7700274429074255958
 GameObject:
@@ -183,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1580164750912160318}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
