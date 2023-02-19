@@ -122,8 +122,8 @@ MonoBehaviour:
   maxHealth: 100
   damagePerHit: 40
   animator: {fileID: 2179476339337756128}
-  moveSpeed: 2
-  burstSpeed: 4
+  moveSpeed: 3
+  burstSpeed: 6
   detectionRange: 12
   attackRange: 1.5
   agressiveRange: 5
