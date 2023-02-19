@@ -5,6 +5,7 @@ using UnityEngine;
 public class LamiaAIController : AIController
 {
     [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float bulletSpeed = 1f;
     [SerializeField] private float chaseRange = 10f;
     [SerializeField] private float shootingRange = 5f;
     [SerializeField] private Transform shootPoint;
@@ -22,6 +23,7 @@ public class LamiaAIController : AIController
     {
         patrolPoints = EnemyPatrolPoints.Instance.GetUnusedPatrolPoints(EnemyPatrolPoints.EnemyType.Lamia);
         currentTarget = transform.position;
+        animator.SetBool("isPatrolling", true);
     }
 
     private void Update()
@@ -73,19 +75,30 @@ public class LamiaAIController : AIController
         }
     }
 
-    private void Shoot()
+private void Shoot()
+{
+    if (Time.time > lastAttackTime + 1f)
     {
-        if (Time.time > lastAttackTime + 1f)
-        {
-            lastAttackTime = Time.time;
-            animator.SetTrigger("attack");
-            AudioManager.Instance.Play("lamiaAttack");
+        lastAttackTime = Time.time;
+        animator.SetTrigger("attack");
+        animator.SetBool("isShooting", true);
 
-            Vector2 direction = (PlayerController.Instance.transform.position - shootPoint.position).normalized;
-            GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
-            bullet.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f);
-        }
+        Vector2 direction = (PlayerController.Instance.transform.position - shootPoint.position).normalized;
+        GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
+
+        Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
+        bulletRigidbody.AddForce(direction * bulletSpeed, ForceMode2D.Impulse);
+        bullet.transform.rotation = Quaternion.Euler(0f, 0f, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f);
+
+        Invoke("ResetShooting", 1f);
     }
+}
+
+
+private void ResetShooting()
+{
+    animator.SetBool("isShooting", false);
+}
 
     public override void TakeDamage(int damage)
     {

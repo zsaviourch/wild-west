@@ -5,7 +5,7 @@ using UnityEngine;
 public class GolemAIController : AIController
 {
     [SerializeField] private float moveSpeed = 2f;
-        [SerializeField] private float burstSpeed = 4f;
+    [SerializeField] private float burstSpeed = 4f;
     [SerializeField] private float detectionRange = 5f;
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private float agressiveRange = 3f;

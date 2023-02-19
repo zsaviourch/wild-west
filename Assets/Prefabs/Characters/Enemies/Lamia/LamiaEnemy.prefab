@@ -169,10 +169,10 @@ MonoBehaviour:
   damagePerHit: 10
   animator: {fileID: 2179476339337756128}
   moveSpeed: 2
-  chaseRange: 5
-  shootingRange: 3
+  chaseRange: 7
+  shootingRange: 5
   shootPoint: {fileID: 1580164750912160318}
-  bulletPrefab: {fileID: 229193747146238013, guid: 45fa0664a9a0a4b9f8a708b0e8c49e46, type: 3}
+  bulletPrefab: {fileID: 1703770609713949572, guid: 694ac5110f36f44458f8f01d337bc400, type: 3}
   patrolPoints: []
 --- !u!1 &7700274429074255958
 GameObject:
