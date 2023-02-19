@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 1703770609713949576}
   - component: {fileID: 1703770609713949579}
   - component: {fileID: 1703770609713949578}
-  m_Layer: 8
-  m_Name: LamiaShootCrystals
+  - component: {fileID: 4399894231783977927}
+  m_Layer: 10
+  m_Name: IceCrystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1703770609713949575
 SpriteRenderer:
@@ -126,10 +127,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 3639
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -143,7 +144,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0029180646, y: 0.0009726919}
@@ -272,3 +273,17 @@ TrailRenderer:
   m_Autodestruct: 1
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &4399894231783977927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703770609713949572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c60aa8e446974617880a3783cea9e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crystalDamage: 20
+  rb: {fileID: 1703770609713949576}

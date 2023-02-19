@@ -123,6 +123,7 @@ MonoBehaviour:
   damagePerHit: 10
   animator: {fileID: 2179476339337756128}
   moveSpeed: 2
+  burstSpeed: 4
   detectionRange: 7
   attackRange: 1.5
   agressiveRange: 5
@@ -163,7 +164,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5586386, y: -2.79319}
+  m_Offset: {x: -1.4792767, y: 1.0734577}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -174,5 +175,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 62.262047, y: 68.96571}
+  m_Size: {x: 34.64314, y: 44.292828}
   m_EdgeRadius: 0
