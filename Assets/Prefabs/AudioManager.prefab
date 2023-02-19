@@ -301,5 +301,10 @@ MonoBehaviour:
     type: 1
     loop: 0
     volume: 1
+  - name: wendigoTalk
+    clip: {fileID: 8300000, guid: 43198a5c7aa59a240a2ce17c7fd1a281, type: 3}
+    type: 1
+    loop: 1
+    volume: 1
   masterBGMVolume: 1
   masterSFXVolume: 1
