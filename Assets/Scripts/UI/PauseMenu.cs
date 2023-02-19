@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject settingsMenu;
+    public GameObject transitionHandler;
+    public GameObject audioManager;
     [SerializeField] private GameObject pauseMenuContainer;
 
     public bool gameIsPaused; // Any other scripts that need to know if the game is paused can reference this bool from this script
@@ -63,7 +65,12 @@ public class PauseMenu : MonoBehaviour
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
+        Destroy(settingsMenu);
+        Destroy(audioManager);
+        Destroy(transitionHandler.GetComponent<TransitionHandler>().levelAtlus.gameObject);
+        Destroy(transitionHandler);
         SceneManager.LoadScene("Main_Menu");
+        Destroy(gameObject);
     }
 
     public void QuitGame()
