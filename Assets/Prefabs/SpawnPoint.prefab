@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &229224493511529672
 MonoBehaviour:
@@ -100,3 +100,6 @@ MonoBehaviour:
   - type: 2
     prefabs:
     - {fileID: 4717353440870715094, guid: 56f8ea06704d24f02b2a684d0d6fdbd3, type: 3}
+  - type: 3
+    prefabs:
+    - {fileID: 4717353440870715094, guid: 3c736215ee78548c5a5f5bb0a515f5ff, type: 3}
