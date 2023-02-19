@@ -22,6 +22,7 @@ public class LamiaAIController : AIController
     private void Start()
     {
         patrolPoints = EnemyPatrolPoints.Instance.GetUnusedPatrolPoints(EnemyPatrolPoints.EnemyType.Lamia);
+        Debug.Log("lamia patrol points are " + patrolPoints.length);
         currentTarget = transform.position;
         animator.SetBool("isPatrolling", true);
     }
