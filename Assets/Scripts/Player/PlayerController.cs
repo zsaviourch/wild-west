@@ -39,8 +39,26 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Die()
-    {
-        //Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+    { 
+        // Get all the components attached to the game object
+        Component[] components = gameObject.GetComponents<Component>();
+
+        // Loop through all the components
+        for (int i = 0; i < components.Length; i++)
+        {
+            // Disable all components except the current script component
+            if (components[i] != this)
+            {
+                Behaviour behavior = components[i] as Behaviour;
+                if (behavior != null)
+                {
+                    behavior.enabled = false;
+                }
+                else
+                {
+                    components[i].gameObject.SetActive(false);
+                }
+            }
+        }
     }
 }
