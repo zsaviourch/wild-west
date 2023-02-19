@@ -57,33 +57,33 @@ public class SpawnPoint : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        Spawn();
-    }
+    //private void Start()
+    //{
+    //    Spawn();
+    //}
 
-    public void Spawn()
+    public GameObject Spawn()
     {
         if (prefabList == null || prefabList.Length == 0)
         {
             Debug.LogError("No prefabs assigned to SpawnPoint");
-            return;
+            return null;
         }
 
         if (!prefabMap.ContainsKey(spawnType))
         {
             Debug.LogError($"No prefab assigned for SpawnType {spawnType}");
-            return;
+            return null;
         }
 
         GameObject[] prefabs = prefabMap[spawnType];
         if (prefabs == null || prefabs.Length == 0)
         {
             Debug.LogError($"No prefabs assigned for SpawnType {spawnType}");
-            return;
+            return null;
         }
 
         GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
-        Instantiate(prefab, transform.position, Quaternion.identity, transform);
+        return Instantiate(prefab, transform.position, Quaternion.identity, transform);
     }
 }

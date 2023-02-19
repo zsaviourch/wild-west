@@ -10,7 +10,7 @@ public class GolemAIController : AIController
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private float agressiveRange = 3f;
     [SerializeField] private float attackCooldown = 5f;
-    [SerializeField] private float proximityDamage = 5f;
+    [SerializeField] private int proximityDamage = 5;
     [SerializeField] private float proximityCheckInterval = 1f;
     [SerializeField] private float proximityRange = 2f;
 

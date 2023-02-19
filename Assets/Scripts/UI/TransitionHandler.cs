@@ -116,7 +116,7 @@ public class TransitionHandler : MonoBehaviour
         mapCanvas.SetActive(false);
         SceneManager.LoadScene(sceneId);
         levelAtlus = FindObjectOfType<LevelAtlus>();
-        
+
         crossfade.SetTrigger("End");
     }
     
@@ -134,7 +134,7 @@ public class TransitionHandler : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         // Set the current location and town for horse icon
-        switch (levelAtlus.CurrentTownIndex)
+        switch (levelAtlus.CurrentTownIndex) // This might or might not work. It might need to see what the next town is, not current.
         {
             case 4:
                 destination = townMapLocations[4];

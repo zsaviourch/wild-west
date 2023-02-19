@@ -70,6 +70,36 @@ MonoBehaviour:
     type: 0
     loop: 1
     volume: 0.6
+  - name: victoryTheme
+    clip: {fileID: 8300000, guid: ac066490fbc96404aa26f8cdcdbfc3d5, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelTwoHigh
+    clip: {fileID: 8300000, guid: 0471690e73eca6544bf0cb47319bdcd4, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelTwoLow
+    clip: {fileID: 8300000, guid: 7176e34cb0612df4fb9936d250a31f69, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelTwoMid
+    clip: {fileID: 8300000, guid: 4d34a145501c78446a9d30297b04c5de, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: deathTheme
+    clip: {fileID: 8300000, guid: aa98e5091fbb6344a9360d0213b5cd3f, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: creditsTheme
+    clip: {fileID: 8300000, guid: ac066490fbc96404aa26f8cdcdbfc3d5, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
   sfxData:
   - name: golemAttack
     clip: {fileID: 8300000, guid: cbe4b79d883b1f340b3e66f09c62a521, type: 3}
@@ -275,6 +305,11 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 694f1fb9cbd40ca40b04173f45ad8a21, type: 3}
     type: 1
     loop: 0
+    volume: 1
+  - name: wendigoTalk
+    clip: {fileID: 8300000, guid: 43198a5c7aa59a240a2ce17c7fd1a281, type: 3}
+    type: 1
+    loop: 1
     volume: 1
   masterBGMVolume: 1
   masterSFXVolume: 1
