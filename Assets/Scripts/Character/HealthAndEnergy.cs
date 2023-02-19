@@ -20,5 +20,13 @@ public class HealthAndEnergy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            OnDied?.Invoke(this);
+        }
     }
+
+    public delegate void OnDiedHandler(HealthAndEnergy sender);
+    public event OnDiedHandler OnDied;
 }
