@@ -154,10 +154,10 @@ public class TransitionHandler : MonoBehaviour
                 destination = townMapLocations[4];
                 break;
             case 3:
-                destination = townMapLocations[3];
+                destination = townMapLocations[2];
                 break;
             case 2:
-                destination = townMapLocations[2];
+                destination = townMapLocations[3];
                 break;
             case 1:
                 destination = townMapLocations[1];
