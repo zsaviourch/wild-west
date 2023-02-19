@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [Header("References")]
     public SettingsMenu settingsMenu;
     public GameObject creditsPage;
+    [SerializeField] private Animator creditsAnim;
+    [SerializeField] private Animator crossfade;
+    
+    [Header("Variables")]
+    [SerializeField] private float transitionTime = 1f;
     /*[Tooltip("Name of the first level to load when the player presses the start button")]
     public string sceneToLoad;*/
 
@@ -34,22 +40,42 @@ public class MainMenu : MonoBehaviour
             settingsMenu.gameObject.SetActive(false);
         }
     }
-    
-    public void CloseCreditsPage()
-    {
-        creditsPage.SetActive(false);
-    }
-    
+
     public void ToggleCreditsPage()
     {
         if (!creditsPage.activeSelf)
         {
-            creditsPage.SetActive(true);
+            StartCoroutine(StartCredits());
         }
         else
         {
-            creditsPage.SetActive(false);
+            StartCoroutine(EndCredits());
         }
+    }
+
+    IEnumerator StartCredits()
+    {
+        crossfade.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        creditsPage.SetActive(true);
+        creditsAnim.SetTrigger("StartCredits");
+        AudioManager.Instance.Play("creditsTheme");
+        AudioManager.Instance.Stop("menuTheme");
+        crossfade.SetTrigger("End");
+        
+        yield return new WaitForSeconds(65f); // If the entire credits finishes playing, stop looping credits music
+        AudioManager.Instance.Stop("creditsTheme");
+    }
+    
+    IEnumerator EndCredits()
+    {
+        crossfade.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        creditsAnim.SetTrigger("EndCredits");
+        AudioManager.Instance.Stop("creditsTheme");
+        AudioManager.Instance.Play("menuTheme");
+        creditsPage.SetActive(false);
+        crossfade.SetTrigger("End");
     }
     
     // We will link this to our game jam download page. For now, it will just link to the jam itself.

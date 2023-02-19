@@ -95,6 +95,11 @@ MonoBehaviour:
     type: 0
     loop: 1
     volume: 1
+  - name: creditsTheme
+    clip: {fileID: 8300000, guid: ac066490fbc96404aa26f8cdcdbfc3d5, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
   sfxData:
   - name: golemAttack
     clip: {fileID: 8300000, guid: cbe4b79d883b1f340b3e66f09c62a521, type: 3}

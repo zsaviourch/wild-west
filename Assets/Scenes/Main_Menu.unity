@@ -156,6 +156,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 206748333}
     - target: {fileID: 8520250871172800498, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
+      propertyPath: crossfade
+      value: 
+      objectReference: {fileID: 152389357}
+    - target: {fileID: 8520250871172800498, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
       propertyPath: settingsMenu
       value: 
       objectReference: {fileID: 1138365649}
@@ -212,6 +216,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
+--- !u!95 &152389357 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6616195286438488691, guid: 0c000d0245594fc4f99ab59ffcff0611, type: 3}
+  m_PrefabInstance: {fileID: 1457238310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &206748332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,6 +759,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1047777897, guid: 0c000d0245594fc4f99ab59ffcff0611, type: 3}
       propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 206748333}
+    - target: {fileID: 1862574884, guid: 0c000d0245594fc4f99ab59ffcff0611, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 206748333}
     - target: {fileID: 6616195287869058472, guid: 0c000d0245594fc4f99ab59ffcff0611, type: 3}
