@@ -45,18 +45,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towns:
-  - TownName: RustBurrow
-    numVisits: 0
-    roomPrefabs:
-    - {fileID: 5557596238393897325, guid: 7e0ecd39d099b804ca80b0bc9cb83915, type: 3}
-    - {fileID: 5557596238393897325, guid: 6cba06db1be3e7c48afab8bc57954790, type: 3}
-    - {fileID: 5557596238393897325, guid: 3de39ebf31393b74ea116c91b6660a86, type: 3}
   - TownName: Casa Diablo
     numVisits: 0
     roomPrefabs:
     - {fileID: 5557596238393897325, guid: 6d3f4ea40cfcaf549a07e20c197e066e, type: 3}
     - {fileID: 5557596238393897325, guid: dd1c79ce4d4a4f74cbc231a3361b399a, type: 3}
     - {fileID: 5557596238393897325, guid: 2607721ce49f3c046b4911633bf77273, type: 3}
+  - TownName: Rust Burrow
+    numVisits: 0
+    roomPrefabs:
+    - {fileID: 5557596238393897325, guid: 6cba06db1be3e7c48afab8bc57954790, type: 3}
+    - {fileID: 5557596238393897325, guid: 3de39ebf31393b74ea116c91b6660a86, type: 3}
+    - {fileID: 5557596238393897325, guid: 7e0ecd39d099b804ca80b0bc9cb83915, type: 3}
+  - TownName: Dark Hust
+    numVisits: 0
+    roomPrefabs:
+    - {fileID: 5557596238393897325, guid: c721c1bcfa4a1144eab1894b463e925a, type: 3}
+    - {fileID: 5557596238393897325, guid: e9c6fbed4d633ca4d9ed3aba75b09e57, type: 3}
+    - {fileID: 5557596238393897325, guid: fdd6fb3a3bfdb864f90cd336855cb53b, type: 3}
+  - TownName: Cold Meadow
+    numVisits: 0
+    roomPrefabs:
+    - {fileID: 5557596238393897325, guid: 8e472d4a8163d8d4b8928a79eb4416a5, type: 3}
+    - {fileID: 5557596238393897325, guid: 90271afe1d623c3449402ead6b9ab367, type: 3}
+    - {fileID: 5557596238393897325, guid: 3f7c18d768a629141ba354b7c697515d, type: 3}
   unmodulatedTownIndex: 0
   startTownIndex: 0
   deathCount: 0

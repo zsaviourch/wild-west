@@ -2,14 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 // To Do: Let the Level loader remember what city it got to previously to then choose the next one it hasn't been to
 
 public class TransitionHandler : MonoBehaviour
 {
+    public static AudioManager Instance { get; private set; }
+    
     [Header("References")]
     public GameObject mapCanvas; // This is essentially the loading screen
     public Animator crossfade;
@@ -19,6 +21,7 @@ public class TransitionHandler : MonoBehaviour
     public GameObject readyButton;
     public AudioManager audioManager;
     public LevelAtlus levelAtlus = null;
+    public HealthAndEnergy healthAndEnergy = null;
     public Transform[] townMapLocations;
 
     [Header("Variables")]
@@ -54,6 +57,8 @@ public class TransitionHandler : MonoBehaviour
         mapCanvas.SetActive(false);
         canHorseMove = false;
         
+        // healthAndEnergy.OnDied += StartTownTransitionPlayerDeath;
+        
         DontDestroyOnLoad(gameObject);
     }
 
@@ -69,6 +74,11 @@ public class TransitionHandler : MonoBehaviour
     }
 
     public void StartTownTransition() // This is the function you want to use for transitions. It starts the coroutine for town transitions in the main scene
+    {
+        StartCoroutine(TownTransition());
+    }
+    
+    private void StartTownTransitionPlayerDeath(HealthAndEnergy sender) // This is the function you want to use for transitions. It starts the coroutine for town transitions in the main scene
     {
         StartCoroutine(TownTransition());
     }
@@ -115,9 +125,13 @@ public class TransitionHandler : MonoBehaviour
         // Load Scene
         mapCanvas.SetActive(false);
         SceneManager.LoadScene(sceneId);
-        levelAtlus = FindObjectOfType<LevelAtlus>();
-
         crossfade.SetTrigger("End");
+        
+        yield return new WaitForSeconds(0.5f);
+        
+        levelAtlus = FindObjectOfType<LevelAtlus>();
+        healthAndEnergy = FindObjectOfType<HealthAndEnergy>();
+        healthAndEnergy.OnDied += StartTownTransitionPlayerDeath;
     }
     
     IEnumerator TownTransition()
@@ -140,10 +154,10 @@ public class TransitionHandler : MonoBehaviour
                 destination = townMapLocations[4];
                 break;
             case 3:
-                destination = townMapLocations[3];
+                destination = townMapLocations[2];
                 break;
             case 2:
-                destination = townMapLocations[2];
+                destination = townMapLocations[3];
                 break;
             case 1:
                 destination = townMapLocations[1];

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class PlayerController : MonoBehaviour
     }
 
     private HealthAndEnergy healthAndEnergy;
+    private Rigidbody2D rigidbody2D;
+
+    private Vector3 pushDirection;
+    private float pushForce;
+    private bool isStunned = false;
 
     private void Awake()
     {
@@ -25,8 +31,72 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        rigidbody2D = GetComponent<Rigidbody2D>();
         healthAndEnergy = GetComponent<HealthAndEnergy>();
     }
+
+    public void Push(Vector2 direction, float force)
+    {
+        if (!isStunned)
+        {
+            rigidbody2D.AddForce(direction * force, ForceMode2D.Impulse);
+        }
+    }
+
+    public void PushAndStun(Vector3 direction, float force)
+    {
+        Debug.Log("Push: Push and stun");
+        if (!isStunned)
+        {
+            pushDirection = direction;
+            pushForce = force;
+            StartCoroutine(PerformPush());
+        }
+    }
+
+    IEnumerator PerformPush()
+    {   
+        Debug.Log("Push: Perform push");
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.AddForce(pushDirection * pushForce, ForceMode.Impulse);
+
+        yield return new WaitForFixedUpdate();
+
+        // Apply stun after push is completed
+        StunPlayer(1.0f);
+    }
+
+    public void StunPlayer(float duration)
+    {
+        Debug.Log("Push: Stun player");
+        isStunned = true;
+        StartCoroutine(PerformStun(duration));
+    }
+
+    IEnumerator PerformStun(float duration)
+    {
+        // Stop player movement and disable input during stun
+        DisablePlayerInput();
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.velocity = Vector3.zero;
+
+        yield return new WaitForSeconds(duration);
+
+        // End stun
+        isStunned = false;
+        EnablePlayerInput();
+    }
+
+    private void DisablePlayerInput()
+    {
+        // Disable player input here
+    }
+
+    private void EnablePlayerInput()
+    {
+        // Enable player input here
+    }
+
 
     public void TakeDamage(int damage)
     {
@@ -34,6 +104,7 @@ public class PlayerController : MonoBehaviour
         if (healthAndEnergy.currentHealth <= 0)
         {
             Die();
+            // Add your logic here
         }
     }
 
