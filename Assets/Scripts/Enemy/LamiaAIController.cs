@@ -79,6 +79,7 @@ public class LamiaAIController : AIController
         {
             lastAttackTime = Time.time;
             animator.SetTrigger("attack");
+            AudioManager.Instance.Play("lamiaAttack");
 
             Vector2 direction = (PlayerController.Instance.transform.position - shootPoint.position).normalized;
             GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
@@ -91,9 +92,11 @@ public class LamiaAIController : AIController
         if (!isDead)
         {
             base.TakeDamage(damage);
+            AudioManager.Instance.Play("lamiaHurt");
             if (isDead)
             {
                 StopAllCoroutines();
+                AudioManager.Instance.Play("lamiaDie");
                 animator.SetBool("isDead", true);
                 // disable all colliders and the Rigidbody2D
                 Collider2D[] colliders = GetComponentsInChildren<Collider2D>();

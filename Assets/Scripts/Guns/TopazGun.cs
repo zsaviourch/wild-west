@@ -238,6 +238,7 @@ public class TopazGun : MonoBehaviour
 
         // Replenish one unit energy
         currentEnergyAmount += energyRegeneratePerSecond;
+        AudioManager.Instance.Play("topazReload");
     }
 
     public int FindEnergyConsumePerBullet(BulletType type)
@@ -274,7 +275,7 @@ public class TopazGun : MonoBehaviour
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
-
+            AudioManager.Instance.Play("topazShot");
         }
     }
 }

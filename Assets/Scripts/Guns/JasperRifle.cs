@@ -248,7 +248,7 @@ public class JasperRifle : MonoBehaviour
         // Replenish all energy
         currentEnergyAmount = energyInitialAmount;
         player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
-
+        AudioManager.Instance.Play("jasperReload");
     }
 
     public int FindEnergyConsumePerBullet(BulletType type)
