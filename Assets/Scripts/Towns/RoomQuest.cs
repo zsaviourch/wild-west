@@ -31,6 +31,7 @@ public class RoomQuest : MonoBehaviour
                 else if (spawnedObject.tag == "Player")
                 {
                     playerHealth = spawnedObject.GetComponent<HealthAndEnergy>();
+                    playerHealth.OnDied += reactToPlayerDeath;
                 }
             }
         }
@@ -88,5 +89,20 @@ public class RoomQuest : MonoBehaviour
     {
         deadPlayer.OnDied -= reactToPlayerDeath;
         EndChallenge(false);
+    }
+
+    private void OnDestroy()
+    {
+        if (playerHealth != null)
+        {
+            playerHealth.OnDied -= reactToPlayerDeath;
+        }
+        foreach(AIController controller in enemiesToBeat)
+        {
+            if (controller != null)
+            {
+                controller.OnDied -= cleanUpEnemyList;
+            }
+        }
     }
 }
