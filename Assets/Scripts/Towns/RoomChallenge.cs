@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomQuest : MonoBehaviour
+public class RoomChallenge : MonoBehaviour
 {
     public enum ChallengeState
     {
