@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
         if (healthAndEnergy.currentHealth <= 0)
         {
             Die();
+            // Add your logic here
         }
     }
 

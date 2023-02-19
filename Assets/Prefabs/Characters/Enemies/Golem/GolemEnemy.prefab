@@ -120,15 +120,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  damagePerHit: 10
+  damagePerHit: 40
   animator: {fileID: 2179476339337756128}
   moveSpeed: 2
   burstSpeed: 4
-  detectionRange: 7
+  detectionRange: 12
   attackRange: 1.5
   agressiveRange: 5
   attackCooldown: 5
-  proximityDamage: 5
+  proximityDamage: 20
   proximityCheckInterval: 1
   proximityRange: 2
   patrolPoints: []
