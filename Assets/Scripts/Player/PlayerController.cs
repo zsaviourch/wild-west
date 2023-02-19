@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
-
-    private float currentHealth;
     private static PlayerController instance;
 
     public static PlayerController Instance
     {
         get { return instance; }
     }
+
+    private HealthAndEnergy healthAndEnergy;
 
     private void Awake()
     {
@@ -26,13 +25,13 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        healthAndEnergy = GetComponent<HealthAndEnergy>();
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        if (currentHealth <= 0)
+        healthAndEnergy.TakeDamage(damage);
+        if (healthAndEnergy.currentHealth <= 0)
         {
             Die();
         }
