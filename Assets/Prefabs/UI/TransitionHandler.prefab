@@ -140,8 +140,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9473a5b99de604d45be835d0e4638632, type: 2}
+  m_sharedMaterial: {fileID: -7014652841389500689, guid: 9473a5b99de604d45be835d0e4638632, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 46
   m_fontSizeMax: 64
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -1059,7 +1059,7 @@ GameObject:
   - component: {fileID: 6616195287869058472}
   - component: {fileID: 1047777897}
   m_Layer: 0
-  m_Name: LevelLoader
+  m_Name: TransitionHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

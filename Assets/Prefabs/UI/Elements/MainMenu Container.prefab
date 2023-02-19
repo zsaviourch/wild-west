@@ -665,7 +665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wild West
+  m_text: Wild Rogue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f060dfc64b64b4d4ea1a2215e0531c64, type: 2}
   m_sharedMaterial: {fileID: 149550789955372309, guid: f060dfc64b64b4d4ea1a2215e0531c64, type: 2}
