@@ -96,7 +96,37 @@ MonoBehaviour:
     loop: 1
     volume: 1
   - name: creditsTheme
-    clip: {fileID: 8300000, guid: ac066490fbc96404aa26f8cdcdbfc3d5, type: 3}
+    clip: {fileID: 8300000, guid: e9e7049906dab1b42974008347e151dd, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelThreeLow
+    clip: {fileID: 8300000, guid: 7319a45e44473fc488e59cf9a2d3eb27, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelThreeMid
+    clip: {fileID: 8300000, guid: 9eb586f70ab202f49a2ad5e08d9df410, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelThreeHigh
+    clip: {fileID: 8300000, guid: af9eee7eccc74ef4591ee6d8f4976b11, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelFourLow
+    clip: {fileID: 8300000, guid: eb6d3a545b04934469202a3e49d3a48a, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelFourMid
+    clip: {fileID: 8300000, guid: 937230edf2611ad409964630ce59bba4, type: 3}
+    type: 0
+    loop: 1
+    volume: 1
+  - name: levelFourHigh
+    clip: {fileID: 8300000, guid: 8aa6266a8e154304cab56180ec6fe784, type: 3}
     type: 0
     loop: 1
     volume: 1
