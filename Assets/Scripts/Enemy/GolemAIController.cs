@@ -28,10 +28,11 @@ public class GolemAIController : AIController
 
     private void Start()
     {
-        patrolPoints = EnemyPatrolPoints.Instance.GetUnusedPatrolPoints(EnemyPatrolPoints.EnemyType.Golem);
+        patrolPoints = GameObject.FindObjectsOfType<EnemyPatrolPoints>()[0].GetUnusedPatrolPoints(EnemyPatrolPoints.EnemyType.Golem);
         //Debug.Log("golem patrol points are " + patrolPoints.length);
         navigationMesh = Grid.Instance;
         animator.SetBool("isPatrolling", true);
+        currentPatrolPointIndex = 0;
     }
 
     private void Update()

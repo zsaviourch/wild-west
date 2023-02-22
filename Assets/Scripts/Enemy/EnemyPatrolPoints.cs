@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyPatrolPoints : MonoBehaviour
 {
-    private static EnemyPatrolPoints instance = null;
-
     [System.Serializable]
     public enum EnemyType
     {
@@ -28,36 +26,10 @@ public class EnemyPatrolPoints : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+
     }
 
     private EnemyPatrolPoints() { }
-
-    public static EnemyPatrolPoints Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                instance = FindObjectOfType<EnemyPatrolPoints>();
-
-                if (instance == null)
-                {
-                    Debug.LogError("There is no EnemyPatrolPoints instance in the scene.");
-                }
-            }
-
-            return instance;
-        }
-    }
 
     public Transform[] GetUnusedPatrolPoints(EnemyType enemyType)
     {

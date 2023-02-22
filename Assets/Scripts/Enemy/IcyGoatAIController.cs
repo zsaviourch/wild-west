@@ -26,7 +26,7 @@ public class IcyGoatAIController : AIController
 
     private void Start()
     {
-        waypoints = EnemyPatrolPoints.Instance.GetUnusedPatrolPoints(EnemyPatrolPoints.EnemyType.IcyGoat);
+        waypoints = GameObject.FindObjectsOfType<EnemyPatrolPoints>()[0].GetUnusedPatrolPoints(EnemyPatrolPoints.EnemyType.IcyGoat);
         playerController = PlayerController.Instance;
         currentHealth = maxHealth;
         nextDamageTime = Time.time;

@@ -10,7 +10,7 @@ public class SpawnPoint : MonoBehaviour
         public GameObject[] prefabs;
     }
 
-        public enum SpawnType
+    public enum SpawnType
     {
         Player_Weston,
         Enemy_Golem,
@@ -83,7 +83,27 @@ public class SpawnPoint : MonoBehaviour
             return null;
         }
 
-        GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
-        return Instantiate(prefab, transform.position, Quaternion.identity, transform);
+        if (spawnType != SpawnType.Player_Weston)
+        {
+            GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
+            return Instantiate(prefab, transform.position, Quaternion.identity, transform);
+        }
+        else
+        {
+            // Check if there is an existing player in the world
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            if (players.Length > 0)
+            {
+                Debug.Log("A player already exists in the world!");
+                players[0].transform.position = transform.position; // Set position of existing player to SpawnPoint position
+                return players[0];
+            }
+            else
+            {
+                GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
+                GameObject newPlayer = Instantiate(prefab, transform.position, Quaternion.identity);
+                return newPlayer;
+            }
+        }
     }
 }
