@@ -86,7 +86,16 @@ public class SpawnPoint : MonoBehaviour
         if (spawnType != SpawnType.Player_Weston)
         {
             GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
-            return Instantiate(prefab, transform.position, Quaternion.identity, transform);
+            
+            GameObject playerInstantiated = Instantiate(prefab, transform.position, Quaternion.identity, transform);
+            if (playerInstantiated.GetComponent<GunManager>())
+            {
+                playerInstantiated.GetComponent<GunManager>().GunName = GunManager.GunType.OnyxSniper;
+                /*                prefab.GetComponent<GunManager>().randomGun = true;
+                */
+            }
+
+            return playerInstantiated;
         }
         else
         {
