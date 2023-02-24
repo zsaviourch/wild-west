@@ -9,8 +9,7 @@ using UnityEngine;
 public class GunManager : MonoBehaviour
 {
     private static GunManager instance;
-    public bool isInitialized = false;
-    public GunType gunName;
+    public GunType? gunName;
     public bool randomGun;
 
     // Singleton Instance
@@ -32,7 +31,7 @@ public class GunManager : MonoBehaviour
         }
     }
 
-    public GunType GunName
+    public GunType? GunName
     {
         get
         {
@@ -55,14 +54,6 @@ public class GunManager : MonoBehaviour
         }
     }
 
-    public GunManager(GunType gun, bool random)
-    {
-        gunName = gun;
-        isInitialized = true;
-
-        SetUpGunScript(gun);
-    }
-
     // References
     public GameObject player;
     private JasperRifle JasperRifleScript;
@@ -77,7 +68,6 @@ public class GunManager : MonoBehaviour
         OnyxSniper,
         TopazGun,
         NoGun
-
     }
 
     // Start is called before the first frame update
@@ -90,38 +80,35 @@ public class GunManager : MonoBehaviour
         TopazGunScript = GetComponent<TopazGun>();
         gunName = GunType.NoGun;
 
+        TakeGun(null, true);
+    }
+
+    public void TakeGun(GunType? name = null, bool isRand = false)
+    {
+        Reset();
+        if(!isRand)
+        {
+            SetUpGunScript(name);
+        }
+        else
+        {
+            int randomIndex = Random.Range(1, GunType.GetValues(typeof(GunType)).Length - 1);
+            GunType randomGunType = (GunType)randomIndex;
+            SetUpGunScript(randomGunType);
+        }
+    }
+
+    void Reset()
+    {
         JasperRifleScript.enabled = false;
         BerylShotgunScript.enabled = false;
         OnyxSniperScript.enabled = false;
         TopazGunScript.enabled = false;
-        
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void SetUpGunScript(GunType? name)
     {
-        Debug.Log(randomGun);
-        if (isInitialized == false)
-        {
-            if (gunName != GunType.NoGun)
-            {
-                SetUpGunScript(gunName);
-                isInitialized = true;
-            }
-            else if (randomGun)
-            {
-                SetUpGunScript(true);
-                isInitialized = true;
-            }
-            else
-            {
-                Debug.Log("Either enter a gun type or set the randomization variable to true!");
-            }
-        }
-    }
-
-    void SetUpGunScript(GunType name)
-    {
+        gunName = name;
         switch (name)
         {
             case GunType.JasperRifle:
@@ -151,34 +138,7 @@ public class GunManager : MonoBehaviour
         }
     }
 
-    void SetUpGunScript(bool rand)
-    {
-        if (rand)
-        {
-            int randNum = Random.Range(1, 4);
-            switch(randNum) 
-            {
-                case 1:
-                    SetUpGunScript(GunType.JasperRifle);
-                    break;
-                case 2:
-                    SetUpGunScript(GunType.BerylShotgun);
-                    break;
-                case 3:
-                    SetUpGunScript(GunType.OnyxSniper);
-                    break;
-                case 4:
-                    SetUpGunScript(GunType.TopazGun);
-                    break;
-            }
-        }
-        else
-        {
-            Debug.Log("Please enter the gun type or set the randomization variable to true to initialize the character!");
-        }
-    }
-
-    void ToggleGunScript(GunType name, bool flag)
+    void ToggleGunScript(GunType? name, bool flag)
     {
         switch (name)
         {

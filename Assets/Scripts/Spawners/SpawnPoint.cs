@@ -105,6 +105,7 @@ public class SpawnPoint : MonoBehaviour
             {
                 Debug.Log("A player already exists in the world!");
                 players[0].transform.position = transform.position; // Set position of existing player to SpawnPoint position
+                players[0].GetComponent<GunManager>().TakeGun(null, true);
                 return players[0];
             }
             else
