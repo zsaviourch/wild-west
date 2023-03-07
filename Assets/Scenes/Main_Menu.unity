@@ -151,6 +151,63 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 206748333}
+    - target: {fileID: 8520250870175876753, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
+      propertyPath: m_text
+      value: '<b>Project Organizer</b>
+
+        Jesus Luna (Character and Animation
+        Artist)
+
+
+        <b>Game Design</b>
+
+        Andrew Tingkang (Game Designer)
+
+
+        <b>Programmers</b>
+
+        Ming
+        Chen (Gun System & Level Designer)
+
+
+        Ayden Arakelian (UI & UX)
+
+
+        ajyang2000
+        (Dialogue System)
+
+
+        Zeno Saviour (NPCs)
+
+
+        Jason A. Long (Levels
+        & Player Progression)
+
+
+        Eli Miller (Debug Programming)
+
+
+        <b>Sound
+        Team</b>
+
+        Evan Seamans (SFX and Wwise Implementation)
+
+
+        Max
+        Nattrass (Original Soundtrack)
+
+
+        <b>Narration</b>
+
+        Elizabeth
+        Lutrix (Narrative Director)
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520250870175876753, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8520250871094499391, guid: 3856f820250a8754ba9389cc43b744c3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

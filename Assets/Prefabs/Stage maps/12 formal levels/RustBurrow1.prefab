@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 1799394556}
   - component: {fileID: 1799394558}
   - component: {fileID: 1799394557}
+  - component: {fileID: 2916101818947084455}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -203,6 +204,18 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1616322016}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &2916101818947084455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799394555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e724e57cb3b1547fc93f21828ca8fefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2017995986
 GameObject:
   m_ObjectHideFlags: 0
@@ -119280,6 +119293,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5557596238359317463}
     m_Modifications:
+    - target: {fileID: 229224493511529672, guid: 4831c2c1aeadf45c19fbc69544373ac6, type: 3}
+      propertyPath: spawnType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 229224493511529672, guid: 4831c2c1aeadf45c19fbc69544373ac6, type: 3}
       propertyPath: prefabList.Array.data[0].prefabs.Array.data[0]
       value: 

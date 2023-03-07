@@ -36,7 +36,7 @@ public class LevelAtlus : MonoBehaviour
 
         public GameObject[] roomPrefabs;
 
-        public int CurrentInstantiatedIndex { get; private set; }
+        public int CurrentInstantiatedIndex { get; internal set; }
         //to un-instanciate all rooms in the town (i.e. to leave that town), simply pass in a negative number
         public void SetInstantiatedIndex(int newIndex)
         {
@@ -170,6 +170,7 @@ public class LevelAtlus : MonoBehaviour
             }
             //else just move to the next room in the same town
             towns[CurrentTownIndex].SetInstantiatedIndex(nextRoomIndex);
+            towns[CurrentTownIndex].CurrentInstantiatedIndex++;
         }
         else
         {
@@ -183,7 +184,7 @@ public class LevelAtlus : MonoBehaviour
         towns[CurrentTownIndex].SetInstantiatedIndex(-1);
         //update the town index
         unmodulatedTownIndex = givenIndex;
-        if (givenIndex < 0)
+        if (givenIndex >= 0)
         {
             //instantiate the first room in the new town
             towns[CurrentTownIndex].SetInstantiatedIndex(0);

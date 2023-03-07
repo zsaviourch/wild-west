@@ -92,7 +92,7 @@ public class GunManager : MonoBehaviour
         }
         else
         {
-            int randomIndex = Random.Range(1, GunType.GetValues(typeof(GunType)).Length - 1);
+            int randomIndex = Random.Range(0, GunType.GetValues(typeof(GunType)).Length - 1);
             GunType randomGunType = (GunType)randomIndex;
             SetUpGunScript(randomGunType);
         }
