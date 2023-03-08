@@ -30,6 +30,7 @@ public class RoomChallenge : MonoBehaviour
                 }
                 else if (spawnedObject.tag == "Player")
                 {
+                    spawnedObject.gameObject.SetActive(true);
                     playerHealth = spawnedObject.GetComponent<HealthAndEnergy>();
                     playerHealth.OnDied += reactToPlayerDeath;
                 }

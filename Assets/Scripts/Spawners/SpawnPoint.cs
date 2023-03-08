@@ -57,10 +57,10 @@ public class SpawnPoint : MonoBehaviour
         }
     }
 
-    //private void Start()
-    //{
-    //    Spawn();
-    //}
+    /*private void Start()
+    {
+        Spawn();
+    }*/
 
     public GameObject Spawn()
     {
@@ -87,15 +87,15 @@ public class SpawnPoint : MonoBehaviour
         {
             GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
             
-            GameObject playerInstantiated = Instantiate(prefab, transform.position, Quaternion.identity, transform);
-            if (playerInstantiated.GetComponent<GunManager>())
+            GameObject prefabInstantiated = Instantiate(prefab, transform.position, Quaternion.identity, transform);
+            /*if (playerInstantiated.GetComponent<GunManager>())
             {
                 playerInstantiated.GetComponent<GunManager>().GunName = GunManager.GunType.OnyxSniper;
-                /*                prefab.GetComponent<GunManager>().randomGun = true;
-                */
-            }
+                *//*                prefab.GetComponent<GunManager>().randomGun = true;
+                *//*
+            }*/
 
-            return playerInstantiated;
+            return prefabInstantiated;
         }
         else
         {
@@ -110,8 +110,12 @@ public class SpawnPoint : MonoBehaviour
             }
             else
             {
-                GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
+                GameObject prefab = prefabs[0];
                 GameObject newPlayer = Instantiate(prefab, transform.position, Quaternion.identity);
+                if (newPlayer != null)
+                {
+                    Debug.Log("new player instantiated!");
+                }
                 return newPlayer;
             }
         }

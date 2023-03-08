@@ -128277,7 +128277,7 @@ PrefabInstance:
     - target: {fileID: 229224493511529672, guid: 4831c2c1aeadf45c19fbc69544373ac6, type: 3}
       propertyPath: prefabList.Array.data[0].prefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 5911997805959121798, guid: ccf9acf860b8bc34a8a4ccbb0edf7d1b, type: 3}
+      objectReference: {fileID: 5911997805959121798, guid: 9af96616e9fc84b42bd9b242d2de19c9, type: 3}
     - target: {fileID: 229224493511529673, guid: 4831c2c1aeadf45c19fbc69544373ac6, type: 3}
       propertyPath: m_Name
       value: SpawnPoint
