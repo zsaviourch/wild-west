@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Audiokinetic Wwise generated include file. Do not edit.
@@ -37,6 +36,9 @@ namespace AK
         static const AkUniqueID LAMIAHURT = 4077017716U;
         static const AkUniqueID LEVEL1START = 3438030758U;
         static const AkUniqueID LEVEL2START = 192279183U;
+        static const AkUniqueID LEVEL3START = 462546520U;
+        static const AkUniqueID LEVEL4START = 1983837969U;
+        static const AkUniqueID MENUSTART = 1447920996U;
         static const AkUniqueID MUSICSTART = 1122283870U;
         static const AkUniqueID PLAYERDASH = 2525052962U;
         static const AkUniqueID PLAYERDIE = 3966601280U;
@@ -48,10 +50,10 @@ namespace AK
         static const AkUniqueID SNIPEREXPLODE = 734204211U;
         static const AkUniqueID SOULDROP = 2940614623U;
         static const AkUniqueID SOULPICKUP = 3739246548U;
+        static const AkUniqueID STOPSHOOT = 3938728838U;
         static const AkUniqueID TIKBALANGATTACK = 2408912248U;
         static const AkUniqueID TIKBALANGDIE = 2437003014U;
         static const AkUniqueID TIKBALANGHURT = 382555423U;
-        static const AkUniqueID VICTORYSTART = 1460238139U;
         static const AkUniqueID WENDIGODIE = 1753832348U;
         static const AkUniqueID WENDIGOHURT = 4294852885U;
         static const AkUniqueID WENDIGOMISSILE = 2286643954U;
@@ -62,6 +64,19 @@ namespace AK
 
     namespace STATES
     {
+        namespace MUSICINTENSITY
+        {
+            static const AkUniqueID GROUP = 1301299809U;
+
+            namespace STATE
+            {
+                static const AkUniqueID HIGHINTENSITY = 3521294064U;
+                static const AkUniqueID LOWINTENSITY = 4231975828U;
+                static const AkUniqueID MIDINTENSITY = 623939704U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSICINTENSITY
+
         namespace MUSICREGIONS
         {
             static const AkUniqueID GROUP = 2753803885U;
@@ -72,6 +87,8 @@ namespace AK
                 static const AkUniqueID MUSICCREDITS = 435872092U;
                 static const AkUniqueID MUSICLEVEL1 = 4206939873U;
                 static const AkUniqueID MUSICLEVEL2 = 4206939874U;
+                static const AkUniqueID MUSICLEVEL3 = 4206939875U;
+                static const AkUniqueID MUSICLEVEL4 = 4206939876U;
                 static const AkUniqueID MUSICMENU = 4082046343U;
                 static const AkUniqueID MUSICVICTORY = 1359346036U;
                 static const AkUniqueID NONE = 748895195U;
@@ -94,18 +111,6 @@ namespace AK
 
     namespace SWITCHES
     {
-        namespace MUSICINTENSITY
-        {
-            static const AkUniqueID GROUP = 1301299809U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID HIGHINT = 3420765524U;
-                static const AkUniqueID LOWINT = 3325438800U;
-                static const AkUniqueID MIDINT = 487624844U;
-            } // namespace SWITCH
-        } // namespace MUSICINTENSITY
-
         namespace PICKUPSWITCH
         {
             static const AkUniqueID GROUP = 2159605653U;
@@ -155,11 +160,12 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID ENVIRONMENT1 = 3761286873U;
-        static const AkUniqueID ENVIRONMENT2 = 3761286874U;
-        static const AkUniqueID ENVIRONMENTBOSS = 863592867U;
+        static const AkUniqueID CASADIABLO = 2461987978U;
+        static const AkUniqueID COLDMEADOWS = 3825844063U;
+        static const AkUniqueID DARKHURST = 3197048195U;
+        static const AkUniqueID FINALBOSS = 2147352708U;
         static const AkUniqueID GAMEPLAYLOOP = 1646894747U;
-        static const AkUniqueID TITLESCREEN = 152105657U;
+        static const AkUniqueID RUSTBURROW = 1104270810U;
     } // namespace BANKS
 
     namespace BUSSES
@@ -186,114 +192,3 @@ namespace AK
 }// namespace AK
 
 #endif // __WWISE_IDS_H__
-=======
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-// Audiokinetic Wwise generated include file. Do not edit.
-//
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#ifndef __WWISE_IDS_H__
-#define __WWISE_IDS_H__
-
-#include <AK/SoundEngine/Common/AkTypes.h>
-
-namespace AK
-{
-    namespace EVENTS
-    {
-        static const AkUniqueID CRYSTALRIFLESHOT = 4170654817U;
-        static const AkUniqueID EMPTYCLIP2 = 2528183560U;
-        static const AkUniqueID GOATATTACK = 720364476U;
-        static const AkUniqueID GOATDIE = 404655026U;
-        static const AkUniqueID GOATHURT = 2445642675U;
-        static const AkUniqueID GOLEMATTACK = 4272317039U;
-        static const AkUniqueID GOLEMDIE = 838703051U;
-        static const AkUniqueID GOLEMHURT = 2573158568U;
-        static const AkUniqueID GUNRELOAD = 323245414U;
-        static const AkUniqueID GUNSHOOT = 3194616450U;
-        static const AkUniqueID LAMIAATTACK = 1609923659U;
-        static const AkUniqueID LAMIADIE = 3060973567U;
-        static const AkUniqueID LAMIAHURT = 4077017716U;
-        static const AkUniqueID PLAYERDASH = 2525052962U;
-        static const AkUniqueID PLAYERDIE = 3966601280U;
-        static const AkUniqueID PLAYERENERGYEMPTY = 2374849433U;
-        static const AkUniqueID PLAYERENERGYLOW = 1839772676U;
-        static const AkUniqueID PLAYERENERGYMAX = 1605033336U;
-        static const AkUniqueID PLAYERHEALTHLOW = 583027834U;
-        static const AkUniqueID PLAYERHEALTHMAX = 4173482238U;
-        static const AkUniqueID PLAYERHEALTHPICKUP = 3292114096U;
-        static const AkUniqueID PLAYERHURT = 3537581393U;
-        static const AkUniqueID SNIPEREXPLODE = 734204211U;
-        static const AkUniqueID SOULDROP = 2940614623U;
-        static const AkUniqueID SOULPICKUP = 3739246548U;
-        static const AkUniqueID TIKBALANGATTACK = 2408912248U;
-        static const AkUniqueID TIKBALANGDIE = 2437003014U;
-        static const AkUniqueID TIKBALANGHURT = 382555423U;
-        static const AkUniqueID WENDIGOCHARGE = 1016938702U;
-        static const AkUniqueID WENDIGODIE = 1753832348U;
-        static const AkUniqueID WENDIGOHURT = 4294852885U;
-        static const AkUniqueID WENDIGOMISSILE = 2286643954U;
-        static const AkUniqueID WENDIGOSLAM = 3438274769U;
-        static const AkUniqueID WENDIGOSLASH = 1823178165U;
-    } // namespace EVENTS
-
-    namespace SWITCHES
-    {
-        namespace WEAPONSWITCH
-        {
-            static const AkUniqueID GROUP = 2107435045U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID GUNREVOLVER = 2548468192U;
-                static const AkUniqueID GUNRIFLE = 163030769U;
-                static const AkUniqueID GUNSHOTGUN = 831777997U;
-                static const AkUniqueID GUNSNIPER = 998971168U;
-            } // namespace SWITCH
-        } // namespace WEAPONSWITCH
-
-    } // namespace SWITCHES
-
-    namespace GAME_PARAMETERS
-    {
-        static const AkUniqueID DISTANCE = 1240670792U;
-        static const AkUniqueID MUSICVOLUME = 2346531308U;
-        static const AkUniqueID ROFINCREASE = 2426350174U;
-        static const AkUniqueID SFXVOLUME = 988953028U;
-    } // namespace GAME_PARAMETERS
-
-    namespace BANKS
-    {
-        static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID ENVIRONMENT1 = 3761286873U;
-        static const AkUniqueID ENVIRONMENT2 = 3761286874U;
-        static const AkUniqueID ENVIRONMENTBOSS = 863592867U;
-        static const AkUniqueID GAMEPLAYLOOP = 1646894747U;
-        static const AkUniqueID NEW_GAMEPLAYLOOP = 56277894U;
-    } // namespace BANKS
-
-    namespace BUSSES
-    {
-        static const AkUniqueID AMBIENT = 77978275U;
-        static const AkUniqueID DIALOGUE = 3930136735U;
-        static const AkUniqueID ENEMIES = 2242381963U;
-        static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID MUSIC = 3991942870U;
-        static const AkUniqueID NON_WORLD = 838047381U;
-        static const AkUniqueID PLAYER = 1069431850U;
-        static const AkUniqueID UI = 1551306167U;
-        static const AkUniqueID VOICE = 3170124113U;
-        static const AkUniqueID WORLD = 2609808943U;
-    } // namespace BUSSES
-
-    namespace AUDIO_DEVICES
-    {
-        static const AkUniqueID NO_OUTPUT = 2317455096U;
-        static const AkUniqueID SYSTEM = 3859886410U;
-    } // namespace AUDIO_DEVICES
-
-}// namespace AK
-
-#endif // __WWISE_IDS_H__
->>>>>>> Stashed changes

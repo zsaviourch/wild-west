@@ -112,7 +112,7 @@
 										<AudioFileSource Name="Click_01" ID="{570C81F5-0EEC-4170-A44F-9E997D2BCB1B}">
 											<PropertyList>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.339231078840394"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.338268265939239"/>
 												<Property Name="TrimEnd" Type="Real64" Value="0.400209229246898"/>
 											</PropertyList>
 											<Language>SFX</Language>

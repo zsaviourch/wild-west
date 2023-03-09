@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3439d076b5a760e4299fcdd4cf3bb98c, type: 3}
+  m_Name: 21524E7E-E981-4FBF-830C-21F19C82B63F
+  m_EditorClassIdentifier: 
+  objectName: coldMeadows
+  id: 3825844063
+  guid: 21524E7E-E981-4FBF-830C-21F19C82B63F
+  bank: {fileID: 11400000, guid: d0b4c259b54174a4a8ce524c3610c37f, type: 2}

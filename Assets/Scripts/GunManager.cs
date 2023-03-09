@@ -116,24 +116,28 @@ public class GunManager : MonoBehaviour
                 ToggleGunScript(GunType.BerylShotgun, false);
                 ToggleGunScript(GunType.OnyxSniper, false);
                 ToggleGunScript(GunType.TopazGun, false);
+                AkSoundEngine.SetSwitch("weaponswitch", "gunRifle", player);
                 break;
             case GunType.BerylShotgun:
                 ToggleGunScript(GunType.JasperRifle, false);
                 ToggleGunScript(GunType.BerylShotgun, true);
                 ToggleGunScript(GunType.OnyxSniper, false);
                 ToggleGunScript(GunType.TopazGun, false);
+                AkSoundEngine.SetSwitch("weaponswitch", "gunShotgun", player);
                 break;
             case GunType.OnyxSniper:
                 ToggleGunScript(GunType.JasperRifle, false);
                 ToggleGunScript(GunType.BerylShotgun, false);
                 ToggleGunScript(GunType.OnyxSniper, true);
                 ToggleGunScript(GunType.TopazGun, false);
+                AkSoundEngine.SetSwitch("weaponswitch", "gunSniper", player);
                 break;
             case GunType.TopazGun:
                 ToggleGunScript(GunType.JasperRifle, false);
                 ToggleGunScript(GunType.BerylShotgun, false);
                 ToggleGunScript(GunType.OnyxSniper, false);
                 ToggleGunScript(GunType.TopazGun, true);
+                AkSoundEngine.SetSwitch("weaponswitch", "gunRevolver", player);
                 break;
         }
     }

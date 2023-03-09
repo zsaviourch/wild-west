@@ -15,6 +15,8 @@
 						<State Name="musicLevel1" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
 						<State Name="musicLevel2" ID="{E2DD3D01-CB1E-4158-A634-1A490E3CF55E}"/>
 						<State Name="musicVictory" ID="{29BF6F26-1A6C-49B1-94FD-562C8A00E11A}"/>
+						<State Name="musicLevel3" ID="{D9B92C5B-7F66-4FB9-A704-52C148777F50}"/>
+						<State Name="musicLevel4" ID="{482CF2DF-1E9E-462F-B536-55DDA2B59DA8}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>
@@ -54,6 +56,14 @@
 						<State Name="None" ID="{724DA6B8-F9EB-443B-BEA8-A850B83B6F8C}"/>
 						<State Name="playerAlive" ID="{32B0F653-6B3C-4BB0-B237-2343492DF765}"/>
 						<State Name="playerDefeated" ID="{611C58CE-D8A6-4692-9B31-D93B6652D2FB}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="MusicIntensity" ID="{3627095C-828A-44FA-B058-2D821C46C8D1}">
+					<ChildrenList>
+						<State Name="None" ID="{424B9336-2C12-4A73-B78C-F4CC11B73161}"/>
+						<State Name="lowIntensity" ID="{406E1EA2-7738-4047-BC5F-FA0798E38105}"/>
+						<State Name="midIntensity" ID="{CD1FFE49-141E-4694-A87A-21D30F8A36EC}"/>
+						<State Name="highIntensity" ID="{AEEB4ECD-99F1-44E8-AEAB-AD12A03E90A6}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

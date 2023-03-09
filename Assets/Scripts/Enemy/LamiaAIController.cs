@@ -83,6 +83,7 @@ private void Shoot()
         lastAttackTime = Time.time;
         animator.SetTrigger("attack");
         animator.SetBool("isShooting", true);
+            AkSoundEngine.PostEvent("lamiaAttack", this.gameObject);
 
         Vector2 direction = (PlayerController.Instance.transform.position - shootPoint.position).normalized;
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
@@ -106,11 +107,13 @@ private void ResetShooting()
         if (!isDead)
         {
             base.TakeDamage(damage);
-            AudioManager.Instance.Play("lamiaHurt");
+            //AudioManager.Instance.Play("lamiaHurt");
+            AkSoundEngine.PostEvent("lamiaHurt", this.gameObject);
             if (isDead)
             {
                 StopAllCoroutines();
-                AudioManager.Instance.Play("lamiaDie");
+                //AudioManager.Instance.Play("lamiaDie");
+                AkSoundEngine.PostEvent("lamiaDie", this.gameObject);
                 animator.SetBool("isDead", true);
                 // disable all colliders and the Rigidbody2D
                 Collider2D[] colliders = GetComponentsInChildren<Collider2D>();

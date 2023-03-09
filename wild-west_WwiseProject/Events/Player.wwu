@@ -154,6 +154,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="stopShoot" ID="{65553334-9868-4CAC-B13C-88F88460119B}">
+							<ChildrenList>
+								<Action Name="" ID="{D2CBBF35-ABFC-42FC-ADDB-9D382E088646}" ShortID="440813911">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SwitchGunShoot" ID="{C61173D1-2523-45AE-96BF-955AA788DD0E}" WorkUnitID="{1B5D1CFD-49EA-435C-9D14-E5D5EE9363D8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

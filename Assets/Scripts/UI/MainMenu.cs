@@ -59,12 +59,13 @@ public class MainMenu : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
         creditsPage.SetActive(true);
         creditsAnim.SetTrigger("StartCredits");
-        AudioManager.Instance.Play("creditsTheme");
-        AudioManager.Instance.Stop("menuTheme");
+        AkSoundEngine.PostEvent("creditsStart", this.gameObject);
+        //AudioManager.Instance.Play("creditsTheme");
+        //AudioManager.Instance.Stop("menuTheme");
         crossfade.SetTrigger("End");
         
         yield return new WaitForSeconds(65f); // If the entire credits finishes playing, stop looping credits music
-        AudioManager.Instance.Stop("creditsTheme");
+        //AudioManager.Instance.Stop("creditsTheme");
     }
     
     IEnumerator EndCredits()
@@ -72,9 +73,10 @@ public class MainMenu : MonoBehaviour
         crossfade.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         creditsAnim.SetTrigger("EndCredits");
-        AudioManager.Instance.Stop("creditsTheme");
-        AudioManager.Instance.Play("menuTheme");
+        //AudioManager.Instance.Stop("creditsTheme");
+        //AudioManager.Instance.Play("menuTheme");
         creditsPage.SetActive(false);
+        AkSoundEngine.PostEvent("menuStart", this.gameObject);
         crossfade.SetTrigger("End");
     }
     

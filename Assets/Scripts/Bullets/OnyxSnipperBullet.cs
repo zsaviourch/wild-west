@@ -179,8 +179,14 @@ public class OnyxSnipperBullet : MonoBehaviour
             Transform parent = collision.gameObject.transform;
             gameObject.transform.SetParent(parent);
         }
-            //collision.gameObject.GetComponent<Enemy_Test>().health -= bulletDamage;
-            //Destroy(gameObject);
+        // hit the enemy
+        if (collision.gameObject.CompareTag("enemy"))
+        {
+            collision.gameObject.GetComponent<AIController>().TakeDamage(bulletDamage);
+            rb.isKinematic = true;
+        }
+        //collision.gameObject.GetComponent<Enemy_Test>().health -= bulletDamage;
+        //Destroy(gameObject);
         // hit the obstacle
         //if (collision.gameObject.CompareTag("obstacle"))
         //{
@@ -293,6 +299,7 @@ public class OnyxSnipperBullet : MonoBehaviour
             }
         }
         StartCoroutine(ExplodeAnimation());
+        AkSoundEngine.PostEvent("sniperExplode", gameObject);
         Destroy(gameObject);
     }
 
@@ -300,7 +307,7 @@ public class OnyxSnipperBullet : MonoBehaviour
     {
         GameObject explosion = Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
         yield return new WaitForSeconds(2);
-        Destroy(explosion);
+        Destroy(explosion, 2f);
         GameObject[] explosions = GameObject.FindGameObjectsWithTag("explosion");
         foreach (GameObject e in explosions)
         {

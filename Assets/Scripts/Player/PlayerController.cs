@@ -104,8 +104,9 @@ public class PlayerController : MonoBehaviour
         if (healthAndEnergy.currentHealth <= 0)
         {
             Die();
+            AkSoundEngine.PostEvent("playerDie", this.gameObject);
             // Add your logic here
-        }
+        } else { AkSoundEngine.PostEvent("playerHurt", this.gameObject); }
     }
 
     private void Die()

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: WwiseData_Mac
+  m_EditorClassIdentifier: 
+  m_GroupName: WwiseData_Mac
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 6b2c307a186af0f4fab2fd1810df9368
+  m_SerializeEntries:
+  - m_GUID: 9b465d88abfa1d74b8f2b3ca4cb707a5
+    m_Address: Assets/WwiseData/Banks/Mac/GameplayLoop.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b99899bdcc152cb48bb87ad62155c6f0
+    m_Address: Assets/WwiseData/Banks/Mac/finalBoss.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5412e95f20d95c74b98567f3f535049a
+    m_Address: Assets/WwiseData/Banks/Mac/darkHurst.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 938818078dd33ab4e882a79e6cd796ad
+    m_Address: Assets/WwiseData/Banks/Mac/rustBurrow.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f3683c1f6d97be9429c8c4220dd8f07f
+    m_Address: Assets/WwiseData/Banks/Mac/casaDiablo.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92b28dd1a64f3aa48a7148c1fa008322
+    m_Address: Assets/WwiseData/Banks/Mac/coldMeadows.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 20507172ec2a2e2489cdc417ffcc9a9c, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4eeae7aa5a812ef42abf23b50847d325, type: 2}
+    - {fileID: 11400000, guid: 25708aeceeabc654a863e158318555da, type: 2}
