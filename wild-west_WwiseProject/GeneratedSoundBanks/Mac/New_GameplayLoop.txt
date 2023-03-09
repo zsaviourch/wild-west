@@ -1,8 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	2528183560	EmptyClip2			\ManuallyAddedSingleAudio\GunShooting\EmptyClip2	
-	4170654817	CrystalRifleShot			\ManuallyAddedSingleAudio\GunShooting\CrystalRifleShot	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	453180518	Crystal Rifle	Y:\Desktop\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\Crystal Rifle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\Crystal Rifle		461312
-	544632092	emptyClip	Y:\Desktop\wild-west\wild-west_WwiseProject\.cache\Mac\SFX\EmptyClip_6481F61E.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Player\Player\Weapons\emptyClip		35376
-

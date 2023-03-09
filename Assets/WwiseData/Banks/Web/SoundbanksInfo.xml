@@ -176,7 +176,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{FC40D980-A700-34B9-A958-D1D42C3BD870}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{08883F3D-1AD1-9227-9DA9-BC325E31F473}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -842,7 +842,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2147352708" Type="User" Language="SFX" Hash="{E06F1BC3-5A72-6816-1CC7-A62F8A16713E}">
+		<SoundBank Id="2147352708" Type="User" Language="SFX" Hash="{2DA10BA8-8B29-C976-5FC9-D870AA0B064B}">
 			<ShortName>finalBoss</ShortName>
 			<Path>finalBoss.bnk</Path>
 			<Media>
@@ -1157,5 +1157,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E90B8BBB-A6E9-86F1-C822-41A7C110361C}</FileHash>
+	<FileHash>{74F77337-CAB2-8EC7-459D-193C020E0CC8}</FileHash>
 </SoundBanksInfo>

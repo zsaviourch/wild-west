@@ -6,6 +6,11 @@
 				<ActorMixer Name="Enemies" ID="{37E7206D-D6EF-480A-B2DB-B030BEE04653}" ShortID="864245185">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>49</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideOutput" Type="bool" Value="True"/>
 						<Property Name="OverridePositioning" Type="bool" Value="True"/>
 					</PropertyList>
