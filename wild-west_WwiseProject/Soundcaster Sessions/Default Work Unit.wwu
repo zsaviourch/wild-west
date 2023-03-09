@@ -119,7 +119,7 @@
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="playerAlive" ID="{32B0F653-6B3C-4BB0-B237-2343492DF765}"/>
 						<CurrentStateRef Name="musicLevel1" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
-						<CurrentStateRef Name="midIntensity" ID="{CD1FFE49-141E-4694-A87A-21D30F8A36EC}"/>
+						<CurrentStateRef Name="highIntensity" ID="{AEEB4ECD-99F1-44E8-AEAB-AD12A03E90A6}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="sandTerrain" ID="{53E18930-8380-48B6-A5ED-5BF6ADDCD666}"/>
