@@ -13,17 +13,6 @@ MonoBehaviour:
   m_Name: GameplayLoop
   m_EditorClassIdentifier: 
   m_dataPerPlatformList:
-  - WwisePlatform: Mac
-    LocalizedBankKeys:
-    - SFX
-    LocalizedBanksValues:
-    - m_AssetGUID: 9b465d88abfa1d74b8f2b3ca4cb707a5
-      m_SubObjectName: 
-      m_SubObjectType: 
-      m_EditorAssetChanged: 0
-    LocalizedStreamingMediaKeys: []
-    LocalizedStreamingMediaValues:
-      localizedMediaList: []
   - WwisePlatform: Web
     LocalizedBankKeys:
     - SFX
@@ -40,6 +29,17 @@ MonoBehaviour:
     - SFX
     LocalizedBanksValues:
     - m_AssetGUID: 32891dafeb088c740b3a42419245f4ff
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    LocalizedStreamingMediaKeys: []
+    LocalizedStreamingMediaValues:
+      localizedMediaList: []
+  - WwisePlatform: Mac
+    LocalizedBankKeys:
+    - SFX
+    LocalizedBanksValues:
+    - m_AssetGUID: 9b465d88abfa1d74b8f2b3ca4cb707a5
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: casaDiablo
   m_EditorClassIdentifier: 
   m_dataPerPlatformList:
-  - WwisePlatform: Mac
+  - WwisePlatform: Windows
     LocalizedBankKeys:
     - SFX
     LocalizedBanksValues:
-    - m_AssetGUID: f3683c1f6d97be9429c8c4220dd8f07f
+    - m_AssetGUID: 39085c6136ffa3846ae39549819c8282
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
@@ -35,11 +35,11 @@ MonoBehaviour:
     LocalizedStreamingMediaKeys: []
     LocalizedStreamingMediaValues:
       localizedMediaList: []
-  - WwisePlatform: Windows
+  - WwisePlatform: Mac
     LocalizedBankKeys:
     - SFX
     LocalizedBanksValues:
-    - m_AssetGUID: 39085c6136ffa3846ae39549819c8282
+    - m_AssetGUID: f3683c1f6d97be9429c8c4220dd8f07f
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0

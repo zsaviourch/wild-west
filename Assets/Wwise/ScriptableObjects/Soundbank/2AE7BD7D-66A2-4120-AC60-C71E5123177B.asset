@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: rustBurrow
   id: 1104270810
   guid: 2AE7BD7D-66A2-4120-AC60-C71E5123177B
-  bank: {fileID: 0}
+  bank: {fileID: 11400000, guid: cc17ae1f50a060243a0ace1d93e142cb, type: 2}

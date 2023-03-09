@@ -118,8 +118,8 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="playerAlive" ID="{32B0F653-6B3C-4BB0-B237-2343492DF765}"/>
-						<CurrentStateRef Name="musicLevel1" ID="{929E30F9-DA6E-4340-B5C8-8C3BA46E189E}"/>
-						<CurrentStateRef Name="highIntensity" ID="{AEEB4ECD-99F1-44E8-AEAB-AD12A03E90A6}"/>
+						<CurrentStateRef Name="musicLevel3" ID="{D9B92C5B-7F66-4FB9-A704-52C148777F50}"/>
+						<CurrentStateRef Name="lowIntensity" ID="{406E1EA2-7738-4047-BC5F-FA0798E38105}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="sandTerrain" ID="{53E18930-8380-48B6-A5ED-5BF6ADDCD666}"/>

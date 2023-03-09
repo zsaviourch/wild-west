@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: darkHurst
   m_EditorClassIdentifier: 
   m_dataPerPlatformList:
-  - WwisePlatform: Mac
+  - WwisePlatform: Web
     LocalizedBankKeys:
     - SFX
     LocalizedBanksValues:
-    - m_AssetGUID: 5412e95f20d95c74b98567f3f535049a
+    - m_AssetGUID: 3426c3834b2173c42aded53a1e3422d6
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     LocalizedStreamingMediaKeys: []
     LocalizedStreamingMediaValues:
       localizedMediaList: []
-  - WwisePlatform: Web
+  - WwisePlatform: Mac
     LocalizedBankKeys:
     - SFX
     LocalizedBanksValues:
-    - m_AssetGUID: 3426c3834b2173c42aded53a1e3422d6
+    - m_AssetGUID: 5412e95f20d95c74b98567f3f535049a
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
