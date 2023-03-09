@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="playerHurt" ID="{4D8D52F2-0EC2-4046-866A-7AF2954A7D0E}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="musicStart" ID="{84386058-9B6D-40A0-BBD5-2D0D16ED0D94}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="1"/>
+						<ObjectRef Name="victoryStart" ID="{318961EB-70B1-40EE-BDFC-588A7E5A7B06}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="gunReload" ID="{E3E1306A-DE9B-4107-99AF-8532CB2CE6B1}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerEnergyEmpty" ID="{773D51E0-38A1-423A-AE9D-2D18C1294C07}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Ice Goat" ID="{C26EB4F8-D960-427F-95FC-F14EDFBCC872}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>

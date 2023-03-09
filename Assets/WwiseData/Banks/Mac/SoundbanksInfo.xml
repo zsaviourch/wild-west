@@ -9,57 +9,57 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1104270810" Type="User" Language="SFX" Hash="{321539FC-2ADF-E47C-2029-6CCE8EDBAB4A}">
+		<SoundBank Id="1104270810" Type="User" Language="SFX" Hash="{0D221E1E-4274-AB3E-9D8E-09064996A565}">
 			<ShortName>rustBurrow</ShortName>
 			<Path>rustBurrow.bnk</Path>
 			<Media>
 				<File Id="19613536" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2Low-003.wav</ShortName>
-					<CachePath>SFX/WWLevel2Low-003_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2Low-003_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="101826339" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2Mid-004.wav</ShortName>
-					<CachePath>SFX/WWLevel2Mid-004_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2Mid-004_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="144599829" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2High-002.wav</ShortName>
-					<CachePath>SFX/WWLevel2High-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2High-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="319415945" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2Low-001.wav</ShortName>
-					<CachePath>SFX/WWLevel2Low-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2Low-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="334936861" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2Low-004.wav</ShortName>
-					<CachePath>SFX/WWLevel2Low-004_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2Low-004_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="695024915" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2Low-002.wav</ShortName>
-					<CachePath>SFX/WWLevel2Low-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2Low-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="699933297" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2High-001.wav</ShortName>
-					<CachePath>SFX/WWLevel2High-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2High-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="729578899" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2Mid-003.wav</ShortName>
-					<CachePath>SFX/WWLevel2Mid-003_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2Mid-003_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="882511775" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2High-004.wav</ShortName>
-					<CachePath>SFX/WWLevel2High-004_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2High-004_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="933226470" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2High-003.wav</ShortName>
-					<CachePath>SFX/WWLevel2High-003_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2High-003_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="957525864" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2Mid-001.wav</ShortName>
-					<CachePath>SFX/WWLevel2Mid-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2Mid-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="1072780429" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel2Mid-002.wav</ShortName>
-					<CachePath>SFX/WWLevel2Mid-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel2Mid-002_9EDFC787.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -176,7 +176,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{601E53A1-CBAE-02E0-BDD6-0A7CAA8EB9D1}">
+		<SoundBank Id="1646894747" Type="User" Language="SFX" Hash="{FC40D980-A700-34B9-A958-D1D42C3BD870}">
 			<ShortName>GameplayLoop</ShortName>
 			<Path>GameplayLoop.bnk</Path>
 			<Media>
@@ -222,7 +222,7 @@
 				</File>
 				<File Id="175513949" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Death_Theme_Mixdown_V1_BrackeysGameJam2023.wav</ShortName>
-					<CachePath>SFX/Death_Theme_Mixdown_V1_BrackeysGameJam2023_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Death_Theme_Mixdown_V1_BrackeysGameJam2023_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="176955351" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Soul Reload.wav</ShortName>
@@ -246,7 +246,7 @@
 				</File>
 				<File Id="202366396" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Credits_Theme_Mixdown_V2_BrackeysGameJam2023.wav</ShortName>
-					<CachePath>SFX/Credits_Theme_Mixdown_V2_BrackeysGameJam2023_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Credits_Theme_Mixdown_V2_BrackeysGameJam2023_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="209860096" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RevolverClickOut.wav</ShortName>
@@ -398,7 +398,7 @@
 				</File>
 				<File Id="783135946" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Main_Menu_Mixdown_V1_BrackeysGameJam2023.wav</ShortName>
-					<CachePath>SFX/Main_Menu_Mixdown_V1_BrackeysGameJam2023_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Main_Menu_Mixdown_V1_BrackeysGameJam2023_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="795595915" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Wood Footstep-001.wav</ShortName>
@@ -410,7 +410,7 @@
 				</File>
 				<File Id="899331520" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Stage_Clear_Theme_Mixdown_V1_BrackeysGameJam2023.wav</ShortName>
-					<CachePath>SFX/Stage_Clear_Theme_Mixdown_V1_BrackeysGameJam2023_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/Stage_Clear_Theme_Mixdown_V1_BrackeysGameJam2023_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="904322900" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player LowHealth.wav</ShortName>
@@ -784,6 +784,11 @@
 						<MediaRef Id="433725598"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1460238139" Name="victoryStart" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="2753803885" Id="1359346036" Name="musicVictory"/>
+					</ActionSetState>
+				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="1240670792" Name="Distance"/>
@@ -837,7 +842,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2147352708" Type="User" Language="SFX" Hash="{C41FE49D-095A-7151-B716-9FA1E75B6C74}">
+		<SoundBank Id="2147352708" Type="User" Language="SFX" Hash="{E06F1BC3-5A72-6816-1CC7-A62F8A16713E}">
 			<ShortName>finalBoss</ShortName>
 			<Path>finalBoss.bnk</Path>
 			<Media>
@@ -859,11 +864,11 @@
 				</File>
 				<File Id="522819470" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestBossTrack-002.wav</ShortName>
-					<CachePath>SFX/WildWestBossTrack-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestBossTrack-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="635594137" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestBossTrack-001.wav</ShortName>
-					<CachePath>SFX/WildWestBossTrack-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestBossTrack-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="736210807" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Goelm Shield Hit.wav</ShortName>
@@ -932,57 +937,57 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2461987978" Type="User" Language="SFX" Hash="{7968874E-4412-2403-847F-C5D78D985D0E}">
+		<SoundBank Id="2461987978" Type="User" Language="SFX" Hash="{9E69F22D-F713-4B81-F632-2492CBC9FCC5}">
 			<ShortName>casaDiablo</ShortName>
 			<Path>casaDiablo.bnk</Path>
 			<Media>
 				<File Id="20960124" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityHigh-002.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityHigh-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityHigh-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="224791011" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityMid-002.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityMid-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityMid-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="239999480" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityLow-003.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityLow-003_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityLow-003_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="310412876" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityHigh-003.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityHigh-003_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityHigh-003_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="343659696" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityHigh-001.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityHigh-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityHigh-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="469791924" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityLow-001.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityLow-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityLow-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="550634096" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityLow-002.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityLow-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityLow-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="609982359" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityHigh-004.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityHigh-004_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityHigh-004_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="666953101" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityMid-003.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityMid-003_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityMid-003_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="711704489" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityLow-004.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityLow-004_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityLow-004_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="741515912" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityMid-004.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityMid-004_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityMid-004_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="1032971319" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WildWestLevel1IntensityMid-001.wav</ShortName>
-					<CachePath>SFX/WildWestLevel1IntensityMid-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WildWestLevel1IntensityMid-001_9EDFC787.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -1017,33 +1022,33 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3197048195" Type="User" Language="SFX" Hash="{8BD5E5E3-295A-AA67-AAA6-2C8CD96C5F7D}">
+		<SoundBank Id="3197048195" Type="User" Language="SFX" Hash="{50DFCDC8-C94F-C4A3-6588-FB1F15709E9B}">
 			<ShortName>darkHurst</ShortName>
 			<Path>darkHurst.bnk</Path>
 			<Media>
 				<File Id="154146861" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel3High-002.wav</ShortName>
-					<CachePath>SFX/WWLevel3High-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel3High-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="263485667" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel3Low-002.wav</ShortName>
-					<CachePath>SFX/WWLevel3Low-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel3Low-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="492720763" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel3Mid-001.wav</ShortName>
-					<CachePath>SFX/WWLevel3Mid-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel3Mid-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="611682969" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel3Low-001.wav</ShortName>
-					<CachePath>SFX/WWLevel3Low-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel3Low-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="692733845" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel3Mid-002.wav</ShortName>
-					<CachePath>SFX/WWLevel3Mid-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel3Mid-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="921515768" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel3High-001.wav</ShortName>
-					<CachePath>SFX/WWLevel3High-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel3High-001_9EDFC787.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -1078,45 +1083,45 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3825844063" Type="User" Language="SFX" Hash="{C025A8C3-555F-11AE-0445-DEAD588597CF}">
+		<SoundBank Id="3825844063" Type="User" Language="SFX" Hash="{B1092FD6-0C67-186D-A3ED-4075B27FA194}">
 			<ShortName>coldMeadows</ShortName>
 			<Path>coldMeadows.bnk</Path>
 			<Media>
 				<File Id="103322" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel4Low-001.wav</ShortName>
-					<CachePath>SFX/WWLevel4Low-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel4Low-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="123422860" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel4Low-003.wav</ShortName>
-					<CachePath>SFX/WWLevel4Low-003_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel4Low-003_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="320998846" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel4High-003.wav</ShortName>
-					<CachePath>SFX/WWLevel4High-003_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel4High-003_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="343196905" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel4Mid-003.wav</ShortName>
-					<CachePath>SFX/WWLevel4Mid-003_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel4Mid-003_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="699541000" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel4Mid-002.wav</ShortName>
-					<CachePath>SFX/WWLevel4Mid-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel4Mid-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="861960979" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel4High-002.wav</ShortName>
-					<CachePath>SFX/WWLevel4High-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel4High-002_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="902642801" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel4High-001.wav</ShortName>
-					<CachePath>SFX/WWLevel4High-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel4High-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="972172787" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel4Mid-001.wav</ShortName>
-					<CachePath>SFX/WWLevel4Mid-001_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel4Mid-001_9EDFC787.wem</CachePath>
 				</File>
 				<File Id="986194685" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WWLevel4Low-002.wav</ShortName>
-					<CachePath>SFX/WWLevel4Low-002_D79FB2B7.wem</CachePath>
+					<CachePath>SFX/WWLevel4Low-002_9EDFC787.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -1152,5 +1157,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9F39A7B6-5633-6DFF-3202-42FC49824027}</FileHash>
+	<FileHash>{162CC63D-30CC-E233-2BA3-5D26680AF2F6}</FileHash>
 </SoundBanksInfo>

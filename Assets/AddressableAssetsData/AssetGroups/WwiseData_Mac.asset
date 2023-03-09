@@ -17,11 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 6b2c307a186af0f4fab2fd1810df9368
   m_SerializeEntries:
-  - m_GUID: 9b465d88abfa1d74b8f2b3ca4cb707a5
-    m_Address: Assets/WwiseData/Banks/Mac/GameplayLoop.bnk
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b99899bdcc152cb48bb87ad62155c6f0
     m_Address: Assets/WwiseData/Banks/Mac/finalBoss.bnk
     m_ReadOnly: 0
@@ -29,6 +24,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5412e95f20d95c74b98567f3f535049a
     m_Address: Assets/WwiseData/Banks/Mac/darkHurst.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b465d88abfa1d74b8f2b3ca4cb707a5
+    m_Address: Assets/WwiseData/Banks/Mac/GameplayLoop.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -54,6 +54,7 @@ namespace AK
         static const AkUniqueID TIKBALANGATTACK = 2408912248U;
         static const AkUniqueID TIKBALANGDIE = 2437003014U;
         static const AkUniqueID TIKBALANGHURT = 382555423U;
+        static const AkUniqueID VICTORYSTART = 1460238139U;
         static const AkUniqueID WENDIGODIE = 1753832348U;
         static const AkUniqueID WENDIGOHURT = 4294852885U;
         static const AkUniqueID WENDIGOMISSILE = 2286643954U;

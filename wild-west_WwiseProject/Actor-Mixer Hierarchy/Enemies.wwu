@@ -14,7 +14,7 @@
 							<ObjectRef Name="Enemies" ID="{10587636-42E1-4CDA-887E-80978A9943E7}" WorkUnitID="{A6FC31E0-593B-4710-9DD0-9CABF381A6A8}"/>
 						</Reference>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+							<ObjectRef Name="WebGL Music Conversion" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Enemies" ID="{ED768A83-EF3E-4A85-952F-95C2F3973ED6}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>

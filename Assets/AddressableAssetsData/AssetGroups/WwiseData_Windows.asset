@@ -17,13 +17,13 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 00cf3da82edd1cc429b65401019d402f
   m_SerializeEntries:
-  - m_GUID: 32891dafeb088c740b3a42419245f4ff
-    m_Address: Assets/WwiseData/Banks/Windows/GameplayLoop.bnk
+  - m_GUID: 145d152739ea07143a8f44a836daf9ef
+    m_Address: Assets/WwiseData/Banks/Windows/rustBurrow.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 145d152739ea07143a8f44a836daf9ef
-    m_Address: Assets/WwiseData/Banks/Windows/rustBurrow.bnk
+  - m_GUID: 32891dafeb088c740b3a42419245f4ff
+    m_Address: Assets/WwiseData/Banks/Windows/GameplayLoop.bnk
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

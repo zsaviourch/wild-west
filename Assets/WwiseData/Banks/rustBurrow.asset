@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: rustBurrow
   m_EditorClassIdentifier: 
   m_dataPerPlatformList:
-  - WwisePlatform: Windows
+  - WwisePlatform: Web
     LocalizedBankKeys:
     - SFX
     LocalizedBanksValues:
-    - m_AssetGUID: 145d152739ea07143a8f44a836daf9ef
+    - m_AssetGUID: 369980dc640a1874f96edb743d8fc1bd
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     LocalizedStreamingMediaKeys: []
     LocalizedStreamingMediaValues:
       localizedMediaList: []
-  - WwisePlatform: Web
+  - WwisePlatform: Windows
     LocalizedBankKeys:
     - SFX
     LocalizedBanksValues:
-    - m_AssetGUID: 369980dc640a1874f96edb743d8fc1bd
+    - m_AssetGUID: 145d152739ea07143a8f44a836daf9ef
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0

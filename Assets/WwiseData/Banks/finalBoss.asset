@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: finalBoss
   m_EditorClassIdentifier: 
   m_dataPerPlatformList:
-  - WwisePlatform: Mac
+  - WwisePlatform: Web
     LocalizedBankKeys:
     - SFX
     LocalizedBanksValues:
-    - m_AssetGUID: b99899bdcc152cb48bb87ad62155c6f0
+    - m_AssetGUID: 549573bc7cc6e4640aad48490ba619d2
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
     LocalizedStreamingMediaKeys: []
     LocalizedStreamingMediaValues:
       localizedMediaList: []
-  - WwisePlatform: Web
+  - WwisePlatform: Mac
     LocalizedBankKeys:
     - SFX
     LocalizedBanksValues:
-    - m_AssetGUID: 549573bc7cc6e4640aad48490ba619d2
+    - m_AssetGUID: b99899bdcc152cb48bb87ad62155c6f0
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0

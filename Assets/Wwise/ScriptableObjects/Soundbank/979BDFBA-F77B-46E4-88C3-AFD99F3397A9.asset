@@ -15,4 +15,4 @@ MonoBehaviour:
   objectName: casaDiablo
   id: 2461987978
   guid: 979BDFBA-F77B-46E4-88C3-AFD99F3397A9
-  bank: {fileID: 11400000, guid: b93345109a835424b98e4a27ec709af0, type: 2}
+  bank: {fileID: 11400000, guid: bfa96ee7d4fb1b24393bf5f70ecb79ce, type: 2}
