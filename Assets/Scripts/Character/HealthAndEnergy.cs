@@ -8,7 +8,7 @@ public class HealthAndEnergy : MonoBehaviour
     // References
     public int energyInitialAmount;
     public int currentEnergyAmount;
-    [SerializeField] int health;
+    public int health;
     public int currentHealth;
 
     // Start is called before the first frame update

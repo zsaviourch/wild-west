@@ -100,13 +100,22 @@ public class SpawnPoint : MonoBehaviour
         else
         {
             // Check if there is an existing player in the world
-            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-            if (players.Length > 0)
+            var controllers = GameObject.FindObjectsOfType<PlayerController>(true);
+            if (controllers.Length > 0)
             {
                 Debug.Log("A player already exists in the world!");
-                players[0].transform.position = transform.position; // Set position of existing player to SpawnPoint position
-                players[0].GetComponent<GunManager>().TakeGun(null, true);
-                return players[0];
+                PlayerController playerController = controllers[0];
+                playerController.gameObject.transform.position = transform.position; // Set position of existing player to SpawnPoint position
+                playerController.UnDie();
+                HealthAndEnergy healthScript = playerController.gameObject.GetComponent<HealthAndEnergy>();
+                if (healthScript.currentHealth <= 0)
+                {
+                    healthScript.currentHealth = healthScript.health;
+                    healthScript.currentEnergyAmount = healthScript.energyInitialAmount;
+
+                }
+                playerController.gameObject.GetComponent<GunManager>().TakeGun(null, true);
+                return playerController.gameObject;
             }
             else
             {
