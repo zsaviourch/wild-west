@@ -112,16 +112,19 @@ else if (!isDefensive && !isBurstAttacking)
     {
         if (isDefensive)
         {
-            AudioManager.Instance.Play("golemShieldHit");
+            //AudioManager.Instance.Play("golemShieldHit");
+            AkSoundEngine.PostEvent("golemShieldHit", this.gameObject);
             return;
         }
         //return;
 
         base.TakeDamage(damage);
-        AudioManager.Instance.Play("golemHurt");
+        //AudioManager.Instance.Play("golemHurt");
+        AkSoundEngine.PostEvent("golemHurt", this.gameObject);
         if (isDead)
         {
-            AudioManager.Instance.Play("golemDie");
+            //AudioManager.Instance.Play("golemDie");
+            AkSoundEngine.PostEvent("golemDie", this.gameObject);
         }
     }
 
@@ -160,7 +163,8 @@ else if (!isDefensive && !isBurstAttacking)
     isCoolingDown = false;
     isBurstAttacking = false;
     lastAttackTime = Time.time;
-        AudioManager.Instance.Play("golemAttack");
+        //AudioManager.Instance.Play("golemAttack");
+        AkSoundEngine.PostEvent("golemAttack", this.gameObject);
     }
 
     private void OnDrawGizmosSelected()

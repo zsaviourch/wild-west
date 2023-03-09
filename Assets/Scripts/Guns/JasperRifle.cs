@@ -248,7 +248,8 @@ public class JasperRifle : MonoBehaviour
         // Replenish all energy
         currentEnergyAmount = energyInitialAmount;
         player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
-        AudioManager.Instance.Play("jasperReload");
+        //AudioManager.Instance.Play("jasperReload");
+        AkSoundEngine.PostEvent("gunReload", gameObject);
     }
 
     public int FindEnergyConsumePerBullet(BulletType type)
@@ -280,7 +281,6 @@ public class JasperRifle : MonoBehaviour
     {
         if (shootInitiated == true)
         {
-            //AkSoundEngine.PostEvent("CrystalRifleShot", gameObject);
             Debug.Log("SoundPlayed");
 /*          StartCoroutine(PlayShootAnimation());*/          
             Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
@@ -288,8 +288,8 @@ public class JasperRifle : MonoBehaviour
             player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
             currentReloadTime = 0f;
             shootInitiated = false;
-            // AkSoundEngine.PostEvent("gunShoot", player);
-            AudioManager.Instance.Play("jasperShot");
+            AkSoundEngine.PostEvent("gunShoot", gameObject);
+            //AudioManager.Instance.Play("jasperShot");
         }
     }
 

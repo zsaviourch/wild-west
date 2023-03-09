@@ -210,6 +210,11 @@ public class TopazGun : MonoBehaviour
         // Shooting 2s preparation time update
         if (mouseButtonDown)
         {
+            //AudioLogic
+            if (currentShootingPreparationTime == 0f)
+            {
+                AkSoundEngine.PostEvent("gunShoot", this.gameObject);
+            }
             if (currentShootingPreparationTime < shootingPreparationTime)
             {
                 currentShootingPreparationTime += Time.deltaTime;
@@ -224,11 +229,10 @@ public class TopazGun : MonoBehaviour
         }
         else
         {
+            AkSoundEngine.PostEvent("stopShoot", this.gameObject);
             currentShootingPreparationTime = 0f;
             shootingPrepared = false;
         }
-        
-        
     }
 
     // methods
@@ -238,7 +242,8 @@ public class TopazGun : MonoBehaviour
 
         // Replenish one unit energy
         currentEnergyAmount += energyRegeneratePerSecond;
-        AudioManager.Instance.Play("topazReload");
+        //AudioManager.Instance.Play("topazReload");
+        AkSoundEngine.PostEvent("gunReload", this.gameObject);
     }
 
     public int FindEnergyConsumePerBullet(BulletType type)
@@ -275,7 +280,6 @@ public class TopazGun : MonoBehaviour
             currentEnergyAmount -= energyConsumePerBullet;
             currentReloadTime = 0f;
             shootInitiated = false;
-            AudioManager.Instance.Play("topazShot");
         }
     }
 }

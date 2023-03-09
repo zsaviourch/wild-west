@@ -4,9 +4,22 @@
 		<WorkUnit Name="Tikbalang" ID="{633E715A-F294-4DA4-A0EA-AC705D592421}" OwnerID="{37E7206D-D6EF-480A-B2DB-B030BEE04653}" PersistMode="Nested">
 			<ChildrenList>
 				<ActorMixer Name="tikbalang" ID="{E549D9AC-F62C-4420-BA37-ADBCBB66FB2F}" ShortID="207165122">
+					<PropertyList>
+						<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+							<ObjectRef Name="WebGL Music Conversion" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -16,7 +29,7 @@
 						<RandomSequenceContainer Name="tikbalangDie" ID="{9243CA20-835A-45AC-9175-0429362405D8}" ShortID="788271349">
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+									<ObjectRef Name="WebGL Music Conversion" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -41,7 +54,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+											<ObjectRef Name="WebGL Music Conversion" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -78,7 +91,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+									<ObjectRef Name="WebGL Music Conversion" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -103,7 +116,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+											<ObjectRef Name="WebGL Music Conversion" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -137,10 +150,27 @@
 										<Value>2</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePriority" Type="bool" Value="True"/>
+								<Property Name="Priority" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+									<ObjectRef Name="WebGL Music Conversion" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -150,7 +180,7 @@
 								<Sound Name="Tikbalang Hurt" ID="{C4717D83-5192-4F1F-8164-0B47D491E29B}" ShortID="354624042">
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+											<ObjectRef Name="WebGL Music Conversion" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>

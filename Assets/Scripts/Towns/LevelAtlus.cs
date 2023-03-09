@@ -171,6 +171,12 @@ public class LevelAtlus : MonoBehaviour
             //else just move to the next room in the same town
             towns[CurrentTownIndex].SetInstantiatedIndex(nextRoomIndex);
             towns[CurrentTownIndex].CurrentInstantiatedIndex++;
+            if (towns[CurrentTownIndex].CurrentInstantiatedIndex == 1) {
+                AkSoundEngine.PostEvent("intensityMid", this.gameObject);
+            } else if (towns[CurrentTownIndex].CurrentInstantiatedIndex == 2)
+            {
+                AkSoundEngine.PostEvent("intensityHigh", this.gameObject);
+            }
         }
         else
         {

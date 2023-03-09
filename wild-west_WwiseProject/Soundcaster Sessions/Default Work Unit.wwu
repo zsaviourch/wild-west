@@ -30,12 +30,8 @@
 							<Position X="1" Y="5"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="bossStart" ID="{912AF976-A4B0-4E10-B4BE-280BB50675A9}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<ObjectRef Name="level3Start" ID="{13A6AECC-EE1D-46D9-99ED-8CC7C3050AEC}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
 							<Position X="1" Y="6"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="creditsStart" ID="{F12EE366-D075-4A4D-B8F4-1BE90764601C}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
-							<Position X="1" Y="7"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="gunEmpty" ID="{2A86A847-9D2B-4A49-BF83-7C9FF422E156}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
@@ -48,6 +44,14 @@
 						<Module>
 							<ObjectRef Name="intensityLow" ID="{BD747405-D189-4D51-9098-85AC7934E313}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
 							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="level4Start" ID="{20C2ABD1-4371-48DF-ACA1-B72F97CBEF64}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="bossStart" ID="{912AF976-A4B0-4E10-B4BE-280BB50675A9}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}"/>
+							<Position X="2" Y="6"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="sniperExplode" ID="{8D2EA042-A4C3-4F15-981D-DF35FDD55E0C}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}"/>
@@ -114,10 +118,10 @@
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="playerAlive" ID="{32B0F653-6B3C-4BB0-B237-2343492DF765}"/>
-						<CurrentStateRef Name="musicBoss" ID="{553FB8C7-A4FC-4833-97DD-D5B79F9DBE76}"/>
+						<CurrentStateRef Name="musicLevel3" ID="{D9B92C5B-7F66-4FB9-A704-52C148777F50}"/>
+						<CurrentStateRef Name="lowIntensity" ID="{406E1EA2-7738-4047-BC5F-FA0798E38105}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="highInt" ID="{59B4356C-419D-43F1-BE7B-7577BF0B088B}"/>
 						<CurrentSwitchRef Name="sandTerrain" ID="{53E18930-8380-48B6-A5ED-5BF6ADDCD666}"/>
 						<CurrentSwitchRef Name="gunRevolver" ID="{7BFB712C-0880-454A-B239-6DF4F86DC31C}"/>
 						<CurrentSwitchRef Name="healthSwitch" ID="{13F5027A-F550-4843-AB67-4B8A5022EE12}"/>

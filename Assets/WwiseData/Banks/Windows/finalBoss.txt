@@ -1,0 +1,43 @@
+Event	ID	Name			Wwise Object Path	Notes
+	947858520	wendigoShieldHit			\Default Work Unit\Enemies\Wendigo\wendigoShieldHit	
+	1753832348	wendigoDie			\Default Work Unit\Enemies\Wendigo\wendigoDie	
+	1823178165	wendigoSlash			\Default Work Unit\Enemies\Wendigo\wendigoSlash	
+	2286643954	wendigoMissile			\Default Work Unit\Enemies\Wendigo\wendigoMissile	
+	2978173602	bossStart			\Default Work Unit\Music\bossStart	
+	4157141718	wendigoSmash			\Default Work Unit\Enemies\Wendigo\wendigoSmash	
+	4294852885	wendigoHurt			\Default Work Unit\Enemies\Wendigo\wendigoHurt	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	444815956	PlayerLife			\Default Work Unit\Music\PlayerLife	
+	1301299809	MusicIntensity			\Default Work Unit\Music\MusicIntensity	
+	2753803885	MusicRegions			\Default Work Unit\Music\MusicRegions	
+
+State	ID	Name	State Group			Notes
+	748895195	None	PlayerLife			
+	818777268	playerDefeated	PlayerLife			
+	2557321869	playerAlive	PlayerLife			
+	623939704	midIntensity	MusicIntensity			
+	748895195	None	MusicIntensity			
+	3521294064	highIntensity	MusicIntensity			
+	4231975828	lowIntensity	MusicIntensity			
+	435872092	musicCredits	MusicRegions			
+	748895195	None	MusicRegions			
+	1359346036	musicVictory	MusicRegions			
+	2935806393	musicBoss	MusicRegions			
+	4082046343	musicMenu	MusicRegions			
+	4206939873	musicLevel1	MusicRegions			
+	4206939874	musicLevel2	MusicRegions			
+	4206939875	musicLevel3	MusicRegions			
+	4206939876	musicLevel4	MusicRegions			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	32132433	wendigoHurt	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Wendigo Hurt_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoHurt\wendigoHurt		264696
+	266832190	wendigoSmash2	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Ice Goat Attack2_EDE86F10.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoSmash\wendigoSmash2		138852
+	272332325	wendigoDie	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Wendigo Die_4E67D237.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoDie\wendigoDie		313268
+	499674927	wendigoSmash1	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Ice Goat Attack1_834F70FD.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoSmash\wendigoSmash1		161656
+	522819470	WildWestBossTrack-002	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WildWestBossTrack-002_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicBoss\WildWestBossTrack-002\WildWestBossTrack-002		617653
+	635594137	WildWestBossTrack-001	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WildWestBossTrack-001_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicBoss\WildWestBossTrack-001\WildWestBossTrack-001		491649
+	736210807	golemShieldHit	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Goelm Shield Hit_4E223B27.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoShield\golemShieldHit		51468
+	937120721	wendigoMissile	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Wendigo Missile_4EB655F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoMissile\wendigoMissile		165688
+	940912880	wendigoSlash	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\Wendigo Slash_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\Enemies\Enemies\Wendigo\wendigo\wendigoSlash\wendigoSlash		352896
+

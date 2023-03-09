@@ -90,6 +90,7 @@ public class RoomChallenge : MonoBehaviour
     {
         deadPlayer.OnDied -= reactToPlayerDeath;
         EndChallenge(false);
+        AkSoundEngine.PostEvent("playerDie", null);
     }
 
     private void OnDestroy()

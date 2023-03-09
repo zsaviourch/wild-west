@@ -3,50 +3,41 @@
 	<SoundBanks>
 		<WorkUnit Name="General" ID="{1620AB33-9BC8-46C4-ABB4-8423C9CC735E}" OwnerID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" PersistMode="Nested">
 			<ChildrenList>
-				<SoundBank Name="GameplayLoop" ID="{0C8E0234-0513-445E-9C4B-9223118F94B6}">
+				<SoundBank Name="GameplayLoop" ID="{2919141A-0EA0-47E8-892A-C5DFD20212C0}">
 					<ObjectInclusionList>
-						<ObjectRef Name="level2Start" ID="{C3B3DB71-24CE-400B-A159-DE139E90D640}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerHurt" ID="{4D8D52F2-0EC2-4046-866A-7AF2954A7D0E}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="tikbalangHurt" ID="{52139911-4740-4104-A9AC-757AB2CF3E9F}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicStart" ID="{84386058-9B6D-40A0-BBD5-2D0D16ED0D94}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="1"/>
+						<ObjectRef Name="victoryStart" ID="{318961EB-70B1-40EE-BDFC-588A7E5A7B06}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="gunReload" ID="{E3E1306A-DE9B-4107-99AF-8532CB2CE6B1}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="level1Start" ID="{BCCE80D0-10E7-4234-91A3-52DA337BE59B}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerEnergyEmpty" ID="{773D51E0-38A1-423A-AE9D-2D18C1294C07}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="tikbalangAttack" ID="{CF9972DB-54C9-429D-B922-A705659D1137}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="tikbalangDie" ID="{C04B97BD-AB4C-42D5-A7FD-370A710CF2AC}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ice Goat" ID="{C26EB4F8-D960-427F-95FC-F14EDFBCC872}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="intensityHigh" ID="{0E10FFEE-43AF-4350-8247-32A9C389E249}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="golemDie" ID="{E91C0C15-43E6-43EC-9FE8-D2A7F56278F3}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="buttonHover" ID="{FAEB5332-1DAD-4400-BD73-399859FD2685}" WorkUnitID="{A4E56E97-9388-481B-98AC-BBDC5EE08BF3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicCredits" ID="{15DB0D49-982F-4404-B62D-C65ED4BC4CAF}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="soulDrop" ID="{722DB41A-B8C1-44D8-81D8-48472809F11F}" WorkUnitID="{F4E28F67-05B8-4BD9-98C0-E62661DE4C23}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerDash" ID="{535AE50B-7C4D-4558-AB6D-A8A4B46254B4}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="golemShieldHit" ID="{6271B543-FBB9-4561-ACB3-E97799871970}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Tikbalang" ID="{5BDC152C-0BD7-4584-9711-1D93565ECDAF}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="buttonStartGame" ID="{731C9755-2E75-458C-9C91-F62871EF7512}" WorkUnitID="{A4E56E97-9388-481B-98AC-BBDC5EE08BF3}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="intensityMid" ID="{D3584236-679C-459A-9220-86861BDDFFE7}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="lamiaHurt" ID="{8D73B84A-D7EE-460F-A3B8-04323C1AE830}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicMainMenu" ID="{5962D410-B696-45A8-9D06-5DF025CE63F6}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="menuStart" ID="{5C3BCE00-4DE3-460A-84A9-8E0110989F15}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="1"/>
 						<ObjectRef Name="soulPickUp" ID="{65401D85-77DA-463A-B4E4-1F8C2D1AF365}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="golemHurt" ID="{82266AE4-DCB1-4711-8481-E546D87307B9}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="golemAttack" ID="{AD100515-6BA8-4786-A4E7-257D7CB7F2E4}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="goatDie" ID="{A8795B55-1C53-478E-8C1C-BF4C8ADCB3B6}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="lamiaDie" ID="{8C6AC4DA-9EE3-4876-BCBC-C6FE7307A39F}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicVictory" ID="{EEE4F955-D1EF-4676-9EDA-4B78657FC76C}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Amber Golem" ID="{ED1D4DB0-3855-468C-A559-4D5966485A6F}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerDie" ID="{9058AAA9-8F66-48E8-9074-E7BCD08B587A}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="goatAttack" ID="{422D8CEB-A397-494F-ADB5-00C3A603C90C}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="buttonClick" ID="{D5C98B6D-3D43-4973-B62A-F42CC2EE08EE}" WorkUnitID="{A4E56E97-9388-481B-98AC-BBDC5EE08BF3}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="gunEmpty" ID="{2A86A847-9D2B-4A49-BF83-7C9FF422E156}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="creditsStart" ID="{F12EE366-D075-4A4D-B8F4-1BE90764601C}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="goatHurt" ID="{62CB2535-9D17-4A6C-86AE-760DE1546DBB}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="creditsStart" ID="{F12EE366-D075-4A4D-B8F4-1BE90764601C}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="1"/>
 						<ObjectRef Name="gunShoot" ID="{2EEFE972-7AB9-4BC8-84C2-90D4E13A9F2B}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerEnergyLow" ID="{C486F123-83F6-4C14-BF42-8581E1407A72}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicDefeat" ID="{B390155D-C89D-4C67-8A4A-C9378A055E84}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="stopShoot" ID="{65553334-9868-4CAC-B13C-88F88460119B}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Lamia" ID="{6D94C795-D119-4D23-8EF9-1EEF1BCA8F62}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicGameSwitch" ID="{42BF7466-7345-4D3B-8587-5ACE1AD54A67}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="1"/>
 						<ObjectRef Name="playerHealthLow" ID="{009B7011-4F3D-4D3C-8DA8-8594DC277430}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="intensityLow" ID="{BD747405-D189-4D51-9098-85AC7934E313}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="sniperExplode" ID="{8D2EA042-A4C3-4F15-981D-DF35FDD55E0C}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="playerFootstep" ID="{1696172C-7C73-4F65-9B9F-1C7B0613F914}" WorkUnitID="{A7A23582-946B-4EA2-8915-3A5990F869F5}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="lamiaAttack" ID="{A1099B03-81F1-4FBC-884A-5DD171C6B068}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
-					</ObjectInclusionList>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
-				<SoundBank Name="TitleScreen" ID="{82DD8809-EB20-4BB2-92AE-FE88D5AB3F22}">
-					<ObjectInclusionList>
-						<ObjectRef Name="musicStart" ID="{84386058-9B6D-40A0-BBD5-2D0D16ED0D94}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -1,0 +1,37 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1983837969	level4Start			\Default Work Unit\Music\level4Start	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	444815956	PlayerLife			\Default Work Unit\Music\PlayerLife	
+	1301299809	MusicIntensity			\Default Work Unit\Music\MusicIntensity	
+	2753803885	MusicRegions			\Default Work Unit\Music\MusicRegions	
+
+State	ID	Name	State Group			Notes
+	748895195	None	PlayerLife			
+	818777268	playerDefeated	PlayerLife			
+	2557321869	playerAlive	PlayerLife			
+	623939704	midIntensity	MusicIntensity			
+	748895195	None	MusicIntensity			
+	3521294064	highIntensity	MusicIntensity			
+	4231975828	lowIntensity	MusicIntensity			
+	435872092	musicCredits	MusicRegions			
+	748895195	None	MusicRegions			
+	1359346036	musicVictory	MusicRegions			
+	2935806393	musicBoss	MusicRegions			
+	4082046343	musicMenu	MusicRegions			
+	4206939873	musicLevel1	MusicRegions			
+	4206939874	musicLevel2	MusicRegions			
+	4206939875	musicLevel3	MusicRegions			
+	4206939876	musicLevel4	MusicRegions			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	103322	WWLevel4Low-001	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WWLevel4Low-001_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel4Low\WWLevel4Low-001\WWLevel4Low-001		360694
+	123422860	WWLevel4Low-003	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WWLevel4Low-003_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel4Low\WWLevel4Low-003\WWLevel4Low-003		415820
+	320998846	WWLevel4High-003	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WWLevel4High-003_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel4High\WWLevel4High-003\WWLevel4High-003		431519
+	343196905	WWLevel4Mid-003	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WWLevel4Mid-003_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel4Mid\WWLevel4Mid-003\WWLevel4Mid-003		413273
+	699541000	WWLevel4Mid-002	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WWLevel4Mid-002_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel4Mid\WWLevel4Mid-002\WWLevel4Mid-002		368826
+	861960979	WWLevel4High-002	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WWLevel4High-002_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel4High\WWLevel4High-002\WWLevel4High-002		360598
+	902642801	WWLevel4High-001	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WWLevel4High-001_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel4High\WWLevel4High-001\WWLevel4High-001		433709
+	972172787	WWLevel4Mid-001	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WWLevel4Mid-001_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel4Mid\WWLevel4Mid-001\WWLevel4Mid-001		337344
+	986194685	WWLevel4Low-002	D:\Game_Production\UnityProjects\wild-west\wild-west_WwiseProject\.cache\Windows\SFX\WWLevel4Low-002_9EDFC787.wem		\Interactive Music Hierarchy\Music\musicGameSwitch\musicLevel4Low\WWLevel4Low-002\WWLevel4Low-002		360208
+

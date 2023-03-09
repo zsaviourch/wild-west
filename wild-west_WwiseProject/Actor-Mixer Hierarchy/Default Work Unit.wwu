@@ -13,7 +13,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+							<ObjectRef Name="Default" ID="{25EED98E-18BF-42C7-9932-BCC0ED1D9D31}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>
@@ -35,7 +35,7 @@
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
+							<ObjectRef Name="Default" ID="{25EED98E-18BF-42C7-9932-BCC0ED1D9D31}" WorkUnitID="{FD72C83D-B9F3-4CCD-8DCD-025E9BAB063E}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{B3719639-CFDC-4BDC-8955-0E721F2974AC}"/>

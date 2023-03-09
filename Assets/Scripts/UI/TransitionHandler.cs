@@ -51,7 +51,7 @@ public class TransitionHandler : MonoBehaviour
     
     private void Start()
     {
-        audioManager.Play("menuTheme");
+        //audioManager.Play("menuTheme");
         readyButton.SetActive(false);
         horseIcon.position = currentLocation.position; // I'm going to use this line when we load into the next scene so the horse icon knows where to start for the next map transition
         mapCanvas.SetActive(false);
@@ -96,14 +96,15 @@ public class TransitionHandler : MonoBehaviour
     IEnumerator LoadFirstLevel(int sceneId) // sceneID is the Level's build order index
     {
         // Start game sfx
-        audioManager.Play("startGameSFX");
+        //audioManager.Play("startGameSFX");
+        AkSoundEngine.PostEvent("buttonStartGame", this.gameObject);
 
         yield return new WaitForSeconds(1f);
         
         // Play Transition Animation
         crossfade.SetTrigger("Start");
-        audioManager.Stop("menuTheme");
-        audioManager.Play("transitionSFX");
+        //audioManager.Stop("menuTheme");
+        //audioManager.Play("transitionSFX");
 
         yield return new WaitForSeconds(transitionTime);
         
@@ -138,7 +139,7 @@ public class TransitionHandler : MonoBehaviour
     {
         // Play Transition Animation
         crossfade.SetTrigger("Start");
-        audioManager.Play("transitionSFX");
+        //audioManager.Play("transitionSFX");
         
         yield return new WaitForSeconds(transitionTime);
 
@@ -163,7 +164,7 @@ public class TransitionHandler : MonoBehaviour
                 destination = townMapLocations[1];
                 break;
             default:
-                destination = townMapLocations[0]; // Dialbo by default
+                destination = townMapLocations[0]; // casaDiablo by default
                 break;
         }
             

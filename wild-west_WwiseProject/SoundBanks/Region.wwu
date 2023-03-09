@@ -1,41 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{42DDE63C-A626-4721-A0EB-D0719B074697}" SchemaVersion="110" RootDocumentID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" ParentDocumentID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}">
+<WwiseDocument Type="WorkUnit" ID="{E11F3216-F83A-4CB8-B176-CBF264AC3D8D}" SchemaVersion="110" RootDocumentID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" ParentDocumentID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}">
 	<SoundBanks>
-		<WorkUnit Name="Region" ID="{42DDE63C-A626-4721-A0EB-D0719B074697}" OwnerID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" PersistMode="Nested">
+		<WorkUnit Name="Region" ID="{E11F3216-F83A-4CB8-B176-CBF264AC3D8D}" OwnerID="{071B3C76-6F21-4D9C-9CEC-F521AF04E408}" PersistMode="Nested">
 			<ChildrenList>
-				<SoundBank Name="Environment1" ID="{979BDFBA-F77B-46E4-88C3-AFD99F3397A9}">
+				<SoundBank Name="casaDiablo" ID="{492FB5E2-967C-4D25-B76D-B9F267507525}">
 					<ObjectInclusionList>
-						<ObjectRef Name="victoryStart" ID="{318961EB-70B1-40EE-BDFC-588A7E5A7B06}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="level1Start" ID="{BCCE80D0-10E7-4234-91A3-52DA337BE59B}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="intensityHigh" ID="{0E10FFEE-43AF-4350-8247-32A9C389E249}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="intensityMid" ID="{D3584236-679C-459A-9220-86861BDDFFE7}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="intensityLow" ID="{BD747405-D189-4D51-9098-85AC7934E313}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel1Mid" ID="{4963C20E-220A-4533-99CA-297FB4C07720}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel1Low" ID="{EB8EEC5C-C9DB-49DD-9391-959F3E4554A5}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel1High" ID="{2F977D3B-366A-4BE5-A6BF-3D46D98C94B1}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
-				<SoundBank Name="Environment2" ID="{2EF2E348-0097-42D7-B118-B37E4B646360}">
+				<SoundBank Name="rustBurrow" ID="{2AE7BD7D-66A2-4120-AC60-C71E5123177B}">
 					<ObjectInclusionList>
 						<ObjectRef Name="level2Start" ID="{C3B3DB71-24CE-400B-A159-DE139E90D640}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="victoryStart" ID="{318961EB-70B1-40EE-BDFC-588A7E5A7B06}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="intensityHigh" ID="{0E10FFEE-43AF-4350-8247-32A9C389E249}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="intensityMid" ID="{D3584236-679C-459A-9220-86861BDDFFE7}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="intensityLow" ID="{BD747405-D189-4D51-9098-85AC7934E313}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel2Low" ID="{34D66016-1093-43CE-B1FB-0856CF4303B2}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel2Mid" ID="{4D3427E8-CCDA-4471-B473-CC4D20F45DB4}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel2High" ID="{BDE9E3A1-04DE-4D52-A442-C502A9B18115}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
-				<SoundBank Name="EnvironmentBoss" ID="{D773876A-B70D-45FB-9C5E-07C1CC8C2382}">
+				<SoundBank Name="darkHurst" ID="{63589E7C-E214-4B85-B12E-E2724E5F67DF}">
 					<ObjectInclusionList>
-						<ObjectRef Name="victoryStart" ID="{318961EB-70B1-40EE-BDFC-588A7E5A7B06}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="wendigoSmash" ID="{F1DAEC66-C640-41A3-B318-2D67C8491743}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="wendigoHurt" ID="{A7800EBC-1C31-443F-831F-B51DB5E42C99}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="wendigoShieldHit" ID="{BE515E43-67A9-483B-8EED-FA71FED3A45C}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="creditsStart" ID="{F12EE366-D075-4A4D-B8F4-1BE90764601C}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="wendigoSlash" ID="{9EAB7885-2B3B-4B95-8E54-941ADB2B750E}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="wendigoMissile" ID="{B1AFB99D-7DBB-4DA4-BBD1-2F952FC66CE8}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel3Low" ID="{65F03394-9C49-421F-8338-3E99336D68E7}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel3High" ID="{55CA20A8-103A-4360-9A90-FFB06137262A}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="level3Start" ID="{13A6AECC-EE1D-46D9-99ED-8CC7C3050AEC}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel3Mid" ID="{5C9D3C3A-7CC6-4DD5-AF30-8D198E05041D}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="coldMeadows" ID="{21524E7E-E981-4FBF-830C-21F19C82B63F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="musicLevel4Low" ID="{4AE0EA8E-CA42-4545-A8FB-D917AACC5C93}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel4Mid" ID="{CFCB02AF-50A9-4817-AC31-EB840D7360D7}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="level4Start" ID="{20C2ABD1-4371-48DF-ACA1-B72F97CBEF64}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="musicLevel4High" ID="{8B97CAF8-1DE6-4E44-AC52-A2112E1B9A14}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="finalBoss" ID="{E6DE36EA-BE54-485C-B1F1-0FACC94B3B6E}">
+					<ObjectInclusionList>
+						<ObjectRef Name="musicBoss" ID="{C9A16DE8-F2A8-4314-92FC-AA415D26CA33}" WorkUnitID="{99CD8E1E-15C2-4781-9610-4534B5215BCB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Wendigo" ID="{BEA9EF7D-88A9-4535-8EC1-AC2889C673CB}" WorkUnitID="{BEA9EF7D-88A9-4535-8EC1-AC2889C673CB}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Wendigo" ID="{B53E1CDE-38C7-4545-9144-67F1B7C61063}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="bossStart" ID="{912AF976-A4B0-4E10-B4BE-280BB50675A9}" WorkUnitID="{A230D9F8-D145-490F-A940-9C2B17AFC3DF}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="wendigoDie" ID="{BAC702CB-54AF-4FE8-8A14-C1AC2E5C6B7D}" WorkUnitID="{9BE1647B-2E45-452B-9E7C-23A88CAA43ED}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

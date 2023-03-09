@@ -24,13 +24,6 @@
 						<Switch Name="winterTerrain" ID="{1B6E7929-8518-4F1E-8240-5F6A8EBAAA23}"/>
 					</ChildrenList>
 				</SwitchGroup>
-				<SwitchGroup Name="musicIntensity" ID="{2C7586FE-06CB-419C-A993-9313C0320FD7}">
-					<ChildrenList>
-						<Switch Name="lowInt" ID="{BBA1C1EC-BB92-4198-8D07-FF05DEE09C5C}"/>
-						<Switch Name="midInt" ID="{108C0C21-B08E-4F1E-81D1-10F67C841CB9}"/>
-						<Switch Name="highInt" ID="{59B4356C-419D-43F1-BE7B-7577BF0B088B}"/>
-					</ChildrenList>
-				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

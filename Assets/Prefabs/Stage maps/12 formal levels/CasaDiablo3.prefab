@@ -74935,6 +74935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5557596238393897324}
   - component: {fileID: 6289870629730935225}
+  - component: {fileID: 4729493553194700404}
   m_Layer: 0
   m_Name: CasaDiablo3
   m_TagString: Untagged
@@ -74975,6 +74976,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98b91936da34d747bc7f2314460621b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4729493553194700404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5557596238393897325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 428a2ed7b5a219d44a58e3dadfc6289f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e8b87ba021af5894881a5f6a856ce68c, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &5557596238756239272
 GameObject:
   m_ObjectHideFlags: 0

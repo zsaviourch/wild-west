@@ -226,7 +226,8 @@ public class OnyxSnipper : MonoBehaviour
         // Replenish one unit energy
         currentEnergyAmount = energyInitialAmount;
         player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
-        AudioManager.Instance.Play("sniperReload");
+        //AudioManager.Instance.Play("sniperReload");
+        AkSoundEngine.PostEvent("gunReload", gameObject);
     }
 
     public int FindEnergyConsumePerBullet(BulletType type)
@@ -264,7 +265,8 @@ public class OnyxSnipper : MonoBehaviour
             player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
             currentReloadTime = 0f;
             shootInitiated = false;
-            AudioManager.Instance.Play("sniperShot");
+            //AudioManager.Instance.Play("sniperShot");
+            AkSoundEngine.PostEvent("gunShoot", gameObject);
         }
     }
 }
