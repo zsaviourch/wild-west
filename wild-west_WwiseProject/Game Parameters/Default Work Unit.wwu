@@ -3,8 +3,16 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{0D4AAB79-89A2-4AF4-BBF7-17FDD436801C}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="sfxVolume" ID="{D0301090-F454-48A3-849F-9001B777AF2D}"/>
-				<GameParameter Name="musicVolume" ID="{20814FDD-C28C-45C3-BE1E-26E2CE7C38C0}"/>
+				<GameParameter Name="sfxVolume" ID="{D0301090-F454-48A3-849F-9001B777AF2D}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="musicVolume" ID="{20814FDD-C28C-45C3-BE1E-26E2CE7C38C0}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
 				<GameParameter Name="Distance" ID="{D9180EF3-D981-42DE-BD95-544A6FD63DBB}">
 					<PropertyList>
 						<Property Name="BindToBuiltInParam" Type="int16" Value="1"/>

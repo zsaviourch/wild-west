@@ -94,7 +94,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C506AC7B-5DC6-0EBF-BF4C-3EDAB99B5A9C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F5E6386B-71A6-0D50-B49F-2A89E052D7A3}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -1157,5 +1157,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{41C12130-1A91-5DD5-C125-A15285F01A7B}</FileHash>
+	<FileHash>{CFAB6630-533B-DBD3-BC83-3406A9E3602F}</FileHash>
 </SoundBanksInfo>

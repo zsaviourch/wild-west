@@ -109,17 +109,17 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="musicVolume" ID="{20814FDD-C28C-45C3-BE1E-26E2CE7C38C0}"/>
-							<Value>50</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="sfxVolume" ID="{D0301090-F454-48A3-849F-9001B777AF2D}"/>
-							<Value>50</Value>
+							<Value>89.5669291338583</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="playerAlive" ID="{32B0F653-6B3C-4BB0-B237-2343492DF765}"/>
-						<CurrentStateRef Name="musicLevel3" ID="{D9B92C5B-7F66-4FB9-A704-52C148777F50}"/>
-						<CurrentStateRef Name="lowIntensity" ID="{406E1EA2-7738-4047-BC5F-FA0798E38105}"/>
+						<CurrentStateRef Name="musicMenu" ID="{C9454A63-4133-459A-90AC-76B2F0F64F03}"/>
+						<CurrentStateRef Name="None" ID="{424B9336-2C12-4A73-B78C-F4CC11B73161}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="sandTerrain" ID="{53E18930-8380-48B6-A5ED-5BF6ADDCD666}"/>

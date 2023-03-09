@@ -21,6 +21,10 @@ State	ID	Name	State Group			Notes
 	4206939875	musicLevel3	MusicRegions			
 	4206939876	musicLevel4	MusicRegions			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	988953028	sfxVolume			\Default Work Unit\sfxVolume	
+	2346531308	musicVolume			\Default Work Unit\musicVolume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	77978275	Ambient			\Default Work Unit\Master Audio Bus\World\Ambient	
 	838047381	Non-World			\Default Work Unit\Master Audio Bus\Non-World	
