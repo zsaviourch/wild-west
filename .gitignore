@@ -78,6 +78,11 @@ wild-west_WwiseProject/*.wsettings
 wild-west_WwiseProject/*.prof
 wild-west_WwiseProject/**/*.akd
 
+# XML Conflicts
+IncrementalSoundBankData.xml
+PluginInfo.xml
+SoundbanksInfo.xml
+
 # WWise Picker (editor)
 # from https://www.audiokinetic.com/library/edge/?source=Unity&id=unity__troubleshooting.html
 # >> Do not keep AkWwiseProjectData.asset under version control! 
