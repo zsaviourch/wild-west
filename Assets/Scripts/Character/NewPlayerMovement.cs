@@ -47,7 +47,7 @@ public class NewPlayerMovement : MonoBehaviour
     private void Update()
     {
 
-        if (!Input.GetMouseButtonDown(0)) Move();
+        if (!Input.GetMouseButtonDown(0) && !Input.GetMouseButtonDown(1)) Move();
 
         if (EnoughAmmo(whichGun)) Shoot();
 
@@ -193,7 +193,7 @@ public class NewPlayerMovement : MonoBehaviour
     private IEnumerator PlayShootAnimation()
     {
         animator.SetBool("shoot", true);
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.3f);
         animator.SetBool("shoot", false);
     }
 

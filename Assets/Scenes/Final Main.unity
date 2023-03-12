@@ -331,9 +331,10 @@ GameObject:
   - component: {fileID: 689725445}
   - component: {fileID: 689725446}
   - component: {fileID: 689725447}
-  m_Layer: 0
+  - component: {fileID: 689725449}
+  m_Layer: 7
   m_Name: 8DirCowBoy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,6 +503,40 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2073975, y: 3.4703674, z: 0.2}
   m_Center: {x: -0.08148193, y: -0.14259338, z: 0}
+--- !u!114 &689725449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689725440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a5cd35d740c4c5dab0cff532c8853b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunName: 
+  energyInitialAmount: 200
+  currentEnergyAmount: 0
+  firingFrequencyInterval: 0.2
+  currentShootingTime: 0
+  shootInitiated: 0
+  energyRegeneratePerSecond: 66
+  rangeWeapon: 0
+  minimumReloadingTime: 2
+  fullyReloadedTime: 3
+  bulletType: 0
+  bulletPrefab: {fileID: 1703770609713949572, guid: 327deb706bb0546e8bdfc4b48be6c576, type: 3}
+  playerTransform: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
+  player: {fileID: 689725440}
+  currentReloadTime: 0
+  reloadInitiated: 0
+  energyConsumePerBullet: 0
+  shootingPos: {fileID: 0}
+  currentReloadPreparationTime: 0
+  energyInitiated: 0
 --- !u!1 &1184936430
 GameObject:
   m_ObjectHideFlags: 0
