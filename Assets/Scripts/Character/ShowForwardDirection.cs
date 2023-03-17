@@ -16,5 +16,6 @@ public class ShowForwardDirection : MonoBehaviour
     void Update()
     {
         Debug.DrawLine(transform.position, transform.position + transform.up * 5f, Color.red);
+        Debug.DrawLine(transform.position, transform.position + transform.right * 5f, Color.green);
     }
 }

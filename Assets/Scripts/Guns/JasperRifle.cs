@@ -6,6 +6,16 @@ using UnityEngine;
 public class JasperRifle : MonoBehaviour
 {
     // References
+    [Header("Shooting Position")]
+    public Transform downShotPos;
+    public Transform downLeftShotPos;
+    public Transform leftShotPos;
+    public Transform upLeftShotPos;
+    public Transform upShotPos;
+    public Transform upRightShotPos;
+    public Transform rightShotPos;
+    public Transform downRightShotPos;
+    [Header("Gun Related")]
     public string gunName;
     public int energyInitialAmount;
     public int currentEnergyAmount;
@@ -164,7 +174,8 @@ public class JasperRifle : MonoBehaviour
         energyConsumePerBullet = FindEnergyConsumePerBullet(this.bulletType);
         currentShootingTime = 0f;
         shootInitiated = false;
-        shootingPos = GameObject.FindWithTag("shootingPos").transform;
+/*        shootingPos = GameObject.FindWithTag("shootingPos").transform;
+*/
         currentReloadPreparationTime = 0f;
 
         currentEnergyAmount = energyInitialAmount;
@@ -282,14 +293,17 @@ public class JasperRifle : MonoBehaviour
         {
             //AkSoundEngine.PostEvent("CrystalRifleShot", gameObject);
             Debug.Log("SoundPlayed");
-/*          StartCoroutine(PlayShootAnimation());*/          
-            Instantiate(bulletPrefab, shootingPos.position, Quaternion.identity);
+            /*          StartCoroutine(PlayShootAnimation());*/
+            // Decide on the shooting pos
+            Transform shotPos = FindShootingPos();
+            GameObject bullet = Instantiate(bulletPrefab, shotPos.position, Quaternion.identity);
+            bullet.transform.right = shotPos.right;
             currentEnergyAmount -= energyConsumePerBullet;
             player.GetComponent<HealthAndEnergy>().currentEnergyAmount = currentEnergyAmount;
             currentReloadTime = 0f;
             shootInitiated = false;
             // AkSoundEngine.PostEvent("gunShoot", player);
-            AudioManager.Instance.Play("jasperShot");
+            /*AudioManager.Instance.Play("jasperShot");*/
         }
     }
 
@@ -299,4 +313,50 @@ public class JasperRifle : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         player.GetComponentInChildren<Animator>().SetBool("shoot", false);
     }*/
+
+    public Transform FindShootingPos()
+    {
+        Animator anim = player.GetComponent<Animator>();
+        bool down = anim.GetBool("faceDown");
+        bool downLeft = anim.GetBool("faceDownLeft");
+        bool left = anim.GetBool("faceLeft");
+        bool upLeft = anim.GetBool("faceUpLeft");
+        bool up = anim.GetBool("faceUp");
+        bool upRight = anim.GetBool("faceUpRight");
+        bool right = anim.GetBool("faceRight");
+        bool downRight = anim.GetBool("faceDownRight");
+        if (down)
+        {
+            return downShotPos;
+        }
+        else if (downLeft)
+        {
+            return downLeftShotPos;
+        }
+        else if (left)
+        {
+            return leftShotPos;
+        }
+        else if (upLeft)
+        {
+            return upLeftShotPos;
+        }
+        else if (up)
+        {
+            return upShotPos;
+        }
+        else if (upRight)
+        {
+            return upRightShotPos;
+        }
+        else if (right)
+        {
+            return rightShotPos;
+        }
+        else
+        {
+            return downRightShotPos;
+        }
+
+    }
 }

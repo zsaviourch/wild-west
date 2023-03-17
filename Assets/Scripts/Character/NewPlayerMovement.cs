@@ -47,11 +47,11 @@ public class NewPlayerMovement : MonoBehaviour
     private void Update()
     {
 
-        if (!Input.GetMouseButtonDown(0) && !Input.GetMouseButtonDown(1)) Move();
+        if (!Input.GetMouseButtonDown(0) && !Input.GetMouseButtonDown(1) && animator.GetBool("reload") == false) Move();
 
         if (EnoughAmmo(whichGun)) Shoot();
 
-        if (Input.GetMouseButtonDown(1))
+        if (!Input.GetMouseButtonDown(0) && Input.GetMouseButtonDown(1) && animator.GetBool("walk") == false)
         {
             StartCoroutine(Reload());
         }
@@ -182,7 +182,7 @@ public class NewPlayerMovement : MonoBehaviour
     // Shoot
     private void Shoot()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && StartToShot(whichGun))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && animator.GetBool("reloading") == false && StartToShot(whichGun))
         {
             Debug.Log("animation");
             StartCoroutine(PlayShootAnimation());
@@ -206,9 +206,9 @@ public class NewPlayerMovement : MonoBehaviour
     // Reload (shoot_reload, massive_shoot_reload, walk_reload)
     private IEnumerator Reload()
     {
-        animator.SetBool("shoot_reload", true);
+        animator.SetBool("reload", true);
         yield return new WaitForSeconds(2);
-        animator.SetBool("shoot_reload", false);        
+        animator.SetBool("reload", false);        
 
     }
 

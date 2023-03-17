@@ -23,6 +23,9 @@ public class JasperRifleBullet : MonoBehaviour
     public bool distanceCalculated;
     public bool bulletDirectionDecided;
     public Vector3 decidedDirection;
+    public Vector3 lastFramePosition;
+    public bool finalDirectionCalculated;
+    public Vector3 finalDirection;
 
     // constructor
     public JasperRifleBullet(int energyConsumedPerBullet, int bulletDamage, int bulletSpeedScaler, bool bulletFollowEnemy,
@@ -162,6 +165,9 @@ public class JasperRifleBullet : MonoBehaviour
         trail = GetComponent<TrailRenderer>();
         distanceCalculated = false;
         bulletDirectionDecided = false;
+
+        lastFramePosition = Vector2.zero;
+        finalDirectionCalculated = false;
     }
 
 
@@ -199,14 +205,35 @@ public class JasperRifleBullet : MonoBehaviour
             }
             if (Vector3.Distance(transform.position, closestEnemyPos) > distanceToClosestEnemy * 0.3)
             {
-                rb.AddForce(shootingPosTransform.forward * bulletSpeedScaler, ForceMode2D.Force);
-                rb.AddForce(((closestEnemyPos - transform.position).normalized) * 2f * bulletSpeedScaler, ForceMode2D.Force);
+                /*rb.AddForce(shootingPosTransform.forward * bulletSpeedScaler, ForceMode2D.Impulse);
+                rb.AddForce(((closestEnemyPos - transform.position).normalized) * bulletSpeedScaler, ForceMode2D.Impulse);*/
+                Vector3 directionTowardsEnemey = (closestEnemyPos - transform.position).normalized;
+                if (Vector3.Dot(directionTowardsEnemey, transform.right) > 0)
+                {
+                    transform.position += transform.right * 2f * bulletSpeedScaler * Time.deltaTime;
+                    transform.position += directionTowardsEnemey * 3f * bulletSpeedScaler * Time.deltaTime;
+                    lastFramePosition = transform.position;
+                }
+                else
+                {
+                    if (finalDirectionCalculated == false)
+                    {
+                        finalDirection = (transform.position - lastFramePosition).normalized;
+                        finalDirectionCalculated = true;
+                    }
+
+                    /*                    transform.position += finalDirection * 3f * bulletSpeedScaler * Time.deltaTime;
+                    */
+                    rb.AddForce(finalDirection * bulletSpeedScaler * 0.1f, ForceMode2D.Impulse);
+                }
+                
+               
             }
             else
             {
                 Vector3 followingTargetDirection = Vector3.MoveTowards(transform.position, closestEnemyPos, bulletSpeedScaler * Time.deltaTime);
-                Vector3 upDirection = Vector3.MoveTowards(transform.position, shootingPosTransform.forward, bulletSpeedScaler * Time.deltaTime);
-                transform.position = followingTargetDirection;
+/*                Vector3 upDirection = Vector3.MoveTowards(transform.position, shootingPosTransform.forward, bulletSpeedScaler * Time.deltaTime);
+*/              transform.position = followingTargetDirection;
             }
             
         }
@@ -217,12 +244,10 @@ public class JasperRifleBullet : MonoBehaviour
                 closestEnemyPos = ReturnClosestEnemyPosition();
                 seekingEnemyInitiated = true;
             }
-
-
             
             if (bulletDirectionDecided == false)
             {
-                if (GameObject.FindWithTag("Player").GetComponent<Transform>().localScale.x == 1)
+                /*if (GameObject.FindWithTag("Player").GetComponent<Transform>().localScale.x == 1)
                 {
                     decidedDirection = shootingPosTransform.right;
                     bulletDirectionDecided = true;
@@ -231,9 +256,11 @@ public class JasperRifleBullet : MonoBehaviour
                 {
                     decidedDirection = -shootingPosTransform.right;
                     bulletDirectionDecided = true;
-                }
+                }*/
+
+                decidedDirection = transform.right;
             }
-            rb.AddForce(decidedDirection * bulletSpeedScaler, ForceMode2D.Force);
+            rb.AddForce(decidedDirection * bulletSpeedScaler, ForceMode2D.Impulse);
 
 
         }
@@ -255,18 +282,24 @@ public class JasperRifleBullet : MonoBehaviour
         float minimumDistance = Mathf.Infinity;
         Vector3 closestEnemyPos = Vector3.zero;
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        List<GameObject> enemiesToBeConsidered = new List<GameObject>();
         if (enemies != null)
         {
+
             foreach (GameObject enemy in enemies)
             {
-
+                
                 Vector3 enemyPosition = enemy.transform.position;
                 float distance = Vector3.Distance(enemyPosition, transform.position);
-                if (distance < minimumDistance)
+                if (distance <= 8f)
                 {
-                    minimumDistance = distance;
-                    closestEnemyPos = enemyPosition;
+                    if (distance < minimumDistance)
+                    {
+                        minimumDistance = distance;
+                        closestEnemyPos = enemyPosition;
+                    }
                 }
+                
             }
         }
         else
