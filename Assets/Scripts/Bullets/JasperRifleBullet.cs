@@ -24,8 +24,10 @@ public class JasperRifleBullet : MonoBehaviour
     public bool bulletDirectionDecided;
     public Vector3 decidedDirection;
     public Vector3 lastFramePosition;
+    public Vector3 recordedPosition;
     public bool finalDirectionCalculated;
     public Vector3 finalDirection;
+    public GameObject player;
 
     // constructor
     public JasperRifleBullet(int energyConsumedPerBullet, int bulletDamage, int bulletSpeedScaler, bool bulletFollowEnemy,
@@ -166,8 +168,11 @@ public class JasperRifleBullet : MonoBehaviour
         distanceCalculated = false;
         bulletDirectionDecided = false;
 
-        lastFramePosition = Vector2.zero;
+        lastFramePosition = Vector3.zero;
+        recordedPosition = Vector3.zero;
         finalDirectionCalculated = false;
+
+        player = GameObject.FindWithTag("Player");
     }
 
 
@@ -208,6 +213,11 @@ public class JasperRifleBullet : MonoBehaviour
                 /*rb.AddForce(shootingPosTransform.forward * bulletSpeedScaler, ForceMode2D.Impulse);
                 rb.AddForce(((closestEnemyPos - transform.position).normalized) * bulletSpeedScaler, ForceMode2D.Impulse);*/
                 Vector3 directionTowardsEnemey = (closestEnemyPos - transform.position).normalized;
+                //if (Vector3.Dot(directionTowardsEnemey, transform.right) > 0.2f &&
+                //    Vector3.Dot(directionTowardsEnemey, transform.right) < 0.3f)
+                //{
+                //    recordedPosition = transform.position;
+                //}
                 if (Vector3.Dot(directionTowardsEnemey, transform.right) > 0)
                 {
                     transform.position += transform.right * 2f * bulletSpeedScaler * Time.deltaTime;
@@ -218,13 +228,15 @@ public class JasperRifleBullet : MonoBehaviour
                 {
                     if (finalDirectionCalculated == false)
                     {
-                        finalDirection = (transform.position - lastFramePosition).normalized;
+                        Debug.Log("direction" + (transform.position - lastFramePosition).normalized.x);
+                        Debug.Log("direction" + (transform.position - lastFramePosition).normalized.y);
+                        finalDirection = (closestEnemyPos - player.transform.position).normalized;
                         finalDirectionCalculated = true;
                     }
 
                     /*                    transform.position += finalDirection * 3f * bulletSpeedScaler * Time.deltaTime;
                     */
-                    rb.AddForce(finalDirection * bulletSpeedScaler * 0.1f, ForceMode2D.Impulse);
+                    rb.AddForce(finalDirection * bulletSpeedScaler * 3f, ForceMode2D.Impulse);
                 }
                 
                
@@ -259,8 +271,9 @@ public class JasperRifleBullet : MonoBehaviour
                 }*/
 
                 decidedDirection = transform.right;
+                bulletDirectionDecided = true;
             }
-            rb.AddForce(decidedDirection * bulletSpeedScaler, ForceMode2D.Impulse);
+            rb.AddForce(decidedDirection * 20f * bulletSpeedScaler, ForceMode2D.Impulse);
 
 
         }
@@ -283,10 +296,73 @@ public class JasperRifleBullet : MonoBehaviour
         Vector3 closestEnemyPos = Vector3.zero;
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
         List<GameObject> enemiesToBeConsidered = new List<GameObject>();
+
+        Animator anim = player.GetComponent<Animator>();
+        bool down = anim.GetBool("faceDown");
+        bool downLeft = anim.GetBool("faceDownLeft");
+        bool left = anim.GetBool("faceLeft");
+        bool upLeft = anim.GetBool("faceUpLeft");
+        bool up = anim.GetBool("faceUp");
+        bool upRight = anim.GetBool("faceUpRight");
+        bool right = anim.GetBool("faceRight");
+        bool downRight = anim.GetBool("faceDownRight");
+        
+
+        foreach (GameObject enemy in enemies)
+        {
+            if (down)
+            {
+                if (enemy.transform.position.y > player.transform.position.y) continue;
+                enemiesToBeConsidered.Add(enemy);
+            }
+            else if (downLeft)
+            {
+                if (enemy.transform.position.y > player.transform.position.y &&
+                    enemy.transform.position.x > player.transform.position.x) continue;
+                enemiesToBeConsidered.Add(enemy);
+            }
+            else if (left)
+            {
+                if (enemy.transform.position.x > player.transform.position.x) continue;
+                enemiesToBeConsidered.Add(enemy);
+            }
+            else if (upLeft)
+            {
+                if (enemy.transform.position.y < player.transform.position.y &&
+                    enemy.transform.position.x > player.transform.position.x) continue;
+                enemiesToBeConsidered.Add(enemy);
+            }
+            else if (up)
+            {
+                if (enemy.transform.position.y < player.transform.position.y) continue;
+                enemiesToBeConsidered.Add(enemy);
+            }
+            else if (upRight)
+            {
+                if (enemy.transform.position.y < player.transform.position.y &&
+                    enemy.transform.position.x < player.transform.position.x) continue;
+                enemiesToBeConsidered.Add(enemy);
+            }
+            else if (right)
+            {
+                if (enemy.transform.position.x < player.transform.position.x) continue;
+                enemiesToBeConsidered.Add(enemy);
+            }
+            else if (downRight)
+            {
+                if (enemy.transform.position.y > player.transform.position.y &&
+                    enemy.transform.position.x < player.transform.position.x) continue;
+                enemiesToBeConsidered.Add(enemy);
+            }
+
+
+        }
+
+
         if (enemies != null)
         {
 
-            foreach (GameObject enemy in enemies)
+            foreach (GameObject enemy in enemiesToBeConsidered)
             {
                 
                 Vector3 enemyPosition = enemy.transform.position;
